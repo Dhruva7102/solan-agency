@@ -68,9 +68,15 @@ automatically (until then, styled placeholder frames render):
 | `ultrapro-automation.png` | Systems → Automation & AI tooling |
 | `ultrapro-analytics.png` | Systems → Analytics & transparency |
 | `ultrapro-crm.png` | Systems → Fan CRM depth |
-| `earnings-1.png` … `earnings-3.png` | Results → earnings dashboards |
+| `earnings-newpage.png` | Results → new-page launch ($0 → $37.3k net, 30 days) |
+| `earnings-takeover.png` | Results → mid-March takeover ($148k → $222.8k) |
+| `earnings-alltime.png` | Results → $2.4M lifetime page (+119% after switch) |
+| `earnings-yearbook.png` | Results → year of $60–76k months |
+| `chat-1.png` … `chat-3.png` | Process → real pod conversations (4:3 crops) |
 
-16:9 crops look best. Redact fan names/handles before committing.
+Earnings shots: 16:9 crops look best. **Redact fan names/handles in the
+chat screenshots before committing** — the "Wi/Mi" avatars, fan display
+names, and tag rows are visible in raw captures.
 
 ### Renaming the brand
 

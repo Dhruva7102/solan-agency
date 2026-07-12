@@ -11,10 +11,12 @@ export default function ScreenshotSlot({
   file,
   label,
   className = "",
+  aspect = "aspect-[16/9]",
 }: {
   file: string;
   label: string;
   className?: string;
+  aspect?: string;
 }) {
   const [loaded, setLoaded] = useState(false);
 
@@ -29,12 +31,14 @@ export default function ScreenshotSlot({
           onLoad={() => setLoaded(true)}
           className={
             loaded
-              ? "aspect-[16/9] w-full object-cover object-top"
+              ? `${aspect} w-full object-cover object-top`
               : "absolute h-0 w-0 opacity-0"
           }
         />
         {!loaded && (
-          <div className="flex aspect-[16/9] flex-col items-center justify-center gap-3 bg-[radial-gradient(400px_200px_at_50%_40%,rgba(210,172,97,0.06),transparent)] px-6 text-center">
+          <div
+            className={`flex ${aspect} flex-col items-center justify-center gap-3 bg-[radial-gradient(400px_200px_at_50%_40%,rgba(210,172,97,0.06),transparent)] px-6 text-center`}
+          >
             <svg
               width="28"
               height="28"

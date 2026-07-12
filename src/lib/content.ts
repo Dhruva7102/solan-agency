@@ -549,43 +549,70 @@ export const RESULTS = {
     desc: "Models who join this team, stay. Agencies churn models when performance stalls and trust breaks; our retention comes from removing both failure modes — transparent systems and a revenue floor most models have never seen.",
     placeholderNote: "[exact retention % and timeframe — insert when confirmed]",
   },
+  // Real trajectories from the founding team's current books (dashboards below).
   caseStudies: [
     {
-      tag: "Case study — placeholder",
-      title: "Mid-tier creator, self-run page",
-      before: "[$X/mo]",
-      after: "[$4X+/mo]",
-      timeframe: "[first 30 days]",
+      tag: "Launch",
+      title: "New page — first 30 days on our systems",
+      before: "$0",
+      after: "$37.3k net",
+      timeframe: "first 30 days",
       story:
-        "Placeholder narrative: where she started, what we changed (pod + pricing architecture + winbacks), what happened by day 30. Replace with a real anonymized story.",
+        "Page went live mid-April with the pod, pricing architecture and funnel running from day one: 5,700+ subs in the first month, $46.6k gross / $37.3k net, and a top 0.27% creator ranking out of the gate.",
     },
     {
-      tag: "Case study — placeholder",
-      title: "Established page, leaving another agency",
-      before: "[$X/mo]",
-      after: "[$X × uplift/mo]",
-      timeframe: "[90 days]",
+      tag: "Takeover",
+      title: "Established page — team takes over mid-March",
+      before: "~$2k/day",
+      after: "$222.8k/mo",
+      timeframe: "the next month",
       story:
-        "Placeholder narrative: what the previous agency's backend was missing, what Ultra Pro attribution surfaced in week one, and the compounding effect by month three.",
+        "Flat at roughly $2k a day for months. The team took over on March 17; daily revenue hit $10–20k within two weeks, closing March at $148.4k — then $222.8k in April and $173.5k in May.",
     },
     {
-      tag: "Case study — placeholder",
-      title: "New creator, first agency",
-      before: "[$X/mo]",
-      after: "[$X × uplift/mo]",
-      timeframe: "[6 months]",
+      tag: "Plateau broken",
+      title: "$2.4M-lifetime page, stuck — then switched",
+      before: "$28.5k/mo",
+      after: "$80k+/mo",
+      timeframe: "90 days",
       story:
-        "Placeholder narrative: building from a small base — marketing funnel + chatting pod from day one, and what the growth curve looked like.",
+        "A veteran page ($2.4M all-time) plateaued under its old setup: $28.5k in March. On our systems: $35.9k in April, $80.1k in May (+119%), $82.9k in June — with messages driving ~$66k net of it.",
     },
   ],
   screenshots: [
-    { file: "earnings-1.png", label: "Earnings dashboard — anonymized" },
-    { file: "earnings-2.png", label: "Month-over-month growth — anonymized" },
-    { file: "earnings-3.png", label: "Chat-driven revenue attribution — anonymized" },
+    {
+      file: "earnings-newpage.png",
+      label: "Launch — $0 → $37.3k net in the first 30 days (top 0.27%)",
+    },
+    {
+      file: "earnings-takeover.png",
+      label: "Takeover Mar 17 — ~$2k/day to $10–20k/day; $222.8k the next month",
+    },
+    {
+      file: "earnings-alltime.png",
+      label: "$2.4M lifetime page — $28.5k → $80k+/mo after switching (+119%)",
+    },
+    {
+      file: "earnings-yearbook.png",
+      label: "A year of $60–76k months — messages driving $58k of the last 30 days",
+    },
   ],
 };
 
 /* ————————————————— Calculator ————————————————— */
+
+/* Chat examples shown on /process (redact fan names/handles before adding files) */
+export const CHAT_EXAMPLES = {
+  eyebrow: "The real thing",
+  heading: "Actual conversations, run by our pods.",
+  intro:
+    "Not scripts — live conversations from pages the founding team runs today. Notice the pacing: rapport first, persona held, and the PPV lands inside the conversation. Fan names and media are redacted.",
+  shots: [
+    { file: "chat-1.png", label: "Morning check-in → $40 PPV unlock, in persona" },
+    { file: "chat-2.png", label: "Custom request handled — $350 prospect logged in Ultra Pro" },
+    { file: "chat-3.png", label: "Escalating session — sequenced sends, each one paid" },
+  ],
+};
 
 export const CALC = {
   eyebrow: "Revenue calculator",

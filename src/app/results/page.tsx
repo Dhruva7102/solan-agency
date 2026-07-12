@@ -39,13 +39,15 @@ export default function ResultsPage() {
         <SectionHeading
           eyebrow="Case studies"
           heading="Three trajectories, anonymized."
-          intro="Templates below are marked as placeholders until real anonymized numbers are dropped in — every figure on this page should be defensible on a call."
+          intro="Real pages from the founding team's current books — names removed, dashboards below. Every figure here is defensible on your call."
         />
         <div className="mt-10 grid gap-4 lg:grid-cols-3">
           {RESULTS.caseStudies.map((cs, i) => (
             <Reveal key={cs.title} delay={i * 0.08} className="h-full">
               <div className="card flex h-full flex-col p-7">
-                <p className="placeholder-chip self-start">{cs.tag}</p>
+                <p className="eyebrow self-start rounded-full border border-gold-dim/50 px-3 py-1 !text-[10px]">
+                  {cs.tag}
+                </p>
                 <h3 className="display mt-4 text-lg text-ink">{cs.title}</h3>
                 <div className="my-6 flex items-center gap-4">
                   <div>
@@ -77,7 +79,7 @@ export default function ResultsPage() {
           eyebrow="Receipts"
           heading="Real dashboards, names removed."
         />
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2">
           {RESULTS.screenshots.map((shot, i) => (
             <Reveal key={shot.file} delay={i * 0.08}>
               <ScreenshotSlot file={shot.file} label={shot.label} />
