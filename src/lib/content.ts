@@ -601,6 +601,37 @@ export const RESULTS = {
 
 /* ————————————————— Calculator ————————————————— */
 
+export const FAQ = {
+  eyebrow: "Fair questions",
+  heading: "The things models actually ask us.",
+  items: [
+    {
+      q: "I already have chatters I trust. Do I have to give them up?",
+      a: "No. That's exactly what the Systems & Consulting tier is for — we put your existing team on Ultra Pro rails, build your SOPs, and train them. Plenty of models also blend: your chatters keep their shifts, our pod covers nights and overflow. You choose the mix.",
+    },
+    {
+      q: "How much new content will I have to shoot?",
+      a: "Less than you'd think, used better than it is now. Your existing library gets catalogued in Ultra Pro and sequenced properly first. The weekly content plan is built from what your data says converts — and it's sent for your approval, scoped to what you're comfortable shooting. Customs are always your call, case by case.",
+    },
+    {
+      q: "How fast do I actually see results?",
+      a: "Your pod goes live in week three of onboarding, supervised. The 4× minimum on chat-driven revenue is a first-month bar, measured against your own pre-Solan baseline at the day-30 review. If the systems are working, you see it in your live dashboard well before we tell you.",
+    },
+    {
+      q: "What can the chatters see, and can they go rogue?",
+      a: "Chatters work inside Ultra Pro with access scoped to their shift — your persona doc and boundaries live in front of them, and every message they send is logged, attributed and QA-scored. Anything outside your SOPs escalates to a human with authority instead of being improvised. You can audit any conversation, any time.",
+    },
+    {
+      q: "What happens if I want to leave?",
+      a: "You leave — cleanly. No lock-in contracts. Your page, your fans, your content and the SOPs we built around you go with you. We keep models by performing; retention through paperwork is how the rest of the industry ended up with its reputation.",
+    },
+    {
+      q: "My page is small. Is this for me?",
+      a: "Yes — some of our best trajectories started at zero (see Results: $0 to $37.3k net in the first 30 days). Tiers exist so you can start where you are: systems-only at 30% if you want rails, the full engine if you want a team.",
+    },
+  ],
+};
+
 /* Chat examples shown on /process (redact fan names/handles before adding files) */
 export const CHAT_EXAMPLES = {
   eyebrow: "The real thing",

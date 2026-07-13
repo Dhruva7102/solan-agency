@@ -40,10 +40,10 @@ export default function SystemsPage() {
               intro={dim.pitch}
             />
             <div className="mt-10 grid items-start gap-8 lg:grid-cols-5">
-              <Reveal className="lg:col-span-3">
+              <Reveal className="min-w-0 lg:col-span-3">
                 <CompareTable rows={dim.rows} />
               </Reveal>
-              <Reveal delay={0.1} className="lg:col-span-2">
+              <Reveal delay={0.1} className="min-w-0 lg:col-span-2">
                 <ScreenshotSlot file={dim.screenshot.file} label={dim.screenshot.label} />
               </Reveal>
             </div>

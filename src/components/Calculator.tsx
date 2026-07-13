@@ -60,6 +60,21 @@ function Slider({
   );
 }
 
+const PRESETS = [
+  {
+    label: "Just starting",
+    values: { subs: 150, subPrice: 7.99, ppv: 400, tips: 100, customs: 0 },
+  },
+  {
+    label: "Established",
+    values: { subs: 1200, subPrice: 9.99, ppv: 3000, tips: 800, customs: 500 },
+  },
+  {
+    label: "Big page",
+    values: { subs: 8000, subPrice: 12.99, ppv: 20000, tips: 4000, customs: 2500 },
+  },
+] as const;
+
 const TIERS = [
   { key: "systems", label: "Systems & Consulting", split: 30, fixed: true },
   { key: "chatting", label: "Chatting & Sexting", split: 30, fixed: true },
@@ -115,7 +130,24 @@ export default function Calculator() {
     <div className="grid items-start gap-6 lg:grid-cols-[380px_1fr]">
       {/* ————— Inputs ————— */}
       <div className="card p-7 lg:sticky lg:top-24">
-        <p className="eyebrow mb-6">Your page today</p>
+        <p className="eyebrow mb-4">Your page today</p>
+        <div className="mb-6 flex flex-wrap gap-2">
+          {PRESETS.map((p) => (
+            <button
+              key={p.label}
+              onClick={() => {
+                setSubs(p.values.subs);
+                setSubPrice(p.values.subPrice);
+                setPpv(p.values.ppv);
+                setTips(p.values.tips);
+                setCustoms(p.values.customs);
+              }}
+              className="rounded-full border border-line px-3.5 py-1.5 text-xs text-ink-2 transition-colors hover:border-gold-dim hover:text-ink"
+            >
+              {p.label}
+            </button>
+          ))}
+        </div>
         <div className="flex flex-col gap-6">
           <Slider
             label="Active subscribers"

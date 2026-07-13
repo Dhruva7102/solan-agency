@@ -1,4 +1,4 @@
-import { SERVICES } from "@/lib/content";
+import { SERVICES, FAQ } from "@/lib/content";
 import { Section, SectionHeading } from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import CtaBand from "@/components/CtaBand";
@@ -57,6 +57,30 @@ export default function ServicesPage() {
             {SERVICES.footnote}
           </p>
         </Reveal>
+      </Section>
+
+      <Section alt className="border-t border-line hairline-b">
+        <SectionHeading eyebrow={FAQ.eyebrow} heading={FAQ.heading} />
+        <div className="mt-10 grid gap-3 lg:grid-cols-2">
+          {FAQ.items.map((item, i) => (
+            <Reveal key={item.q} delay={(i % 2) * 0.06}>
+              <details className="card group px-6 py-1 open:border-gold-dim/60">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-[15px] font-medium text-ink [&::-webkit-details-marker]:hidden">
+                  {item.q}
+                  <span
+                    aria-hidden
+                    className="shrink-0 text-gold transition-transform duration-200 group-open:rotate-45"
+                  >
+                    +
+                  </span>
+                </summary>
+                <p className="border-t border-line pb-5 pt-4 text-sm leading-relaxed text-ink-2">
+                  {item.a}
+                </p>
+              </details>
+            </Reveal>
+          ))}
+        </div>
       </Section>
 
       <CtaBand />

@@ -36,7 +36,8 @@ function LevelMark({ level }: { level: Level }) {
 
 export default function CompareTable({ rows }: { rows: Rows }) {
   return (
-    <div className="card overflow-hidden">
+    <div className="card overflow-x-auto">
+      <div className="min-w-[560px]">
       <div className="grid grid-cols-[1.2fr_1fr_1fr] border-b border-line bg-surface-2 text-xs font-semibold">
         <div className="px-5 py-3.5 text-muted">Capability</div>
         <div className="border-l border-line px-5 py-3.5 text-gold">
@@ -70,6 +71,7 @@ export default function CompareTable({ rows }: { rows: Rows }) {
           </div>
         </div>
       ))}
+      </div>
     </div>
   );
 }

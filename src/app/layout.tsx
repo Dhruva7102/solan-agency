@@ -5,6 +5,7 @@ import { hasAccess } from "@/lib/access";
 import AccessGate from "@/components/AccessGate";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import MotionProvider from "@/components/MotionProvider";
 import { BRAND } from "@/lib/content";
 
 const inter = Inter({
@@ -38,15 +39,17 @@ export default async function RootLayout({
       className={`${inter.variable} ${fraunces.variable} h-full antialiased`}
     >
       <body className="grain min-h-full flex flex-col">
-        {unlocked ? (
-          <>
-            <Nav />
-            <div className="flex-1">{children}</div>
-            <Footer />
-          </>
-        ) : (
-          <AccessGate />
-        )}
+        <MotionProvider>
+          {unlocked ? (
+            <>
+              <Nav />
+              <div className="flex-1">{children}</div>
+              <Footer />
+            </>
+          ) : (
+            <AccessGate />
+          )}
+        </MotionProvider>
       </body>
     </html>
   );

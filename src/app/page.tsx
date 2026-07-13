@@ -12,23 +12,39 @@ import CtaBand from "@/components/CtaBand";
 const SECTION_CARDS = [
   {
     href: "/systems",
+    step: "01",
     title: "The Backend",
     desc: "Ultra Pro vs Inflow — the side-by-side no other agency can show you.",
   },
   {
+    href: "/services",
+    step: "02",
+    title: "Services & Rates",
+    desc: "Transparent 30% single-service tiers — and honest answers to the hard questions.",
+  },
+  {
     href: "/calculator",
+    step: "03",
     title: "Calculator",
     desc: "Put in your numbers. See what 4× on chat-driven revenue looks like.",
   },
   {
     href: "/process",
+    step: "04",
     title: "How We Operate",
     desc: "Watch the actual flows: a fan's DM, an escalation, your first 30 days.",
   },
   {
     href: "/control",
+    step: "05",
     title: "Your Control",
     desc: "Individual onboarding, full dashboard access, no lock-in.",
+  },
+  {
+    href: "/results",
+    step: "06",
+    title: "Results",
+    desc: "$0 → $37.3k launches, $222.8k takeover months, real dashboards.",
   },
 ];
 
@@ -123,15 +139,16 @@ export default function Home() {
           eyebrow="The walkthrough"
           heading="Everything we do, shown — not described."
         />
-        <div className="mt-10 grid gap-4 sm:grid-cols-2">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {SECTION_CARDS.map((card, i) => (
-            <Reveal key={card.href} delay={i * 0.06}>
+            <Reveal key={card.href} delay={(i % 3) * 0.06} className="h-full">
               <Link
                 href={card.href}
                 className="card group flex h-full flex-col justify-between p-7 transition-colors hover:border-gold-dim"
               >
                 <div>
-                  <h3 className="display text-xl text-ink">{card.title}</h3>
+                  <span className="display gold-text text-lg">{card.step}</span>
+                  <h3 className="display mt-2 text-xl text-ink">{card.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-ink-2">
                     {card.desc}
                   </p>
@@ -143,19 +160,6 @@ export default function Home() {
             </Reveal>
           ))}
         </div>
-        <Reveal delay={0.2}>
-          <p className="mt-8 text-sm text-muted">
-            Or see{" "}
-            <Link href="/services" className="text-gold hover:text-gold-bright">
-              services &amp; rates
-            </Link>{" "}
-            and{" "}
-            <Link href="/results" className="text-gold hover:text-gold-bright">
-              results
-            </Link>
-            .
-          </p>
-        </Reveal>
       </Section>
 
       <CtaBand />

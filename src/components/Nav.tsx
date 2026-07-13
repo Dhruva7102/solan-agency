@@ -19,7 +19,10 @@ export default function Nav() {
           </span>
         </Link>
 
-        <nav className="-mb-px flex items-center gap-1 overflow-x-auto whitespace-nowrap [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <nav
+          aria-label="Primary"
+          className="-mb-px flex items-center gap-1 overflow-x-auto whitespace-nowrap [scrollbar-width:none] [mask-image:linear-gradient(90deg,#000_92%,transparent)] sm:[mask-image:none] [&::-webkit-scrollbar]:hidden"
+        >
           {NAV_LINKS.map((link) => {
             const active = pathname === link.href;
             return (
