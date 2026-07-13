@@ -658,7 +658,18 @@ export const FINAL_CTA = {
   heading: "See it with your own numbers.",
   body: "Book a call and we'll walk your actual page through every system on this site — live, on the real dashboards.",
   button: "Book your call",
-  // Replace with the real booking link (Calendly etc.)
-  href: "#book",
-  note: "[Replace href in src/lib/content.ts with your booking link]",
+  // Swap for your Calendly/booking link when ready — this works today.
+  href:
+    "mailto:solandennis@gmail.com?subject=Intro%20call%20%E2%80%94%20Solan&body=Hi%20%E2%80%94%20I%20went%20through%20the%20site%20and%20I%27d%20like%20to%20book%20a%20call.%0A%0AMy%20page%3A%20%0ABest%20times%3A%20",
+};
+
+/* Intro video on the home page — drop media/intro.mp4 (and optionally
+   media/intro-poster.jpg) into /public to activate it. */
+export const INTRO_VIDEO = {
+  eyebrow: "Two minutes, from the founders",
+  heading: "Watch this before you scroll.",
+  file: "intro.mp4",
+  poster: "intro-poster.jpg",
+  caption:
+    "The short version of everything on this site — who we are, what Ultra Pro is, and why models don't leave.",
 };

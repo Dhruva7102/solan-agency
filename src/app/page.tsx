@@ -4,9 +4,11 @@ import {
   HEADLINE_STATS,
   MANIFESTO,
   FOUNDER_AUTHORITY,
+  INTRO_VIDEO,
 } from "@/lib/content";
 import { Section, SectionHeading } from "@/components/Section";
 import Reveal from "@/components/Reveal";
+import VideoSlot from "@/components/VideoSlot";
 import CtaBand from "@/components/CtaBand";
 
 const SECTION_CARDS = [
@@ -94,6 +96,20 @@ export default function Home() {
               </div>
             </Reveal>
           ))}
+        </div>
+      </Section>
+
+      {/* Founder intro video */}
+      <Section className="hairline-b">
+        <div className="mx-auto max-w-3xl">
+          <SectionHeading
+            eyebrow={INTRO_VIDEO.eyebrow}
+            heading={INTRO_VIDEO.heading}
+            center
+          />
+          <Reveal delay={0.1} className="mt-10">
+            <VideoSlot />
+          </Reveal>
         </div>
       </Section>
 

@@ -53,8 +53,8 @@ can't accidentally pitch with them unnoticed:
 | Placeholder | Where |
 |---|---|
 | Exact churn/retention % | `HEADLINE_STATS`, `RESULTS.churn` |
-| Case study numbers & stories (×3) | `RESULTS.caseStudies` |
-| Booking link (Calendly etc.) | `FINAL_CTA.href` |
+| Booking link | `FINAL_CTA.href` — currently a working `mailto:`; swap for Calendly |
+| Founder intro video | drop `public/media/intro.mp4` (+ optional `intro-poster.jpg`) |
 | Partner names | intentionally anonymous — revealed on calls |
 
 ### Dropping in screenshots
