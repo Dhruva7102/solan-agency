@@ -8,8 +8,8 @@
 
 export const BRAND = {
   // Placeholder brand — swap these three lines when the name is decided.
-  name: "Solan",
-  wordmark: "SOLAN",
+  name: "Astor",
+  wordmark: "ASTOR",
   tagline: "A different type of agency.",
   subtag:
     "Founded with the operators behind the industry's largest chatting agency and one of its top full-service agencies — built on infrastructure no other agency has.",
@@ -53,7 +53,7 @@ export const MANIFESTO = {
   heading: "Most agencies ask for your trust. We removed the need for it.",
   paragraphs: [
     "The agency model is broken in one specific way: models hand over their page, their fans, and their income to systems they can't see, run by people they've never met. When it works, they don't know why. When it stops working, they can't prove it.",
-    "Solan was built as the answer. Our backend runs on Ultra Pro — the most advanced CRM, chatting and automation platform in the industry, currently used by no agency outside our partner network. Every message, every sale, every chatter's performance is logged, attributed and visible to you in real time.",
+    "Astor was built as the answer. Our backend runs on Ultra Pro — the most advanced CRM, chatting and automation platform in the industry, currently used by no agency outside our partner network. Every message, every sale, every chatter's performance is logged, attributed and visible to you in real time.",
     "We onboard every model individually. We learn your story, how you speak, what you will and won't sell, and how you want your page run — then we generate SOPs around you. We can do that because we built custom infrastructure to accommodate it. Nobody else has.",
   ],
 };
@@ -451,14 +451,14 @@ export const FLOWS: Flow[] = [
         actor: "model",
         time: "Day 30",
         title: "First monthly review — against your baseline",
-        desc: "Your manager walks you through month one versus your pre-Solan numbers: revenue by stream, attribution, what worked, what's next. The 4× minimum on chat-driven revenue is the bar we expect to clear.",
+        desc: "Your manager walks you through month one versus your pre-Astor numbers: revenue by stream, attribution, what worked, what's next. The 4× minimum on chat-driven revenue is the bar we expect to clear.",
       },
     ],
   },
   {
     key: "rhythm",
     label: "A normal week with us",
-    heading: "The weekly rhythm — what working with Solan feels like",
+    heading: "The weekly rhythm — what working with Astor feels like",
     intro:
       "No black box, no radio silence. This is the standing cadence every model on full management gets.",
     steps: [
@@ -615,7 +615,7 @@ export const FAQ = {
     },
     {
       q: "How fast do I actually see results?",
-      a: "Your pod goes live in week three of onboarding, supervised. The 4× minimum on chat-driven revenue is a first-month bar, measured against your own pre-Solan baseline at the day-30 review. If the systems are working, you see it in your live dashboard well before we tell you.",
+      a: "Your pod goes live in week three of onboarding, supervised. The 4× minimum on chat-driven revenue is a first-month bar, measured against your own pre-Astor baseline at the day-30 review. If the systems are working, you see it in your live dashboard well before we tell you.",
     },
     {
       q: "What can the chatters see, and can they go rogue?",
@@ -660,7 +660,7 @@ export const FINAL_CTA = {
   button: "Book your call",
   // Swap for your Calendly/booking link when ready — this works today.
   href:
-    "mailto:solandennis@gmail.com?subject=Intro%20call%20%E2%80%94%20Solan&body=Hi%20%E2%80%94%20I%20went%20through%20the%20site%20and%20I%27d%20like%20to%20book%20a%20call.%0A%0AMy%20page%3A%20%0ABest%20times%3A%20",
+    "mailto:solandennis@gmail.com?subject=Intro%20call%20%E2%80%94%20Astor&body=Hi%20%E2%80%94%20I%20went%20through%20the%20site%20and%20I%27d%20like%20to%20book%20a%20call.%0A%0AMy%20page%3A%20%0ABest%20times%3A%20",
 };
 
 /* Intro video on the home page — drop media/intro.mp4 (and optionally
