@@ -22,7 +22,7 @@ const SECTION_CARDS = [
     href: "/services",
     step: "02",
     title: "Services & Rates",
-    desc: "Transparent 30% single-service tiers — and honest answers to the hard questions.",
+    desc: "Transparent single-service rates from 15% — and honest answers to the hard questions.",
   },
   {
     href: "/calculator",

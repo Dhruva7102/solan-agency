@@ -76,7 +76,7 @@ const PRESETS = [
 ] as const;
 
 const TIERS = [
-  { key: "systems", label: "Systems & Consulting", split: 30, fixed: true },
+  { key: "systems", label: "Systems & Consulting", split: 15, fixed: true },
   { key: "chatting", label: "Chatting & Sexting", split: 30, fixed: true },
   { key: "growth", label: "Growth", split: 40, fixed: false },
   { key: "full", label: "Full Management", split: 45, fixed: false },
@@ -278,7 +278,8 @@ export default function Calculator() {
         <div className="card p-7">
           <p className="eyebrow mb-2">The split</p>
           <p className="mb-6 text-sm leading-relaxed text-ink-2">
-            Single service lines are a transparent 30%. Stacked tiers carry more
+            Single service lines are a transparent flat rate — 15% for Systems &
+            Consulting, 30% for Chatting & Sexting. Stacked tiers carry more
             overhead and are set individually at onboarding — the slider below is
             illustrative.
           </p>

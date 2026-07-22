@@ -84,11 +84,11 @@ export const SERVICES = {
   eyebrow: "Services & rates",
   heading: "Start with what you need. Stack as you grow.",
   intro:
-    "Every engagement starts at a transparent 30% for a single service line. Stacking services adds real overhead — dedicated staff, more management layers — so combined rates are set individually during onboarding, in writing, before anything starts.",
+    "Every engagement starts at a transparent flat rate — 15% for Systems & Consulting, 30% for Chatting & Sexting. Stacking services adds real overhead — dedicated staff, more management layers — so combined rates are set individually during onboarding, in writing, before anything starts.",
   tiers: [
     {
       name: "Systems & Consulting",
-      rate: "30%",
+      rate: "15%",
       rateNote: "single service line",
       blurb:
         "For models who want to keep running their own page — on professional-grade rails. We install and configure Ultra Pro, build your SOPs, train you and your team, and stay on call.",
@@ -107,6 +107,7 @@ export const SERVICES = {
       blurb:
         "A dedicated 24/7 chatter pod trained on your voice, your boundaries and your fans — run on Ultra Pro with full QA and every conversation visible to you.",
       includes: [
+        "Everything in Systems & Consulting",
         "Dedicated pod — three shifts, round-the-clock coverage",
         "Chatters trained on your persona document",
         "PPV, tips & customs selling with per-fan pricing",
@@ -627,7 +628,7 @@ export const FAQ = {
     },
     {
       q: "My page is small. Is this for me?",
-      a: "Yes — some of our best trajectories started at zero (see Results: $0 to $37.3k net in the first 30 days). Tiers exist so you can start where you are: systems-only at 30% if you want rails, the full engine if you want a team.",
+      a: "Yes — some of our best trajectories started at zero (see Results: $0 to $37.3k net in the first 30 days). Tiers exist so you can start where you are: systems-only at 15% if you want rails, the full engine if you want a team.",
     },
   ],
 };

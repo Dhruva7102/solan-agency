@@ -88,7 +88,7 @@ surfaces, ink). Fonts are set in `src/app/layout.tsx`.
 
 `src/components/Calculator.tsx` — the 4× first-month uplift on chat-driven
 revenue (agency minimum) is the default of the uplift slider; tier splits
-(30% fixed for single service lines, custom for stacked) are in the `TIERS`
+(fixed 15%/30% for single service lines, custom for stacked) are in the `TIERS`
 array there and in `SERVICES` in `content.ts`.
 
 ## Page map
@@ -97,7 +97,7 @@ array there and in `SERVICES` in `content.ts`.
 |---|---|
 | `/` | Positioning, headline stats, manifesto, founder authority |
 | `/systems` | Ultra Pro vs Inflow — 4 dimensions, tables + screenshots |
-| `/services` | Four tiers with transparent 30% base rates |
+| `/services` | Four tiers with transparent base rates (15% systems, 30% chatting) |
 | `/calculator` | Interactive projection with before/after + take-home |
 | `/process` | Animated flows: fan DM, escalation chain, first 30 days, weekly rhythm |
 | `/control` | The model-control pillars (individual onboarding, no lock-in…) |
