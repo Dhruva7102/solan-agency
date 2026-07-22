@@ -1,7 +1,7 @@
 # Solan — Creator Pitch Site
 
 A password-gated, interactive pitch site for walking creators through the
-agency: the Ultra Pro backend (vs Inflow), services & rates, a live revenue
+agency: the Altyr Pro backend (vs Inflow), services & rates, a live revenue
 calculator, animated operational flows, the model-control story, and results.
 
 Built with Next.js (App Router) + Tailwind CSS + Framer Motion. Deploys to
@@ -43,7 +43,7 @@ leaks.
 
 **All copy and data is in [`src/lib/content.ts`](src/lib/content.ts).**
 Every page renders from that one file — brand, stats, service tiers and
-rates, the Ultra Pro vs Inflow comparison rows, the four operational flows,
+rates, the Altyr Pro vs Inflow comparison rows, the four operational flows,
 the control pillars, case studies, and the booking CTA.
 
 Things waiting on real numbers are marked with `placeholder: true` or
@@ -96,7 +96,7 @@ array there and in `SERVICES` in `content.ts`.
 | Route | Purpose |
 |---|---|
 | `/` | Positioning, headline stats, manifesto, founder authority |
-| `/systems` | Ultra Pro vs Inflow — 4 dimensions, tables + screenshots |
+| `/systems` | Altyr Pro vs Inflow — 4 dimensions, tables + screenshots |
 | `/services` | Four tiers with transparent base rates (15% systems, 30% chatting) |
 | `/calculator` | Interactive projection with before/after + take-home |
 | `/process` | Animated flows: fan DM, escalation chain, first 30 days, weekly rhythm |

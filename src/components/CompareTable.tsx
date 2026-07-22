@@ -41,7 +41,7 @@ export default function CompareTable({ rows }: { rows: Rows }) {
       <div className="grid grid-cols-[1.2fr_1fr_1fr] border-b border-line bg-surface-2 text-xs font-semibold">
         <div className="px-5 py-3.5 text-muted">Capability</div>
         <div className="border-l border-line px-5 py-3.5 text-gold">
-          Ultra Pro <span className="ml-1 font-normal text-muted">(us)</span>
+          Altyr Pro <span className="ml-1 font-normal text-muted">(us)</span>
         </div>
         <div className="border-l border-line px-5 py-3.5 text-ink-2">
           Inflow <span className="ml-1 font-normal text-muted">(most agencies)</span>

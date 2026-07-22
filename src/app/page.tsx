@@ -16,7 +16,7 @@ const SECTION_CARDS = [
     href: "/systems",
     step: "01",
     title: "The Backend",
-    desc: "Ultra Pro vs Inflow — the side-by-side no other agency can show you.",
+    desc: "Altyr Pro vs Inflow — the side-by-side no other agency can show you.",
   },
   {
     href: "/services",

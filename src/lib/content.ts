@@ -53,7 +53,7 @@ export const MANIFESTO = {
   heading: "Most agencies ask for your trust. We removed the need for it.",
   paragraphs: [
     "The agency model is broken in one specific way: models hand over their page, their fans, and their income to systems they can't see, run by people they've never met. When it works, they don't know why. When it stops working, they can't prove it.",
-    "Astor was built as the answer. Our backend runs on Ultra Pro — the most advanced CRM, chatting and automation platform in the industry, currently used by no agency outside our partner network. Every message, every sale, every chatter's performance is logged, attributed and visible to you in real time.",
+    "Astor was built as the answer. Our backend runs on Altyr Pro — the most advanced CRM, chatting and automation platform in the industry, currently used by no agency outside our partner network. Every message, every sale, every chatter's performance is logged, attributed and visible to you in real time.",
     "We onboard every model individually. We learn your story, how you speak, what you will and won't sell, and how you want your page run — then we generate SOPs around you. We can do that because we built custom infrastructure to accommodate it. Nobody else has.",
   ],
 };
@@ -91,9 +91,9 @@ export const SERVICES = {
       rate: "15%",
       rateNote: "single service line",
       blurb:
-        "For models who want to keep running their own page — on professional-grade rails. We install and configure Ultra Pro, build your SOPs, train you and your team, and stay on call.",
+        "For models who want to keep running their own page — on professional-grade rails. We install and configure Altyr Pro, build your SOPs, train you and your team, and stay on call.",
       includes: [
-        "Ultra Pro setup, configured to your page",
+        "Altyr Pro setup, configured to your page",
         "Custom SOPs generated around how you work",
         "Pricing architecture & PPV sequencing playbook",
         "Training for you (and your existing chatters)",
@@ -105,7 +105,7 @@ export const SERVICES = {
       rate: "30%",
       rateNote: "single service line",
       blurb:
-        "A dedicated 24/7 chatter pod trained on your voice, your boundaries and your fans — run on Ultra Pro with full QA and every conversation visible to you.",
+        "A dedicated 24/7 chatter pod trained on your voice, your boundaries and your fans — run on Altyr Pro with full QA and every conversation visible to you.",
       includes: [
         "Everything in Systems & Consulting",
         "Dedicated pod — three shifts, round-the-clock coverage",
@@ -149,7 +149,7 @@ export const SERVICES = {
     "Why do stacked rates increase? Because each added service line means dedicated humans on your page — not because we can. You'll see exactly what the overhead pays for before you sign anything.",
 };
 
-/* ————————————————— Ultra Pro vs Inflow ————————————————— */
+/* ————————————————— Altyr Pro vs Inflow ————————————————— */
 
 type Cell = { level: "full" | "partial" | "none"; note: string };
 
@@ -163,9 +163,9 @@ export type CompareDimension = {
 
 export const ULTRAPRO = {
   eyebrow: "The backend",
-  heading: "Run on Ultra Pro. Compared against Inflow.",
+  heading: "Run on Altyr Pro. Compared against Inflow.",
   intro:
-    "Most agencies run on Inflow. Ours runs on Ultra Pro — the most advanced CRM, chatting and automation platform in the industry, currently used by no agency outside our partner network. Here's the difference, dimension by dimension. Screenshots below are from our live systems.",
+    "Most agencies run on Inflow. Ours runs on Altyr Pro — the most advanced CRM, chatting and automation platform in the industry, currently used by no agency outside our partner network. Here's the difference, dimension by dimension. Screenshots below are from our live systems.",
   disclaimer:
     "Comparison reflects our operating experience across both platforms. Verify current Inflow capabilities independently.",
 };
@@ -175,8 +175,8 @@ export const COMPARE_DIMENSIONS: CompareDimension[] = [
     key: "qa",
     title: "Chatter quality control",
     pitch:
-      "The single biggest fear models have — 'will the chatters sound like me?' — is an engineering problem, and Ultra Pro solved it. Every conversation is auditable at message level, every chatter carries a scorecard, and your persona document is enforced, not suggested.",
-    screenshot: { file: "ultrapro-qa.png", label: "Ultra Pro — message-level QA view" },
+      "The single biggest fear models have — 'will the chatters sound like me?' — is an engineering problem, and Altyr Pro solved it. Every conversation is auditable at message level, every chatter carries a scorecard, and your persona document is enforced, not suggested.",
+    screenshot: { file: "ultrapro-qa.png", label: "Altyr Pro — message-level QA view" },
     rows: [
       {
         feature: "Message-level QA auditing",
@@ -204,8 +204,8 @@ export const COMPARE_DIMENSIONS: CompareDimension[] = [
     key: "automation",
     title: "Automation & AI tooling",
     pitch:
-      "Revenue on your page shouldn't depend on whether tonight's shift is having a good night. Ultra Pro sequences PPV sends, follow-ups and re-engagement automatically — chatters close, the system never forgets.",
-    screenshot: { file: "ultrapro-automation.png", label: "Ultra Pro — automation & sequencing" },
+      "Revenue on your page shouldn't depend on whether tonight's shift is having a good night. Altyr Pro sequences PPV sends, follow-ups and re-engagement automatically — chatters close, the system never forgets.",
+    screenshot: { file: "ultrapro-automation.png", label: "Altyr Pro — automation & sequencing" },
     rows: [
       {
         feature: "Mass DM with fan segmentation",
@@ -233,8 +233,8 @@ export const COMPARE_DIMENSIONS: CompareDimension[] = [
     key: "analytics",
     title: "Analytics & transparency",
     pitch:
-      "This is where 'a different type of agency' stops being a slogan. Ultra Pro gives you the same live dashboard we use: revenue attributed to every chatter, every send, every fan. You never have to ask how your page is doing — or take our word for it.",
-    screenshot: { file: "ultrapro-analytics.png", label: "Ultra Pro — live revenue attribution" },
+      "This is where 'a different type of agency' stops being a slogan. Altyr Pro gives you the same live dashboard we use: revenue attributed to every chatter, every send, every fan. You never have to ask how your page is doing — or take our word for it.",
+    screenshot: { file: "ultrapro-analytics.png", label: "Altyr Pro — live revenue attribution" },
     rows: [
       {
         feature: "Real-time revenue attribution",
@@ -262,8 +262,8 @@ export const COMPARE_DIMENSIONS: CompareDimension[] = [
     key: "crm",
     title: "Fan CRM depth",
     pitch:
-      "Your top fans notice when 'you' forget their name between shifts. Ultra Pro's fan CRM keeps every profile, preference and inside joke persistent — so the 4am chatter picks up exactly where the 8pm chatter left off.",
-    screenshot: { file: "ultrapro-crm.png", label: "Ultra Pro — fan profile & spend history" },
+      "Your top fans notice when 'you' forget their name between shifts. Altyr Pro's fan CRM keeps every profile, preference and inside joke persistent — so the 4am chatter picks up exactly where the 8pm chatter left off.",
+    screenshot: { file: "ultrapro-crm.png", label: "Altyr Pro — fan profile & spend history" },
     rows: [
       {
         feature: "Persistent fan profiles across shifts",
@@ -313,7 +313,7 @@ export const ACTORS: Record<
 > = {
   fan: { label: "Fan", color: "#4c86d8" },
   chatter: { label: "Chatter", color: "#b9831f" },
-  system: { label: "Ultra Pro", color: "#8a8478" },
+  system: { label: "Altyr Pro", color: "#8a8478" },
   lead: { label: "Pod Lead", color: "#c24e7e" },
   manager: { label: "Manager", color: "#2e9b5e" },
   model: { label: "You", color: "#d2ac61" },
@@ -336,7 +336,7 @@ export const FLOWS: Flow[] = [
       {
         actor: "system",
         time: "11:47 PM",
-        title: "Ultra Pro loads his full profile",
+        title: "Altyr Pro loads his full profile",
         desc: "Spend history, preferences, past conversations, the nickname he likes, the price point he converts at — surfaced beside the chat before a word is typed.",
       },
       {
@@ -355,7 +355,7 @@ export const FLOWS: Flow[] = [
         actor: "system",
         time: "12:18 AM",
         title: "The right PPV, at his price",
-        desc: "Ultra Pro suggests content he hasn't seen at the price band he historically converts at. The chatter sends it wrapped in the conversation, not as a broadcast.",
+        desc: "Altyr Pro suggests content he hasn't seen at the price band he historically converts at. The chatter sends it wrapped in the conversation, not as a broadcast.",
       },
       {
         actor: "fan",
@@ -383,7 +383,7 @@ export const FLOWS: Flow[] = [
         actor: "chatter",
         title: "Level 1 — the chatter flags it",
         time: "Immediately",
-        desc: "A fan asks for something outside your boundaries doc, disputes a payment, or makes an unusual request. The chatter doesn't improvise — it's flagged in Ultra Pro and the conversation is tagged.",
+        desc: "A fan asks for something outside your boundaries doc, disputes a payment, or makes an unusual request. The chatter doesn't improvise — it's flagged in Altyr Pro and the conversation is tagged.",
       },
       {
         actor: "lead",
@@ -406,7 +406,7 @@ export const FLOWS: Flow[] = [
       {
         actor: "system",
         title: "Every escalation leaves a paper trail",
-        desc: "Who flagged it, who decided, what was decided — logged in Ultra Pro and visible to you. Nothing about your page gets decided in a group chat you can't see.",
+        desc: "Who flagged it, who decided, what was decided — logged in Altyr Pro and visible to you. Nothing about your page gets decided in a group chat you can't see.",
       },
     ],
     footnote: "24/7 coverage means the chain works at 4 AM on a Sunday exactly like it works on a Tuesday afternoon.",
@@ -433,7 +433,7 @@ export const FLOWS: Flow[] = [
       {
         actor: "system",
         time: "Week 2",
-        title: "Ultra Pro is configured for your page",
+        title: "Altyr Pro is configured for your page",
         desc: "Fan data imported, segments built, automation sequences set to your pricing architecture, your dashboard access provisioned. Your page's history becomes usable intelligence.",
       },
       {
@@ -517,7 +517,7 @@ export const CONTROL = {
     },
     {
       title: "Full dashboard access",
-      desc: "You get the same Ultra Pro view we work from: live revenue attribution, every chat log, every chatter's scorecard. Nothing is summarized for you, filtered for you, or hidden from you.",
+      desc: "You get the same Altyr Pro view we work from: live revenue attribution, every chat log, every chatter's scorecard. Nothing is summarized for you, filtered for you, or hidden from you.",
     },
     {
       title: "No lock-in. Clean exit.",
@@ -529,7 +529,7 @@ export const CONTROL = {
     },
     {
       title: "Hard boundaries, enforced by software",
-      desc: "What you will and won't sell isn't a note in a group chat — it lives in Ultra Pro's workflow, in front of every chatter, on every shift. Boundary-adjacent requests escalate to humans instead of being improvised.",
+      desc: "What you will and won't sell isn't a note in a group chat — it lives in Altyr Pro's workflow, in front of every chatter, on every shift. Boundary-adjacent requests escalate to humans instead of being improvised.",
     },
     {
       title: "You set your involvement level",
@@ -608,11 +608,11 @@ export const FAQ = {
   items: [
     {
       q: "I already have chatters I trust. Do I have to give them up?",
-      a: "No. That's exactly what the Systems & Consulting tier is for — we put your existing team on Ultra Pro rails, build your SOPs, and train them. Plenty of models also blend: your chatters keep their shifts, our pod covers nights and overflow. You choose the mix.",
+      a: "No. That's exactly what the Systems & Consulting tier is for — we put your existing team on Altyr Pro rails, build your SOPs, and train them. Plenty of models also blend: your chatters keep their shifts, our pod covers nights and overflow. You choose the mix.",
     },
     {
       q: "How much new content will I have to shoot?",
-      a: "Less than you'd think, used better than it is now. Your existing library gets catalogued in Ultra Pro and sequenced properly first. The weekly content plan is built from what your data says converts — and it's sent for your approval, scoped to what you're comfortable shooting. Customs are always your call, case by case.",
+      a: "Less than you'd think, used better than it is now. Your existing library gets catalogued in Altyr Pro and sequenced properly first. The weekly content plan is built from what your data says converts — and it's sent for your approval, scoped to what you're comfortable shooting. Customs are always your call, case by case.",
     },
     {
       q: "How fast do I actually see results?",
@@ -620,7 +620,7 @@ export const FAQ = {
     },
     {
       q: "What can the chatters see, and can they go rogue?",
-      a: "Chatters work inside Ultra Pro with access scoped to their shift — your persona doc and boundaries live in front of them, and every message they send is logged, attributed and QA-scored. Anything outside your SOPs escalates to a human with authority instead of being improvised. You can audit any conversation, any time.",
+      a: "Chatters work inside Altyr Pro with access scoped to their shift — your persona doc and boundaries live in front of them, and every message they send is logged, attributed and QA-scored. Anything outside your SOPs escalates to a human with authority instead of being improvised. You can audit any conversation, any time.",
     },
     {
       q: "What happens if I want to leave?",
@@ -641,7 +641,7 @@ export const CHAT_EXAMPLES = {
     "Not scripts — live conversations from pages the founding team runs today. Notice the pacing: rapport first, persona held, and the PPV lands inside the conversation. Fan names and media are redacted.",
   shots: [
     { file: "chat-1.png", label: "Morning check-in → $40 PPV unlock, in persona" },
-    { file: "chat-2.png", label: "Custom request handled — $350 prospect logged in Ultra Pro" },
+    { file: "chat-2.png", label: "Custom request handled — $350 prospect logged in Altyr Pro" },
     { file: "chat-3.png", label: "Escalating session — sequenced sends, each one paid" },
   ],
 };
@@ -672,5 +672,5 @@ export const INTRO_VIDEO = {
   file: "intro.mp4",
   poster: "intro-poster.jpg",
   caption:
-    "The short version of everything on this site — who we are, what Ultra Pro is, and why models don't leave.",
+    "The short version of everything on this site — who we are, what Altyr Pro is, and why models don't leave.",
 };
