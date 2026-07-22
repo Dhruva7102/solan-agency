@@ -616,7 +616,7 @@ export const FAQ = {
     },
     {
       q: "How fast do I actually see results?",
-      a: "Your pod goes live in week three of onboarding, supervised. The 4× minimum on chat-driven revenue is a first-month bar, measured against your own pre-Astor baseline at the day-30 review. If the systems are working, you see it in your live dashboard well before we tell you.",
+      a: "Your pod goes live after thorough onboarding, supervised. The 4× minimum on chat-driven revenue is a first-month bar, measured against your own pre-Astor baseline at the day-30 review. If the systems are working, you see it in your live dashboard well before we tell you.",
     },
     {
       q: "What can the chatters see, and can they go rogue?",
