@@ -217,7 +217,7 @@ export default function Calculator() {
               max={25}
               step={1}
               onChange={setGrowth}
-              hint="Your assumption — marketing engine compounds; set it to whatever you believe."
+              hint="Your assumption: the marketing engine compounds, so set it to whatever you believe."
             />
           </div>
         </div>
@@ -278,10 +278,10 @@ export default function Calculator() {
         <div className="card p-7">
           <p className="eyebrow mb-2">The split</p>
           <p className="mb-6 text-sm leading-relaxed text-ink-2">
-            Single service lines are a transparent flat rate — 15% for Systems &
+            Single service lines are a flat rate: 15% for Systems &
             Consulting, 30% for Chatting & Sexting. Stacked tiers carry more
-            overhead and are set individually at onboarding — the slider below is
-            illustrative.
+            overhead and are set individually at onboarding, so the slider below
+            is illustrative.
           </p>
           <div className="grid gap-2 sm:grid-cols-2">
             {TIERS.map((t) => (
@@ -298,7 +298,7 @@ export default function Calculator() {
                   {t.label}
                 </span>
                 <span className="mt-0.5 block text-xs text-muted">
-                  {t.fixed ? `${t.split}% — fixed` : "custom — set at onboarding"}
+                  {t.fixed ? `${t.split}% fixed` : "custom, set at onboarding"}
                 </span>
               </button>
             ))}

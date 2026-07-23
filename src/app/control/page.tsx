@@ -43,8 +43,8 @@ export default function ControlPage() {
             <p className="eyebrow mb-4">The test</p>
             <p className="display text-2xl leading-snug text-ink sm:text-3xl">
               Ask any other agency for live dashboard access, your chat logs,
-              and a no-lock-in contract —{" "}
-              <span className="gold-text">then ask us.</span>
+              and a no-lock-in contract.{" "}
+              <span className="gold-text">Then ask us.</span>
             </p>
             <p className="mt-6 text-sm text-ink-2">
               See exactly how the transparency works in{" "}

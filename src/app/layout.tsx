@@ -20,7 +20,7 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: `${BRAND.name} — ${BRAND.tagline}`,
+  title: `${BRAND.name} · ${BRAND.tagline}`,
   description:
     "A private walkthrough of how our agency runs creator pages: systems, rates, and results.",
   robots: { index: false, follow: false },

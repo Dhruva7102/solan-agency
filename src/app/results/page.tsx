@@ -39,7 +39,7 @@ export default function ResultsPage() {
         <SectionHeading
           eyebrow="Case studies"
           heading="Three trajectories, anonymized."
-          intro="Real pages from the founding team's current books — names removed, dashboards below. Every figure here is defensible on your call."
+          intro="Real pages from the founding team's current books, names removed, dashboards below. Every figure here is defensible on your call."
         />
         <div className="mt-10 grid gap-4 lg:grid-cols-3">
           {RESULTS.caseStudies.map((cs, i) => (
@@ -94,8 +94,8 @@ export default function ResultsPage() {
           <div className="mx-auto max-w-2xl text-center">
             <p className="eyebrow mb-4">{FOUNDER_AUTHORITY.eyebrow}</p>
             <p className="display text-2xl leading-snug text-ink sm:text-3xl">
-              The track records behind these numbers are shared —{" "}
-              <span className="gold-text">with names</span> — on your call.
+              The track records behind these numbers are shared,{" "}
+              <span className="gold-text">with names</span>, on your call.
             </p>
           </div>
         </Reveal>

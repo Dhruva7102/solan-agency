@@ -32,7 +32,7 @@ export default function Footer() {
           </a>
         </div>
         <p className="mt-12 text-xs leading-relaxed text-muted">
-          Confidential. This material is provided for the recipient only —
+          Confidential. This material is provided for the recipient only, so
           please don&apos;t redistribute the link or access code. Revenue
           figures shown in calculators are illustrative models, not guarantees.
         </p>

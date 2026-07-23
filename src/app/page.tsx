@@ -16,13 +16,13 @@ const SECTION_CARDS = [
     href: "/systems",
     step: "01",
     title: "The Backend",
-    desc: "Altyr Pro vs Inflow — the side-by-side no other agency can show you.",
+    desc: "Altyr Pro vs Inflow: the side-by-side no other agency can show you.",
   },
   {
     href: "/services",
     step: "02",
     title: "Services & Rates",
-    desc: "Transparent single-service rates from 15% — and honest answers to the hard questions.",
+    desc: "Transparent single-service rates from 15%, and honest answers to the hard questions.",
   },
   {
     href: "/calculator",
@@ -153,7 +153,7 @@ export default function Home() {
       <Section>
         <SectionHeading
           eyebrow="The walkthrough"
-          heading="Everything we do, shown — not described."
+          heading="Everything we do, shown, not described."
         />
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {SECTION_CARDS.map((card, i) => (
