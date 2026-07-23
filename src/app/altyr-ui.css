@@ -1,0 +1,235 @@
+/* ═══════════════════════════════════════════════════════════════════
+   ALTYR PRODUCT UI — faithful design-system subset, scoped to .altyr-ui
+   Mirrors the real Altyr Pro "Obsidian Clarity" language (pure-black
+   canvas, raised glass surfaces, rose→amber accent, platinum numerals,
+   tier badges) so the product renders on this pitch site read as the
+   genuine article. No proprietary component source is copied — only the
+   published design tokens/recipes, reimplemented here.
+   ═══════════════════════════════════════════════════════════════════ */
+
+.altyr-ui {
+  --altyr-canvas: #000000;
+  --altyr-canvas-wash: radial-gradient(130% 70% at 50% 0%, rgba(52, 52, 56, 0.28) 0%, transparent 55%);
+
+  --altyr-surface-bg: rgba(255, 255, 255, 0.04);
+  --altyr-surface-border: rgba(255, 255, 255, 0.09);
+  --altyr-surface-inset-bg: rgba(0, 0, 0, 0.28);
+  --altyr-surface-inset-border: rgba(255, 255, 255, 0.05);
+
+  --altyr-elev: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 1px 0 rgba(0, 0, 0, 0.3),
+    0 14px 34px -22px rgba(0, 0, 0, 0.8);
+
+  --altyr-text-1: #e8eaef;
+  --altyr-text-2: rgba(214, 216, 221, 0.65);
+  --altyr-text-3: rgba(214, 216, 221, 0.45);
+
+  --altyr-rose: #c0387a;
+  --altyr-amber: #e08a38;
+  --altyr-rose-fill: rgba(192, 56, 122, 0.08);
+  --altyr-amber-fill: rgba(224, 138, 56, 0.08);
+  --altyr-rose-border: rgba(192, 56, 122, 0.4);
+  --altyr-amber-border: rgba(224, 138, 56, 0.35);
+  --altyr-accent-gradient: linear-gradient(90deg, #c0387a 0%, #e08a38 100%);
+  --altyr-platinum-gradient: linear-gradient(180deg, #ffffff 0%, #c9ccd2 60%, #7b7e85 100%);
+
+  --altyr-tier-diamond: #e8eaef;
+  --altyr-tier-platinum: #c5c7cc;
+  --altyr-tier-gold: #c9a961;
+  --altyr-tier-diamond-border: rgba(214, 216, 221, 0.45);
+  --altyr-tier-platinum-border: rgba(214, 216, 221, 0.28);
+  --altyr-tier-gold-border: rgba(201, 169, 106, 0.45);
+
+  --altyr-border: rgba(255, 255, 255, 0.09);
+  --altyr-border-soft: rgba(255, 255, 255, 0.06);
+
+  --altyr-font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --altyr-font-text: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --altyr-r-sm: 8px;
+  --altyr-r-md: 12px;
+  --altyr-r-lg: 18px;
+  --altyr-r-pill: 999px;
+
+  position: relative;
+  isolation: isolate;
+  background: var(--altyr-canvas);
+  color: var(--altyr-text-1);
+  font-family: var(--altyr-font-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ambient cool wash at the top of the plate */
+.altyr-ui::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--altyr-canvas-wash);
+  pointer-events: none;
+  z-index: 0;
+}
+.altyr-ui > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Raised surface — THE signature element */
+.altyr-ui .altyr-surface {
+  background: var(--altyr-surface-bg);
+  border: 1px solid var(--altyr-surface-border);
+  border-radius: var(--altyr-r-lg);
+  box-shadow: var(--altyr-elev);
+}
+.altyr-ui .altyr-inset {
+  background: var(--altyr-surface-inset-bg);
+  border: 1px solid var(--altyr-surface-inset-border);
+  border-radius: var(--altyr-r-md);
+}
+
+/* Platinum numeral — engraved-metal finish for hero counters.
+   Faithful to the real Altyr Pro design system's signature numeral. */
+/* impeccable-disable gradient-text -- authentic Altyr platinum-numeral finish, core to the product identity */
+.altyr-ui .altyr-numeric {
+  font-family: var(--altyr-font-display);
+  font-weight: 200;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  color: transparent;
+  background: var(--altyr-platinum-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-variant-numeric: tabular-nums;
+}
+.altyr-ui .altyr-display-num {
+  font-family: var(--altyr-font-display);
+  font-weight: 200;
+  letter-spacing: -0.03em;
+  color: var(--altyr-text-1);
+  font-variant-numeric: tabular-nums;
+}
+.altyr-ui .altyr-eyebrow {
+  font-family: var(--altyr-font-text);
+  font-weight: 400;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--altyr-text-3);
+}
+
+/* Chips & tier badges */
+.altyr-ui .altyr-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: var(--altyr-r-pill);
+  border: 1px solid var(--altyr-border);
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 0.68rem;
+  color: var(--altyr-text-2);
+  white-space: nowrap;
+}
+.altyr-ui .altyr-chip-rose {
+  border-color: var(--altyr-rose-border);
+  background: var(--altyr-rose-fill);
+  color: var(--altyr-rose);
+}
+.altyr-ui .altyr-chip-amber {
+  border-color: var(--altyr-amber-border);
+  background: var(--altyr-amber-fill);
+  color: var(--altyr-amber);
+  font-weight: 500;
+}
+.altyr-ui .altyr-tier {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--altyr-r-pill);
+  border: 1px solid var(--altyr-tier-platinum-border);
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--altyr-tier-platinum);
+}
+.altyr-ui .altyr-tier-diamond {
+  color: var(--altyr-tier-diamond);
+  border-color: var(--altyr-tier-diamond-border);
+}
+.altyr-ui .altyr-tier-gold {
+  color: var(--altyr-tier-gold);
+  border-color: var(--altyr-tier-gold-border);
+}
+
+/* Hairline progress with accent fill + glow */
+.altyr-ui .altyr-progress {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.altyr-ui .altyr-progress-fill {
+  height: 100%;
+  background: var(--altyr-accent-gradient);
+  box-shadow: 0 0 8px rgba(192, 56, 122, 0.45);
+}
+
+/* Avatar (initials) */
+.altyr-ui .altyr-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #1a1a1c, #0a0a0a);
+  border: 1px solid var(--altyr-border);
+  color: var(--altyr-text-1);
+  font-family: var(--altyr-font-display);
+  font-size: 0.76rem;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+.altyr-ui .altyr-avatar-sm {
+  width: 30px;
+  height: 30px;
+  font-size: 0.6rem;
+}
+
+/* Live pill (rose) */
+.altyr-ui .altyr-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--altyr-rose);
+}
+.altyr-ui .altyr-live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--altyr-rose);
+  box-shadow: 0 0 8px var(--altyr-rose);
+}
+
+/* Accent toggle (on) */
+.altyr-ui .altyr-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 26px;
+  height: 15px;
+  border-radius: var(--altyr-r-pill);
+  background: var(--altyr-accent-gradient);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  flex-shrink: 0;
+}
+.altyr-ui .altyr-toggle::after {
+  content: "";
+  position: absolute;
+  right: 2px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #fff;
+}

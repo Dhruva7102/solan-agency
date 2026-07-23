@@ -1,7 +1,7 @@
 import { ULTRAPRO, COMPARE_DIMENSIONS } from "@/lib/content";
 import { Section, SectionHeading } from "@/components/Section";
 import Reveal from "@/components/Reveal";
-import MockAltyrPro from "@/components/MockAltyrPro";
+import AltyrProPanel from "@/components/AltyrProPanel";
 import CompareTable from "@/components/CompareTable";
 import CtaBand from "@/components/CtaBand";
 
@@ -45,7 +45,7 @@ export default function SystemsPage() {
                 <CompareTable rows={dim.rows} />
               </Reveal>
               <Reveal delay={0.1} className="min-w-0 lg:col-span-2">
-                <MockAltyrPro kind={dim.key} label={dim.screenshot.label} />
+                <AltyrProPanel kind={dim.key} label={dim.screenshot.label} />
               </Reveal>
             </div>
           </div>
