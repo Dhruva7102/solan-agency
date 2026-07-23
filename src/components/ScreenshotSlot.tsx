@@ -28,6 +28,8 @@ export default function ScreenshotSlot({
         <img
           src={`/screenshots/${file}`}
           alt={label}
+          loading="lazy"
+          decoding="async"
           onLoad={() => setLoaded(true)}
           className={
             loaded

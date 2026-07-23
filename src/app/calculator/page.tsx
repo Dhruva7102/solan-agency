@@ -9,6 +9,7 @@ export default function CalculatorPage() {
       <section className="hero-glow hairline-b">
         <div className="mx-auto max-w-6xl px-6 pb-14 pt-20 sm:pt-24">
           <SectionHeading
+            as="h1"
             eyebrow={CALC.eyebrow}
             heading={CALC.heading}
             intro={CALC.intro}

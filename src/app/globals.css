@@ -15,7 +15,8 @@
   /* Ink */
   --ink: #f2eee5;
   --ink-2: #b3ada0;
-  --muted: #7e786b;
+  /* muted lifted from #7e786b to clear WCAG AA 4.5:1 on --bg for small text */
+  --muted: #8b8574;
 
   /* Brand */
   --gold: #d2ac61;
@@ -52,8 +53,10 @@
   --font-display: var(--font-fraunces), Georgia, serif;
 }
 
-html {
-  scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -66,6 +69,16 @@ body {
 ::selection {
   background: var(--gold-dim);
   color: var(--ink);
+}
+
+/* Visible keyboard focus for all interactive elements (WCAG 2.4.7) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 /* ————— shared component classes ————— */
@@ -130,6 +143,7 @@ body {
   background: rgba(210, 172, 97, 0.06);
 }
 
+/* impeccable-disable gradient-text -- intentional gold brand wordmark/metric accent, core to the Obsidian Clarity identity */
 .gold-text {
   background: linear-gradient(100deg, var(--gold-bright) 20%, var(--gold) 60%, var(--gold-dim));
   -webkit-background-clip: text;

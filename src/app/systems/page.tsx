@@ -11,6 +11,7 @@ export default function SystemsPage() {
       <section className="hero-glow hairline-b">
         <div className="mx-auto max-w-6xl px-6 pb-16 pt-20 sm:pt-24">
           <SectionHeading
+            as="h1"
             eyebrow={ULTRAPRO.eyebrow}
             heading={ULTRAPRO.heading}
             intro={ULTRAPRO.intro}
@@ -21,7 +22,7 @@ export default function SystemsPage() {
                 <a
                   key={d.key}
                   href={`#${d.key}`}
-                  className="btn-ghost !px-4 !py-2 text-xs"
+                  className="btn-ghost !min-h-11 !px-4 !py-2 text-xs"
                 >
                   {String(i + 1).padStart(2, "0")} — {d.title}
                 </a>

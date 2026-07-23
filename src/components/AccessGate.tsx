@@ -24,15 +24,16 @@ export default function AccessGate() {
         </p>
 
         <form action={action} className="mt-10">
-          <div className="card flex items-center gap-2 p-2">
+          <div className="card flex items-center gap-2 p-2 focus-within:border-gold-dim">
             <input
               type="password"
               name="code"
               required
               autoFocus
+              aria-label="Access code"
               placeholder="Access code"
               autoComplete="off"
-              className="w-full bg-transparent px-4 py-2.5 text-sm text-ink placeholder:text-muted focus:outline-none"
+              className="w-full bg-transparent px-4 py-2.5 text-sm text-ink placeholder:text-muted focus-visible:outline-none"
             />
             <button
               type="submit"

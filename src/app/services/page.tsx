@@ -9,6 +9,7 @@ export default function ServicesPage() {
       <section className="hero-glow hairline-b">
         <div className="mx-auto max-w-6xl px-6 pb-16 pt-20 sm:pt-24">
           <SectionHeading
+            as="h1"
             eyebrow={SERVICES.eyebrow}
             heading={SERVICES.heading}
             intro={SERVICES.intro}

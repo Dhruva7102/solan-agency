@@ -10,6 +10,7 @@ export default function ResultsPage() {
       <section className="hero-glow hairline-b">
         <div className="mx-auto max-w-6xl px-6 pb-16 pt-20 sm:pt-24">
           <SectionHeading
+            as="h1"
             eyebrow={RESULTS.eyebrow}
             heading={RESULTS.heading}
             intro={RESULTS.intro}
