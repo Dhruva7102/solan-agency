@@ -597,6 +597,10 @@ export const RESULTS = {
       file: "earnings-yearbook.png",
       label: "A year of $60–76k months, with messages driving $58k of the last 30 days",
     },
+    {
+      file: "earnings-last30.png",
+      label: "Last 30 days on a top-0.16% page: $84.2k, with messages driving $66.6k net",
+    },
   ],
 };
 

@@ -72,6 +72,7 @@ automatically (until then, styled placeholder frames render):
 | `earnings-takeover.png` | Results → mid-March takeover ($148k → $222.8k) |
 | `earnings-alltime.png` | Results → $2.4M lifetime page (+119% after switch) |
 | `earnings-yearbook.png` | Results → year of $60–76k months |
+| `earnings-last30.png` | Results → top-0.16% page, $84.2k last 30 days |
 | `chat-1.png` … `chat-3.png` | Process → real pod conversations (4:3 crops) |
 
 Earnings shots: 16:9 crops look best. **Redact fan names/handles in the
