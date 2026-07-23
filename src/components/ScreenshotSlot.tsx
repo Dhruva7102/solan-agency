@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 /**
  * Renders /screenshots/<file> once it exists in /public/screenshots.
@@ -19,6 +19,14 @@ export default function ScreenshotSlot({
   aspect?: string;
 }) {
   const [loaded, setLoaded] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  // onLoad misses images that finish before hydration (e.g. from cache) —
+  // check the probe's state once on mount.
+  useEffect(() => {
+    const img = imgRef.current;
+    if (img && img.complete && img.naturalWidth > 0) setLoaded(true);
+  }, []);
 
   return (
     <figure className={`card overflow-hidden ${className}`}>
@@ -26,6 +34,7 @@ export default function ScreenshotSlot({
         {/* Probe: invisible until it actually loads */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
+          ref={imgRef}
           src={`/screenshots/${file}`}
           alt={label}
           loading="lazy"
