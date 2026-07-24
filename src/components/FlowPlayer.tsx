@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { FLOWS, ACTORS, type Flow } from "@/lib/content";
 
 const STEP_MS = 4200;
@@ -35,8 +35,13 @@ export default function FlowPlayer() {
 }
 
 function FlowTimeline({ flow }: { flow: Flow }) {
-  const [reached, setReached] = useState(0); // index of last revealed step
-  const [playing, setPlaying] = useState(true);
+  // Reduced-motion users get the whole timeline at once instead of a
+  // 4-second-per-step autoplay.
+  const reducedMotion = useReducedMotion();
+  const [reached, setReached] = useState(
+    reducedMotion ? flow.steps.length - 1 : 0
+  );
+  const [playing, setPlaying] = useState(!reducedMotion);
   const done = reached >= flow.steps.length - 1;
   const activeRef = useRef<HTMLDivElement>(null);
 

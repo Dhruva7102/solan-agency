@@ -1,4 +1,4 @@
-# Solan — Creator Pitch Site
+# Astor — Creator Pitch Site
 
 A password-gated, interactive pitch site for walking creators through the
 agency: the Altyr Pro backend (vs Inflow), services & rates, a live revenue
@@ -7,9 +7,6 @@ calculator, animated operational flows, the model-control story, and results.
 Built with Next.js (App Router) + Tailwind CSS + Framer Motion. Deploys to
 Vercel in one click.
 
-> **"Solan" is a placeholder brand.** Swap it in one place — see
-> [Renaming the brand](#renaming-the-brand).
-
 ## Quick start
 
 ```bash
@@ -17,7 +14,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000 — the access gate appears. Default code: **SOLAN**
+Open http://localhost:3000 — the access gate appears. Default code: **ASTOR**
 (case-insensitive). Change it by setting the env var:
 
 ```bash
@@ -68,11 +65,11 @@ automatically (until then, styled placeholder frames render):
 | `ultrapro-automation.png` | Systems → Automation & AI tooling |
 | `ultrapro-analytics.png` | Systems → Analytics & transparency |
 | `ultrapro-crm.png` | Systems → Fan CRM depth |
-| `earnings-newpage.png` | Results → new-page launch ($0 → $37.3k net, 30 days) |
-| `earnings-takeover.png` | Results → mid-March takeover ($148k → $222.8k) |
-| `earnings-alltime.png` | Results → $2.4M lifetime page (+119% after switch) |
-| `earnings-yearbook.png` | Results → year of $60–76k months |
-| `earnings-last30.png` | Results → top-0.16% page, $84.2k last 30 days |
+| `earnings-newpage.webp` | Results → new-page launch ($0 → $37.3k net, 30 days) |
+| `earnings-takeover.webp` | Results → mid-March takeover ($148k → $222.8k) |
+| `earnings-alltime.webp` | Results → $2.4M lifetime page (+119% after switch) |
+| `earnings-yearbook.webp` | Results → year of $60–76k months |
+| `earnings-last30.webp` | Results → top-0.16% page, $84.2k last 30 days |
 | `chat-1.png` … `chat-3.png` | Process → real pod conversations (4:3 crops) |
 
 Earnings shots: 16:9 crops look best. **Redact fan names/handles in the

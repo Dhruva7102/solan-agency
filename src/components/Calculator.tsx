@@ -244,7 +244,7 @@ export default function Calculator() {
               {money(calc.solanTotal)}
             </p>
             <p className="mt-1 text-[11px] text-muted">
-              {uplift}× on PPV, messages, tips &amp; customs
+              {uplift}× on PPV, messages, tips &amp; customs; subs held flat
             </p>
           </div>
           <div className="card p-6">
@@ -263,6 +263,20 @@ export default function Calculator() {
             Even after the split, that&apos;s{" "}
             <strong className="text-gold">{money(delta)} more per month</strong>{" "}
             in your pocket than running the page yourself today.
+          </div>
+        )}
+
+        {calc.todayTotal < 5000 && (
+          <div className="card p-5 text-sm leading-relaxed text-ink-2">
+            <p className="eyebrow mb-2">Smaller page?</p>
+            This calculator only models your existing revenue at higher
+            conversion; it doesn&apos;t include the funnel bringing in new fans,
+            which is where smaller pages grow most. One page this size went{" "}
+            <strong className="text-ink">$0 to $37.3k net in its first 30 days</strong>{" "}
+            on our systems.{" "}
+            <a href="/results" className="text-gold underline-offset-4 hover:underline">
+              See the dashboard →
+            </a>
           </div>
         )}
 

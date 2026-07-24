@@ -20,10 +20,27 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://solan-agency.vercel.app"
+  ),
   title: `${BRAND.name} · ${BRAND.tagline}`,
   description:
     "A private walkthrough of how our agency runs creator pages: systems, rates, and results.",
   robots: { index: false, follow: false },
+  openGraph: {
+    title: `${BRAND.name} · ${BRAND.tagline}`,
+    description:
+      "A private walkthrough of how our agency runs creator pages: systems, rates, and results.",
+    type: "website",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: BRAND.wordmark }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${BRAND.name} · ${BRAND.tagline}`,
+    description:
+      "A private walkthrough of how our agency runs creator pages: systems, rates, and results.",
+    images: ["/og.png"],
+  },
 };
 
 export default async function RootLayout({

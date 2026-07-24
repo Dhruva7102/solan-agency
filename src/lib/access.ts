@@ -3,11 +3,11 @@
 import { cookies } from "next/headers";
 import { revalidatePath } from "next/cache";
 
-const COOKIE = "solan_access";
+const COOKIE = "astor_access";
 
 function expectedCode() {
   // Set SITE_ACCESS_CODE in Vercel (or .env.local) to change the code.
-  return process.env.SITE_ACCESS_CODE ?? "SOLAN";
+  return process.env.SITE_ACCESS_CODE ?? "ASTOR";
 }
 
 export async function hasAccess(): Promise<boolean> {

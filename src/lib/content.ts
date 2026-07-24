@@ -165,7 +165,7 @@ export const ULTRAPRO = {
   eyebrow: "The backend",
   heading: "Run on Altyr Pro. Compared against Inflow.",
   intro:
-    "Most agencies run on Inflow. Ours runs on Altyr Pro, the most advanced CRM, chatting and automation platform in the space, used by no agency outside our partner network. What follows is the difference, dimension by dimension, with screenshots from our live systems.",
+    "Most agencies run on Inflow. Ours runs on Altyr Pro, the most advanced CRM, chatting and automation platform in the space, used by no agency outside our partner network. What follows is the difference, dimension by dimension, illustrated with faithful renders of the product views our team works in. You'll see the real thing, live, on your call.",
   disclaimer:
     "Comparison reflects our operating experience across both platforms. Verify current Inflow capabilities independently.",
 };
@@ -582,23 +582,23 @@ export const RESULTS = {
   ],
   screenshots: [
     {
-      file: "earnings-newpage.png",
+      file: "earnings-newpage.webp",
       label: "Launch: $0 to $37.3k net in the first 30 days (top 0.27%)",
     },
     {
-      file: "earnings-takeover.png",
+      file: "earnings-takeover.webp",
       label: "Takeover Mar 17: ~$2k/day to $10–20k/day, then $222.8k the next month",
     },
     {
-      file: "earnings-alltime.png",
+      file: "earnings-alltime.webp",
       label: "$2.4M lifetime page: $28.5k to $80k+/mo after switching (+119%)",
     },
     {
-      file: "earnings-yearbook.png",
+      file: "earnings-yearbook.webp",
       label: "A year of $60–76k months, with messages driving $58k of the last 30 days",
     },
     {
-      file: "earnings-last30.png",
+      file: "earnings-last30.webp",
       label: "Last 30 days on a top-0.16% page: $84.2k, with messages driving $66.6k net",
     },
   ],
