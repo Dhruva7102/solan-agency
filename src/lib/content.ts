@@ -84,7 +84,7 @@ export const SERVICES = {
   eyebrow: "Services & rates",
   heading: "Start with what you need. Stack as you grow.",
   intro:
-    "Every engagement starts at a flat rate: 15% for Systems & Consulting, 30% for Chatting & Sexting. Stacking services adds overhead (dedicated staff, more management layers), so combined rates are set individually at onboarding, in writing, before anything starts.",
+    "Every rate is flat and in writing before anything starts: 15% for Systems & Consulting, 30% for Chatting & Sexting, and 40% for Growth, with a 45% option that adds the full social stack. No custom quotes, no surprises at onboarding.",
   tiers: [
     {
       name: "Systems & Consulting",
@@ -118,35 +118,34 @@ export const SERVICES = {
     },
     {
       name: "Growth",
-      rate: "Custom",
-      rateNote: "chatting + marketing",
+      rate: "40%",
+      rateNote: "chatting + growth engine",
       blurb:
-        "Everything in Chatting & Sexting, plus the traffic engine: multi-platform funnels that keep new fans flowing into a page that's built to convert them.",
+        "Everything in Chatting & Sexting, plus the growth layer: content plans built from what converts and a collab engine that keeps new fans flowing in.",
       includes: [
         "Everything in Chatting & Sexting",
+        "Monthly content plans built from your page's data",
+        "Collab finder: vetted creator collabs matched to your niche",
         "Multi-platform marketing funnels",
-        "Content strategy calibrated to what converts",
         "Weekly growth reporting with attribution",
-        "Rate set at onboarding, always before we start",
       ],
-    },
-    {
-      name: "Full Management",
-      rate: "Custom",
-      rateNote: "everything, one team",
-      blurb:
-        "The complete operation: chatting, marketing, content strategy, page ops and account management. One team, one weekly rhythm, one number to judge us by.",
-      includes: [
-        "Everything in Growth",
-        "Page operations & account management",
-        "Content calendar planning & production support",
-        "Dedicated account manager with a direct line",
-        "Rate set at onboarding, always before we start",
-      ],
+      upgrade: {
+        rate: "45%",
+        rateNote: "growth + social armor",
+        blurb:
+          "Everything in Growth, hardened for social: ban-proof link infrastructure, account-by-account reviews, and content plans customized to each platform.",
+        includes: [
+          "Everything in Growth at 40%",
+          "Custom-domain link hubs that survive Instagram bans",
+          "Social media account reviews, platform by platform",
+          "Customized content plans built around your accounts",
+          "Weekly growth reporting with attribution",
+        ],
+      },
     },
   ],
   footnote:
-    "Why do stacked rates increase? Because each added service line puts dedicated humans on your page, not because we can. You'll see exactly what the overhead pays for before you sign anything.",
+    "Why do stacked rates increase? Because each added service line puts dedicated humans on your page, not because we can. Every rate is flat, published here, and in your agreement in writing.",
 };
 
 /* ————————————————— Altyr Pro vs Inflow ————————————————— */
@@ -461,7 +460,7 @@ export const FLOWS: Flow[] = [
     label: "A normal week with us",
     heading: "The weekly rhythm: what working with Astor feels like",
     intro:
-      "No black box, no radio silence. This is the standing cadence every model on full management gets.",
+      "No black box, no radio silence. This is the standing cadence every model on a Growth tier gets.",
     steps: [
       {
         actor: "lead",

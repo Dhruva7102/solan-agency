@@ -78,8 +78,8 @@ const PRESETS = [
 const TIERS = [
   { key: "systems", label: "Systems & Consulting", split: 15, fixed: true },
   { key: "chatting", label: "Chatting & Sexting", split: 30, fixed: true },
-  { key: "growth", label: "Growth", split: 40, fixed: false },
-  { key: "full", label: "Full Management", split: 45, fixed: false },
+  { key: "growth", label: "Growth", split: 40, fixed: true },
+  { key: "growthplus", label: "Growth + Social Armor", split: 45, fixed: true },
 ] as const;
 
 export default function Calculator() {
@@ -292,10 +292,9 @@ export default function Calculator() {
         <div className="card p-7">
           <p className="eyebrow mb-2">The split</p>
           <p className="mb-6 text-sm leading-relaxed text-ink-2">
-            Single service lines are a flat rate: 15% for Systems &
-            Consulting, 30% for Chatting & Sexting. Stacked tiers carry more
-            overhead and are set individually at onboarding, so the slider below
-            is illustrative.
+            Every rate is flat: 15% for Systems & Consulting, 30% for
+            Chatting & Sexting, 40% for Growth, and 45% with the full social
+            stack. What you pick here is what you&apos;d pay.
           </p>
           <div className="grid gap-2 sm:grid-cols-2">
             {TIERS.map((t) => (

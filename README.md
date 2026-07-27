@@ -95,7 +95,7 @@ array there and in `SERVICES` in `content.ts`.
 |---|---|
 | `/` | Positioning, headline stats, manifesto, founder authority |
 | `/systems` | Altyr Pro vs Inflow — 4 dimensions, tables + screenshots |
-| `/services` | Four tiers with transparent base rates (15% systems, 30% chatting) |
+| `/services` | Three tiers, flat rates (15% / 30% / 40% with a 45% toggle) |
 | `/calculator` | Interactive projection with before/after + take-home |
 | `/process` | Animated flows: fan DM, escalation chain, first 30 days, weekly rhythm |
 | `/control` | The model-control pillars (individual onboarding, no lock-in…) |

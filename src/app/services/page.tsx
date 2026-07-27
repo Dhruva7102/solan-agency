@@ -2,6 +2,7 @@ import { SERVICES, FAQ } from "@/lib/content";
 import { Section, SectionHeading } from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import CtaBand from "@/components/CtaBand";
+import TierCard, { type Tier } from "@/components/TierCard";
 
 export default function ServicesPage() {
   return (
@@ -18,38 +19,10 @@ export default function ServicesPage() {
       </section>
 
       <Section>
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-3">
           {SERVICES.tiers.map((tier, i) => (
             <Reveal key={tier.name} delay={i * 0.07} className="h-full">
-              <div
-                className={`flex h-full flex-col rounded-2xl border p-7 ${
-                  tier.featured
-                    ? "border-gold-dim bg-[linear-gradient(180deg,rgba(210,172,97,0.08),rgba(18,18,26,0.4))]"
-                    : "card"
-                }`}
-              >
-                {tier.featured && (
-                  <p className="eyebrow mb-4 !text-[10px]">Most common start</p>
-                )}
-                <h3 className="display text-xl text-ink">{tier.name}</h3>
-                <div className="mt-4 flex items-baseline gap-2">
-                  <span className="display gold-text text-4xl">{tier.rate}</span>
-                  <span className="text-xs text-muted">{tier.rateNote}</span>
-                </div>
-                <p className="mt-4 text-sm leading-relaxed text-ink-2">
-                  {tier.blurb}
-                </p>
-                <ul className="mt-6 flex flex-col gap-2.5 border-t border-line pt-6">
-                  {tier.includes.map((item) => (
-                    <li key={item} className="flex gap-2.5 text-[13px] leading-snug text-ink-2">
-                      <span className="mt-0.5 text-gold" aria-hidden>
-                        ✓
-                      </span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <TierCard tier={tier as Tier} />
             </Reveal>
           ))}
         </div>
