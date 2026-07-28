@@ -43,7 +43,7 @@ export default function ControlPage() {
           <div className="mx-auto max-w-2xl text-center">
             <p className="eyebrow mb-4">The test</p>
             <p className="display text-2xl leading-snug text-ink sm:text-3xl">
-              Ask any other agency for live dashboard access, your chat logs,
+              Ask any other management company for live dashboard access, your chat logs,
               and a no-lock-in contract.{" "}
               <span className="gold-text">Then ask us.</span>
             </p>

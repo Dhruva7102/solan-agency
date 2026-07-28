@@ -16,7 +16,7 @@ const SECTION_CARDS = [
     href: "/systems",
     step: "01",
     title: "The Backend",
-    desc: "Altyr Pro vs Inflow: the side-by-side no other agency can show you.",
+    desc: "Altyr Pro vs Inflow: the side-by-side no one else can show you.",
   },
   {
     href: "/services",
@@ -59,7 +59,7 @@ export default function Home() {
           <Reveal>
             <p className="eyebrow mb-6">Private creator briefing</p>
             <h1 className="display mx-auto max-w-3xl text-5xl leading-[1.05] tracking-tight sm:text-7xl">
-              A different <span className="gold-text">type</span> of agency.
+              A different <span className="gold-text">type</span> of management.
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-ink-2">
               {BRAND.subtag}

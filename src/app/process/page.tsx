@@ -14,7 +14,7 @@ export default function ProcessPage() {
             as="h1"
             eyebrow="How we operate"
             heading="Watch the systems run."
-            intro="Four real flows from inside the agency, played step by step, exactly as they happen on a live page. This is the operational depth most agencies keep behind the curtain."
+            intro="Four real flows from inside the operation, played step by step, exactly as they happen on a live page. This is the depth the rest of the industry keeps behind the curtain."
           />
         </div>
       </section>

@@ -10,9 +10,9 @@ export const BRAND = {
   // Placeholder brand — swap these three lines when the name is decided.
   name: "Astor",
   wordmark: "ASTOR",
-  tagline: "A different type of agency.",
+  tagline: "A different type of management.",
   subtag:
-    "Founded with the operators behind the industry's largest chatting agency and one of its top full-service agencies, on infrastructure no other agency has.",
+    "Founded with the operators behind the industry's largest chatting operation and one of its top full-service management companies, on infrastructure no one else in the space has.",
 };
 
 export const NAV_LINKS = [
@@ -28,7 +28,7 @@ export const HEADLINE_STATS = [
   {
     value: "4×",
     label: "Minimum first-month uplift in PPV, message and tip revenue",
-    sub: "Typical agency minimum. Many models see more.",
+    sub: "Our typical minimum. Many models see more.",
   },
   {
     value: "Lowest",
@@ -50,10 +50,10 @@ export const HEADLINE_STATS = [
 
 export const MANIFESTO = {
   eyebrow: "Why we exist",
-  heading: "Most agencies ask for your trust. We removed the need for it.",
+  heading: "Most management companies ask for your trust. We removed the need for it.",
   paragraphs: [
-    "The agency model is broken in one specific way: models hand over their page, their fans, and their income to systems they can't see, run by people they've never met. When it works, they don't know why. When it stops working, they can't prove it.",
-    "Astor was built as the answer. Our backend runs on Altyr Pro, a CRM, chatting and automation platform used by no agency outside our partner network. Every message, every sale, every chatter's shift gets logged, attributed and shown to you in real time.",
+    "The management model is broken in one specific way: models hand over their page, their fans, and their income to systems they can't see, run by people they've never met. When it works, they don't know why. When it stops working, they can't prove it.",
+    "Astor was built as the answer. Our backend runs on Altyr Pro, a CRM, chatting and automation platform used by no one outside our partner network. Every message, every sale, every chatter's shift gets logged, attributed and shown to you in real time.",
     "We onboard every model individually. We learn your story, how you speak, what you will and won't sell, and how you want your page run. Then we build SOPs around you. We can do that because we built the infrastructure for it. Nobody else has.",
   ],
 };
@@ -65,15 +65,15 @@ export const FOUNDER_AUTHORITY = {
   founders: [
     {
       role: "The Chatting Operator",
-      desc: "Runs the largest chatting agency in the industry: the team that trains and staffs chatters for the biggest pages in the space.",
+      desc: "Runs the largest chatting operation in the industry: the team that trains and staffs chatters for the biggest pages in the space.",
     },
     {
-      role: "The Agency Operator",
-      desc: "Runs one of the largest full-service agencies in the industry, with the lowest model churn in the space. Models who join, stay.",
+      role: "The Full-Service Operator",
+      desc: "Runs one of the largest full-service management companies in the industry, with the lowest model churn in the space. Models who join, stay.",
     },
     {
       role: "The Systems Architect",
-      desc: "Built the infrastructure this agency runs on: the onboarding, SOP and transparency layer no other agency can offer.",
+      desc: "Built the infrastructure this operation runs on: the onboarding, SOP and transparency layer no one else can offer.",
     },
   ],
 };
@@ -164,7 +164,7 @@ export const ULTRAPRO = {
   eyebrow: "The backend",
   heading: "Run on Altyr Pro. Compared against Inflow.",
   intro:
-    "Most agencies run on Inflow. Ours runs on Altyr Pro, the most advanced CRM, chatting and automation platform in the space, used by no agency outside our partner network. What follows is the difference, dimension by dimension, illustrated with faithful renders of the product views our team works in. You'll see the real thing, live, on your call.",
+    "Most management teams run on Inflow. Ours runs on Altyr Pro, the most advanced CRM, chatting and automation platform in the space, used by no one outside our partner network. What follows is the difference, dimension by dimension, illustrated with faithful renders of the product views our team works in. You'll see the real thing, live, on your call.",
   disclaimer:
     "Comparison reflects our operating experience across both platforms. Verify current Inflow capabilities independently.",
 };
@@ -195,7 +195,7 @@ export const COMPARE_DIMENSIONS: CompareDimension[] = [
       {
         feature: "Model-visible QA results",
         ultrapro: { level: "full", note: "You can audit any conversation on your page, any time" },
-        inflow: { level: "none", note: "QA, where it exists, is internal to the agency" },
+        inflow: { level: "none", note: "QA, where it exists, is internal to the company" },
       },
     ],
   },
@@ -232,7 +232,7 @@ export const COMPARE_DIMENSIONS: CompareDimension[] = [
     key: "analytics",
     title: "Analytics & transparency",
     pitch:
-      "This is where 'a different type of agency' stops being a slogan. Altyr Pro gives you the same live dashboard we use: revenue attributed to every chatter, every send, every fan. You never have to ask how your page is doing, or take our word for it.",
+      "This is where 'a different type of management' stops being a slogan. Altyr Pro gives you the same live dashboard we use: revenue attributed to every chatter, every send, every fan. You never have to ask how your page is doing, or take our word for it.",
     screenshot: { file: "ultrapro-analytics.png", label: "Altyr Pro: live revenue attribution" },
     rows: [
       {
@@ -243,7 +243,7 @@ export const COMPARE_DIMENSIONS: CompareDimension[] = [
       {
         feature: "Model-facing live dashboard",
         ultrapro: { level: "full", note: "You see what we see: same data, same time" },
-        inflow: { level: "none", note: "Reporting is agency-side; models get summaries" },
+        inflow: { level: "none", note: "Reporting is management-side; models get summaries" },
       },
       {
         feature: "Fan spend analytics & whale tracking",
@@ -508,11 +508,11 @@ export const CONTROL = {
   eyebrow: "Your control",
   heading: "Your page. Your rules. Our infrastructure.",
   intro:
-    "Every agency says the model comes first. We built the systems that make it structurally true, designed from scratch around a simple idea: you should never have to wonder what's happening on your own page.",
+    "Every management company says the model comes first. We built the systems that make it structurally true, designed from scratch around a simple idea: you should never have to wonder what's happening on your own page.",
   pillars: [
     {
       title: "Onboarded individually, never templated",
-      desc: "We learn your story, your voice and how you want your page run, then build SOPs around you: your persona document, your boundaries, your escalation rules. We can work this way because we built the infrastructure for it. No other agency has it.",
+      desc: "We learn your story, your voice and how you want your page run, then build SOPs around you: your persona document, your boundaries, your escalation rules. We can work this way because we built the infrastructure for it. No one else has it.",
     },
     {
       title: "Full dashboard access",
@@ -546,7 +546,7 @@ export const RESULTS = {
     "We'd rather show you real dashboards than adjectives. Everything below is anonymized. Full detail, with names, on your call.",
   churn: {
     stat: "Lowest churn in the industry",
-    desc: "Models who join this team, stay. Agencies lose models when performance stalls and trust breaks. Our retention comes from removing both failure modes: transparent systems and a revenue floor most models have never seen.",
+    desc: "Models who join this team, stay. Management companies lose models when performance stalls and trust breaks. Our retention comes from removing both failure modes: transparent systems and a revenue floor most models have never seen.",
     placeholderNote: "[exact retention % and timeframe: insert when confirmed]",
   },
   // Real trajectories from the founding team's current books (dashboards below).
@@ -653,9 +653,9 @@ export const CALC = {
   eyebrow: "Revenue calculator",
   heading: "What your page looks like on our systems.",
   intro:
-    "Put in where your page is today. The projection applies our agency minimum, 4× on PPV, message and tip revenue in the first month, and you can adjust it along with everything else. This is a model, not a promise. Your real plan gets built at onboarding.",
+    "Put in where your page is today. The projection applies our minimum, 4× on PPV, message and tip revenue in the first month, and you can adjust it along with everything else. This is a model, not a promise. Your real plan gets built at onboarding.",
   upliftNote:
-    "4× is the agency's typical minimum first-month uplift on chat-driven revenue (PPV, messages, tips). Many models see more.",
+    "4× is our typical minimum first-month uplift on chat-driven revenue (PPV, messages, tips). Many models see more.",
 };
 
 export const FINAL_CTA = {

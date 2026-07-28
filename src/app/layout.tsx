@@ -25,12 +25,12 @@ export const metadata: Metadata = {
   ),
   title: `${BRAND.name} · ${BRAND.tagline}`,
   description:
-    "A private walkthrough of how our agency runs creator pages: systems, rates, and results.",
+    "A private walkthrough of how we run creator pages: systems, rates, and results.",
   robots: { index: false, follow: false },
   openGraph: {
     title: `${BRAND.name} · ${BRAND.tagline}`,
     description:
-      "A private walkthrough of how our agency runs creator pages: systems, rates, and results.",
+      "A private walkthrough of how we run creator pages: systems, rates, and results.",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: BRAND.wordmark }],
   },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${BRAND.name} · ${BRAND.tagline}`,
     description:
-      "A private walkthrough of how our agency runs creator pages: systems, rates, and results.",
+      "A private walkthrough of how we run creator pages: systems, rates, and results.",
     images: ["/og.png"],
   },
 };

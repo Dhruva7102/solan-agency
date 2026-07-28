@@ -22,7 +22,7 @@ export default function Nav() {
             {BRAND.wordmark}
           </span>
           <span className="hidden text-[10px] uppercase tracking-[0.25em] text-muted sm:inline">
-            agency
+            management
           </span>
         </Link>
 
