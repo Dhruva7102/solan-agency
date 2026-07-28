@@ -26,7 +26,9 @@ export default function ResultsPage() {
               <p className="display gold-text text-4xl leading-tight sm:text-5xl">
                 {RESULTS.churn.stat}
               </p>
-              <p className="placeholder-chip mt-4">{RESULTS.churn.placeholderNote}</p>
+              <p className="mt-4 text-sm font-medium text-gold">
+                {RESULTS.churn.figures}
+              </p>
             </div>
             <p className="text-[15px] leading-relaxed text-ink-2">
               {RESULTS.churn.desc}
