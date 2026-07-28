@@ -33,8 +33,11 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
-# vercel
-.vercel
+# vercel — ignore the local cache but commit the project link so CI
+# (npx vercel deploy) targets the astor-management project deterministically,
+# regardless of the checkout directory name.
+.vercel/*
+!.vercel/project.json
 
 # typescript
 *.tsbuildinfo
