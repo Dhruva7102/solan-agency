@@ -643,9 +643,9 @@ export const CHAT_EXAMPLES = {
   intro:
     "Not scripts. These are live conversations from pages the founding team runs today. Notice the pacing: rapport first, persona held, the PPV landing inside the conversation. Fan names and media are redacted.",
   shots: [
-    { file: "chat-1.png", label: "Morning check-in → $40 PPV unlock, in persona" },
-    { file: "chat-2.png", label: "Custom request handled: $350 prospect logged in Altyr Pro" },
-    { file: "chat-3.png", label: "Escalating session: sequenced sends, each one paid" },
+    { file: "chat-1.webp", label: "Morning check-in → $40 PPV unlock, in persona" },
+    { file: "chat-2.webp", label: "Custom request handled: $350 prospect logged in Altyr Pro" },
+    { file: "chat-3.webp", label: "Escalating session: sequenced sends, each one paid" },
   ],
 };
 

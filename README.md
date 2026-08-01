@@ -68,7 +68,7 @@ automatically (until then, styled placeholder frames render):
 | `earnings-alltime.webp` | Results → $2.4M lifetime page (+119% after switch) |
 | `earnings-yearbook.webp` | Results → year of $60–76k months |
 | `earnings-last30.webp` | Results → top-0.16% page, $84.2k last 30 days |
-| `chat-1.png` … `chat-3.png` | Process → real pod conversations (4:3 crops) |
+| `chat-1.webp` … `chat-3.webp` | Process → real pod conversations (4:3 crops) |
 
 Earnings shots: 16:9 crops look best. **Redact fan names/handles in the
 chat screenshots before committing** — the "Wi/Mi" avatars, fan display
