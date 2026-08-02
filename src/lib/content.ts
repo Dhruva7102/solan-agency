@@ -12,7 +12,7 @@ export const BRAND = {
   wordmark: "ASTOR",
   tagline: "A different type of management.",
   subtag:
-    "Founded with the operators behind the industry's largest chatting operation and one of its top full-service management companies, on infrastructure no one else in the space has.",
+    "Founded with the operators behind the industry's largest chatting operation and one of its top full-service management companies, on venture-funded infrastructure no one else in the space has.",
 };
 
 export const NAV_LINKS = [
