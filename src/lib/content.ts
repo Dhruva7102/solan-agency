@@ -72,7 +72,7 @@ export const MANIFESTO = {
 export const FOUNDER_AUTHORITY = {
   eyebrow: "Who's behind this",
   heading: "Three operators. One standard.",
-  note: "Names and track records shared on your call.",
+  note: "Names and track records shared on your call, along with an introduction to a creator already on the team.",
   founders: [
     {
       role: "The Chatting Operator",
@@ -708,6 +708,10 @@ export const FAQ = {
   eyebrow: "Fair questions",
   heading: "The things models actually ask us.",
   items: [
+    {
+      q: "Can I talk to a model who actually works with you?",
+      a: "Yes, and we'll offer before you ask. On your intro call we connect you with a creator currently on these systems, and you talk to her without us in the room. Ask her anything: what the money really did, whether the chatters sound like her, what she'd change. Nobody who's hiding something makes that offer.",
+    },
     {
       q: "I already have chatters I trust. Do I have to give them up?",
       a: "No. That's exactly what the Systems & Consulting tier is for: we put your existing team on Altyr Pro rails, build your SOPs, and train them. Plenty of models blend the two: your chatters keep their shifts, our pod covers nights and overflow. You choose the mix.",
