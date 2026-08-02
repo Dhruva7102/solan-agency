@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { CALC } from "@/lib/content";
+import CountUp from "./CountUp";
 
 /* Validated series palette (dataviz six checks, dark surface #14141C) */
 const SERIES = [
@@ -231,8 +232,8 @@ export default function Calculator() {
             <p className="text-xs font-medium uppercase tracking-wider text-muted">
               Today (gross)
             </p>
-            <p className="display mt-2 text-3xl text-ink-2">
-              {money(calc.todayTotal)}
+            <p className="display mt-2 text-3xl tabular-nums text-ink-2">
+              <CountUp value={money(calc.todayTotal)} />
             </p>
             <p className="mt-1 text-[11px] text-muted">per month, your inputs</p>
           </div>
@@ -240,8 +241,8 @@ export default function Calculator() {
             <p className="text-xs font-medium uppercase tracking-wider text-gold">
               Month one with us (gross)
             </p>
-            <p className="display gold-text mt-2 text-3xl">
-              {money(calc.solanTotal)}
+            <p className="display gold-text mt-2 text-3xl tabular-nums">
+              <CountUp value={money(calc.solanTotal)} />
             </p>
             <p className="mt-1 text-[11px] text-muted">
               {uplift}× on PPV, messages, tips &amp; customs; subs held flat
@@ -251,7 +252,9 @@ export default function Calculator() {
             <p className="text-xs font-medium uppercase tracking-wider text-muted">
               Your take-home
             </p>
-            <p className="display mt-2 text-3xl text-ink">{money(takeHome)}</p>
+            <p className="display mt-2 text-3xl tabular-nums text-ink">
+              <CountUp value={money(takeHome)} />
+            </p>
             <p className="mt-1 text-[11px] text-muted">
               after the {split}% {tier.label} split
             </p>

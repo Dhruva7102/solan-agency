@@ -3,6 +3,7 @@ import { Section, SectionHeading } from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import ScreenshotSlot from "@/components/ScreenshotSlot";
 import CtaBand from "@/components/CtaBand";
+import Testimonials from "@/components/Testimonials";
 
 export default function ResultsPage() {
   return (
@@ -104,7 +105,9 @@ export default function ResultsPage() {
         </Reveal>
       </Section>
 
-      <CtaBand />
+      <Testimonials />
+
+      <CtaBand expect />
     </main>
   );
 }

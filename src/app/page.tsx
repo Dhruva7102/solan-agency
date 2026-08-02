@@ -119,8 +119,10 @@ export default function Home() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {HEADLINE_STATS.map((stat, i) => (
             <Reveal key={stat.label} delay={i * 0.08}>
-              <div className="card h-full p-6">
-                <p className="display gold-text text-4xl">{stat.value}</p>
+              <div className="card lift h-full p-6">
+                <p className="display gold-text text-4xl tabular-nums">
+                  <CountUp value={stat.value} />
+                </p>
                 <p className="mt-3 text-sm font-medium leading-snug text-ink">
                   {stat.label}
                 </p>
@@ -174,7 +176,7 @@ export default function Home() {
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {FOUNDER_AUTHORITY.founders.map((f, i) => (
             <Reveal key={f.role} delay={i * 0.08}>
-              <div className="card h-full p-7">
+              <div className="card lift h-full p-7">
                 <div className="mb-5 h-10 w-10 rounded-full border border-gold-dim bg-[radial-gradient(circle_at_35%_30%,rgba(232,203,139,0.35),rgba(151,120,63,0.15))]" />
                 <h3 className="display text-lg text-ink">{f.role}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-ink-2">{f.desc}</p>
@@ -198,7 +200,7 @@ export default function Home() {
             <Reveal key={card.href} delay={(i % 3) * 0.06} className="h-full">
               <Link
                 href={card.href}
-                className="card group flex h-full flex-col justify-between p-7 transition-colors hover:border-gold-dim"
+                className="card lift group flex h-full flex-col justify-between p-7"
               >
                 <div>
                   <span className="display gold-text text-lg">{card.step}</span>
@@ -216,7 +218,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <CtaBand />
+      <CtaBand expect />
     </main>
   );
 }

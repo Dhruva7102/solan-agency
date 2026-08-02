@@ -644,6 +644,64 @@ export const RESULTS = {
   ],
 };
 
+/* ————————————————— Creator voices —————————————————
+   Peer proof beats every feature list in this industry. These are
+   deliberately empty until real, permissioned quotes come back from
+   models on the founding team's books: never write these for them.
+   Fill `quote` + `attribution` and delete `placeholder` to publish. */
+
+export const TESTIMONIALS = {
+  eyebrow: "In their words",
+  heading: "The models already on these systems.",
+  intro:
+    "Anonymised at their request. On your call we'll connect you directly with a creator currently on the team, so you can ask whatever you want without us in the room.",
+  items: [
+    {
+      quote: "",
+      attribution: "",
+      placeholder:
+        "[quote from a long-tenure model: why she stayed, what changed]",
+    },
+    {
+      quote: "",
+      attribution: "",
+      placeholder:
+        "[quote about the money: a before/after in her own words]",
+    },
+    {
+      quote: "",
+      attribution: "",
+      placeholder:
+        "[quote about trust: boundaries held, chatters sounding like her]",
+    },
+  ],
+};
+
+/* ————————————————— What the intro call actually is ————————————————— */
+
+export const CALL_EXPECT = {
+  eyebrow: "Before you book",
+  heading: "What actually happens on the call.",
+  steps: [
+    {
+      title: "Thirty minutes, on video or not",
+      desc: "Your call, your camera preference. One of the founders, not a salesperson working from a script.",
+    },
+    {
+      title: "We look at your real page together",
+      desc: "Your actual numbers on the live dashboards, not a slide deck. We'll tell you where the money is being left, whether or not you work with us.",
+    },
+    {
+      title: "You talk to a creator already on the team",
+      desc: "We'll connect you with a model currently on these systems so you can ask her the things you'd never ask us.",
+    },
+    {
+      title: "You leave with the numbers either way",
+      desc: "No contract on the call, no pressure, no follow-up spam. If it's not a fit, we'll say so first.",
+    },
+  ],
+};
+
 /* ————————————————— Calculator ————————————————— */
 
 export const FAQ = {

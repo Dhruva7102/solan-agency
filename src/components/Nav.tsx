@@ -18,7 +18,7 @@ export default function Nav() {
     <header className="sticky top-0 z-50 border-b border-line bg-bg/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6">
         <Link href="/" className="flex shrink-0 items-baseline gap-2 py-4">
-          <span className="display gold-text text-lg font-semibold tracking-wide">
+          <span className="display gold-text shimmer inline-block text-lg font-semibold tracking-wide">
             {BRAND.wordmark}
           </span>
           <span className="hidden text-[10px] uppercase tracking-[0.25em] text-muted sm:inline">

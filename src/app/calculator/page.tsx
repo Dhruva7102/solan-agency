@@ -19,7 +19,7 @@ export default function CalculatorPage() {
       <section className="mx-auto max-w-6xl px-6 py-16">
         <Calculator />
       </section>
-      <CtaBand />
+      <CtaBand expect />
     </main>
   );
 }

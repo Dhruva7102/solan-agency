@@ -42,12 +42,18 @@ export default function CountUp({
     return () => cancelAnimationFrame(frame);
   }, [inView, reducedMotion, duration]);
 
-  // Split into number / non-number chunks so symbols and words survive.
-  const rendered = value.replace(/\d+(\.\d+)?/g, (match) => {
-    const target = parseFloat(match);
+  // Animate the numbers, keep symbols, words and thousands grouping intact.
+  const rendered = value.replace(/\d[\d,]*(\.\d+)?/g, (match) => {
+    const grouped = match.includes(",");
+    const target = parseFloat(match.replace(/,/g, ""));
     const decimals = match.includes(".") ? match.split(".")[1].length : 0;
     const current = target * progress;
-    return current.toFixed(decimals);
+    return grouped
+      ? current.toLocaleString("en-US", {
+          minimumFractionDigits: decimals,
+          maximumFractionDigits: decimals,
+        })
+      : current.toFixed(decimals);
   });
 
   return (

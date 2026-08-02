@@ -3,6 +3,7 @@
 import { useActionState } from "react";
 import { unlock, type UnlockState } from "@/lib/access";
 import { BRAND } from "@/lib/content";
+import { UNLOCK_FLAG } from "./UnlockReveal";
 
 export default function AccessGate() {
   const [state, action, pending] = useActionState<UnlockState, FormData>(
@@ -15,7 +16,9 @@ export default function AccessGate() {
       <div className="w-full max-w-md text-center">
         <p className="eyebrow mb-6">Private — by invitation</p>
         <h1 className="display text-5xl tracking-tight sm:text-6xl">
-          <span className="gold-text">{BRAND.wordmark}</span>
+          <span className="gold-text shimmer inline-block">
+            {BRAND.wordmark}
+          </span>
         </h1>
         <p className="mt-4 text-sm leading-relaxed text-ink-2">
           {BRAND.tagline}
@@ -23,7 +26,18 @@ export default function AccessGate() {
           conversation with.
         </p>
 
-        <form action={action} className="mt-10">
+        <form
+          action={action}
+          onSubmit={() => {
+            // Consumed by UnlockReveal on the other side of the gate.
+            try {
+              sessionStorage.setItem(UNLOCK_FLAG, "1");
+            } catch {
+              /* private mode: the reveal is decorative, carry on */
+            }
+          }}
+          className="mt-10"
+        >
           <div className="card flex items-center gap-2 p-2 focus-within:border-gold-dim">
             <input
               type="password"

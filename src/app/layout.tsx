@@ -3,6 +3,7 @@ import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { hasAccess } from "@/lib/access";
 import AccessGate from "@/components/AccessGate";
+import UnlockReveal from "@/components/UnlockReveal";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import MotionProvider from "@/components/MotionProvider";
@@ -59,6 +60,7 @@ export default async function RootLayout({
         <MotionProvider>
           {unlocked ? (
             <>
+              <UnlockReveal />
               <Nav />
               <div className="flex-1">{children}</div>
               <Footer />
