@@ -11,8 +11,9 @@ export const BRAND = {
   name: "Astor",
   wordmark: "ASTOR",
   tagline: "A different type of management.",
+  // *asterisks* mark the phrases rendered in gold on the hero.
   subtag:
-    "The operators behind the industry's largest chatting operation and one of its top full-service management companies, running your page on $1.5M of purpose-built infrastructure, with every dollar visible to you, live.",
+    "The operators behind the industry's *largest chatting operation* and one of its top full-service management companies, running your page on *$1.5M* of purpose-built infrastructure, with *every dollar visible to you, live*.",
 };
 
 /* Proof strip under the hero: real numbers, straight from the dashboards. */

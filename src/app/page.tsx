@@ -10,6 +10,8 @@ import {
 } from "@/lib/content";
 import { Section, SectionHeading } from "@/components/Section";
 import Reveal from "@/components/Reveal";
+import Highlight from "@/components/Highlight";
+import CountUp from "@/components/CountUp";
 import VideoSlot from "@/components/VideoSlot";
 import CtaBand from "@/components/CtaBand";
 
@@ -64,7 +66,7 @@ export default function Home() {
               A different <span className="gold-text">type</span> of management.
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-ink-2">
-              {BRAND.subtag}
+              <Highlight text={BRAND.subtag} />
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <Link href="/calculator" className="btn-gold">
@@ -92,8 +94,8 @@ export default function Home() {
               <dl className="grid gap-6 sm:grid-cols-3">
                 {HERO_PROOF.items.map((item) => (
                   <div key={item.value}>
-                    <dt className="display gold-text text-2xl sm:text-3xl">
-                      {item.value}
+                    <dt className="display gold-text text-2xl tabular-nums sm:text-3xl">
+                      <CountUp value={item.value} />
                     </dt>
                     <dd className="mx-auto mt-2 max-w-[24ch] text-xs leading-relaxed text-ink-2">
                       {item.label}
