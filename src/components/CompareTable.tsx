@@ -44,7 +44,10 @@ export default function CompareTable({ rows }: { rows: Rows }) {
           Altyr Pro <span className="ml-1 font-normal text-muted">(us)</span>
         </div>
         <div className="border-l border-line px-5 py-3.5 text-ink-2">
-          Inflow <span className="ml-1 font-normal text-muted">(most teams)</span>
+          Inflow{" "}
+          <span className="ml-1 font-normal text-muted">
+            (what every other team runs)
+          </span>
         </div>
       </div>
       {rows.map((row) => (

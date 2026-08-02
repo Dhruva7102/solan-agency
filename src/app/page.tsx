@@ -1,10 +1,12 @@
 import Link from "next/link";
 import {
   BRAND,
+  HERO_PROOF,
   HEADLINE_STATS,
   MANIFESTO,
   FOUNDER_AUTHORITY,
   INTRO_VIDEO,
+  FINAL_CTA,
 } from "@/lib/content";
 import { Section, SectionHeading } from "@/components/Section";
 import Reveal from "@/components/Reveal";
@@ -65,11 +67,45 @@ export default function Home() {
               {BRAND.subtag}
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-              <Link href="/systems" className="btn-gold">
-                See the backend <span aria-hidden>→</span>
+              <Link href="/calculator" className="btn-gold">
+                Run your numbers <span aria-hidden>→</span>
               </Link>
-              <Link href="/calculator" className="btn-ghost">
-                Run your numbers
+              <Link href="/systems" className="btn-ghost">
+                See the backend
+              </Link>
+            </div>
+            <p className="mt-5 text-sm text-muted">
+              Or{" "}
+              <a
+                href={FINAL_CTA.href}
+                className="text-gold underline-offset-4 hover:underline"
+              >
+                book an intro call
+              </a>{" "}
+              and we&apos;ll walk your page through it live.
+            </p>
+          </Reveal>
+
+          {/* Proof strip: the receipts, above the fold */}
+          <Reveal delay={0.15}>
+            <div className="mt-14 border-t border-line pt-8">
+              <dl className="grid gap-6 sm:grid-cols-3">
+                {HERO_PROOF.items.map((item) => (
+                  <div key={item.value}>
+                    <dt className="display gold-text text-2xl sm:text-3xl">
+                      {item.value}
+                    </dt>
+                    <dd className="mx-auto mt-2 max-w-[24ch] text-xs leading-relaxed text-ink-2">
+                      {item.label}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+              <Link
+                href={HERO_PROOF.href}
+                className="mt-7 inline-block text-sm text-gold transition-transform hover:translate-x-0.5"
+              >
+                {HERO_PROOF.linkLabel} <span aria-hidden>→</span>
               </Link>
             </div>
           </Reveal>

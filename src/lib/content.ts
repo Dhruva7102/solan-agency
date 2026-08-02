@@ -12,7 +12,18 @@ export const BRAND = {
   wordmark: "ASTOR",
   tagline: "A different type of management.",
   subtag:
-    "Founded with the operators behind the industry's largest chatting operation and one of its top full-service management companies, on venture-funded infrastructure no one else in the space has.",
+    "The operators behind the industry's largest chatting operation and one of its top full-service management companies, running your page on $1.5M of purpose-built infrastructure, with every dollar visible to you, live.",
+};
+
+/* Proof strip under the hero: real numbers, straight from the dashboards. */
+export const HERO_PROOF = {
+  items: [
+    { value: "$0 → $37.3k", label: "net, first 30 days on a new page" },
+    { value: "$222.8k", label: "the month after we took over a flat page" },
+    { value: "+119%", label: "on a $2.4M page that had plateaued" },
+  ],
+  href: "/results",
+  linkLabel: "See the dashboards",
 };
 
 export const NAV_LINKS = [
@@ -52,7 +63,7 @@ export const MANIFESTO = {
   heading: "Most management companies ask for your trust. We removed the need for it.",
   paragraphs: [
     "The management model is broken in one specific way: models hand over their page, their fans, and their income to systems they can't see, run by people they've never met. When it works, they don't know why. When it stops working, they can't prove it.",
-    "Astor was built as the answer. Our backend runs on Altyr Pro, a CRM, chatting and automation platform used by no one outside our partner network. Every message, every sale, every chatter's shift gets logged, attributed and shown to you in real time.",
+    "There's a reason it works that way: nearly every management company in the space runs creator pages through the same off-the-shelf software, Inflow, and it was never built to show you anything. Astor was built as the answer. We raised $1.5M and built Altyr Pro instead: a CRM, chatting and automation platform used by no one outside our partner network. Every message, every sale, every chatter's shift gets logged, attributed and shown to you in real time.",
     "We onboard every model individually. We learn your story, how you speak, what you will and won't sell, and how you want your page run. Then we build SOPs around you. We can do that because we built the infrastructure for it. Nobody else has.",
   ],
 };
@@ -155,15 +166,20 @@ export type CompareDimension = {
   key: string;
   title: string;
   pitch: string;
+  /** The same claim in the model's own terms, not operator jargon. */
+  youGet: string;
+  /** Ties the capability to a real number on the Results page. */
+  receipt?: { text: string; href: string };
   screenshot: { file: string; label: string };
   rows: { feature: string; ultrapro: Cell; inflow: Cell }[];
 };
 
 export const ULTRAPRO = {
   eyebrow: "The backend",
-  heading: "Run on Altyr Pro. Compared against Inflow.",
+  heading: "Every other team runs on Inflow. We built our own.",
   intro:
-    "Most management teams run on Inflow. Ours runs on Altyr Pro, the most advanced CRM, chatting and automation platform in the space, used by no one outside our partner network. What follows is the difference, dimension by dimension, illustrated with faithful renders of the product views our team works in. You'll see the real thing, live, on your call.",
+    "Inflow is the industry standard: the off-the-shelf software nearly every management company in the space runs creator pages through, usually without telling the model. We raised $1.5M and built the alternative. Altyr Pro is used by no one outside our partner network, so this isn't us against one competitor, it's us against the tooling every other team has. Here's the difference, dimension by dimension.",
+  note: "The panels below are faithful renders of the views our team works in. You'll see the live product, running on your own page's data, on your call.",
   disclaimer:
     "Comparison reflects our operating experience across both platforms. Verify current Inflow capabilities independently.",
 };
@@ -174,6 +190,12 @@ export const COMPARE_DIMENSIONS: CompareDimension[] = [
     title: "Chatter quality control",
     pitch:
       "The single biggest fear models have, 'will the chatters sound like me?', is an engineering problem, and Altyr Pro solved it. Every conversation is auditable at message level, every chatter carries a scorecard, and your persona document is enforced, not suggested.",
+    youGet:
+      "In plain terms: nobody can talk to your fans in a way you didn't approve, your hard limits are enforced by the software before a message sends, and you can pull up any conversation on your page, any time, without asking permission.",
+    receipt: {
+      text: "This is why models stay: 92%+ annual retention, 8 in 10 past three years.",
+      href: "/results",
+    },
     screenshot: { file: "ultrapro-qa.png", label: "Altyr Pro: message-level QA view" },
     rows: [
       {
@@ -203,6 +225,12 @@ export const COMPARE_DIMENSIONS: CompareDimension[] = [
     title: "Automation & AI tooling",
     pitch:
       "Revenue on your page shouldn't depend on whether tonight's shift is having a good night. Altyr Pro sequences PPV sends, follow-ups and re-engagement automatically. Chatters close; the system never forgets.",
+    youGet:
+      "In plain terms: your income stops depending on who happens to be on shift. Fans who went quiet get pulled back, unopened PPVs get followed up, and every fan sees the price they actually buy at, whether it's a Tuesday afternoon or 4am on a holiday.",
+    receipt: {
+      text: "This engine is what took a flat page from ~$2k/day to $10–20k/day in two weeks.",
+      href: "/results",
+    },
     screenshot: { file: "ultrapro-automation.png", label: "Altyr Pro: automation and sequencing" },
     rows: [
       {
@@ -232,6 +260,12 @@ export const COMPARE_DIMENSIONS: CompareDimension[] = [
     title: "Analytics & transparency",
     pitch:
       "This is where 'a different type of management' stops being a slogan. Altyr Pro gives you the same live dashboard we use: revenue attributed to every chatter, every send, every fan. You never have to ask how your page is doing, or take our word for it.",
+    youGet:
+      "In plain terms: you never have to ask how your page is doing, wait for a summary, or trust a number someone typed into a message. You open the same screen we do and see what we see, at the same moment we see it.",
+    receipt: {
+      text: "Every figure on our Results page was read off this dashboard.",
+      href: "/results",
+    },
     screenshot: { file: "ultrapro-analytics.png", label: "Altyr Pro: live revenue attribution" },
     rows: [
       {
@@ -261,6 +295,12 @@ export const COMPARE_DIMENSIONS: CompareDimension[] = [
     title: "Fan CRM depth",
     pitch:
       "Your top fans notice when 'you' forget their name between shifts. Altyr Pro's fan CRM keeps every profile, preference and inside joke persistent, so the 4am chatter picks up exactly where the 8pm chatter left off.",
+    youGet:
+      "In plain terms: your biggest spenders never get the 'who is this?' feeling. Whoever is on shift knows his name, what he's bought, what he likes and what you talked about last week, so the relationship that makes him spend stays intact around the clock.",
+    receipt: {
+      text: "A $2.4M-lifetime page had plateaued at $28.5k/mo. On these systems: $80k+ (+119%).",
+      href: "/results",
+    },
     screenshot: { file: "ultrapro-crm.png", label: "Altyr Pro: fan profile and spend history" },
     rows: [
       {
