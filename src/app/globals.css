@@ -186,6 +186,13 @@ input:focus-visible,
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  /* background-clip:text paints only inside the background box, so italic
+     and swashed glyphs get their overhang sliced off (the "e" in "type").
+     Widen the box, then pull the layout back so nothing shifts. */
+  padding-inline: 0.09em;
+  /* Compensate the left fully, but leave a sliver on the right: the italic
+     terminal that was being clipped is now visible ink and needs the room. */
+  margin-inline: -0.09em -0.02em;
 }
 
 .hairline-b {

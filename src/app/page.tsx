@@ -97,7 +97,7 @@ export default function Home() {
               <dl className="mt-10 grid grid-cols-2 gap-x-6 gap-y-9 sm:grid-cols-4">
                 {HEADLINE_STATS.map((stat) => (
                   <div key={stat.label}>
-                    <dt className="numeral gold-text text-[2rem] sm:text-[2.5rem]">
+                    <dt className="numeral gold-text text-[2.75rem] sm:text-[3.5rem]">
                       {stat.value.includes("/") ? (
                         stat.value
                       ) : (
