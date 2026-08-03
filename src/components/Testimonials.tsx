@@ -22,8 +22,13 @@ export default function Testimonials() {
                     </span>
                     {item.quote}
                   </blockquote>
-                  <figcaption className="mt-6 border-t border-line pt-4 text-xs text-muted">
+                  <figcaption className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-line pt-4 text-xs text-muted">
                     {item.attribution}
+                    {item.sample && (
+                      <span className="placeholder-chip !border-gold-dim/60 !text-gold">
+                        sample — replace before pitching
+                      </span>
+                    )}
                   </figcaption>
                 </>
               ) : (
@@ -31,7 +36,9 @@ export default function Testimonials() {
                   <span className="display gold-text text-3xl leading-none" aria-hidden>
                     &ldquo;
                   </span>
-                  <p className="placeholder-chip">{item.placeholder}</p>
+                  <p className="placeholder-chip">
+                    awaiting a real quote from a model on the team
+                  </p>
                 </div>
               )}
             </figure>

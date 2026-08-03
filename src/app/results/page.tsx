@@ -83,7 +83,7 @@ export default function ResultsPage() {
           eyebrow="Receipts"
           heading="Real dashboards, names removed."
         />
-        <div className="mt-10 grid gap-4 sm:grid-cols-2">
+        <div className="mt-10 grid items-start gap-4 sm:grid-cols-2">
           {RESULTS.screenshots.map((shot, i) => (
             <Reveal key={shot.file} delay={i * 0.08}>
               <ScreenshotSlot file={shot.file} label={shot.label} />

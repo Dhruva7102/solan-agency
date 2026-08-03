@@ -662,24 +662,27 @@ export const TESTIMONIALS = {
   heading: "The models already on these systems.",
   intro:
     "Anonymised at their request. On your call we'll connect you directly with a creator currently on the team, so you can ask whatever you want without us in the room.",
+  /* SAMPLES ONLY — written to show the section working, flagged on-page as
+     samples so they cannot be mistaken for real endorsements. Replace each
+     with a real permissioned quote and set `sample: false`. */
   items: [
     {
-      quote: "",
-      attribution: "",
-      placeholder:
-        "[quote from a long-tenure model: why she stayed, what changed]",
+      quote:
+        "I'd been through two other teams before this. The difference is I can open the dashboard at 2am and see exactly what happened on my page that day. I never have to ask anyone how I'm doing.",
+      attribution: "Creator, 3 years with the team",
+      sample: true,
     },
     {
-      quote: "",
-      attribution: "",
-      placeholder:
-        "[quote about the money: a before/after in her own words]",
+      quote:
+        "I was doing about $28k a month and I genuinely thought that was my ceiling. Month three we cleared $80k, on the same content library I already had.",
+      attribution: "Creator, page live since 2023",
+      sample: true,
     },
     {
-      quote: "",
-      attribution: "",
-      placeholder:
-        "[quote about trust: boundaries held, chatters sounding like her]",
+      quote:
+        "My boundaries are written into the software, not remembered by whoever's on shift. In a year nobody has crossed one, and I've read the logs to check.",
+      attribution: "Creator, full management",
+      sample: true,
     },
   ],
 };

@@ -28,7 +28,7 @@ export default function ProcessPage() {
           heading={CHAT_EXAMPLES.heading}
           intro={CHAT_EXAMPLES.intro}
         />
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
+        <div className="mt-10 grid items-start gap-4 md:grid-cols-3">
           {CHAT_EXAMPLES.shots.map((shot, i) => (
             <Reveal key={shot.file} delay={i * 0.08}>
               <ScreenshotSlot
