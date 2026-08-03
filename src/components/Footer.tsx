@@ -16,12 +16,12 @@ export default function Footer() {
               with.
             </p>
           </div>
-          <nav className="grid grid-cols-2 gap-x-12 gap-y-3">
+          <nav className="grid grid-cols-2 gap-x-12">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-ink-2 transition-colors hover:text-ink"
+                className="flex min-h-11 items-center text-sm text-ink-2 transition-colors hover:text-ink"
               >
                 {link.label}
               </Link>

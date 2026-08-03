@@ -26,9 +26,9 @@ export default function ControlPage() {
                 <span className="display gold-text text-2xl">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="display mt-4 text-lg leading-snug text-ink">
+                <h2 className="display mt-4 text-lg leading-snug text-ink">
                   {pillar.title}
-                </h3>
+                </h2>
                 <p className="mt-3 text-sm leading-relaxed text-ink-2">
                   {pillar.desc}
                 </p>

@@ -367,9 +367,9 @@ function StackedComparison({
   return (
     <div className="card p-7">
       <div className="flex flex-wrap items-baseline justify-between gap-3">
-        <h3 className="text-sm font-semibold text-ink">
+        <h2 className="text-sm font-semibold text-ink">
           Where the money comes from
-        </h3>
+        </h2>
         <div className="flex flex-wrap gap-4">
           {SERIES.map((s) => (
             <span key={s.key} className="flex items-center gap-1.5 text-[11px] text-ink-2">
@@ -496,9 +496,9 @@ function Projection({
   return (
     <div className="card p-7">
       <div className="flex flex-wrap items-baseline justify-between gap-3">
-        <h3 className="text-sm font-semibold text-ink">
+        <h2 className="text-sm font-semibold text-ink">
           12-month trajectory (gross)
-        </h3>
+        </h2>
         <div className="flex gap-4 text-[11px] text-ink-2">
           <span className="flex items-center gap-1.5">
             <span className="h-[2px] w-4 rounded bg-gold" /> With us

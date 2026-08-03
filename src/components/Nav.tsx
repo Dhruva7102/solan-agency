@@ -17,7 +17,10 @@ export default function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-bg/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6">
-        <Link href="/" className="flex shrink-0 items-baseline gap-2 py-4">
+        <Link
+          href="/"
+          className="flex min-h-11 shrink-0 items-center gap-2 py-4"
+        >
           <span className="display gold-text shimmer inline-block text-lg font-semibold tracking-wide">
             {BRAND.wordmark}
           </span>
@@ -36,7 +39,7 @@ export default function Nav() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`border-b-2 px-3 py-4 text-[13px] transition-colors ${
+                className={`flex min-h-11 items-center border-b-2 px-3 py-4 text-[13px] transition-colors ${
                   active
                     ? "border-gold text-ink"
                     : "border-transparent text-ink-2 hover:text-ink"

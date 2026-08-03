@@ -16,8 +16,8 @@ export default function CtaBand({ expect = false }: { expect?: boolean }) {
           </Reveal>
           <ol className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {CALL_EXPECT.steps.map((step, i) => (
-              <Reveal key={step.title} delay={i * 0.07} className="h-full">
-                <li className="card lift h-full p-6">
+              <li key={step.title} className="h-full">
+                <Reveal delay={i * 0.07} className="card lift h-full p-6">
                   <span className="display gold-text text-sm">
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -27,8 +27,8 @@ export default function CtaBand({ expect = false }: { expect?: boolean }) {
                   <p className="mt-2 text-sm leading-relaxed text-ink-2">
                     {step.desc}
                   </p>
-                </li>
-              </Reveal>
+                </Reveal>
+              </li>
             ))}
           </ol>
         </div>

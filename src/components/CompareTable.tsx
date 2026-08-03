@@ -36,8 +36,38 @@ function LevelMark({ level }: { level: Level }) {
 
 export default function CompareTable({ rows }: { rows: Rows }) {
   return (
-    <div className="card overflow-x-auto">
-      <div className="min-w-[560px]">
+    <>
+      {/* Phones: stacked cards. A 3-column table at 560px min-width pushes the
+          Inflow column, which is the whole argument, off a 390px screen and
+          hides it behind a horizontal scroll most people never find. */}
+      <div className="flex flex-col gap-3 md:hidden">
+        {rows.map((row) => (
+          <div key={row.feature} className="card p-5">
+            <p className="text-sm font-medium text-ink">{row.feature}</p>
+            <div className="mt-4 flex flex-col gap-3">
+              <div className="flex items-start gap-2.5">
+                <LevelMark level={row.ultrapro.level} />
+                <p className="text-xs leading-relaxed text-ink-2">
+                  <span className="font-semibold text-gold">Altyr Pro: </span>
+                  {row.ultrapro.note}
+                </p>
+              </div>
+              <div className="flex items-start gap-2.5 border-t border-line pt-3">
+                <LevelMark level={row.inflow.level} />
+                <p className="text-xs leading-relaxed text-muted">
+                  <span className="font-semibold text-ink-2">
+                    Inflow, what every other team runs:{" "}
+                  </span>
+                  {row.inflow.note}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="card hidden overflow-x-auto md:block">
+        <div className="min-w-[560px]">
       <div className="grid grid-cols-[1.2fr_1fr_1fr] border-b border-line bg-surface-2 text-xs font-semibold">
         <div className="px-5 py-3.5 text-muted">Capability</div>
         <div className="border-l border-line px-5 py-3.5 text-gold">
@@ -74,7 +104,8 @@ export default function CompareTable({ rows }: { rows: Rows }) {
           </div>
         </div>
       ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

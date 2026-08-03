@@ -32,7 +32,7 @@ export default function TierCard({ tier }: { tier: Tier }) {
         <p className="eyebrow mb-4 !text-[10px]">Most common start</p>
       )}
       <div className="flex items-center justify-between gap-3">
-        <h3 className="display text-xl text-ink">{tier.name}</h3>
+        <h2 className="display text-xl text-ink">{tier.name}</h2>
         {tier.upgrade && (
           <div
             role="group"

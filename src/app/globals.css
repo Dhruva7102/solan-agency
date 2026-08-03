@@ -16,8 +16,8 @@
   /* Ink */
   --ink: #f2eee5;
   --ink-2: #b3ada0;
-  /* muted lifted from #7e786b to clear WCAG AA 4.5:1 on --bg for small text */
-  --muted: #8b8574;
+  /* muted clears WCAG AA 4.5:1 for small text on card surfaces, not just --bg */
+  --muted: #8f8978;
 
   /* Brand */
   --gold: #d2ac61;
@@ -251,9 +251,13 @@ input[type="range"]::-moz-range-thumb {
     }
   }
 
-  /* Ambient glow behind heroes, breathing slowly. */
-  .hero-glow {
-    animation: glow-drift 18s ease-in-out infinite alternate;
+  /* Ambient glow behind heroes, breathing slowly. Desktop only: repainting
+     a full-width gradient forever is a real cost on phone GPUs, and the
+     static glow reads identically on a small screen. */
+  @media (min-width: 768px) {
+    .hero-glow {
+      animation: glow-drift 18s ease-in-out infinite alternate;
+    }
   }
   @keyframes glow-drift {
     from {
