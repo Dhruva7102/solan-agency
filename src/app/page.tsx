@@ -89,64 +89,64 @@ export default function Home() {
             </p>
           </Reveal>
 
-          {/* Proof strip: the receipts, above the fold */}
+          {/* Above the fold: what's true of the whole operation. A claim
+              about every page we run lands harder than one page's number. */}
           <Reveal delay={0.15}>
             <div className="mt-16">
               <hr className="rule-fade" />
-              <dl className="mt-10 grid gap-10 sm:grid-cols-3 sm:gap-6">
-                {HERO_PROOF.items.map((item) => (
-                  <div key={item.value}>
-                    <dt className="numeral gold-text text-[2.25rem] sm:text-[2.75rem]">
-                      <CountUp value={item.value} />
+              <dl className="mt-10 grid grid-cols-2 gap-x-6 gap-y-9 sm:grid-cols-4">
+                {HEADLINE_STATS.map((stat) => (
+                  <div key={stat.label}>
+                    <dt className="numeral gold-text text-[2rem] sm:text-[2.5rem]">
+                      {stat.value.includes("/") ? (
+                        stat.value
+                      ) : (
+                        <CountUp value={stat.value} />
+                      )}
                     </dt>
-                    <dd className="mx-auto mt-3 max-w-[26ch] text-[13px] leading-relaxed text-ink-2">
-                      {item.label}
+                    <dd className="mx-auto mt-3 max-w-[22ch] text-[12.5px] leading-relaxed text-ink-2">
+                      {stat.short}
                     </dd>
                   </div>
                 ))}
               </dl>
-              <Link
-                href={HERO_PROOF.href}
-                className="mt-10 inline-flex min-h-11 items-center text-sm text-gold transition-transform hover:translate-x-0.5"
-              >
-                {HERO_PROOF.linkLabel} <span aria-hidden>&nbsp;→</span>
-              </Link>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* Stats band — numbers as architecture, not cards in a row */}
+      {/* Then the individual receipts, at full scale */}
       <Section alt className="glow-band hairline-b">
-        <div className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
-          {HEADLINE_STATS.map((stat, i) => (
+        <Reveal>
+          <p className="eyebrow mb-5">Pages we run</p>
+          <h2 className="display-xl max-w-2xl text-ink">
+            What that looks like on a single page.
+          </h2>
+        </Reveal>
+        <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3">
+          {HERO_PROOF.items.map((item, i) => (
             <Reveal
-              key={stat.label}
+              key={item.value}
               delay={i * 0.08}
-              className="group bg-surface p-7 transition-colors duration-300 hover:bg-surface-2 sm:p-8"
+              className="bg-surface p-7 transition-colors duration-300 hover:bg-surface-2 sm:p-8"
             >
-              <p className="numeral gold-text text-[3.25rem] sm:text-[3.75rem]">
-                {/* "24/7" is a ratio, not a quantity — counting it up reads
-                    as a rendering glitch rather than a flourish. */}
-                {stat.value.includes("/") ? (
-                  stat.value
-                ) : (
-                  <CountUp value={stat.value} />
-                )}
+              <p className="numeral gold-text text-[2.75rem] sm:text-[3.25rem]">
+                <CountUp value={item.value} />
               </p>
-              <p className="mt-5 text-sm font-medium leading-snug text-ink">
-                {stat.label}
-              </p>
-              <p
-                className={`mt-2 text-xs leading-relaxed text-muted ${
-                  "placeholder" in stat && stat.placeholder ? "italic" : ""
-                }`}
-              >
-                {stat.sub}
+              <p className="mt-5 max-w-[28ch] text-sm leading-relaxed text-ink-2">
+                {item.label}
               </p>
             </Reveal>
           ))}
         </div>
+        <Reveal delay={0.2}>
+          <Link
+            href={HERO_PROOF.href}
+            className="mt-8 inline-flex min-h-11 items-center text-sm text-gold transition-transform hover:translate-x-0.5"
+          >
+            {HERO_PROOF.linkLabel} <span aria-hidden>&nbsp;→</span>
+          </Link>
+        </Reveal>
       </Section>
 
       {/* Founder intro video */}

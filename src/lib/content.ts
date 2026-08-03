@@ -36,24 +36,31 @@ export const NAV_LINKS = [
   { href: "/results", label: "Results" },
 ] as const;
 
+/* These sit directly under the hero: claims about the whole operation,
+   which carry further than any single page's dashboard. `short` is the
+   tightened label used in the hero strip, where space is scarce. */
 export const HEADLINE_STATS = [
   {
     value: "4×",
+    short: "Minimum first-month uplift on chat-driven revenue",
     label: "Minimum first-month uplift in PPV, message and tip revenue",
     sub: "Our typical minimum. Many models see more.",
   },
   {
     value: "92%+",
+    short: "Annual model retention across the book",
     label: "Annual model retention",
     sub: "8 in 10 of our models have been with the team for over three years.",
   },
   {
     value: "24/7",
+    short: "A dedicated pod on your page, every hour",
     label: "Dedicated chatter pod on your page, every hour",
     sub: "Your pod. Your voice. Never a shared queue.",
   },
   {
     value: "100%",
+    short: "Dashboard transparency: you see what we see",
     label: "Dashboard transparency: you see what we see",
     sub: "Live revenue attribution, chat logs, chatter scorecards.",
   },
