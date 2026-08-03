@@ -58,14 +58,15 @@ export default function Home() {
   return (
     <main>
       {/* Hero */}
-      <section className="hero-glow hairline-b">
-        <div className="mx-auto max-w-6xl px-6 pb-20 pt-24 text-center sm:pb-28 sm:pt-32">
+      <section className="hero-glow hairline-b relative overflow-hidden">
+        <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-24 text-center sm:pb-28 sm:pt-32">
           <Reveal>
-            <p className="eyebrow mb-6">Private creator briefing</p>
-            <h1 className="display mx-auto max-w-3xl text-5xl leading-[1.05] tracking-tight sm:text-7xl">
-              A different <span className="gold-text">type</span> of management.
+            <p className="eyebrow mb-8 justify-center">Private creator briefing</p>
+            <h1 className="display-hero mx-auto max-w-4xl">
+              A different <span className="gold-text italic">type</span> of
+              <br className="hidden sm:block" /> management.
             </h1>
-            <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-ink-2">
+            <p className="mx-auto mt-8 max-w-xl text-base leading-relaxed text-ink-2">
               <Highlight text={BRAND.subtag} />
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -90,14 +91,15 @@ export default function Home() {
 
           {/* Proof strip: the receipts, above the fold */}
           <Reveal delay={0.15}>
-            <div className="mt-14 border-t border-line pt-8">
-              <dl className="grid gap-6 sm:grid-cols-3">
+            <div className="mt-16">
+              <hr className="rule-fade" />
+              <dl className="mt-10 grid gap-10 sm:grid-cols-3 sm:gap-6">
                 {HERO_PROOF.items.map((item) => (
                   <div key={item.value}>
-                    <dt className="display gold-text text-2xl tabular-nums sm:text-3xl">
+                    <dt className="numeral gold-text text-[2.25rem] sm:text-[2.75rem]">
                       <CountUp value={item.value} />
                     </dt>
-                    <dd className="mx-auto mt-2 max-w-[24ch] text-xs leading-relaxed text-ink-2">
+                    <dd className="mx-auto mt-3 max-w-[26ch] text-[13px] leading-relaxed text-ink-2">
                       {item.label}
                     </dd>
                   </div>
@@ -105,35 +107,43 @@ export default function Home() {
               </dl>
               <Link
                 href={HERO_PROOF.href}
-                className="mt-7 inline-block text-sm text-gold transition-transform hover:translate-x-0.5"
+                className="mt-10 inline-flex min-h-11 items-center text-sm text-gold transition-transform hover:translate-x-0.5"
               >
-                {HERO_PROOF.linkLabel} <span aria-hidden>→</span>
+                {HERO_PROOF.linkLabel} <span aria-hidden>&nbsp;→</span>
               </Link>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* Stats band */}
-      <Section alt className="hairline-b">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {/* Stats band — numbers as architecture, not cards in a row */}
+      <Section alt className="glow-band hairline-b">
+        <div className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
           {HEADLINE_STATS.map((stat, i) => (
-            <Reveal key={stat.label} delay={i * 0.08}>
-              <div className="card lift h-full p-6">
-                <p className="display gold-text text-4xl tabular-nums">
+            <Reveal
+              key={stat.label}
+              delay={i * 0.08}
+              className="group bg-surface p-7 transition-colors duration-300 hover:bg-surface-2 sm:p-8"
+            >
+              <p className="numeral gold-text text-[3.25rem] sm:text-[3.75rem]">
+                {/* "24/7" is a ratio, not a quantity — counting it up reads
+                    as a rendering glitch rather than a flourish. */}
+                {stat.value.includes("/") ? (
+                  stat.value
+                ) : (
                   <CountUp value={stat.value} />
-                </p>
-                <p className="mt-3 text-sm font-medium leading-snug text-ink">
-                  {stat.label}
-                </p>
-                <p
-                  className={`mt-2 text-xs leading-relaxed text-muted ${
-                    "placeholder" in stat && stat.placeholder ? "italic" : ""
-                  }`}
-                >
-                  {stat.sub}
-                </p>
-              </div>
+                )}
+              </p>
+              <p className="mt-5 text-sm font-medium leading-snug text-ink">
+                {stat.label}
+              </p>
+              <p
+                className={`mt-2 text-xs leading-relaxed text-muted ${
+                  "placeholder" in stat && stat.placeholder ? "italic" : ""
+                }`}
+              >
+                {stat.sub}
+              </p>
             </Reveal>
           ))}
         </div>
@@ -153,17 +163,34 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Manifesto */}
-      <Section>
-        <SectionHeading eyebrow={MANIFESTO.eyebrow} heading={MANIFESTO.heading} />
-        <div className="mt-10 grid max-w-4xl gap-6">
-          {MANIFESTO.paragraphs.map((p, i) => (
-            <Reveal key={i} delay={i * 0.06}>
-              <p className="max-w-2xl text-[15px] leading-relaxed text-ink-2">
-                {p}
-              </p>
-            </Reveal>
-          ))}
+      {/* Manifesto — editorial: statement left, argument offset right */}
+      <Section className="relative overflow-hidden">
+        <span
+          aria-hidden
+          className="ghost-figure -right-6 top-0 hidden text-[16rem] lg:block"
+        >
+          &rdquo;
+        </span>
+        <div className="relative grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <Reveal className="lg:col-span-5">
+            <p className="eyebrow mb-6">{MANIFESTO.eyebrow}</p>
+            <h2 className="display-xl text-ink">{MANIFESTO.heading}</h2>
+          </Reveal>
+          <div className="flex flex-col gap-7 lg:col-span-6 lg:col-start-7 lg:pt-3">
+            {MANIFESTO.paragraphs.map((p, i) => (
+              <Reveal key={i} delay={i * 0.06}>
+                <p
+                  className={
+                    i === 0
+                      ? "text-[17px] leading-relaxed text-ink"
+                      : "text-[15px] leading-relaxed text-ink-2"
+                  }
+                >
+                  {p}
+                </p>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </Section>
 

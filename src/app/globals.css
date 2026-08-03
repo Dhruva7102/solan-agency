@@ -2,30 +2,36 @@
 @import "./altyr-ui.css";
 
 :root {
-  /* Surfaces */
-  --bg: #0a0a0f;
-  --bg-2: #0d0d14;
-  --surface: #12121a;
-  --surface-2: #181823;
-  --chart-surface: #14141c;
+  /* Surfaces — warm near-black. A cool black makes gold look painted on;
+     a warm one makes it look lit. */
+  --bg: #090807;
+  --bg-2: #0e0c0a;
+  --surface: #15120f;
+  --surface-2: #1d1915;
+  --chart-surface: #15120f;
 
   /* Lines */
-  --line: rgba(240, 236, 227, 0.08);
-  --line-strong: rgba(240, 236, 227, 0.16);
+  --line: rgba(246, 241, 230, 0.09);
+  --line-strong: rgba(246, 241, 230, 0.18);
 
   /* Ink */
-  --ink: #f2eee5;
-  --ink-2: #b3ada0;
+  --ink: #f7f2e7;
+  --ink-2: #c2baa9;
   /* muted clears WCAG AA 4.5:1 for small text on card surfaces, not just --bg */
-  --muted: #8f8978;
+  --muted: #968e7c;
 
   /* Brand */
   --gold: #d2ac61;
-  --gold-bright: #e8cb8b;
-  --gold-dim: #97783f;
-  --gold-ink: #151006;
+  --gold-bright: #f2dda9;
+  --gold-dim: #8f7137;
+  --gold-ink: #150f06;
 
-  /* Chart series — validated (dataviz six checks, dark surface #14141C) */
+  /* Companion accent. Atmosphere only — never type, never a border.
+     It exists to give the gold something to glow against. */
+  --ember: #6e2440;
+  --ember-soft: rgba(110, 36, 64, 0.5);
+
+  /* Chart series — validated (dataviz six checks, dark surface) */
   --series-subs: #4c86d8;
   --series-chat: #b9831f;
   --series-tips: #c24e7e;
@@ -50,6 +56,7 @@
   --color-gold-dim: var(--gold-dim);
   --color-gold-ink: var(--gold-ink);
   --color-good: var(--good);
+  --color-ember: var(--ember);
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-display: var(--font-fraunces), Georgia, serif;
 }
@@ -85,11 +92,27 @@ input:focus-visible,
 /* ————— shared component classes ————— */
 
 .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
   font-size: 0.6875rem;
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
+}
+/* A struck gold rule leading each eyebrow: cheap to render, and it gives
+   every section a deliberate starting mark instead of floating text. */
+.eyebrow::before {
+  content: "";
+  width: 1.75rem;
+  height: 1px;
+  flex: none;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+.eyebrow.text-center,
+.text-center > .eyebrow {
+  justify-content: center;
 }
 
 .display {
@@ -98,16 +121,29 @@ input:focus-visible,
   letter-spacing: -0.01em;
 }
 
+/* Lacquer, not cardboard: a top-lit gradient, a bright inner edge and a
+   deep soft shadow. This is what separates "expensive" from "flat black
+   rectangle with a hairline". */
 .card {
-  background: var(--surface);
+  background:
+    linear-gradient(180deg, rgba(255, 246, 230, 0.05), rgba(255, 246, 230, 0.012) 55%),
+    var(--surface);
   border: 1px solid var(--line);
-  border-radius: 1rem;
+  border-radius: 1.25rem;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 246, 230, 0.07),
+    0 28px 56px -40px rgba(0, 0, 0, 0.95);
 }
 
 .card-raised {
-  background: var(--surface-2);
-  border: 1px solid var(--line);
-  border-radius: 1rem;
+  background:
+    linear-gradient(180deg, rgba(255, 246, 230, 0.075), rgba(255, 246, 230, 0.02) 55%),
+    var(--surface-2);
+  border: 1px solid var(--line-strong);
+  border-radius: 1.25rem;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 246, 230, 0.1),
+    0 36px 70px -44px rgba(0, 0, 0, 1);
 }
 
 .btn-gold {
@@ -207,9 +243,11 @@ input[type="range"]::-moz-range-thumb {
 
 /* Subtle ambient glow used behind heroes */
 .hero-glow {
+  position: relative;
   background:
-    radial-gradient(600px 320px at 50% 0%, rgba(210, 172, 97, 0.09), transparent 70%),
-    radial-gradient(900px 500px at 80% 10%, rgba(76, 134, 216, 0.05), transparent 70%);
+    radial-gradient(720px 380px at 50% -5%, rgba(210, 172, 97, 0.13), transparent 72%),
+    radial-gradient(900px 520px at 12% 8%, rgba(110, 36, 64, 0.2), transparent 70%),
+    radial-gradient(760px 460px at 88% 18%, rgba(110, 36, 64, 0.12), transparent 72%);
 }
 
 /* Fine grain to avoid flat black banding */
@@ -345,4 +383,89 @@ input[type="range"]::-moz-range-thumb {
   .lift:hover {
     transform: none;
   }
+}
+
+/* ————————————————— Editorial system ————————————————— */
+
+/* Fluid display scale. The hero should feel architectural on a laptop and
+   still fit a 390px phone without a media query. */
+.display-hero {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(2.75rem, 11vw, 7.5rem);
+  line-height: 0.94;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.display-xl {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(2rem, 5.5vw, 3.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+/* Numbers treated as graphic objects, not text. */
+.numeral {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums lining-nums;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+}
+
+/* A rule that fades at both ends — reads as light catching an edge rather
+   than a border drawn across the page. */
+.rule-fade {
+  height: 1px;
+  border: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--line-strong) 15%,
+    rgba(210, 172, 97, 0.5) 50%,
+    var(--line-strong) 85%,
+    transparent
+  );
+}
+
+/* Section-scale ambient light for bands that are not the hero. */
+.glow-band {
+  position: relative;
+  isolation: isolate;
+  /* The glow bleeds past both edges by design; clip it so it can't widen
+     the document and hand phones a horizontal scrollbar. */
+  overflow: clip;
+}
+.glow-band::before {
+  content: "";
+  position: absolute;
+  inset: -20% -10% auto -10%;
+  height: 140%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 70% at 20% 40%, rgba(110, 36, 64, 0.16), transparent 70%),
+    radial-gradient(55% 65% at 85% 30%, rgba(210, 172, 97, 0.09), transparent 72%);
+}
+
+/* Oversized ghost numeral behind editorial sections. Decorative only. */
+.ghost-figure {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 500;
+  line-height: 0.8;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(210, 172, 97, 0.13);
+  opacity: 0.9;
+}
+
+/* Full-bleed escape from a max-width container. */
+.bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }

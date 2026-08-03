@@ -32,10 +32,12 @@ export function SectionHeading({
 }) {
   return (
     <Reveal className={center ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
-      {eyebrow && <p className="eyebrow mb-4">{eyebrow}</p>}
-      <Tag className="display text-3xl leading-tight tracking-tight text-ink sm:text-4xl">
-        {heading}
-      </Tag>
+      {eyebrow && (
+        <p className={`eyebrow mb-5 ${center ? "justify-center" : ""}`}>
+          {eyebrow}
+        </p>
+      )}
+      <Tag className="display-xl text-ink">{heading}</Tag>
       {intro && (
         <p className="mt-5 text-[15px] leading-relaxed text-ink-2">{intro}</p>
       )}
