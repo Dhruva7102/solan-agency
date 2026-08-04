@@ -12,7 +12,7 @@ import { Section, SectionHeading } from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import Highlight from "@/components/Highlight";
 import CountUp from "@/components/CountUp";
-import VideoSlot from "@/components/VideoSlot";
+import VideoSlot, { hasIntroVideo } from "@/components/VideoSlot";
 import CtaBand from "@/components/CtaBand";
 
 const SECTION_CARDS = [
@@ -149,19 +149,21 @@ export default function Home() {
         </Reveal>
       </Section>
 
-      {/* Founder intro video */}
-      <Section className="hairline-b">
-        <div className="mx-auto max-w-3xl">
-          <SectionHeading
-            eyebrow={INTRO_VIDEO.eyebrow}
-            heading={INTRO_VIDEO.heading}
-            center
-          />
-          <Reveal delay={0.1} className="mt-10">
-            <VideoSlot />
-          </Reveal>
-        </div>
-      </Section>
+      {/* Founder intro video — only once the file is actually in /public/media */}
+      {hasIntroVideo() && (
+        <Section className="hairline-b">
+          <div className="mx-auto max-w-3xl">
+            <SectionHeading
+              eyebrow={INTRO_VIDEO.eyebrow}
+              heading={INTRO_VIDEO.heading}
+              center
+            />
+            <Reveal delay={0.1} className="mt-10">
+              <VideoSlot />
+            </Reveal>
+          </div>
+        </Section>
+      )}
 
       {/* Manifesto — editorial: statement left, argument offset right */}
       <Section className="relative overflow-hidden">
