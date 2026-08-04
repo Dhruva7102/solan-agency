@@ -22,14 +22,11 @@ export default function Testimonials() {
                     </span>
                     {item.quote}
                   </blockquote>
-                  <figcaption className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-line pt-4 text-xs text-muted">
-                    {item.attribution}
-                    {item.sample && (
-                      <span className="placeholder-chip !border-gold-dim/60 !text-gold">
-                        sample — replace before pitching
-                      </span>
-                    )}
-                  </figcaption>
+                  {item.attribution && (
+                    <figcaption className="mt-6 border-t border-line pt-4 text-xs text-muted">
+                      {item.attribution}
+                    </figcaption>
+                  )}
                 </>
               ) : (
                 <div className="flex min-h-40 flex-col items-center justify-center gap-3 text-center">

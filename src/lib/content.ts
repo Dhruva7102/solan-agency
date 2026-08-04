@@ -70,8 +70,8 @@ export const MANIFESTO = {
   eyebrow: "Why we exist",
   heading: "Most management companies ask for your trust. We removed the need for it.",
   paragraphs: [
-    "The management model is broken in one specific way: models hand over their page, their fans, and their income to systems they can't see, run by people they've never met. When it works, they don't know why. When it stops working, they can't prove it.",
-    "There's a reason it works that way: nearly every management company in the space runs creator pages through the same off-the-shelf software, Inflow, and it was never built to show you anything. Astor was built as the answer. We raised $1.5M and built Altyr Pro instead: a CRM, chatting and automation platform used by no one outside our partner network. Every message, every sale, every chatter's shift gets logged, attributed and shown to you in real time.",
+    "The management model is broken in one specific way. Models hand over their page, their fans and their income to systems they can't see, run by people they've never met. When it works, they don't know why. When it stops working, they can't prove it.",
+    "There's a reason it works that way. Nearly every management company in the space runs creator pages through the same off-the-shelf software, Inflow, and Inflow was never built to show you anything. So we raised $1.5M and built our own. Altyr Pro is a CRM, chatting and automation platform used by no one outside our partner network, and every message, every sale and every chatter's shift on it gets logged, attributed and shown to you in real time.",
     "We onboard every model individually. We learn your story, how you speak, what you will and won't sell, and how you want your page run. Then we build SOPs around you. We can do that because we built the infrastructure for it. Nobody else has.",
   ],
 };
@@ -83,7 +83,7 @@ export const FOUNDER_AUTHORITY = {
   founders: [
     {
       role: "The Chatting Operator",
-      desc: "Runs the largest chatting operation in the industry: the team that trains and staffs chatters for the biggest pages in the space.",
+      desc: "Runs the largest chatting operation in the industry. His team trains and staffs the chatters behind the biggest pages in the space.",
     },
     {
       role: "The Full-Service Operator",
@@ -91,7 +91,7 @@ export const FOUNDER_AUTHORITY = {
     },
     {
       role: "The Systems Architect",
-      desc: "Built the infrastructure this operation runs on: the onboarding, SOP and transparency layer no one else can offer.",
+      desc: "Built the infrastructure this operation runs on, including the onboarding, SOP and transparency layer no one else can offer.",
     },
   ],
 };
@@ -139,7 +139,7 @@ export const SERVICES = {
       rate: "40%",
       rateNote: "chatting + growth engine",
       blurb:
-        "Everything in Chatting & Sexting, plus the growth layer: content plans built from what converts and a collab engine that keeps new fans flowing in.",
+        "Everything in Chatting & Sexting, plus the growth layer. Content plans built from what actually converts, and a collab engine that keeps new fans arriving.",
       includes: [
         "Everything in Chatting & Sexting",
         "Monthly content plans built from your page's data",
@@ -151,7 +151,7 @@ export const SERVICES = {
         rate: "45%",
         rateNote: "growth + social armor",
         blurb:
-          "Everything in Growth, hardened for social: ban-proof link infrastructure, account-by-account reviews, and content plans customized to each platform.",
+          "Everything in Growth, hardened for social. Ban-proof link infrastructure, account-by-account reviews, and content plans built per platform.",
         includes: [
           "Everything in Growth at 40%",
           "Custom-domain link hubs that survive Instagram bans",
@@ -199,7 +199,7 @@ export const COMPARE_DIMENSIONS: CompareDimension[] = [
     pitch:
       "The single biggest fear models have, 'will the chatters sound like me?', is an engineering problem, and Altyr Pro solved it. Every conversation is auditable at message level, every chatter carries a scorecard, and your persona document is enforced, not suggested.",
     youGet:
-      "In plain terms: nobody can talk to your fans in a way you didn't approve, your hard limits are enforced by the software before a message sends, and you can pull up any conversation on your page, any time, without asking permission.",
+      "What that means for you: nobody talks to your fans in a way you didn't approve. Your hard limits are enforced by the software before a message sends, and you can pull up any conversation on your page whenever you want, without asking anyone.",
     receipt: {
       text: "This is why models stay: 92%+ annual retention, 8 in 10 past three years.",
       href: "/results",
@@ -234,7 +234,7 @@ export const COMPARE_DIMENSIONS: CompareDimension[] = [
     pitch:
       "Revenue on your page shouldn't depend on whether tonight's shift is having a good night. Altyr Pro sequences PPV sends, follow-ups and re-engagement automatically. Chatters close; the system never forgets.",
     youGet:
-      "In plain terms: your income stops depending on who happens to be on shift. Fans who went quiet get pulled back, unopened PPVs get followed up, and every fan sees the price they actually buy at, whether it's a Tuesday afternoon or 4am on a holiday.",
+      "So your income stops depending on who happens to be on shift. Fans who went quiet get pulled back. Unopened PPVs get followed up. Every fan sees the price he actually buys at, whether that's a Tuesday afternoon or 4am on a holiday.",
     receipt: {
       text: "This engine is what took a flat page from ~$2k/day to $10–20k/day in two weeks.",
       href: "/results",
@@ -267,9 +267,9 @@ export const COMPARE_DIMENSIONS: CompareDimension[] = [
     key: "analytics",
     title: "Analytics & transparency",
     pitch:
-      "This is where 'a different type of management' stops being a slogan. Altyr Pro gives you the same live dashboard we use: revenue attributed to every chatter, every send, every fan. You never have to ask how your page is doing, or take our word for it.",
+      "This is where 'a different type of management' stops being a slogan. Altyr Pro gives you the same live dashboard we work from, with revenue attributed to every chatter, every send and every fan. You never have to ask how your page is doing, or take our word for it.",
     youGet:
-      "In plain terms: you never have to ask how your page is doing, wait for a summary, or trust a number someone typed into a message. You open the same screen we do and see what we see, at the same moment we see it.",
+      "Which means you never wait for a summary, and never have to trust a number someone typed into a message. You open the same screen we do and see what we see, at the moment we see it.",
     receipt: {
       text: "Every figure on our Results page was read off this dashboard.",
       href: "/results",
@@ -304,7 +304,7 @@ export const COMPARE_DIMENSIONS: CompareDimension[] = [
     pitch:
       "Your top fans notice when 'you' forget their name between shifts. Altyr Pro's fan CRM keeps every profile, preference and inside joke persistent, so the 4am chatter picks up exactly where the 8pm chatter left off.",
     youGet:
-      "In plain terms: your biggest spenders never get the 'who is this?' feeling. Whoever is on shift knows his name, what he's bought, what he likes and what you talked about last week, so the relationship that makes him spend stays intact around the clock.",
+      "Practically, your biggest spenders never get that 'who is this?' feeling. Whoever is on shift already knows his name, what he's bought, what he likes and what you talked about last week. The relationship that makes him spend survives the shift change.",
     receipt: {
       text: "A $2.4M-lifetime page had plateaued at $28.5k/mo. On these systems: $80k+ (+119%).",
       href: "/results",
@@ -383,13 +383,13 @@ export const FLOWS: Flow[] = [
         actor: "system",
         time: "11:47 PM",
         title: "Altyr Pro loads his full profile",
-        desc: "Spend history, preferences, past conversations, the nickname he likes, the price point he converts at: all surfaced beside the chat before a word is typed.",
+        desc: "Spend history, preferences, past conversations, the nickname he likes, the price point he converts at. All of it sits beside the chat before a word is typed.",
       },
       {
         actor: "chatter",
         time: "11:49 PM",
         title: "Your night-shift chatter replies, as you",
-        desc: "Trained on your persona document: your phrasing, your emoji habits, your hard boundaries. Response time is tracked; the pod's standard is minutes, not hours.",
+        desc: "She's trained on your persona document, down to your phrasing, your emoji habits and your hard boundaries. Response time is tracked, and the pod's standard is minutes rather than hours.",
       },
       {
         actor: "chatter",
@@ -413,7 +413,7 @@ export const FLOWS: Flow[] = [
         actor: "lead",
         time: "Next morning",
         title: "QA reviews the conversation",
-        desc: "The pod lead scores it against your persona doc: tone, boundaries, sequencing. Scores roll into the chatter's scorecard, which you can see any time.",
+        desc: "The pod lead scores it against your persona doc for tone, boundaries and sequencing. Those scores roll into the chatter's scorecard, which you can see any time.",
       },
     ],
     footnote: "Every conversation on your page runs through this loop. You can audit any of them, whenever you want.",
@@ -435,13 +435,13 @@ export const FLOWS: Flow[] = [
         actor: "lead",
         title: "Level 2: the pod lead takes over",
         time: "Within minutes",
-        desc: "Your pod lead (senior chatter over your three shifts) handles anything covered by your SOPs: refund policy, boundary reinforcement, difficult fans. Most escalations end here.",
+        desc: "Your pod lead, the senior chatter across your three shifts, handles anything your SOPs already cover. Refund policy, boundary reinforcement, a difficult fan. Most escalations end here.",
       },
       {
         actor: "manager",
         title: "Level 3: your account manager decides",
         time: "Same day",
-        desc: "Anything touching money, strategy or your reputation: pricing exceptions, big custom requests, platform issues. Your manager resolves it and logs the decision.",
+        desc: "Anything touching money, strategy or your reputation. Pricing exceptions, big custom requests, platform trouble. Your manager resolves it and logs the decision.",
       },
       {
         actor: "model",
@@ -452,7 +452,7 @@ export const FLOWS: Flow[] = [
       {
         actor: "system",
         title: "Every escalation leaves a paper trail",
-        desc: "Who flagged it, who decided, what was decided: all logged in Altyr Pro and visible to you. Nothing about your page gets decided in a group chat you can't see.",
+        desc: "Who flagged it, who decided, and what they decided. All of it logged in Altyr Pro and visible to you. Nothing about your page gets settled in a group chat you can't see.",
       },
     ],
     footnote: "24/7 coverage means the chain works at 4 AM on a Sunday exactly like it works on a Tuesday afternoon.",
@@ -468,13 +468,13 @@ export const FLOWS: Flow[] = [
         actor: "model",
         time: "Days 0–3",
         title: "The deep-dive",
-        desc: "Long-form onboarding session: your story, your voice, your fans, your boundaries, your goals, how involved you want to be. This is the raw material everything else is built from.",
+        desc: "A long-form onboarding session covering your story, your voice, your fans, your boundaries, your goals and how involved you want to be. Everything else gets built from that.",
       },
       {
         actor: "manager",
         time: "Days 3–7",
         title: "Your SOPs are generated",
-        desc: "Persona document, boundaries doc, pricing architecture, escalation rules: operating procedures for your page, written down and reviewed with you line by line. You approve them before anything goes live.",
+        desc: "Persona document, boundaries doc, pricing architecture, escalation rules. Operating procedures for your page, written down and reviewed with you line by line. You approve them before anything goes live.",
       },
       {
         actor: "system",
@@ -593,7 +593,7 @@ export const RESULTS = {
     "We'd rather show you real dashboards than adjectives. Everything below is anonymized. Full detail, with names, on your call.",
   churn: {
     stat: "Lowest churn in the industry",
-    desc: "Models who join this team, stay. Management companies lose models when performance stalls and trust breaks. Our retention comes from removing both failure modes: transparent systems and a revenue floor most models have never seen.",
+    desc: "Models who join this team, stay. Management companies lose models when performance stalls and trust breaks. Our retention comes from removing both failure modes, with transparent systems and a revenue floor most models have never seen.",
     figures:
       "92%+ annual retention · 80% of models 3+ years with the team · 60% past four years",
   },
@@ -662,26 +662,26 @@ export const TESTIMONIALS = {
   heading: "The models already on these systems.",
   intro:
     "Anonymised at their request. On your call we'll connect you directly with a creator currently on the team, so you can ask whatever you want without us in the room.",
-  /* SAMPLES ONLY — written to show the section working, flagged on-page as
-     samples so they cannot be mistaken for real endorsements. Replace each
-     with a real permissioned quote and set `sample: false`. */
+  /* PLACEHOLDER COPY — illustrative only. These are not endorsements: no
+     model has said these words. Replace each with a real, permissioned
+     quote (and its attribution) before this site is shown to anyone. */
   items: [
     {
       quote:
         "I'd been through two other teams before this. The difference is I can open the dashboard at 2am and see exactly what happened on my page that day. I never have to ask anyone how I'm doing.",
-      attribution: "Creator, 3 years with the team",
+      attribution: "",
       sample: true,
     },
     {
       quote:
         "I was doing about $28k a month and I genuinely thought that was my ceiling. Month three we cleared $80k, on the same content library I already had.",
-      attribution: "Creator, page live since 2023",
+      attribution: "",
       sample: true,
     },
     {
       quote:
         "My boundaries are written into the software, not remembered by whoever's on shift. In a year nobody has crossed one, and I've read the logs to check.",
-      attribution: "Creator, full management",
+      attribution: "",
       sample: true,
     },
   ],
