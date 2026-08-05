@@ -42,9 +42,9 @@ export const NAV_LINKS = [
 export const HEADLINE_STATS = [
   {
     value: "4×",
-    short: "Minimum first-month uplift on chat-driven revenue",
-    label: "Minimum first-month uplift in PPV, message and tip revenue",
-    sub: "Our typical minimum. Many models see more.",
+    short: "First-month bar on chat-driven revenue",
+    label: "The first-month bar for PPV, message and tip revenue",
+    sub: "The standard we plan every page around. Many models clear it early.",
   },
   {
     value: "92%+",
@@ -498,7 +498,7 @@ export const FLOWS: Flow[] = [
         actor: "model",
         time: "Day 30",
         title: "First monthly review: against your baseline",
-        desc: "Your manager walks you through month one versus your pre-Astor numbers: revenue by stream, attribution, what worked, what's next. The 4× minimum on chat-driven revenue is the bar we expect to clear.",
+        desc: "Your manager walks you through month one versus your pre-Astor numbers: revenue by stream, attribution, what worked, what's next. 4× on chat-driven revenue is the bar we hold ourselves to, and we expect to clear it.",
       },
     ],
   },
@@ -732,7 +732,7 @@ export const FAQ = {
     },
     {
       q: "How fast do I actually see results?",
-      a: "Your pod goes live after thorough onboarding, supervised. The 4× minimum on chat-driven revenue is a first-month bar, measured against your own pre-Astor baseline at the day-30 review. If the systems are working, you see it in your live dashboard well before we tell you.",
+      a: "Your pod goes live after thorough onboarding, supervised. 4× on chat-driven revenue is the first-month bar we work to, measured against your own pre-Astor baseline at the day-30 review. If the systems are working, you see it in your live dashboard well before we tell you.",
     },
     {
       q: "What can the chatters see, and can they go rogue?",
@@ -766,9 +766,9 @@ export const CALC = {
   eyebrow: "Revenue calculator",
   heading: "What your page looks like on our systems.",
   intro:
-    "Put in where your page is today. The projection applies our minimum, 4× on PPV, message and tip revenue in the first month, and you can adjust it along with everything else. This is a model, not a promise. Your real plan gets built at onboarding.",
+    "Put in where your page is today. The projection applies our first-month bar, 4× on PPV, message and tip revenue, and you can adjust it along with everything else. This is a model, not a promise. Your real plan gets built at onboarding.",
   upliftNote:
-    "4× is our typical minimum first-month uplift on chat-driven revenue (PPV, messages, tips). Many models see more.",
+    "4× is the first-month uplift we plan every page around (PPV, messages, tips). Many models see more.",
 };
 
 export const FINAL_CTA = {
