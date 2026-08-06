@@ -87,7 +87,7 @@ export const FOUNDER_AUTHORITY = {
     },
     {
       role: "The Full-Service Operator",
-      desc: "Runs one of the largest full-service management companies in the industry, with the lowest model churn in the space. Models who join, stay.",
+      desc: "Runs one of the largest full-service management companies in the industry, keeping 92%+ of models year over year. Models who join, stay.",
     },
     {
       role: "The Systems Architect",
@@ -592,10 +592,10 @@ export const RESULTS = {
   intro:
     "We'd rather show you real dashboards than adjectives. Everything below is anonymized. Full detail, with names, on your call.",
   churn: {
-    stat: "Lowest churn in the industry",
-    desc: "Models who join this team, stay. Management companies lose models when performance stalls and trust breaks. Our retention comes from removing both failure modes, with transparent systems and a revenue floor most models have never seen.",
+    stat: "92%+ annual retention",
+    desc: "Models who join this team, stay. Management companies lose models when performance stalls and trust breaks. Our retention comes from removing both failure modes, with transparent systems and performance most models have never seen.",
     figures:
-      "92%+ annual retention · 80% of models 3+ years with the team · 60% past four years",
+      "80% of models 3+ years with the team · 60% past four years",
   },
   // Real trajectories from the founding team's current books (dashboards below).
   caseStudies: [

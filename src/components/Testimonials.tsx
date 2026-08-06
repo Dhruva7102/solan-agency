@@ -3,6 +3,12 @@ import { Section, SectionHeading } from "./Section";
 import Reveal from "./Reveal";
 
 export default function Testimonials() {
+  // Only real, permissioned quotes render. While every item is still marked
+  // `sample`, the whole section stays off the page — a creator never sees
+  // words no model actually said.
+  const real = TESTIMONIALS.items.filter((item) => !item.sample && item.quote);
+  if (real.length === 0) return null;
+
   return (
     <Section alt className="border-t border-line hairline-b">
       <SectionHeading
@@ -11,7 +17,7 @@ export default function Testimonials() {
         intro={TESTIMONIALS.intro}
       />
       <div className="mt-10 grid gap-4 md:grid-cols-3">
-        {TESTIMONIALS.items.map((item, i) => (
+        {real.map((item, i) => (
           <Reveal key={i} delay={i * 0.08} className="h-full">
             <figure className="card lift flex h-full flex-col justify-between p-7">
               {item.quote ? (
