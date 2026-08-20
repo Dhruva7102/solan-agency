@@ -92,7 +92,9 @@ export default function Nav() {
           className="border-t border-line bg-bg/95 backdrop-blur-xl md:hidden"
         >
           <div className="mx-auto flex max-w-6xl flex-col px-6 py-2">
-            {NAV_LINKS.map((link) => {
+            {/* The wordmark is the only other way home, and on a phone it
+                doesn't read as a button — so the menu says it outright. */}
+            {[{ href: "/", label: "Home" }, ...NAV_LINKS].map((link) => {
               const active = pathname === link.href;
               return (
                 <Link
