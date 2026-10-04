@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
-import { hasAccess } from "@/lib/access";
-import AccessGate from "@/components/AccessGate";
-import UnlockReveal from "@/components/UnlockReveal";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import MotionProvider from "@/components/MotionProvider";
@@ -44,13 +41,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const unlocked = await hasAccess();
-
   return (
     <html
       lang="en"
@@ -58,16 +53,9 @@ export default async function RootLayout({
     >
       <body className="grain min-h-full flex flex-col">
         <MotionProvider>
-          {unlocked ? (
-            <>
-              <UnlockReveal />
-              <Nav />
-              <div className="flex-1">{children}</div>
-              <Footer />
-            </>
-          ) : (
-            <AccessGate />
-          )}
+          <Nav />
+          <div className="flex-1">{children}</div>
+          <Footer />
         </MotionProvider>
       </body>
     </html>
