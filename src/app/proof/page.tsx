@@ -1,11 +1,11 @@
-import { RESULTS, FOUNDER_AUTHORITY } from "@/lib/content";
+import { RESULTS, CHAT_EXAMPLES, FOUNDER_AUTHORITY } from "@/lib/content";
 import { Section, SectionHeading } from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import ScreenshotSlot from "@/components/ScreenshotSlot";
 import CtaBand from "@/components/CtaBand";
 import Testimonials from "@/components/Testimonials";
 
-export default function ResultsPage() {
+export default function ProofPage() {
   return (
     <main>
       <section className="hero-glow hairline-b">
@@ -19,7 +19,7 @@ export default function ResultsPage() {
         </div>
       </section>
 
-      {/* Churn hero */}
+      {/* Retention first: the number that says models stay */}
       <Section>
         <Reveal>
           <div className="card-raised grid gap-8 p-8 sm:p-10 lg:grid-cols-2 lg:items-center">
@@ -92,8 +92,28 @@ export default function ResultsPage() {
         </div>
       </Section>
 
-      {/* Partner authority reprise */}
+      {/* Chat receipts: how the money actually lands */}
       <Section alt className="border-t border-line hairline-b">
+        <SectionHeading
+          eyebrow={CHAT_EXAMPLES.eyebrow}
+          heading={CHAT_EXAMPLES.heading}
+          intro={CHAT_EXAMPLES.intro}
+        />
+        <div className="mt-10 grid items-start gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {CHAT_EXAMPLES.shots.map((shot, i) => (
+            <Reveal key={shot.file} delay={i * 0.08}>
+              <ScreenshotSlot
+                file={shot.file}
+                label={shot.label}
+                aspect="aspect-[9/16]"
+              />
+            </Reveal>
+          ))}
+        </div>
+      </Section>
+
+      {/* Partner authority reprise */}
+      <Section>
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
             <p className="eyebrow mb-4">{FOUNDER_AUTHORITY.eyebrow}</p>

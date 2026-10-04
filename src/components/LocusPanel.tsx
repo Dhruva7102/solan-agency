@@ -1,5 +1,5 @@
 /**
- * Faithful renders of the real Altyr Pro product views, in the genuine
+ * Faithful renders of the real Locus product views, in the genuine
  * "Obsidian Clarity" product language (pure-black canvas, raised glass,
  * rose→amber accent, platinum numerals, tier badges — see altyr-ui.css).
  *
@@ -19,7 +19,7 @@ function Chrome({ view }: { view: string }) {
         <span className="h-2.5 w-2.5 rounded-full bg-white/[0.12]" />
       </span>
       <span className="ml-1.5 text-[0.7rem] tracking-wide text-white/40">
-        Altyr Pro <span className="text-white/65">/ {view}</span>
+        Locus <span className="text-white/65">/ {view}</span>
       </span>
       <span className="altyr-live ml-auto">
         <span className="altyr-live-dot" /> live
@@ -217,7 +217,7 @@ const VIEWS: Record<string, { view: string; body: React.ReactNode }> = {
   crm: { view: "Fan context", body: <FanPanel /> },
 };
 
-export default function AltyrProPanel({
+export default function LocusPanel({
   kind,
   label,
   className = "",

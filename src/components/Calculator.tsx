@@ -277,7 +277,7 @@ export default function Calculator() {
             which is where smaller pages grow most. One page this size went{" "}
             <strong className="text-ink">$0 to $37.3k net in its first 30 days</strong>{" "}
             on our systems.{" "}
-            <a href="/results" className="text-gold underline-offset-4 hover:underline">
+            <a href="/proof" className="text-gold underline-offset-4 hover:underline">
               See the dashboard →
             </a>
           </div>

@@ -5,13 +5,15 @@ export function Section({
   children,
   className = "",
   alt = false,
+  id,
 }: {
   children: ReactNode;
   className?: string;
   alt?: boolean;
+  id?: string;
 }) {
   return (
-    <section className={`${alt ? "bg-bg-2" : ""} ${className}`}>
+    <section id={id} className={`${alt ? "bg-bg-2" : ""} ${className}`}>
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">{children}</div>
     </section>
   );
