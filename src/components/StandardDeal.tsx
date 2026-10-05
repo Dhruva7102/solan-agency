@@ -12,7 +12,7 @@ export default function StandardDeal() {
           <div key={row.dim} className="px-5 py-4">
             <p className="text-[15px] font-semibold text-ink">{row.dim}</p>
             <p className="mt-2 text-[14px] leading-relaxed text-muted">
-              <span className="mr-2 text-[10px] font-medium uppercase tracking-[0.22em] text-muted/80">
+              <span className="mr-2 text-[10px] font-medium uppercase tracking-[0.14em] text-muted/80">
                 {STANDARD_DEAL.theirLabel}
               </span>
               {row.them}
@@ -31,11 +31,11 @@ export default function StandardDeal() {
           <thead>
             <tr className="border-b border-line">
               <th scope="col" className="w-[20%] px-6 py-4" />
-              <th scope="col" className="w-[36%] px-6 py-4 text-[10.5px] font-medium uppercase tracking-[0.3em] text-muted">
+              <th scope="col" className="w-[36%] px-6 py-4 text-[10.5px] font-medium uppercase tracking-[0.14em] text-muted">
                 {STANDARD_DEAL.theirLabel}
               </th>
-              <th scope="col" className="bg-[rgba(210,172,97,0.05)] px-6 py-4">
-                <span className="flex items-center gap-2.5 text-[10.5px] font-medium uppercase tracking-[0.3em] text-gold">
+              <th scope="col" className="bg-[rgba(205,178,131,0.05)] px-6 py-4">
+                <span className="flex items-center gap-2.5 text-[10.5px] font-medium uppercase tracking-[0.14em] text-gold">
                   <AppIcon app="astor" size={22} />
                   {STANDARD_DEAL.ourLabel}
                 </span>
@@ -49,7 +49,7 @@ export default function StandardDeal() {
                   {row.dim}
                 </th>
                 <td className="px-6 py-5 align-top text-[15px] leading-relaxed text-muted">{row.them}</td>
-                <td className="bg-[rgba(210,172,97,0.05)] px-6 py-5 align-top text-[15px] leading-relaxed text-ink">
+                <td className="bg-[rgba(205,178,131,0.05)] px-6 py-5 align-top text-[15px] leading-relaxed text-ink">
                   <span className="flex gap-3">
                     <GoldCheck />
                     <span>{row.us}</span>

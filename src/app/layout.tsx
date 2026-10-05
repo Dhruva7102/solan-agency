@@ -1,23 +1,23 @@
 import type { Metadata } from "next";
-import { Bodoni_Moda, Jost } from "next/font/google";
+import { Gilda_Display, Jost } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import MotionProvider from "@/components/MotionProvider";
 import { BRAND } from "@/lib/content";
 
-/* Jost carries the text and the spaced caps; Bodoni Moda is the display
-   voice: the lock-screen clock, titles and the big figures. It replaced
-   Italiana, whose single hairline weight made the figures hard to read. */
+/* Jost carries the text and every figure; Gilda Display is the quiet
+   display voice for the headline and titles. Figures stay in Jost: the
+   display serifs tried before (Italiana, Bodoni Moda) read as thin or loud. */
 const jost = Jost({
   variable: "--font-jost",
   subsets: ["latin"],
 });
 
-const bodoni = Bodoni_Moda({
-  variable: "--font-bodoni",
+const gilda = Gilda_Display({
+  variable: "--font-gilda",
   subsets: ["latin"],
-  axes: ["opsz"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -51,7 +51,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jost.variable} ${bodoni.variable} h-full antialiased`}
+      className={`${jost.variable} ${gilda.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <MotionProvider>

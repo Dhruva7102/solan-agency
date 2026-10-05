@@ -3,7 +3,6 @@ import { Section, SectionHeading } from "@/components/Section";
 import ScreenshotSlot from "@/components/ScreenshotSlot";
 import CtaBand from "@/components/CtaBand";
 import Testimonials from "@/components/Testimonials";
-import { Fig } from "@/components/Phone";
 
 export default function ProofPage() {
   const [statFigure, ...statRest] = RESULTS.churn.stat.split(" ");
@@ -18,7 +17,7 @@ export default function ProofPage() {
           {/* Retention first: the number that says models stay */}
           <div className="glass mt-12 grid gap-8 p-6 sm:p-9 lg:grid-cols-2 lg:items-center">
             <div>
-              <p className="numeral gold-text text-[5rem] sm:text-[6.5rem]"><Fig>{statFigure}</Fig></p>
+              <p className="numeral gold-text text-[4.5rem] sm:text-[5.5rem]">{statFigure}</p>
               <p className="display text-[1.8rem] leading-tight text-ink">{statRest.join(" ")}</p>
               <p className="mt-4 text-[14px] font-medium text-gold-bright">{RESULTS.churn.figures}</p>
             </div>
@@ -36,18 +35,18 @@ export default function ProofPage() {
         <div className="mt-12 grid gap-3 lg:grid-cols-3">
           {RESULTS.caseStudies.map((cs) => (
             <article key={cs.title} className="card flex h-full flex-col p-6 sm:p-7">
-              <span className="self-start rounded-full bg-gold/15 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.22em] text-gold-bright">
+              <span className="self-start rounded-full bg-gold/15 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.14em] text-gold-bright">
                 {cs.tag}
               </span>
               <h3 className="mt-5 text-[17px] font-semibold leading-snug text-ink">{cs.title}</h3>
               <dl className="list my-6 border-y border-line">
                 <div className="flex items-baseline justify-between gap-4 py-3">
-                  <dt className="text-[10px] font-medium uppercase tracking-[0.2em] text-muted">Before</dt>
-                  <dd className="numeral whitespace-nowrap text-[1.7rem] text-ink-2"><Fig>{cs.before}</Fig></dd>
+                  <dt className="text-[10px] font-medium uppercase tracking-[0.14em] text-muted">Before</dt>
+                  <dd className="numeral whitespace-nowrap text-[1.7rem] text-ink-2">{cs.before}</dd>
                 </div>
                 <div className="flex items-baseline justify-between gap-4 py-3">
-                  <dt className="text-[10px] font-medium uppercase tracking-[0.2em] text-muted">After · {cs.timeframe}</dt>
-                  <dd className="numeral gold-text whitespace-nowrap text-right text-[1.9rem] sm:text-[2.2rem]"><Fig>{cs.after}</Fig></dd>
+                  <dt className="text-[10px] font-medium uppercase tracking-[0.14em] text-muted">After · {cs.timeframe}</dt>
+                  <dd className="numeral gold-text whitespace-nowrap text-right text-[1.9rem] sm:text-[2.2rem]">{cs.after}</dd>
                 </div>
               </dl>
               <p className="text-[15px] leading-relaxed text-ink-2">{cs.story}</p>

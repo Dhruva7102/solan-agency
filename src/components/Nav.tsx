@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 import { BRAND, NAV_LINKS, FINAL_CTA } from "@/lib/content";
 
 /**
- * The status bar. Clear over the lock-screen wallpaper at the top of a page,
- * frosted once the page scrolls under it.
+ * The status bar. Clear at the top of a page, a dimmed bar once the page
+ * scrolls under it.
  */
 export default function Nav() {
   const pathname = usePathname();
@@ -38,8 +38,8 @@ export default function Nav() {
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 sm:px-6">
         <Link href="/" className="flex min-h-11 shrink-0 items-baseline gap-3" aria-label={`${BRAND.name} home`}>
-          <span className="text-[13px] font-medium tracking-[0.5em] text-gold">{BRAND.wordmark}</span>
-          <span className="hidden text-[9.5px] font-medium uppercase tracking-[0.42em] text-muted sm:inline">
+          <span className="text-[14px] font-medium tracking-[0.34em] text-ink">{BRAND.wordmark}</span>
+          <span className="hidden text-[12px] text-muted sm:inline">
             Management
           </span>
         </Link>
@@ -52,7 +52,7 @@ export default function Nav() {
                 key={link.href}
                 href={link.href}
                 aria-current={active ? "page" : undefined}
-                className={`relative flex min-h-11 items-center text-[11px] font-medium uppercase tracking-[0.32em] transition-colors ${
+                className={`relative flex min-h-11 items-center text-[14px] transition-colors ${
                   active ? "text-ink" : "text-ink-2 hover:text-ink"
                 }`}
               >
@@ -65,9 +65,8 @@ export default function Nav() {
           })}
           <a
             href={FINAL_CTA.href}
-            className="glass flex min-h-10 items-center gap-2.5 !rounded-full px-4 text-[10.5px] font-medium uppercase tracking-[0.24em] text-ink transition-colors hover:border-gold-dim"
+            className="flex min-h-10 items-center rounded-full border border-line-strong px-4 text-[14px] font-medium text-ink transition-colors hover:border-gold"
           >
-            <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_0_3px_rgba(210,172,97,0.18)]" />
             {FINAL_CTA.button}
           </a>
         </nav>
@@ -75,9 +74,8 @@ export default function Nav() {
         <div className="flex items-center gap-2 md:hidden">
           <a
             href={FINAL_CTA.href}
-            className="glass flex min-h-10 items-center gap-2 !rounded-full px-3.5 text-[10px] font-medium uppercase tracking-[0.22em] text-ink"
+            className="flex min-h-10 items-center rounded-full border border-line-strong px-4 text-[14px] font-medium text-ink"
           >
-            <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold" />
             Book
           </a>
           <button
@@ -86,7 +84,7 @@ export default function Nav() {
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "Close menu" : "Open menu"}
-            className="glass flex h-10 w-10 items-center justify-center !rounded-full text-ink"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-line-strong text-ink"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" aria-hidden>
               {open ? (

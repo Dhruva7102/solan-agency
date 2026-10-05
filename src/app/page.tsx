@@ -1,4 +1,3 @@
-import type { CSSProperties } from "react";
 import Link from "next/link";
 import {
   BRAND,
@@ -21,11 +20,9 @@ import VideoSlot, { hasIntroVideo } from "@/components/VideoSlot";
 import CtaBand from "@/components/CtaBand";
 import LocusPanel from "@/components/LocusPanel";
 import StandardDeal from "@/components/StandardDeal";
-import { AppIcon, Arrow, Chevron, Fig, GoldCheck, Notification, Widget } from "@/components/Phone";
+import { AppIcon, Arrow, Chevron, GoldCheck, Notification } from "@/components/Phone";
+import Silk from "@/components/Silk";
 import LockDate from "@/components/LockDate";
-
-/* Arrival order for the lock screen waking (see .wake-in / .arrive). */
-const wake = (i: number) => ({ "--i": i }) as CSSProperties;
 
 /* Each reason's own line, from its section label ("01 · Where the $1.5M went"). */
 const REASON_LINES: Record<string, string> = Object.fromEntries(
@@ -39,70 +36,76 @@ export default function Home() {
     <main>
       {/* ── The lock screen ── */}
       <section className="relative isolate -mt-16 overflow-hidden" aria-labelledby="hero-h">
-        <div className="hero-glow wake-light absolute inset-x-0 top-0 -z-10 h-[max(100svh,760px)]" aria-hidden />
-        <div className="mx-auto flex min-h-[100svh] max-w-6xl flex-col items-center px-5 pb-5 pt-[4.25rem] sm:px-6 sm:pb-6 sm:pt-[5rem]">
-          <LockDate className="wake-in text-[17px] font-medium text-ink/70 sm:text-[19px]" />
-          <h1 id="hero-h" className="mt-2 text-center sm:mt-3">
-            <span className="display-hero gold-text wake-clock block">We take a smaller cut</span>
-            <span className="display wake-in mt-3 block text-[clamp(1.4rem,2.7vw,2.4rem)] leading-tight text-ink" style={wake(1)}>
-              than the teams we outperform.
+        <div className="hero-glow absolute inset-x-0 top-0 -z-10 h-[max(100svh,760px)]" aria-hidden />
+        <div className="mx-auto flex min-h-[100svh] max-w-6xl flex-col items-center px-5 pb-5 pt-[4.25rem] sm:px-6 sm:pb-6 sm:pt-[5.25rem]">
+          <LockDate className="text-[14px] text-ink-2" />
+          <h1 id="hero-h" className="mt-3 text-center sm:mt-4">
+            <span className="display-hero block text-ink">
+              We take a <span className="text-gold">smaller cut</span>
             </span>
+            <span className="mt-3 block text-[17px] text-ink-2 sm:mt-4 sm:text-[21px]">than the teams we outperform.</span>
           </h1>
 
-          <dl className="mt-4 grid w-full max-w-[680px] grid-cols-2 gap-2 sm:mt-6 sm:grid-cols-4 sm:gap-2.5">
+          {/* The four figures as one hairline line, opaque so the ribbon passes behind */}
+          <dl className="mt-6 grid w-full max-w-[760px] grid-cols-2 border-y border-line bg-bg sm:mt-8 sm:grid-cols-4">
             {HEADLINE_STATS.map((stat, i) => (
-              <div key={stat.label}>
-                <dt className="sr-only">{stat.short}</dt>
-                <dd>
-                  <Widget value={stat.value} label={stat.short} mini={stat.mini} index={i + 2} className="h-full" />
+              <div
+                key={stat.label}
+                className={`flex items-baseline gap-2 px-3 py-3 sm:block sm:px-5 sm:py-[18px] ${i % 2 ? "border-l border-line" : ""} ${i > 1 ? "border-t border-line sm:border-t-0" : ""} ${i === 2 ? "sm:border-l" : ""}`}
+              >
+                <dt className="numeral text-[1.375rem] text-gold-bright sm:text-[1.9rem]">{stat.value}</dt>
+                <dd className="text-[12px] leading-snug text-ink-2 sm:mt-2 sm:text-[12.5px]">
+                  <span className="sm:hidden">{stat.mini}</span>
+                  <span className="hidden sm:inline">{stat.short}</span>
                 </dd>
               </div>
             ))}
           </dl>
 
-          <div className="mt-5 flex w-full max-w-[540px] flex-col gap-2 sm:mt-auto sm:pt-7">
-            <Notification app="astor" title="Management, rebuilt" time="now" index={0}>
+          <div className="relative mt-5 flex w-full max-w-[520px] flex-col gap-2 sm:mt-auto sm:pt-6">
+            <Silk />
+            <Notification app="astor" title="Management, rebuilt" time="now">
               <Highlight text={BRAND.subtag} />
             </Notification>
-            <Notification app="locus" title="Locus · Earnings" time="30d" index={1}>
-              <span className="numeral block py-1 text-[2rem] text-gold-bright"><Fig>{firstReceipt.value}</Fig></span>
+            <Notification app="locus" title="Locus · Earnings" time="30d">
+              <span className="numeral block py-1 text-[1.75rem] text-gold-bright">{firstReceipt.value}</span>
               {firstReceipt.label}
             </Notification>
             {/* the rest of the stack, collapsed behind it */}
-            <span aria-hidden className="arrive mx-4 -mt-2.5 h-3 rounded-b-[18px] border border-t-0 border-[var(--glass-edge)] bg-[var(--glass)] opacity-60" style={wake(2)} />
-            <span aria-hidden className="arrive mx-8 -mt-2 h-3 rounded-b-[16px] border border-t-0 border-[var(--glass-edge)] bg-[var(--glass)] opacity-35" style={wake(2)} />
+            <span aria-hidden className="mx-4 -mt-2.5 h-3 rounded-b-[16px] border border-t-0 border-line bg-[#100e0c]" />
+            <span aria-hidden className="mx-8 -mt-2 h-3 rounded-b-[14px] border border-t-0 border-line bg-[#0e0c0b]" />
           </div>
 
-          {/* The dock: proof and deal in the corners, booking as the swipe */}
-          <div className="wake-in mt-4 grid w-full max-w-[560px] grid-cols-[auto_1fr_auto] items-start gap-2 sm:gap-3" style={wake(6)}>
+          {/* The dock: proof and deal in the corners, booking in the middle */}
+          <div className="mt-5 grid w-full max-w-[560px] grid-cols-[auto_1fr_auto] items-start gap-2 sm:gap-3">
             <Link href="/proof" className="group flex w-14 flex-col items-center gap-2 sm:w-16">
-              <span className="glass grid h-[52px] w-[52px] place-items-center !rounded-full text-ink transition-colors group-hover:border-gold-dim">
-                <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <span className="grid h-[50px] w-[50px] place-items-center rounded-full border border-line-strong text-ink transition-colors group-hover:border-gold">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                   <path d="M4 19V5M4 19h16M8 15l3-4 3 2 5-6" />
                 </svg>
               </span>
-              <span className="text-[9.5px] font-medium uppercase tracking-[0.28em] text-ink/70">Proof</span>
+              <span className="text-[12px] text-ink-2">Proof</span>
             </Link>
             <div className="flex flex-col items-center gap-2.5">
-              <a href={FINAL_CTA.href} className="btn-gold max-sm:!gap-2 max-sm:!px-4 max-sm:!tracking-[0.16em]">
+              <a href={FINAL_CTA.href} className="btn-gold max-sm:!px-5">
                 {FINAL_CTA.button}
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden>
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
               </a>
-              <span className="hidden text-center text-[12.5px] text-ink/55 sm:block">We&apos;ll walk your page through it live</span>
+              <span className="hidden text-center text-[12.5px] text-muted sm:block">We&apos;ll walk your page through it live</span>
             </div>
             <Link href="/deal" className="group flex w-14 flex-col items-center gap-2 sm:w-16">
-              <span className="glass grid h-[52px] w-[52px] place-items-center !rounded-full text-ink transition-colors group-hover:border-gold-dim">
-                <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <span className="grid h-[50px] w-[50px] place-items-center rounded-full border border-line-strong text-ink transition-colors group-hover:border-gold">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                   <path d="M7 3h7l4 4v14H7z" />
                   <path d="M14 3v4h4M10 12h5M10 16h5" />
                 </svg>
               </span>
-              <span className="whitespace-nowrap text-[9.5px] font-medium uppercase tracking-[0.2em] text-ink/70 sm:tracking-[0.28em]">The Deal</span>
+              <span className="whitespace-nowrap text-[12px] text-ink-2">The Deal</span>
             </Link>
           </div>
-          <span aria-hidden className="mt-3 h-[5px] w-[134px] rounded-full bg-ink/80 sm:mt-4" />
+          <span aria-hidden className="mt-3 h-[5px] w-[134px] rounded-full bg-ink/70 sm:mt-4" />
         </div>
       </section>
 
@@ -132,7 +135,7 @@ export default function Home() {
               href={LOCUS.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex min-h-11 items-center gap-2 text-[11px] font-medium uppercase tracking-[0.3em] text-gold-bright hover:text-gold"
+              className="mt-8 inline-flex min-h-11 items-center gap-2 text-[15px] text-gold-bright underline decoration-gold/40 underline-offset-[6px] hover:decoration-gold"
             >
               {LOCUS.linkLabel} <Arrow external />
             </a>
@@ -148,12 +151,12 @@ export default function Home() {
             <div className="mt-2.5 grid grid-cols-3 gap-2.5">
               {RAILS.census.items.map((c) => (
                 <div key={c.label} className="card flex flex-col justify-between gap-5 p-4 sm:p-5">
-                  <span className="flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.28em] text-muted">
+                  <span className="flex items-center gap-2 text-[12px] text-muted">
                     <AppIcon app="locus" size={16} />
                     Locus
                   </span>
                   <span>
-                    <span className="numeral block text-[2.1rem] text-gold-bright sm:text-[2.8rem]"><Fig>{c.value}</Fig></span>
+                    <span className="numeral block text-[1.9rem] text-gold-bright sm:text-[2.4rem]">{c.value}</span>
                     <span className="mt-1.5 block text-[12.5px] leading-snug text-ink-2">{c.label}</span>
                   </span>
                 </div>
@@ -197,7 +200,7 @@ export default function Home() {
             <h2 className="display-xl text-ink">{NO_CAGE.heading}</h2>
             <p className="mt-7 text-[17px] leading-[1.7] text-ink-2">{NO_CAGE.paragraphs[0]}</p>
             <div className="glass mt-8 p-5">
-              <p className="numeral gold-text text-[3.6rem]"><Fig>92%+</Fig></p>
+              <p className="numeral text-[3.2rem] text-gold-bright">92%+</p>
               <p className="mt-2 text-[14px] leading-snug text-ink/80">{NO_CAGE.retention}</p>
             </div>
           </div>
@@ -259,7 +262,7 @@ export default function Home() {
           {FOUNDER_AUTHORITY.founders.map((f) => (
             <li key={f.role} className="grid grid-cols-[3.5rem_1fr] items-start gap-4 px-5 py-5 sm:grid-cols-[4rem_1fr] sm:px-6">
               <span
-                className="display grid h-14 w-14 place-items-center rounded-full bg-[linear-gradient(160deg,#3a3026,#17120d)] text-[1.35rem] text-gold ring-1 ring-gold-dim/60 sm:h-16 sm:w-16 sm:text-[1.5rem]"
+                className="display grid h-14 w-14 place-items-center rounded-full bg-surface-2 text-[1.35rem] text-gold-bright ring-1 ring-gold-dim/60 sm:h-16 sm:w-16 sm:text-[1.5rem]"
                 aria-hidden
               >
                 {f.role.replace(/^The\s+/, "").split(/[\s-]+/).map((w) => w[0]).join("").slice(0, 2)}
@@ -289,7 +292,7 @@ export default function Home() {
           <div className="flex flex-col gap-2">
             {[firstReceipt, ...otherReceipts].map((item, i) => (
               <Notification key={item.value} app="locus" title="Locus · Earnings" time={["30d", "1mo", "90d"][i]}>
-                <span className="numeral block py-1 text-[2.3rem] text-gold-bright"><Fig>{item.value}</Fig></span>
+                <span className="numeral block py-1 text-[2rem] text-gold-bright">{item.value}</span>
                 {item.label}
               </Notification>
             ))}
@@ -310,7 +313,7 @@ export default function Home() {
             {FAQ.items.map((item, i) => (
               <details key={item.q} className="group" open={i === 0}>
                 <summary className="flex cursor-pointer list-none items-end gap-2 [&::-webkit-details-marker]:hidden">
-                  <span className="bubble-in max-w-[85%] px-4 py-2.5 text-[15.5px] leading-snug transition-colors group-hover:bg-[#332d27]">
+                  <span className="bubble-in max-w-[85%] px-4 py-2.5 text-[15.5px] leading-snug transition-colors group-hover:bg-[#2c2722]">
                     {item.q}
                   </span>
                 </summary>

@@ -45,7 +45,7 @@ Astor runs pages on software it built and owns, Locus (made by Altyr). Most team
 
 - **Name:** Astor. Wordmark: ASTOR. Tagline: "A different type of management."
 - **Astor is its own brand.** It does not take on Altyr's Obsidian Clarity design language. Locus screens shown on the site still look like Locus.
-- **The colour scheme is pinned** (user, 10/04: "keep the current gold color scheme, just the UI elements and design"). That means the warm near-black grounds, the gold family (`--gold` #d2ac61, `--gold-bright` #f2dda9, `--gold-dim` #8f7137) on warm ink (#f7f2e7), and the ember atmosphere (#6e2440). Layout, type, components and motion are open to redesign.
+- **Black and gold, quietly** (user, 10/04: "keep the current gold color scheme"; refined 10/05: "subtle luxury, private jet vibes, but not so pompous. Gold and ribbons"). Matte warm black grounds, champagne gold as the accent (`--gold` #cdb283, `--gold-bright` #e8d6b0, `--gold-dim` #8a7550) on warm ink (#f3eee4). No foil, bevels, velvet, Deco or engraved costume: restraint is the luxury. A gold ribbon is the one ornament.
 - **Naming rules:**
   - The word "agency" never appears in visible copy (legal).
   - The product is "Locus" and the company behind it is "Altyr". "Altyr Pro" is retired.

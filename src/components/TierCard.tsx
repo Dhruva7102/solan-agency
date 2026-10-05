@@ -28,17 +28,17 @@ export default function TierCard({ tier }: { tier: Tier }) {
     <div
       className={`relative flex h-full flex-col overflow-hidden rounded-[var(--r-widget)] border p-6 sm:p-7 ${
         tier.featured
-          ? "border-gold-dim bg-[linear-gradient(180deg,rgba(210,172,97,0.1),rgba(21,18,15,0.9)_45%)] shadow-[0_0_0_1px_rgba(210,172,97,0.15),0_30px_60px_-36px_rgba(0,0,0,1)]"
+          ? "border-gold-dim/70 bg-surface-2 shadow-[0_30px_60px_-36px_rgba(0,0,0,1)]"
           : "card"
       }`}
     >
       {tier.featured && (
-        <p className="-mx-6 -mt-6 mb-5 bg-gold/15 py-2 text-center text-[10px] font-medium uppercase tracking-[0.28em] text-gold-bright sm:-mx-7 sm:-mt-7">
+        <p className="-mx-6 -mt-6 mb-5 border-b border-gold-dim/50 py-2 text-center text-[12.5px] text-gold-bright sm:-mx-7 sm:-mt-7">
           Most common start
         </p>
       )}
       <div className="flex min-h-9 items-center justify-between gap-3">
-        <h2 className="text-[17px] font-semibold text-ink">{tier.name}</h2>
+        <h2 className="text-[17px] font-medium text-ink">{tier.name}</h2>
         {tier.upgrade && (
           <div role="group" aria-label={`${tier.name} rate`} className="segmented">
             {[tier.rate, tier.upgrade.rate].map((rate, i) => {
@@ -53,8 +53,8 @@ export default function TierCard({ tier }: { tier: Tier }) {
         )}
       </div>
       <div className="mt-5 flex items-baseline gap-3">
-        <span className="numeral gold-text text-[4.2rem]">{active.rate}</span>
-        <span className="text-[12px] uppercase tracking-[0.18em] text-muted">{active.rateNote}</span>
+        <span className="numeral text-[3.6rem] text-gold-bright">{active.rate}</span>
+        <span className="text-[12px] uppercase tracking-[0.14em] text-muted">{active.rateNote}</span>
       </div>
       <p className="mt-4 text-[15px] leading-relaxed text-ink-2">{active.blurb}</p>
       <ul className="mt-6 flex flex-col gap-3 border-t border-line pt-6">

@@ -139,7 +139,7 @@ export default function Calculator() {
     <div className="grid items-start gap-6 lg:grid-cols-[380px_1fr]">
       {/* ————— Inputs ————— */}
       <div className="card p-6 sm:p-7 lg:sticky lg:top-24">
-        <p className="mb-3 text-[11px] font-medium uppercase tracking-[0.22em] text-muted">Your page today</p>
+        <p className="mb-3 text-[11px] font-medium uppercase tracking-[0.14em] text-muted">Your page today</p>
         <div role="group" aria-label="Start from a page size" className="segmented mb-7 flex w-full">
           {PRESETS.map((p, i) => (
             <button
@@ -209,7 +209,7 @@ export default function Calculator() {
         </div>
 
         <div className="mt-8 border-t border-line pt-7">
-          <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.22em] text-muted">Assumptions</p>
+          <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.14em] text-muted">Assumptions</p>
           <div className="flex flex-col gap-6">
             <Slider
               label="Month-one uplift on chat-driven revenue"
@@ -240,7 +240,7 @@ export default function Calculator() {
         {/* Headline tiles */}
         <div className="grid gap-4 sm:grid-cols-3">
           <div className="card p-5 sm:p-6">
-            <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-muted">
+            <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-muted">
               Today (gross)
             </p>
             <p className="tnum mt-3 text-[2rem] font-light leading-none text-ink-2">
@@ -249,7 +249,7 @@ export default function Calculator() {
             <p className="mt-1 text-[11px] text-muted">per month, your inputs</p>
           </div>
           <div className="card-raised !border-gold-dim p-5 sm:p-6">
-            <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-gold">
+            <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-gold">
               Month one with us (gross)
             </p>
             <p className="tnum gold-text mt-3 text-[2rem] font-normal leading-none">
@@ -260,7 +260,7 @@ export default function Calculator() {
             </p>
           </div>
           <div className="card p-5 sm:p-6">
-            <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-muted">
+            <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-muted">
               Your take-home
             </p>
             <p className="tnum mt-3 text-[2rem] font-light leading-none text-ink">
@@ -282,7 +282,7 @@ export default function Calculator() {
 
         {calc.todayTotal < 5000 && (
           <div className="card p-5 text-[15px] leading-relaxed text-ink-2">
-            <p className="mb-2 text-[11px] font-medium uppercase tracking-[0.22em] text-gold">Smaller page?</p>
+            <p className="mb-2 text-[11px] font-medium uppercase tracking-[0.14em] text-gold">Smaller page?</p>
             This calculator only models your existing revenue at higher
             conversion; it doesn&apos;t include the funnel bringing in new fans,
             which is where smaller pages grow most. One page this size went{" "}
@@ -304,7 +304,7 @@ export default function Calculator() {
 
         {/* Split selector */}
         <div className="card p-6 sm:p-7">
-          <p className="mb-2 text-[11px] font-medium uppercase tracking-[0.22em] text-muted">The split</p>
+          <p className="mb-2 text-[11px] font-medium uppercase tracking-[0.14em] text-muted">The split</p>
           <p className="mb-6 text-[15px] leading-relaxed text-ink-2">
             Every rate is flat: 15% for Systems & Consulting, 30% for
             Chatting & Sexting, 40% for Growth, and 45% with the full social
@@ -319,7 +319,7 @@ export default function Calculator() {
                 aria-pressed={tierKey === t.key}
                 className={`rounded-2xl border px-4 py-3.5 text-left transition-colors ${
                   tierKey === t.key
-                    ? "border-gold-dim bg-[rgba(210,172,97,0.1)]"
+                    ? "border-gold-dim bg-[rgba(205,178,131,0.1)]"
                     : "border-line hover:border-line-strong"
                 }`}
               >

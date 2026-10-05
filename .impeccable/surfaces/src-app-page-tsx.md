@@ -38,5 +38,5 @@ related_targets: ["src/app/deal/page.tsx","src/app/proof/page.tsx"]
   - Then a notification stack: the intro from Astor, then a Locus earnings receipt.
   - A dock: Proof and The Deal as round corner buttons, and a foil "Book your call" pill in the centre above a home-indicator bar.
   - Signature motion: the screen wakes. The wallpaper light rises, the clock resolves from blur, and the notifications arrive one by one, springing up.
-- **FORM:** A fusion requested by the user. The Lock Screen grammar (re-roll 1's pick card) is set in The Invitation's type (re-roll 2's assigned direction). Seed key 77fed2da.
+- **FORM:** The Lock Screen grammar (re-roll 1's pick), now dressed as Silk (10/05): matte black, champagne hairlines, Gilda Display headline with Jost figures, and one gold silk ribbon drawn in behind the receipts. The user steered round 3 away from velvet, Deco, ledger and foil as pompous and chose Silk from three quieter takes. Seed key 77fed2da.
 - **FINISH:** unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
