@@ -22,7 +22,7 @@ const gilda = Gilda_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://astor-management.vercel.app"
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://astormgt.com"
   ),
   title: `${BRAND.name} · ${BRAND.tagline}`,
   description:

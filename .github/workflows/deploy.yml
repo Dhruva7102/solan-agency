@@ -15,3 +15,19 @@ jobs:
 
       - name: Deploy to Vercel
         run: npx vercel deploy --prod --yes --token ${{ secrets.VERCEL_TOKEN }}
+
+      # Idempotent: attaches astormgt.com to the project (409 = already
+      # attached, fine). DNS at the registrar still has to point here for
+      # the domain to go live; Vercel shows the exact records it expects.
+      - name: Ensure astormgt.com is attached
+        run: |
+          for body in '{"name":"astormgt.com"}' '{"name":"www.astormgt.com","redirect":"astormgt.com"}'; do
+            code=$(curl -s -o /tmp/resp.json -w "%{http_code}" \
+              -X POST "https://api.vercel.com/v10/projects/prj_X0aFtaK4YNHAM9b21Bc3LVeaE12k/domains?teamId=team_3c4zRHJTIaqs21CoedKm1MiC" \
+              -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+              -H "Content-Type: application/json" \
+              -d "$body")
+            echo "POST $body -> $code"
+            cat /tmp/resp.json; echo
+            if [ "$code" != "200" ] && [ "$code" != "409" ]; then exit 1; fi
+          done
