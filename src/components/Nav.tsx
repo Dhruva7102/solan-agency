@@ -30,9 +30,9 @@ export default function Nav() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-300 ${
+      className={`sticky top-0 z-50 transition-[background-color,border-color] duration-300 ${
         frosted
-          ? "border-b border-line bg-bg/70 backdrop-blur-2xl backdrop-saturate-150"
+          ? "border-b border-line bg-bg/95"
           : "border-b border-transparent bg-transparent"
       }`}
     >

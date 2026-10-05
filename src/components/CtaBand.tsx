@@ -15,7 +15,7 @@ export default function CtaBand({ expect = false }: { expect?: boolean }) {
             <div className="card overflow-hidden lg:col-span-7">
               <div className="flex items-center gap-4 border-b border-line px-5 py-4 sm:px-6">
                 <span className="flex w-11 flex-col items-center rounded-xl bg-surface-2 py-1.5 ring-1 ring-line" aria-hidden>
-                  <span className="text-[9px] font-semibold uppercase tracking-[0.14em] text-[#e2665a]">Call</span>
+                  <span className="text-[9px] font-semibold uppercase tracking-[0.14em] text-gold">Call</span>
                   <span className="display text-[1.4rem] leading-none text-ink">30</span>
                 </span>
                 <span>

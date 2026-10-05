@@ -1,46 +1,99 @@
 ---
 name: Astor
-description: A different type of management. The page reaches a creator the way their money does, on the lock screen.
+description: A different type of management. The iPhone lock screen, told quietly, in matte warm black and champagne gold with one silk ribbon.
 colors:
-  warm-black: "#090807"
-  warm-black-2: "#0e0c0a"
-  surface: "#15120f"
-  surface-raised: "#1d1915"
-  line: "rgba(246, 241, 230, 0.09)"
-  line-strong: "rgba(246, 241, 230, 0.18)"
-  glass: "rgba(38, 32, 26, 0.5)"
-  glass-strong: "rgba(48, 40, 32, 0.62)"
-  glass-edge: "rgba(246, 241, 230, 0.1)"
-  ink: "#f7f2e7"
-  ink-2: "#c2baa9"
-  muted: "#968e7c"
-  gold: "#d2ac61"
-  gold-bright: "#f2dda9"
-  gold-dim: "#8f7137"
-  gold-ink: "#150f06"
-  ember: "#6e2440"
+  bg: "#0b0a09"
+  bg-2: "#0f0d0b"
+  surface: "#13110f"
+  surface-2: "#1a1714"
+  line: "rgba(236, 224, 200, 0.11)"
+  line-strong: "rgba(236, 224, 200, 0.2)"
+  ink-tray: "rgba(236, 224, 200, 0.06)"
+  ink-wash: "rgba(236, 224, 200, 0.14)"
+  ink: "#f3eee4"
+  ink-2: "#bdb4a3"
+  muted: "#918979"
+  gold: "#cdb283"
+  gold-bright: "#e8d6b0"
+  gold-dim: "#8a7550"
+  gold-ink: "#17120a"
+  gold-tint: "rgba(205, 178, 131, 0.05)"
+  gold-wash: "rgba(205, 178, 131, 0.12)"
+  gold-selection: "rgba(205, 178, 131, 0.3)"
+  bubble-in: "#24201c"
+  bubble-in-hover: "#2c2722"
   series-subs: "#94702c"
-  series-chat: "#f2dda9"
+  series-chat: "#e8d6b0"
   series-tips: "#b84a72"
   series-customs: "#e9e1d2"
 typography:
   display:
-    fontFamily: "Bodoni Moda, Didot, serif"
-    fontSize: "clamp(2.9rem, 7.2vw, 6.9rem)"
-    fontWeight: 500
-    lineHeight: 0.95
-    letterSpacing: "-0.02em"
+    fontFamily: "Gilda Display, Georgia, serif"
+    fontSize: "clamp(2.75rem, min(6.2vw, 9.4vh), 5.75rem)"
+    fontWeight: 400
+    lineHeight: 1.02
+    letterSpacing: "-0.01em"
   headline:
-    fontFamily: "Bodoni Moda, Didot, serif"
-    fontSize: "clamp(2.4rem, 5vw, 4.2rem)"
-    fontWeight: 500
-    lineHeight: 1.04
+    fontFamily: "Gilda Display, Georgia, serif"
+    fontSize: "clamp(2.2rem, 4.2vw, 3.5rem)"
+    fontWeight: 400
+    lineHeight: 1.08
+    letterSpacing: "-0.01em"
+  title-serif:
+    fontFamily: "Gilda Display, Georgia, serif"
+    fontSize: "1.5rem"
+    fontWeight: 400
+    lineHeight: 1.25
+    letterSpacing: "-0.005em"
+  figure-hero:
+    fontFamily: "Jost, Futura, Century Gothic, system-ui, sans-serif"
+    fontSize: "5.5rem"
+    fontWeight: 400
+    lineHeight: 1
     letterSpacing: "-0.015em"
-  numeral:
-    fontFamily: "Bodoni Moda, Didot, serif"
+    fontFeature: "\"lnum\", \"tnum\""
+  figure-xl:
+    fontFamily: "Jost, Futura, Century Gothic, system-ui, sans-serif"
     fontSize: "3.6rem"
-    fontWeight: 600
-    lineHeight: 0.95
+    fontWeight: 400
+    lineHeight: 1
+    letterSpacing: "-0.015em"
+    fontFeature: "\"lnum\", \"tnum\""
+  figure-lg:
+    fontFamily: "Jost, Futura, Century Gothic, system-ui, sans-serif"
+    fontSize: "2.4rem"
+    fontWeight: 400
+    lineHeight: 1
+    letterSpacing: "-0.015em"
+    fontFeature: "\"lnum\", \"tnum\""
+  figure:
+    fontFamily: "Jost, Futura, Century Gothic, system-ui, sans-serif"
+    fontSize: "2rem"
+    fontWeight: 400
+    lineHeight: 1
+    letterSpacing: "-0.015em"
+    fontFeature: "\"lnum\", \"tnum\""
+  figure-stat:
+    fontFamily: "Jost, Futura, Century Gothic, system-ui, sans-serif"
+    fontSize: "1.9rem"
+    fontWeight: 400
+    lineHeight: 1
+    letterSpacing: "-0.015em"
+    fontFeature: "\"lnum\", \"tnum\""
+  figure-sm:
+    fontFamily: "Jost, Futura, Century Gothic, system-ui, sans-serif"
+    fontSize: "1.75rem"
+    fontWeight: 400
+    lineHeight: 1
+    letterSpacing: "-0.015em"
+    fontFeature: "\"lnum\", \"tnum\""
+  figure-xs:
+    fontFamily: "Jost, Futura, Century Gothic, system-ui, sans-serif"
+    fontSize: "1.375rem"
+    fontWeight: 400
+    lineHeight: 1
+    letterSpacing: "-0.015em"
+    fontFeature: "\"lnum\", \"tnum\""
   title:
     fontFamily: "Jost, Futura, Century Gothic, system-ui, sans-serif"
     fontSize: "17px"
@@ -51,41 +104,72 @@ typography:
     fontSize: "17px"
     fontWeight: 400
     lineHeight: 1.7
+  body-ui:
+    fontFamily: "Jost, Futura, Century Gothic, system-ui, sans-serif"
+    fontSize: "16px"
+    fontWeight: 400
+    lineHeight: 1.5
   body-card:
     fontFamily: "Jost, Futura, Century Gothic, system-ui, sans-serif"
     fontSize: "15px"
     fontWeight: 400
     lineHeight: 1.625
+  body-sm:
+    fontFamily: "Jost, Futura, Century Gothic, system-ui, sans-serif"
+    fontSize: "14px"
+    fontWeight: 400
+    lineHeight: 1.5
+  caption:
+    fontFamily: "Jost, Futura, Century Gothic, system-ui, sans-serif"
+    fontSize: "13px"
+    fontWeight: 400
+    lineHeight: 1.5
+  meta:
+    fontFamily: "Jost, Futura, Century Gothic, system-ui, sans-serif"
+    fontSize: "12px"
+    fontWeight: 400
+    lineHeight: 1.375
+  control:
+    fontFamily: "Jost, Futura, Century Gothic, system-ui, sans-serif"
+    fontSize: "15px"
+    fontWeight: 500
+    lineHeight: 1
+  segment:
+    fontFamily: "Jost, Futura, Century Gothic, system-ui, sans-serif"
+    fontSize: "13px"
+    fontWeight: 500
+    lineHeight: 1
   label:
     fontFamily: "Jost, Futura, Century Gothic, system-ui, sans-serif"
     fontSize: "11px"
     fontWeight: 500
     lineHeight: 1.2
-    letterSpacing: "0.3em"
-  label-button:
+    letterSpacing: "0.14em"
+  tag:
     fontFamily: "Jost, Futura, Century Gothic, system-ui, sans-serif"
-    fontSize: "12px"
-    fontWeight: 600
-    lineHeight: 1
-    letterSpacing: "0.28em"
-  figure-tabular:
+    fontSize: "10px"
+    fontWeight: 500
+    lineHeight: 1.2
+    letterSpacing: "0.14em"
+  wordmark:
     fontFamily: "Jost, Futura, Century Gothic, system-ui, sans-serif"
-    fontSize: "2rem"
-    fontWeight: 300
+    fontSize: "14px"
+    fontWeight: 500
     lineHeight: 1
-    fontFeature: "\"tnum\", \"lnum\""
+    letterSpacing: "0.34em"
 rounded:
   pip: "3px"
+  bubble-tail: "6px"
+  focus: "8px"
   segment: "9px"
   app-icon: "10px"
   segmented: "12px"
   tile: "16px"
-  screenshot: "18px"
+  widget: "18px"
   bubble: "20px"
-  widget: "22px"
   pill: "999px"
 spacing:
-  hairline-gap: "8px"
+  stack-gap: "8px"
   tile-gap: "10px"
   grid-gap: "12px"
   gutter-phone: "20px"
@@ -98,77 +182,89 @@ components:
   button-primary:
     backgroundColor: "{colors.gold}"
     textColor: "{colors.gold-ink}"
-    typography: "{typography.label-button}"
+    typography: "{typography.control}"
     rounded: "{rounded.pill}"
     padding: "0 28px"
     height: "52px"
+  button-primary-hover:
+    backgroundColor: "{colors.gold-bright}"
   button-ghost:
-    backgroundColor: "{colors.glass}"
     textColor: "{colors.ink}"
-    typography: "{typography.label-button}"
+    typography: "{typography.control}"
     rounded: "{rounded.pill}"
     padding: "0 25.6px"
     height: "52px"
-  button-ghost-hover:
-    backgroundColor: "{colors.glass-strong}"
   button-round:
-    backgroundColor: "{colors.glass}"
     textColor: "{colors.ink}"
     rounded: "{rounded.pill}"
-    size: "52px"
+    size: "50px"
+  button-round-answer:
+    backgroundColor: "{colors.gold}"
+    textColor: "{colors.gold-ink}"
+    rounded: "{rounded.pill}"
+    size: "68px"
   card:
     backgroundColor: "{colors.surface}"
     rounded: "{rounded.widget}"
     padding: "{spacing.card-pad}"
   card-raised:
-    backgroundColor: "{colors.surface-raised}"
+    backgroundColor: "{colors.surface-2}"
     rounded: "{rounded.widget}"
     padding: "20px"
-  glass-notification:
-    backgroundColor: "{colors.glass}"
+  notification:
+    backgroundColor: "{colors.surface}"
     textColor: "{colors.ink}"
     rounded: "{rounded.widget}"
     padding: "12px 16px 14px"
-  widget:
-    backgroundColor: "{colors.glass}"
+  stat-row:
+    backgroundColor: "{colors.bg}"
     textColor: "{colors.gold-bright}"
-    typography: "{typography.numeral}"
-    rounded: "{rounded.widget}"
-    padding: "14px 16px"
+    typography: "{typography.figure-stat}"
+    padding: "18px 20px"
+  list-row:
+    textColor: "{colors.ink}"
+    padding: "16px 20px"
   segmented:
-    backgroundColor: "rgba(246, 241, 230, 0.07)"
+    backgroundColor: "{colors.ink-tray}"
     rounded: "{rounded.segmented}"
     padding: "3px"
   segmented-button:
     textColor: "{colors.ink-2}"
+    typography: "{typography.segment}"
     rounded: "{rounded.segment}"
     padding: "0 14.4px"
     height: "36px"
   segmented-button-selected:
-    backgroundColor: "rgba(246, 241, 230, 0.16)"
+    backgroundColor: "{colors.ink-wash}"
     textColor: "{colors.ink}"
-  list-row:
+  option-tile:
     textColor: "{colors.ink}"
-    padding: "16px 20px"
+    rounded: "{rounded.tile}"
+    padding: "14px 16px"
+  option-tile-selected:
+    backgroundColor: "rgba(205, 178, 131, 0.1)"
   bubble-in:
-    backgroundColor: "#2a2520"
+    backgroundColor: "{colors.bubble-in}"
     textColor: "{colors.ink}"
     rounded: "{rounded.bubble}"
     padding: "10px 16px"
+  bubble-in-hover:
+    backgroundColor: "{colors.bubble-in-hover}"
   bubble-out:
-    backgroundColor: "#c9a258"
+    backgroundColor: "{colors.gold}"
     textColor: "{colors.gold-ink}"
     rounded: "{rounded.bubble}"
     padding: "12px 16px"
   chip-tag:
-    backgroundColor: "rgba(210, 172, 97, 0.15)"
+    backgroundColor: "rgba(205, 178, 131, 0.15)"
     textColor: "{colors.gold-bright}"
+    typography: "{typography.tag}"
     rounded: "{rounded.pill}"
     padding: "4px 12px"
   nav-status-bar:
-    backgroundColor: "rgba(9, 8, 7, 0.7)"
+    backgroundColor: "rgba(11, 10, 9, 0.7)"
     textColor: "{colors.ink-2}"
-    typography: "{typography.label}"
+    typography: "{typography.body-sm}"
     height: "64px"
 ---
 
@@ -176,183 +272,187 @@ components:
 
 ## Overview
 
-**Creative North Star: "The Lock Screen"**
+**Creative North Star: "Silk"**
 
-Astor reaches a creator the way their money does: on the phone's lock screen. The whole site is assembled from native iPhone surfaces rendered in the house's pinned black-and-gold. The wallpaper is a warm near-black lit from below by ember and gold. Headlines are set like the clock. Stats are widgets, payouts arrive as notifications, terms are grouped inset lists, the FAQ is a Messages thread, and the close is an incoming call. Each section borrows one of these surfaces. None of them invent a web-marketing component where an iPhone surface already does the job.
+Astor keeps the iPhone lock screen as its layout and tells it quietly. The first screen is still a lock screen: a date line, a headline set where the clock would be, a row of figures, a stack of notifications, a dock and a home indicator. Further down, terms are grouped inset lists, the FAQ is a Messages thread, and the close is an incoming call. The surfaces are native; the voice is hushed. Nothing shines, nothing is engraved, nothing shouts.
 
-The material is warm frosted glass over lit darkness, with gold read as light rather than paint. A high-contrast fashion display face (Bodoni Moda) carries the clock, titles and big figures. Jost carries everything you read, and its spaced caps carry controls and labels. Density is calm and phone-first. Sections breathe at 96 to 128px, and inside a section the surfaces stack tightly, 8 to 12px apart, the way a notification stack does.
+The material is matte. Grounds are warm black, cards are solid and edged with a hairline, and gold is a flat champagne used sparingly, never a gradient on type or controls. Light is a low warm glow from below and a trace from above, never a show. The one ornament is a gold silk ribbon on the first screen. It draws itself in once and passes behind the receipts, and the solid cards it slips behind are what make it read as depth. Gilda Display gives the headline and titles a calm, high-waisted serif voice. Jost carries everything you read and every figure, in lining tabular numerals.
 
-The palette is pinned by the user and is Astor's own. It is not Altyr's Obsidian Clarity. Product renders of Locus are the one place another language appears, and they appear as themselves, framed inside an Astor card.
+Density is phone-first and calm. Sections breathe at 96 to 128px, and inside a section surfaces stack tightly, 8 to 12px apart, the way a notification stack does. The palette is Astor's own, not Altyr's Obsidian Clarity. Locus product renders are the one place another language appears, and they appear as themselves inside an Astor card.
 
 **Key Characteristics:**
-- Warm near-black wallpaper lit from below by radial ember and gold light, never a flat fill on hero surfaces.
-- Frosted warm glass (26px blur, 150% saturation) with 22px continuous corners for notifications, widgets and round controls.
-- Gold foil reserved for the clock, key figures and the one action.
-- Bodoni Moda for display and big figures. Jost for text, spaced Jost caps for labels and buttons.
+- Matte warm black grounds with solid, hairline-edged cards. No frosted glass on surfaces.
+- Champagne gold as a flat accent: key figures, the one action, links, checks, the active pip.
+- One gold silk ribbon on the first screen, drawn in once, passing behind solid surfaces.
+- Gilda Display 400 for the headline and titles. Jost for text and every figure, lining and tabular.
+- Sentence-case controls: one solid champagne pill per surface, hairline pills for second actions.
 - Grouped inset lists split by hairlines, rather than separate boxed rows.
-- One authored motion moment: the screen wakes.
 
 ## Colors
 
-The palette is warm near-black grounds, a three-step gold family on warm ink, and ember as light only.
+Matte warm black, a three-step champagne gold, and warm ink, with hairlines doing the structural work.
 
 ### Primary
-- **House Gold** (gold): carets, focus rings, active-nav pips, the slider fill, gold spaced-cap column headers, and the base of the foil. It sits under glass without turning grey because every ground beneath it is warm.
-- **Champagne Light** (gold-bright): big widget and notification figures, inline gold links ("See every tier"), tag chips and the featured-tier ribbon. It is the readable gold for text on dark grounds.
-- **Antique Bronze** (gold-dim): the borders of featured or selected things (featured tier card, chosen calculator split, the raised result card) and hover borders on glass controls. It is the dark end of the foil.
-- **Gold Ink** (gold-ink): the text on foil. It is a near-black brown, never pure black.
-
-### Tertiary
-- **Ember** (ember): atmosphere only. It is the lower-left light in the wallpaper (`hero-glow`) and the faint wash in alternating sections (`glow-band`). A lighter ember rose (series-tips) is the one place the hue becomes a fill, as a chart segment.
+- **Champagne** (gold): the one action pill, the outgoing Messages bubble, the answer button, the active-nav pip, the slider fill, the caret, call-step numerals and hover borders on hairline controls.
+- **Champagne Light** (gold-bright): figures (the hero stat row, receipts, census, tier rates, retention), inline links, the focus ring, check marks, tag text and the primary pill's hover. It is the readable gold for text on dark grounds.
+- **Antique Bronze** (gold-dim): the borders of featured or selected things (the featured tier card, the chosen calculator split, the raised result card), the Astor app icon rim, the founder monogram ring and the check outline.
+- **Gold Ink** (gold-ink): text on champagne. A near-black brown, never pure black.
+- **Gold Tint / Gold Wash / Gold Selection**: champagne as light rather than paint. The tint (5%) marks Astor's column in the deal table; the wash (12%) fills the check disc and lights the hero glow; the selection step (30%) is text selection and, at 24%, the scrollbar thumb.
 
 ### Neutral
-- **Warm Black** (warm-black): the page and the wallpaper base.
-- **Warm Black, Alternate** (warm-black-2): alternating sections and the footer, a half-step up so section bands read without lines.
-- **Card Surface** (surface): grouped cards, lists, tables and the screenshot backing.
-- **Raised Surface** (surface-raised): the raised card, the Messages header and list-row hover. It is also the fallback for glass where `backdrop-filter` is unsupported.
-- **Warm Glass / Glass Strong / Glass Edge**: the frosted material and its 1px rim. Glass Strong is the hover state of the quiet pill.
-- **Hairline / Hairline Strong** (line, line-strong): row dividers, section borders and card rims. The strong step is for raised cards and the placeholder dash.
-- **Warm Ink** (ink): headings and primary text. On glass, secondary copy uses ink at reduced alpha (85%, 70%, 55%) so it stays warm.
-- **Parchment** (ink-2): body prose and inactive nav.
-- **Muted Taupe** (muted): notes, footnotes, captions and "them" columns. It is tuned to clear WCAG AA 4.5:1 on card surfaces, not only on the page.
+- **Warm Black** (bg): the page, the hero, and the opaque backing of the hero stat row.
+- **Warm Black, Alternate** (bg-2): alternating sections and the footer, a half-step up so bands read with only a hairline between them.
+- **Card Surface** (surface): every card, list, notification, table and screenshot backing. The `.glass` class now means this solid card with a soft drop.
+- **Raised Surface** (surface-2): the raised result card, the featured tier card, list-row hover, the Messages header and monogram discs.
+- **Hairline / Hairline Strong** (line, line-strong): row dividers, section borders and card rims. The strong step rims hairline pills, round dock buttons, the raised card and the placeholder dash.
+- **Ink Tray / Ink Wash** (ink-tray, ink-wash): the segmented control's tray and its selected segment; the wash is also the slider's unfilled track.
+- **Warm Ink** (ink): headlines and primary text. Inside notifications and widgets, secondary copy is ink at 85% or 80%.
+- **Parchment** (ink-2): body prose, inactive nav, dock captions and stat labels.
+- **Muted Taupe** (muted): notes, footnotes, timestamps, column heads and the "them" column. It clears WCAG AA 4.5:1 on card surfaces, not only on the page.
+- **Bubble In / Bubble In Hover**: the incoming Messages bubble and its hover step.
 
 ### Chart Series
-- Bronze (series-subs), Champagne (series-chat), Ember Rose (series-tips) and Pale Ink (series-customs) are the house palette as a ramp. They are stacked alternating dark and light so adjacent segments clear 3.4:1, and each clears 3.8:1 on the card surface.
+- Bronze (series-subs), Champagne Light (series-chat), Ember Rose (series-tips) and Pale Ink (series-customs) are the calculator's stacked bar. Stacked order alternates dark and light so adjacent segments clear 3.4:1, and each clears 3.8:1 on the card surface. Ember rose appears nowhere else.
 
 ### Named Rules
-**The Lit-Not-Painted Rule.** Grounds are warm (hue near 70°). A cool or neutral black makes the gold look painted on, so never put gold on a cool ground.
+**The Warm Ground Rule.** Every ground is a warm black (hue near 60 to 70 degrees). Gold on a cool or neutral black looks painted on.
 
-**The Ember Is Light Rule.** Ember appears as radial light in the wallpaper and section washes. It is never type and never a border. Its only solid use is as a chart segment.
+**The Flat Gold Rule.** Gold is a solid colour. No gradient on type, buttons or chips; the only gold gradient in the system is the ribbon's own sheen.
 
-**The Foil Reserve Rule.** The foil gradient goes on the hero clock, key figures (rates, retention, the projected result, case-study "after" values) and the gold action pill. Nothing else is foil.
+**The Gold Phrase Rule.** A headline or line may carry at most one short phrase in solid gold (the hero's "smaller cut", the proof page's "with names", asterisk-marked phrases in copy). Gold never fills a whole headline.
 
 ## Typography
 
-**Display Font:** Bodoni Moda (with Didot, serif)
+**Display Font:** Gilda Display (with Georgia, serif)
 **Body Font:** Jost (with Futura, Century Gothic, system-ui, sans-serif)
 
-**Character:** A high-contrast fashion display face (Bodoni Moda, which replaced the hairline-only Bodoni Moda on 10/04 because the figures read too thin) set large like a lock-screen clock, paired with a geometric sans whose wide-tracked caps read like an invitation card. Bodoni Moda ships in one weight (400). Hierarchy comes from size alone.
+**Character:** Gilda Display is a quiet, high-contrast serif with one weight (400); it reads as composed rather than fashionable. Jost is a geometric sans that carries running text, controls and all figures, so numbers read cleanly and columns line up. Earlier display serifs (Italiana, Bodoni Moda) were tried and read as thin or loud.
 
 ### Hierarchy
-- **Display** (400, clamp(3.4rem, 8.6vw, 8.4rem), 0.92): the clock. It appears once per site, as the home hero headline in foil. Balanced wrap.
-- **Headline** (400, clamp(2.5rem, 5.2vw, 4.4rem), 1.02): every section title and inner-page h1, in warm ink. Balanced wrap. It stands alone, with no label above it.
-- **Numeral** (Bodoni Moda 600, 0.95 line height, 1.6rem to 6.5rem): big figures as display objects in widgets, notifications, the census, tier rates and retention. They are set in gold-bright, or in foil when the Foil Reserve allows.
-- **Title** (Jost 600, 15 to 17px, snug): card, tier, list-row and notification titles.
-- **Body** (Jost 400, 17px, 1.7): section prose, capped around 42rem (max-w-2xl). Inside cards it drops to 15 to 15.5px at a relaxed line height. The lead paragraph of a card can step up to 18px in ink.
-- **Label** (Jost 500, 10 to 11px, 0.2em to 0.36em, uppercase): nav links (11px, 0.32em), table column heads, data terms (Before / After), field-group labels and case-study tags.
-- **Label, Button** (Jost 600, 12px, 0.28em, uppercase): the action pill. The quiet pill uses weight 500 and 0.26em.
-- **Figure, Tabular** (Jost, tabular and lining numerals): calculator inputs, results and chart values.
+- **Display** (Gilda 400, clamp(2.75rem, min(6.2vw, 9.4vh), 5.75rem), 1.02): the home hero headline only, set where the clock would be, balanced wrap. Its continuation runs below in Jost parchment (17px, 21px from 640px).
+- **Headline** (Gilda 400, clamp(2.2rem, 4.2vw, 3.5rem), 1.08): every section title and inner-page h1, in warm ink, balanced wrap. It stands alone.
+- **Title, Serif** (Gilda 400, around 1.5rem): the footer tagline, founder monograms, the proof page's retention sub-line, the Astor app-icon "A".
+- **Figures** (Jost 400, lining and tabular, line height 1, -0.015em): Figure Hero (5.5rem; 4.5rem on phones, 5rem on the 404) for the one big number on a page; Figure XL (3.6rem) for tier rates and the retention widget; Figure Large (2.4rem) for the census; Figure (2rem) for receipts and calculator results; Figure Stat (1.9rem) for the hero stat row; Figure Small (1.75rem) for the hero receipt and case-study values; Figure XS (1.375rem) for the stat row on phones. Usually champagne light; "before" values sit in parchment, calculator baselines in Jost 300.
+- **Title** (Jost 600, 17px, 1.375): founder, case-study and plan titles. Card and row titles step down to 15 to 16px at 500 to 600.
+- **Body** (Jost 400, 17px, 1.7): section prose, capped near 42rem. In cards it drops to Body Card (15px, 1.625); list rows and UI copy use Body UI (16px). The first paragraph of a prose card may step up to 18px in ink.
+- **Body Small / Caption / Meta** (14px, 13px, 12px): nav links and footnotes; call captions and notes; notification app names, dock captions and stat labels.
+- **Control** (Jost 500, 15px, sentence case): both pills. Segments use 13px 500.
+- **Label** (Jost 500, 11px, 0.14em, uppercase, muted): form-group heads ("Your page today", "Assumptions"), table column heads and calculator result heads. **Tag** is the same at 10px, for case-study tags and Before / After terms.
+- **Wordmark** (Jost 500, 14px, 0.34em): ASTOR in the nav and footer, with "Management" in 12px muted beside it from 640px.
 
 ### Named Rules
-**The Clock Face Rule.** Bodoni Moda is for the clock, titles and big figures only. Never set it below about 1.4rem and never use it for running text.
+**The Jost Figure Rule.** Every figure is Jost, lining and tabular, from the 5.5rem hero number to a table cell. Gilda never sets a number except the call-card "30" and the monograms.
 
-**The Readable One Rule.** Big figures go in Bodoni Moda. Tables, sliders and the calculator keep Jost tabular numerals, so columns of figures line up. Bodoni Moda's own +, × and ~ are hairlines, so the `Fig` helper sets those symbols in Jost.
+**The Sentence Case Rule.** Controls, nav links and captions are sentence case. Spaced caps are reserved for small data labels, column heads and tags, at 0.14em.
 
-**The Title Stands Alone Rule.** A headline carries its own weight. Spaced caps name controls, columns and data. They never sit above a headline as a kicker.
+**The Title Stands Alone Rule.** A headline carries its own weight. Nothing in spaced caps sits above it as a kicker.
 
 ## Layout
 
-Phone-first. Content sits in a centred 72rem (1152px) container with 20px gutters on phones and 24px from 640px. Sections pad 96px vertically on phones and 128px from 640px, and they alternate between warm-black and warm-black-2 with hairline borders top and bottom. Two-column sections use a 12-column grid from 1024px: the headline takes 5 columns and the surface takes 7, with a 56px gap. Centred sections cap their text at 48rem.
+Phone-first. Content sits in a centred 72rem (1152px) container with 20px gutters on phones and 24px from 640px. Sections pad 96px vertically on phones and 128px from 640px, and they alternate between warm black and the alternate band with hairline borders. Two-column sections use a 12-column grid from 1024px: the headline takes 5 columns and the surface 7, with a 56px gap. Centred sections cap their text at 48rem.
 
-Inside a section, surfaces stack tightly. Notifications are 8px apart, widgets and census tiles 10px, tier and case-study cards 12px. This is the rhythm of a lock-screen stack, and it contrasts with the generous section spacing.
+Inside a section, surfaces stack tightly: notifications 8px apart, census tiles 10px, tier and case-study cards 12px. This lock-screen rhythm contrasts with the generous section spacing.
 
-The home hero is a full-viewport lock screen (100svh, minimum 760px of wallpaper). From top to bottom it holds the date line, the clock, a 2-up (phone) or 4-up (640px and up) widget row at most 680px wide, a notification stack at most 540px wide, a dock with round glass corner buttons and the foil pill, and a 134 by 5px home indicator. Inner pages open with a shorter wallpaper hero: 144px top padding, 176px from 640px.
+The home hero fills the viewport (100svh, light layer at least 760px). From top to bottom: the date line (today, in the visitor's locale), the headline and its continuation, the hero stat row (at most 760px wide, 2-up on phones and 4-up from 640px), the notification stack (at most 520px) with the ribbon behind it, the dock (at most 560px: round proof and deal buttons in the corners, the champagne pill in the middle), and a 134 by 5px home indicator in ink at 70%. Inner pages open with a shorter lit hero: 144px top padding, 176px from 640px.
 
-Breakpoints are Tailwind's defaults: 640, 768 and 1024px. The deal table becomes one grouped row per dimension below 768px.
+Breakpoints are Tailwind's defaults: 640, 768 and 1024px. The deal table becomes one grouped row per dimension below 768px; the nav collapses to Book plus a menu button below 768px.
 
 ## Elevation & Depth
 
-Depth comes from light and material, not stacked shadows. The wallpaper is lit from below. Glass blurs that light through warm translucency, and opaque cards sit on the dark with a 1px inset top highlight and a long, low, heavily negative-spread shadow that pools beneath rather than around.
+Depth is tonal and quiet. Cards are opaque surfaces a half-step above the ground, edged with a hairline. A soft, heavily negative-spread drop sits under notifications, small tiles and raised cards, enough to separate them from what passes behind. The ribbon carries its own soft drop shadow, so it reads as lying between the page and the cards. Light comes from a faint warm glow, not from shadows.
 
 ### Shadow Vocabulary
-- **Card** (`box-shadow: 0 1px 0 rgba(255,246,230,0.04) inset, 0 24px 48px -32px rgba(0,0,0,0.9)`): grouped cards and lists.
-- **Card Raised** (`box-shadow: 0 1px 0 rgba(255,246,230,0.06) inset, 0 32px 60px -38px rgba(0,0,0,1)`): the emphasised result card.
-- **Glass** (`box-shadow: 0 18px 40px -26px rgba(0,0,0,0.75)`): notifications, widgets and glass controls.
-- **Foil Glow** (`box-shadow: 0 14px 34px -16px rgba(210,172,97,0.65), inset 0 1px 0 rgba(255,255,255,0.35)`): only the gold action pill, which emits warm light.
-- **Featured Rim** (`box-shadow: 0 0 0 1px rgba(210,172,97,0.15), 0 30px 60px -36px rgba(0,0,0,1)`): the featured tier card.
-- **Segment Selected** (`box-shadow: 0 2px 6px rgba(0,0,0,0.35)`): the selected segment of a segmented control.
+- **Tile Drop** (`box-shadow: 0 18px 36px -22px rgba(0,0,0,0.9)`): notifications, the retention widget, the proof hero card, the calculator note and the mobile menu (the `.glass` card).
+- **Raised Drop** (`box-shadow: 0 30px 60px -40px rgba(0,0,0,1)`): the raised result card. The featured tier card uses the same family at -36px.
+- **Ribbon Drop** (`filter: drop-shadow(0 12px 14px rgba(0,0,0,0.5))`, 0 8px 10px on phones): the silk ribbon only.
+- **Thumb** (`box-shadow: 0 2px 8px rgba(0,0,0,0.55)`): the slider thumb.
 
 ### Named Rules
-**The Light From Below Rule.** Wallpaper light rises from the bottom edge: gold at 50% 108%, ember at 10% 96%, bronze at 92% 88%. A faint ember wash enters from the top. Never light a hero from the top centre.
+**The Solid Surface Rule.** Cards, notifications and controls are opaque. The ribbon only reads as passing behind because nothing in front of it is translucent; the hero stat row carries an opaque warm-black fill for the same reason.
 
-**The Glass Over Light Rule.** Glass only earns its blur over the lit wallpaper or a glow band. On a plain warm-black section, use the opaque card.
+**The Low Light Rule.** Hero light is a low champagne glow from below (12% at 50% 84%) and a faint trace from above (6% at 50% -6%), masked so it never shows an edge. Alternating bands may carry a 6% glow from the bottom. Light never becomes a visible shape.
 
 ## Shapes
 
-Continuous iPhone-scale corners throughout. Widgets, cards, notifications and tier cards use 22px. Screenshots use 18px. The calculator's split tiles use 16px, the segmented control 12px outer and 9px inner, and app icons 10px. Every button and chip is a full pill. Round controls (52px dock buttons, 68px call buttons, 56px icon badges) are glass pills at full radius. Message bubbles are 20px with a 6px tail corner on the sender's side. Borders are always 1px hairlines in warm ink at low alpha. The placeholder chip is the only dashed border.
+Gentle iPhone-scale corners. Cards, notifications, widgets, tier cards and screenshots use 18px. Calculator option tiles use 16px, the segmented control 12px outer and 9px inner, app icons 10px, and the focus ring 8px. Every button and chip is a full pill. Round controls are hairline circles: 50px dock buttons, 68px call buttons, a 56px icon badge. Messages bubbles are 20px with a 6px tail corner on the sender's side. Borders are always 1px, in warm ink at low alpha or in antique bronze for featured and selected states. The placeholder chip is the only dashed border.
+
+The ribbon is the one free form: a long, shallow S-curve of 18px stroke (12px on phones) with a 1.2px pale highlight a few pixels above it, routed so it never crosses type.
 
 ## Components
 
 ### Buttons
-Each surface has one action. That action is foil and always books the call.
+One action per surface, and it books the call.
 - **Shape:** full pill (999px), minimum height 52px.
-- **Primary (gold action pill):** foil gradient at 180% width on gold-ink text, Label Button type, 28px horizontal padding, foil glow shadow. On phones it tightens to 16px padding and 0.16em tracking.
-- **Hover / Focus:** the foil sweeps (background position 0% to 100% over 600ms on the expo-out ease). Active scales to 0.98. Focus shows a 2px gold outline at 3px offset.
-- **Quiet pill (secondary):** frosted glass with a glass-edge rim, ink text, weight 500 and 0.26em tracking. On hover the border goes to gold at 45% and the fill to Glass Strong.
-- **Round glass buttons:** 52px (dock) or 68px (incoming call) glass circles with a 1.6-stroke line icon and a 9.5 to 10px spaced-cap caption below. Hover moves the rim to antique bronze. The call answer button is the foil version.
+- **Primary (champagne pill):** solid champagne on gold ink, Control type, 28px horizontal padding (20px on phones). Hover steps to champagne light over 300ms on the expo-out ease; active scales to 0.98.
+- **Secondary (hairline pill):** transparent with a hairline-strong rim, ink text, Control type. On hover the rim turns champagne. The nav's Book link is a 40px version at 14px.
+- **Round buttons:** hairline circles in ink with a 1.5 to 1.6-stroke line icon and a 12 to 13px parchment caption below. Hover turns the rim champagne. The incoming-call answer button is the solid champagne version, hovering to champagne light.
+- **Focus:** a 1.5px champagne-light outline at 4px offset with an 8px radius on every interactive element.
 
 ### Chips
-- **Tag:** gold at 15% fill, champagne text, 10px label caps at 0.22em, pill. Used for case-study tags.
-- **Placeholder:** muted text, dashed line-strong border, pill. Used only for content the founders will supply.
+- **Tag:** gold at 15% fill, champagne-light Tag type, pill. Used for case-study tags.
+- **Placeholder:** muted 11px caps, dashed hairline-strong border, pill. Only for content the founders will supply.
 
 ### Cards / Containers
-- **Corner Style:** 22px.
-- **Background:** card surface, or raised surface for emphasis. Glass over lit regions.
-- **Shadow Strategy:** Card / Card Raised / Glass (see Elevation & Depth).
-- **Border:** 1px hairline. Featured or selected states use antique bronze.
-- **Internal Padding:** 24px, 28px from 640px. Compact tiles use 16 to 20px.
-- **Grouped Inset List:** one card holds the rows, split by 1px hairlines, with rows at 16px by 20px. Used for reasons, promises, founders, call steps, the phone deal table and the mobile menu. Link rows end in an 8 by 14 muted chevron.
+- **Corner Style:** 18px.
+- **Background:** card surface; raised surface for emphasis.
+- **Shadow Strategy:** none on plain cards; Tile Drop and Raised Drop as above.
+- **Border:** 1px hairline. Featured and selected states use antique bronze; hover on testimonial cards moves the rim to gold at 35%.
+- **Internal Padding:** 24px, 28px from 640px; compact tiles 16 to 20px.
+- **Grouped Inset List:** one card holds the rows, split by 1px hairlines, rows at 16px by 20px. Used for the four reasons, promises, founders, call steps, the phone deal table and the mobile menu. Link rows end in an 8 by 14 muted chevron; a checked row leads with the gold check disc.
 
 ### Inputs / Fields
-- **Slider:** 6px pill track with a gold fill to the value and warm ink at 12% beyond it, plus a 26px warm-ink thumb with a soft drop shadow that scales 1.08 while dragging.
-- **Segmented control:** a 12px tray (warm ink at 7%, hairline rim, 3px padding) with 9px segments at 36px height in parchment. The selected segment fills to warm ink at 16% in ink with a small shadow. Used for page-size presets and 40% / 45% tier toggles.
-- **Option tile:** a 16px-radius bordered tile. When selected it gets an antique-bronze border and a 10% gold fill.
-- **Focus:** a 2px gold outline at 3px offset on every interactive element. The caret is gold.
+- **Slider:** a 4px pill track, champagne to the value and ink wash beyond it, with a 24px warm-ink thumb that scales 1.08 while dragging.
+- **Segmented control:** an ink-tray tray with a hairline rim and 3px padding; 36px segments in parchment, the selected one filled with ink wash in ink. Used for page-size presets and the 40% / 45% tier toggle.
+- **Option tile:** a 16px hairline tile; selected gets an antique-bronze border and a 10% gold fill.
+- **Caret:** champagne.
 
 ### Navigation
-- **Status bar:** sticky and 64px tall. It is transparent over the wallpaper and frosts once the page scrolls past 8px (warm black at 70%, 2xl blur, 150% saturation, hairline bottom).
-- **Wordmark:** ASTOR in 13px Jost 500 at 0.5em, gold, with "Management" in 9.5px muted caps from 640px.
-- **Links:** 11px caps at 0.32em in parchment, ink on hover. The active link is ink with a 4px gold pip beneath it.
-- **Book:** a small glass pill with a gold status dot.
-- **Mobile:** "Book" plus a 40px round glass menu button. The menu is a glass grouped list with 17px rows, a Home row, and a gold dot on the current page.
+- **Status bar:** sticky, 64px. Transparent over the hero; once the page scrolls past 8px (or the menu opens) it dims to warm black at 70% with a hairline bottom.
+- **Links:** 14px sentence case in parchment, ink on hover. The active link is ink with a 4px champagne pip beneath it.
+- **Book:** a 40px hairline pill.
+- **Mobile:** Book plus a 40px round hairline menu button. The menu is a solid grouped list with 17px rows, a Home row, and a champagne dot on the current page.
+
+### Hero Stat Row (signature)
+The four headline figures as one line ruled by hairlines above and below, with hairline dividers between cells, on an opaque warm-black fill. Figure Stat in champagne light over a 12.5px parchment label; on phones it becomes a 2 by 2 grid with the figure beside a one-word label.
 
 ### Notification (signature)
-A glass card on a 38px icon / content / time grid. It has a 15px semibold title, a 12.5px time in ink at 50%, and a 14.5px body in ink at 85%. A champagne Bodoni Moda figure can sit in the body. Below the stack, two narrowing glass slivers suggest more notifications.
+A solid card on a 38px icon / content / time grid: 12px muted app name, 15px medium title, 12.5px muted time, 14.5px body in ink at 85%. A champagne figure can sit in the body. Under the hero stack, two narrowing hairline slivers suggest more notifications.
 
-### Widget (signature)
-A glass tile with an Bodoni Moda figure in champagne (1.75 to 2.15rem, or 3.4 to 4rem when large) over an 11 to 12px label in ink at 70%. On phones it lays out as a row (figure beside a one-line label). From 640px it becomes a stacked tile.
+### Silk Ribbon (signature)
+One gold silk ribbon, drawn as an SVG stroke behind the hero notification stack and spanning the viewport. Its sheen is a horizontal gradient through the gold family (#6f5d3e to #ecdcb8) at 66% opacity. It draws in once over 1900ms on the expo-out ease after 150ms, via stroke-dashoffset, and is simply present, static, under reduced motion. On phones a shorter run enters through the gap above the stack.
 
-### App Icon (signature)
-A 10px-radius square. Astor's is a dark bronze gradient with an antique-bronze rim and a gold Bodoni Moda "A". Locus's keeps its own rose-to-amber gradient.
+### App Icon
+A 10px-radius square. Astor's is card surface with an antique-bronze rim and a champagne Gilda "A". Locus's keeps its own rose-to-amber gradient.
 
 ### Messages Thread (FAQ)
-Questions are incoming bubbles (#2a2520, lightening to #332d27 on hover) in disclosure summaries. Answers are outgoing champagne-gradient bubbles (#e7cd94 to #c9a258) in gold ink. The thread sits in a card under a contact header.
+Questions are incoming bubbles in disclosure summaries, answers are solid champagne outgoing bubbles in gold ink. The thread sits in a card under a contact header.
 
 ### Incoming Call (close)
-Over the lit wallpaper sits an 88px Astor icon with a slow 2.4s ping ring, a Headline, a caption, and two round buttons: decline-side "See the proof" in glass, answer-side "Book" in foil.
+Over the low glow: an 88px Astor icon inside a hairline ring in antique bronze at 40%, a Headline, a muted caption, and two round buttons, "See the proof" in hairline and the booking answer in solid champagne.
 
 ### Locus Panel (scoped exception)
-Product renders sit inside an Astor card with a muted caption ("illustrative product render"). Inside a `.altyr-ui` scope they use Locus's own product language from `src/app/altyr-ui.css`: pure-black canvas, white-alpha glass, rose `#c0387a` to amber `#e08a38`, platinum numerals and the product's own eyebrow labels. That vocabulary belongs to Locus and is valid only inside the scope. It is not Astor's system and must never leak onto Astor surfaces.
+Product renders sit inside an Astor card with a muted caption. Inside the `.altyr-ui` scope they use Locus's own language from `src/app/altyr-ui.css`: black canvas, white-alpha surfaces, rose `#c0387a` to amber `#e08a38`, platinum numerals and its own small type. That vocabulary is valid only inside the scope and never on Astor surfaces.
 
 ### Motion
-One authored moment, the screen waking, plays only under `prefers-reduced-motion: no-preference` on the expo-out ease `cubic-bezier(0.16, 1, 0.3, 1)`. The wallpaper brightens from 0.4 over 1400ms. The clock resolves from a 14px blur and 1.04 scale over 1100ms, starting at 180ms. Lines and widgets rise 10px in a 110ms stagger from 400ms. Notifications spring up 26px from 0.96 scale in a 160ms stagger from 820ms. Everything else is a 150 to 300ms colour or border transition.
+The ribbon drawing in is the one authored moment. Everything else is a 150 to 300ms colour, border or background transition; the primary pill uses the expo-out ease `cubic-bezier(0.16, 1, 0.3, 1)`. Smooth scrolling and framer-motion respect reduced motion.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** build each section from a native iPhone surface (widget, notification, grouped list, Messages thread, incoming call, subscription plan) before reaching for a generic web component.
-- **Do** keep every ground warm (warm-black, surface, glass at rgba(38,32,26)) so gold reads as lit.
-- **Do** set big figures in Bodoni Moda champagne, and in foil only for the clock, key figures and the action pill.
-- **Do** use 22px corners for widgets, cards and notifications, and full pills for every button and chip.
+- **Do** build each section from a native iPhone surface (notification, grouped list, segmented control, Messages thread, incoming call, plan card) before reaching for a generic web component.
+- **Do** keep every ground warm black and every card solid, edged with a 1px hairline.
+- **Do** set every figure in Jost, lining and tabular, usually in champagne light.
+- **Do** keep one solid champagne pill per surface, and make it book the call; second actions are hairline pills.
+- **Do** keep controls, nav and captions in sentence case.
 - **Do** group related rows into one card split by hairlines.
-- **Do** keep one foil action per surface, and make it book the call.
-- **Do** frame Locus renders in an Astor card and let them keep Locus's own colours inside the `.altyr-ui` scope.
+- **Do** let the ribbon be the only ornament, on the first screen only, behind solid surfaces and clear of type.
+- **Do** frame Locus renders in an Astor card and let them keep Locus's colours inside the `.altyr-ui` scope.
 
 ### Don't:
-- **Don't** use Altyr's Obsidian Clarity palette (pure black, rose to amber, platinum) on Astor surfaces. It lives only inside Locus panels and the Locus app icon.
-- **Don't** set ember as text or as a border. It is light in the wallpaper and a chart segment, nothing else.
-- **Don't** foil a phrase inside a sentence or headline. Foil belongs to figures and the action.
+- **Don't** put a gradient on type, buttons or chips. Gold is flat.
+- **Don't** use backdrop-filter or translucent glass on cards, notifications or controls.
+- **Don't** add foil, bevels, velvet, Deco or engraved costume, or a second ornament beside the ribbon.
+- **Don't** use Altyr's Obsidian Clarity palette (pure black, rose to amber, platinum) on Astor surfaces.
 - **Don't** put a spaced-cap kicker or eyebrow above a headline.
-- **Don't** set Bodoni Moda for body copy or small sizes, or use it in tables and the calculator.
-- **Don't** light the wallpaper from the top centre, and don't use glass on an unlit flat section.
-- **Don't** add a second authored entrance animation beyond the screen waking.
+- **Don't** set Gilda Display for body copy, figures in tables or the calculator.
+- **Don't** add a second authored entrance animation beyond the ribbon drawing in.

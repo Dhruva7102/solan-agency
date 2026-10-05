@@ -33,9 +33,6 @@
   --gold-dim: #8a7550;
   --gold-ink: #17120a;
 
-  /* Kept for the chart ramp only */
-  --ember: #6e2440;
-
   /* The old glass names now mean a solid raised card */
   --glass: #13110f;
   --glass-strong: #1a1714;
@@ -43,7 +40,6 @@
 
   /* Corners */
   --r-widget: 18px;
-  --r-sheet: 24px;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -55,7 +51,6 @@
   --series-tips: #b84a72;
   --series-customs: #e9e1d2;
 
-  --good: #0ca30c;
 }
 
 @theme inline {
@@ -73,8 +68,6 @@
   --color-gold-bright: var(--gold-bright);
   --color-gold-dim: var(--gold-dim);
   --color-gold-ink: var(--gold-ink);
-  --color-good: var(--good);
-  --color-ember: var(--ember);
   --font-sans: var(--font-jost), "Futura", "Century Gothic", system-ui, sans-serif;
   --font-display: var(--font-gilda), Georgia, serif;
 }
@@ -367,12 +360,6 @@ input[type="range"]::-moz-range-thumb {
   isolation: isolate;
   overflow: clip;
   background: radial-gradient(60% 70% at 50% 100%, rgba(205, 178, 131, 0.06), transparent 72%);
-}
-
-.rule-fade {
-  height: 1px;
-  border: 0;
-  background: linear-gradient(90deg, transparent, var(--line-strong) 20%, rgba(205, 178, 131, 0.4) 50%, var(--line-strong) 80%, transparent);
 }
 
 .lift {

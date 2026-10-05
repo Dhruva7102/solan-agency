@@ -1,28 +1,28 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-04T18:10:00Z",
+  "generatedAt": "2026-10-05T12:00:00Z",
   "title": "Design System: Astor",
   "extensions": {
     "colorMeta": {
-      "warm-black": {
+      "bg": {
         "role": "neutral",
         "displayName": "Warm Black",
-        "canonical": "oklch(13.5% 0.003 69.6)",
+        "canonical": "oklch(14.6% 0.003 68.6)",
         "tonalRamp": [
           "#0c0b0a",
-          "#252422",
+          "#252423",
           "#413f3e",
           "#5f5d5c",
           "#7e7d7b",
-          "#a09e9c",
+          "#9f9e9c",
           "#c5c4c2",
           "#f0eeec"
         ]
       },
-      "warm-black-2": {
+      "bg-2": {
         "role": "neutral",
         "displayName": "Warm Black, Alternate",
-        "canonical": "oklch(15.6% 0.005 67.4)",
+        "canonical": "oklch(16.1% 0.005 67.4)",
         "tonalRamp": [
           "#0d0b09",
           "#262421",
@@ -37,220 +37,320 @@
       "surface": {
         "role": "neutral",
         "displayName": "Card Surface",
-        "canonical": "oklch(18.5% 0.008 67.3)",
+        "canonical": "oklch(17.9% 0.005 67.5)",
+        "tonalRamp": [
+          "#0d0b09",
+          "#262421",
+          "#423f3d",
+          "#605d5a",
+          "#7f7d7a",
+          "#a19e9b",
+          "#c6c3c1",
+          "#f1eeeb"
+        ]
+      },
+      "surface-2": {
+        "role": "neutral",
+        "displayName": "Raised Surface",
+        "canonical": "oklch(20.7% 0.008 67.4)",
         "tonalRamp": [
           "#0d0b08",
           "#272320",
-          "#433f3b",
+          "#423f3c",
           "#615d59",
-          "#807c78",
-          "#a29e99",
-          "#c8c3bf",
+          "#807c79",
+          "#a29e9a",
+          "#c7c3bf",
           "#f2eee9"
-        ]
-      },
-      "surface-raised": {
-        "role": "neutral",
-        "displayName": "Raised Surface",
-        "canonical": "oklch(21.7% 0.010 67.3)",
-        "tonalRamp": [
-          "#0e0a07",
-          "#27231f",
-          "#433f3a",
-          "#625d58",
-          "#817c77",
-          "#a39d98",
-          "#c9c3bd",
-          "#f3ede8"
         ]
       },
       "line": {
         "role": "neutral",
-        "displayName": "Hairline"
+        "displayName": "Hairline",
+        "canonical": "rgba(236, 224, 200, 0.11)",
+        "tonalRamp": [
+          "#120a00",
+          "#2c230f",
+          "#483e2b",
+          "#675c47",
+          "#877c66",
+          "#a89d87",
+          "#cfc3ab",
+          "#f9edd5"
+        ]
       },
       "line-strong": {
         "role": "neutral",
-        "displayName": "Hairline Strong"
+        "displayName": "Hairline Strong",
+        "canonical": "rgba(236, 224, 200, 0.2)",
+        "tonalRamp": [
+          "#120a00",
+          "#2c230f",
+          "#483e2b",
+          "#675c47",
+          "#877c66",
+          "#a89d87",
+          "#cfc3ab",
+          "#f9edd5"
+        ]
       },
-      "glass": {
+      "ink-tray": {
         "role": "neutral",
-        "displayName": "Warm Glass"
+        "displayName": "Ink Tray",
+        "canonical": "rgba(236, 224, 200, 0.06)",
+        "tonalRamp": [
+          "#120a00",
+          "#2c230f",
+          "#483e2b",
+          "#675c47",
+          "#877c66",
+          "#a89d87",
+          "#cfc3ab",
+          "#f9edd5"
+        ]
       },
-      "glass-strong": {
+      "ink-wash": {
         "role": "neutral",
-        "displayName": "Warm Glass, Strong"
-      },
-      "glass-edge": {
-        "role": "neutral",
-        "displayName": "Glass Edge"
+        "displayName": "Ink Wash",
+        "canonical": "rgba(236, 224, 200, 0.14)",
+        "tonalRamp": [
+          "#120a00",
+          "#2c230f",
+          "#483e2b",
+          "#675c47",
+          "#877c66",
+          "#a89d87",
+          "#cfc3ab",
+          "#f9edd5"
+        ]
       },
       "ink": {
         "role": "neutral",
         "displayName": "Warm Ink",
-        "canonical": "oklch(96.2% 0.016 86.4)",
+        "canonical": "oklch(95.0% 0.014 84.6)",
         "tonalRamp": [
           "#0e0b05",
           "#27241c",
           "#433f37",
-          "#615d54",
-          "#817d73",
-          "#a39e94",
-          "#c8c4b9",
-          "#f3eee3"
+          "#615d55",
+          "#817d74",
+          "#a39e95",
+          "#c8c4ba",
+          "#f3eee4"
         ]
       },
       "ink-2": {
         "role": "neutral",
         "displayName": "Parchment",
-        "canonical": "oklch(79.1% 0.025 85.8)",
+        "canonical": "oklch(77.3% 0.026 83.4)",
         "tonalRamp": [
-          "#100a02",
-          "#292316",
-          "#463f31",
-          "#645d4e",
-          "#847c6d",
-          "#a59e8d",
-          "#cbc3b2",
-          "#f6eedc"
+          "#100a01",
+          "#2a2315",
+          "#463f30",
+          "#655d4d",
+          "#857c6c",
+          "#a69d8d",
+          "#ccc3b2",
+          "#f7eddc"
         ]
       },
       "muted": {
         "role": "neutral",
         "displayName": "Muted Taupe",
-        "canonical": "oklch(64.9% 0.028 86.9)",
+        "canonical": "oklch(63.2% 0.025 84.6)",
         "tonalRamp": [
-          "#100a01",
-          "#2a2314",
-          "#463f2f",
-          "#645d4c",
-          "#847d6b",
-          "#a69e8b",
-          "#ccc3b0",
-          "#f6eeda"
+          "#100a02",
+          "#2a2316",
+          "#463f31",
+          "#645d4e",
+          "#847c6d",
+          "#a69e8d",
+          "#ccc3b2",
+          "#f6eedc"
         ]
       },
       "gold": {
         "role": "primary",
-        "displayName": "House Gold",
-        "canonical": "oklch(76.3% 0.104 83.1)",
+        "displayName": "Champagne",
+        "canonical": "oklch(77.6% 0.070 81.2)",
         "tonalRamp": [
-          "#1a0500",
-          "#381d00",
-          "#593800",
-          "#7a5700",
-          "#9b7729",
-          "#be984d",
-          "#e5be73",
-          "#ffeaaa"
+          "#6f5d3e",
+          "#8a7550",
+          "#9c8458",
+          "#cdb283",
+          "#d4bb8c",
+          "#d9c193",
+          "#e2cfa6",
+          "#ecdcb8"
         ]
       },
       "gold-bright": {
         "role": "primary",
         "displayName": "Champagne Light",
-        "canonical": "oklch(90.2% 0.071 88.6)",
+        "canonical": "oklch(88.1% 0.054 85.6)",
         "tonalRamp": [
-          "#170700",
-          "#322100",
-          "#4f3d07",
-          "#6e5b2b",
-          "#8f7b4a",
-          "#b09c6b",
-          "#d7c28f",
-          "#ffedb8"
+          "#6f5d3e",
+          "#8a7550",
+          "#9c8458",
+          "#cdb283",
+          "#d4bb8c",
+          "#d9c193",
+          "#e2cfa6",
+          "#ecdcb8"
         ]
       },
       "gold-dim": {
         "role": "primary",
         "displayName": "Antique Bronze",
-        "canonical": "oklch(56.6% 0.085 82.0)",
+        "canonical": "oklch(57.3% 0.059 81.2)",
         "tonalRamp": [
-          "#1a0500",
-          "#381d00",
-          "#563a00",
-          "#75581c",
-          "#96783e",
-          "#b9995f",
-          "#e0bf84",
-          "#ffeaad"
+          "#6f5d3e",
+          "#8a7550",
+          "#9c8458",
+          "#cdb283",
+          "#d4bb8c",
+          "#d9c193",
+          "#e2cfa6",
+          "#ecdcb8"
         ]
       },
       "gold-ink": {
         "role": "primary",
         "displayName": "Gold Ink",
-        "canonical": "oklch(17.3% 0.021 78.5)",
+        "canonical": "oklch(18.6% 0.017 79.1)",
         "tonalRamp": [
-          "#100a03",
-          "#2a2319",
-          "#463f34",
-          "#645c51",
-          "#847c70",
-          "#a69d90",
-          "#cbc3b6",
-          "#f6eddf"
+          "#0f0a04",
+          "#29231b",
+          "#453f36",
+          "#635d53",
+          "#837c72",
+          "#a49d93",
+          "#cac3b8",
+          "#f5ede2"
         ]
       },
-      "ember": {
-        "role": "tertiary",
-        "displayName": "Ember",
-        "canonical": "oklch(38.1% 0.108 0.2)",
+      "gold-tint": {
+        "role": "primary",
+        "displayName": "Gold Tint",
+        "canonical": "rgba(205, 178, 131, 0.05)",
         "tonalRamp": [
-          "#21000a",
-          "#430a22",
-          "#69233d",
-          "#8d405b",
-          "#b1607a",
-          "#d5819b",
-          "#fca8c1",
-          "#ffd6ec"
+          "#190500",
+          "#351f00",
+          "#523b0a",
+          "#72592c",
+          "#93794c",
+          "#b59a6c",
+          "#dbc091",
+          "#ffebba"
+        ]
+      },
+      "gold-wash": {
+        "role": "primary",
+        "displayName": "Gold Wash",
+        "canonical": "rgba(205, 178, 131, 0.12)",
+        "tonalRamp": [
+          "#190500",
+          "#351f00",
+          "#523b0a",
+          "#72592c",
+          "#93794c",
+          "#b59a6c",
+          "#dbc091",
+          "#ffebba"
+        ]
+      },
+      "gold-selection": {
+        "role": "primary",
+        "displayName": "Gold Selection",
+        "canonical": "rgba(205, 178, 131, 0.3)",
+        "tonalRamp": [
+          "#190500",
+          "#351f00",
+          "#523b0a",
+          "#72592c",
+          "#93794c",
+          "#b59a6c",
+          "#dbc091",
+          "#ffebba"
+        ]
+      },
+      "bubble-in": {
+        "role": "neutral",
+        "displayName": "Bubble In",
+        "canonical": "oklch(24.7% 0.010 67.4)",
+        "tonalRamp": [
+          "#0e0a07",
+          "#27231f",
+          "#433f3a",
+          "#615d58",
+          "#817c77",
+          "#a39d98",
+          "#c8c3be",
+          "#f3ede8"
+        ]
+      },
+      "bubble-in-hover": {
+        "role": "neutral",
+        "displayName": "Bubble In Hover",
+        "canonical": "oklch(27.6% 0.012 67.3)",
+        "tonalRamp": [
+          "#0f0a06",
+          "#28231e",
+          "#443f39",
+          "#625c57",
+          "#827c76",
+          "#a39d97",
+          "#c9c3bc",
+          "#f4ede6"
         ]
       },
       "series-subs": {
-        "role": "chart",
+        "role": "tertiary",
         "displayName": "Series Bronze",
         "canonical": "oklch(56.8% 0.096 80.4)",
         "tonalRamp": [
-          "#1a0400",
-          "#391c00",
+          "#1e0200",
+          "#3b1b00",
           "#593800",
           "#795709",
           "#9b7733",
           "#bd9856",
           "#e5be7b",
-          "#ffe9ab"
+          "#ffe8a4"
         ]
       },
       "series-chat": {
-        "role": "chart",
+        "role": "tertiary",
         "displayName": "Series Champagne",
-        "canonical": "oklch(90.2% 0.071 88.6)",
+        "canonical": "oklch(88.1% 0.054 85.6)",
         "tonalRamp": [
-          "#170700",
-          "#322100",
-          "#4f3d07",
-          "#6e5b2b",
-          "#8f7b4a",
-          "#b09c6b",
-          "#d7c28f",
-          "#ffedb8"
+          "#150800",
+          "#302200",
+          "#4d3e1c",
+          "#6b5c39",
+          "#8c7b58",
+          "#ae9c78",
+          "#d4c29d",
+          "#ffedc6"
         ]
       },
       "series-tips": {
-        "role": "chart",
+        "role": "tertiary",
         "displayName": "Series Ember Rose",
         "canonical": "oklch(56.5% 0.147 0.3)",
         "tonalRamp": [
-          "#21000a",
-          "#430a22",
-          "#69233d",
-          "#903d5b",
-          "#b9597a",
-          "#da7e9b",
-          "#fca8c1",
-          "#ffd6ec"
+          "#2a0009",
+          "#4c0021",
+          "#6e1b3d",
+          "#913c5a",
+          "#b65c7a",
+          "#db7d9b",
+          "#ffa3c0",
+          "#ffcdeb"
         ]
       },
       "series-customs": {
-        "role": "chart",
+        "role": "tertiary",
         "displayName": "Series Pale Ink",
         "canonical": "oklch(91.2% 0.022 83.3)",
         "tonalRamp": [
@@ -267,140 +367,163 @@
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Clock",
-        "purpose": "The home hero headline only, in foil. Bodoni Moda 500."
+        "displayName": "Headline",
+        "purpose": "The home hero headline only, where the clock would be. Gilda Display 400."
       },
       "headline": {
         "displayName": "Large Title",
-        "purpose": "Every section title and inner-page h1, in warm ink, standing alone with no kicker."
+        "purpose": "Every section title and inner-page h1, standing alone with no kicker."
       },
-      "numeral": {
-        "displayName": "Display Figure",
-        "purpose": "Big figures in widgets, notifications, census tiles, tier rates and retention; 1.6rem to 6.5rem; champagne or foil."
+      "title-serif": {
+        "displayName": "Serif Title",
+        "purpose": "Footer tagline, founder monograms, proof retention sub-line, the app-icon A."
+      },
+      "figure-hero": {
+        "displayName": "Hero Figure",
+        "purpose": "The one big number on a page (proof retention; 4.5rem on phones, 5rem on the 404)."
+      },
+      "figure-xl": {
+        "displayName": "Rate Figure",
+        "purpose": "Tier rates and the retention widget."
+      },
+      "figure-lg": {
+        "displayName": "Census Figure",
+        "purpose": "Platform census tiles from 640px."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Receipts and calculator results."
+      },
+      "figure-stat": {
+        "displayName": "Stat Figure",
+        "purpose": "The hero stat row and census tiles on phones."
+      },
+      "figure-sm": {
+        "displayName": "Small Figure",
+        "purpose": "The hero receipt, case-study values, call-step numerals."
+      },
+      "figure-xs": {
+        "displayName": "Phone Stat Figure",
+        "purpose": "The hero stat row on phones."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Card, tier, list-row and notification titles; 15 to 17px."
+        "purpose": "Founder, case-study and plan titles."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Section prose, max about 42rem."
+        "purpose": "Section prose, capped near 42rem."
+      },
+      "body-ui": {
+        "displayName": "Body UI",
+        "purpose": "List rows and UI copy."
       },
       "body-card": {
-        "displayName": "Body, Card",
-        "purpose": "Prose inside cards and lists; 14.5 to 15.5px."
+        "displayName": "Body Card",
+        "purpose": "Prose inside cards."
+      },
+      "body-sm": {
+        "displayName": "Body Small",
+        "purpose": "Nav links, footer links, footnotes."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Call captions and notes."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Notification app names, dock captions, stat labels."
+      },
+      "control": {
+        "displayName": "Control",
+        "purpose": "Both pills, sentence case."
+      },
+      "segment": {
+        "displayName": "Segment",
+        "purpose": "Segmented-control buttons."
       },
       "label": {
-        "displayName": "Spaced Caps",
-        "purpose": "Nav links, column heads, data terms, field-group labels, tags; 10 to 11px at 0.2em to 0.36em."
+        "displayName": "Label",
+        "purpose": "Small spaced caps for form-group heads, column heads and result heads. Never above a headline."
       },
-      "label-button": {
-        "displayName": "Spaced Caps, Button",
-        "purpose": "The foil action pill; the quiet pill uses 500 at 0.26em."
+      "tag": {
+        "displayName": "Tag",
+        "purpose": "Case-study tags and Before / After terms."
       },
-      "figure-tabular": {
-        "displayName": "Tabular Figure",
-        "purpose": "Calculator inputs, results and chart values, where columns of figures must line up."
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "ASTOR in the nav and footer."
       }
-    },
-    "foil": {
-      "value": "linear-gradient(115deg, #8f7137 0%, #f2dda9 28%, #d2ac61 48%, #fff1c9 56%, #b38c45 78%, #8f7137 100%)",
-      "purpose": "The clock, key figures (as background-clip text, 160% width) and the gold action pill (180% width, swept on hover). Nothing else."
     },
     "materials": [
       {
-        "name": "glass",
-        "value": "background: rgba(38,32,26,0.5); border: 1px solid rgba(246,241,230,0.1); backdrop-filter: blur(26px) saturate(150%); border-radius: 22px",
-        "purpose": "Notifications, widgets, round controls and the quiet pill. Falls back to #1d1915 without backdrop-filter."
+        "name": "card",
+        "value": "background: #13110f; border: 1px solid rgba(236,224,200,0.11); border-radius: 18px",
+        "purpose": "Every grouped surface. Solid, so the ribbon can pass behind it."
+      },
+      {
+        "name": "glass (legacy name)",
+        "value": "background: #13110f; border: 1px solid rgba(236,224,200,0.11); border-radius: 18px; box-shadow: 0 18px 36px -22px rgba(0,0,0,0.9)",
+        "purpose": "The .glass class now means a solid raised card with a soft drop: notifications, small tiles, the mobile menu. No backdrop-filter."
       },
       {
         "name": "hero-glow",
-        "value": "radial-gradient(60% 44% at 50% 108%, rgba(210,172,97,0.26), transparent 70%), radial-gradient(46% 40% at 10% 96%, rgba(110,36,64,0.5), transparent 72%), radial-gradient(40% 36% at 92% 88%, rgba(143,113,55,0.32), transparent 70%), radial-gradient(70% 50% at 50% -12%, rgba(110,36,64,0.18), transparent 70%), #090807",
-        "purpose": "The lock-screen wallpaper: page heroes and the incoming-call close."
+        "value": "radial-gradient(72% 36% at 50% 84%, rgba(205,178,131,0.12), transparent 72%), radial-gradient(46% 30% at 50% -6%, rgba(232,214,176,0.06), transparent 72%), #0b0a09; mask-image: linear-gradient(180deg, transparent, #000 12%, #000 76%, transparent)",
+        "purpose": "Low warm light under heroes and the incoming call. Masked so it never shows an edge."
       },
       {
         "name": "glow-band",
-        "value": "radial-gradient(50% 60% at 15% 100%, rgba(110,36,64,0.22), transparent 72%), radial-gradient(45% 55% at 90% 0%, rgba(210,172,97,0.08), transparent 72%)",
-        "purpose": "Faint ember and gold wash on alternating sections."
+        "value": "radial-gradient(60% 70% at 50% 100%, rgba(205,178,131,0.06), transparent 72%)",
+        "purpose": "A faint glow from below on alternating bands."
       },
       {
-        "name": "rule-fade",
-        "value": "linear-gradient(90deg, transparent, rgba(246,241,230,0.18) 20%, rgba(210,172,97,0.45) 50%, rgba(246,241,230,0.18) 80%, transparent)",
-        "purpose": "A 1px fading divider with a gold centre."
+        "name": "silk-sheen",
+        "value": "linearGradient userSpaceOnUse: #6f5d3e 0, #d9c193 .14, #8a7550 .24, #ecdcb8 .42, #9c8458 .58, #e2cfa6 .74, #8a7550 .86, #d4bb8c 1; stroke 18px (12px on phones) at 0.66 opacity, plus a 1.2px rgba(255,248,228,0.22) highlight 7px above",
+        "purpose": "The silk ribbon only. The one gold gradient in the system."
       }
     ],
     "shadows": [
       {
-        "name": "card",
-        "value": "0 1px 0 rgba(255,246,230,0.04) inset, 0 24px 48px -32px rgba(0,0,0,0.9)",
-        "purpose": "Grouped cards and lists."
+        "name": "tile-drop",
+        "value": "0 18px 36px -22px rgba(0,0,0,0.9)",
+        "purpose": "Notifications, retention widget, proof hero card, mobile menu."
       },
       {
-        "name": "card-raised",
-        "value": "0 1px 0 rgba(255,246,230,0.06) inset, 0 32px 60px -38px rgba(0,0,0,1)",
-        "purpose": "The emphasised result card."
+        "name": "raised-drop",
+        "value": "0 30px 60px -40px rgba(0,0,0,1)",
+        "purpose": "The raised result card; the featured tier card uses -36px spread."
       },
       {
-        "name": "glass",
-        "value": "0 18px 40px -26px rgba(0,0,0,0.75)",
-        "purpose": "Notifications, widgets, glass controls."
+        "name": "ribbon-drop",
+        "value": "drop-shadow(0 12px 14px rgba(0,0,0,0.5))",
+        "purpose": "The silk ribbon (0 8px 10px on phones), so it reads as lying beneath the cards."
       },
       {
-        "name": "foil-glow",
-        "value": "0 14px 34px -16px rgba(210,172,97,0.65), inset 0 1px 0 rgba(255,255,255,0.35)",
-        "purpose": "The gold action pill only."
-      },
-      {
-        "name": "featured-rim",
-        "value": "0 0 0 1px rgba(210,172,97,0.15), 0 30px 60px -36px rgba(0,0,0,1)",
-        "purpose": "The featured tier card."
-      },
-      {
-        "name": "segment-selected",
-        "value": "0 2px 6px rgba(0,0,0,0.35)",
-        "purpose": "Selected segment of a segmented control."
-      },
-      {
-        "name": "slider-thumb",
-        "value": "0 2px 8px rgba(0,0,0,0.55), 0 0 0 0.5px rgba(0,0,0,0.2)",
-        "purpose": "The 26px slider thumb."
+        "name": "thumb",
+        "value": "0 2px 8px rgba(0,0,0,0.55)",
+        "purpose": "The slider thumb."
       }
     ],
     "motion": [
       {
         "name": "ease-out",
         "value": "cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "The waking sequence and the foil sweep."
+        "purpose": "The ribbon draw and the primary pill's hover."
       },
       {
-        "name": "wake-light",
-        "value": "1400ms ease-out; opacity 0 and brightness(0.4) to none",
-        "purpose": "The wallpaper light rises."
-      },
-      {
-        "name": "wake-clock",
-        "value": "1100ms ease-out, 180ms delay; blur(14px) scale(1.04) to none",
-        "purpose": "The clock resolves from blur."
-      },
-      {
-        "name": "wake-in",
-        "value": "900ms ease-out, 400ms + i * 110ms; translateY(10px) to none",
-        "purpose": "Date line, subline, widgets and dock rise."
-      },
-      {
-        "name": "arrive",
-        "value": "760ms ease-out, 820ms + i * 160ms; translateY(26px) scale(0.96) to none",
-        "purpose": "Notifications spring up one by one."
-      },
-      {
-        "name": "foil-sweep",
-        "value": "background-position 600ms ease-out",
-        "purpose": "Gold pill hover."
+        "name": "silk-draw",
+        "value": "stroke-dashoffset 1 to 0 over 1900ms ease-out, 150ms delay; pathLength 1, dasharray 1",
+        "purpose": "The one authored moment. Only under prefers-reduced-motion: no-preference; otherwise the ribbon is static."
       },
       {
         "name": "state",
-        "value": "150 to 300ms ease on color, border-color, background",
-        "purpose": "Every other hover and selection change."
+        "value": "150 to 300ms on color, border-color, background",
+        "purpose": "Every hover and selection change."
+      },
+      {
+        "name": "press",
+        "value": "transform scale(0.98), 150ms",
+        "purpose": "Primary pill active state."
       }
     ],
     "breakpoints": [
@@ -422,161 +545,169 @@
         "name": "Locus product UI",
         "file": "src/app/altyr-ui.css",
         "scope": ".altyr-ui (inside LocusPanel only) and the Locus app icon",
-        "purpose": "Locus renders keep Locus's own Obsidian Clarity language: #000 canvas, white-alpha glass, rose #c0387a to amber #e08a38, platinum numerals, product eyebrows. Not Astor's system; never used on Astor surfaces."
+        "purpose": "Locus renders keep Locus's own Obsidian Clarity language: #000 canvas, white-alpha surfaces, rose #c0387a to amber #e08a38, platinum numerals, its own small type. Not Astor's system; never used on Astor surfaces."
       }
     ]
   },
   "components": [
     {
-      "name": "Gold Action Pill",
+      "name": "Champagne Pill",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The one action on a surface: book the call. Foil sweeps on hover.",
-      "html": "<a class=\"ds-btn-gold\" href=\"#\">Book your call <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
-      "css": ".ds-btn-gold { display: inline-flex; align-items: center; justify-content: center; gap: 0.75rem; min-height: 3.25rem; padding: 0 1.75rem; border-radius: 999px; background: linear-gradient(115deg, #8f7137 0%, #f2dda9 28%, #d2ac61 48%, #fff1c9 56%, #b38c45 78%, #8f7137 100%); background-size: 180% 100%; background-position: 0% 0; color: #150f06; font-family: Jost, Futura, system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; text-decoration: none; white-space: nowrap; box-shadow: 0 14px 34px -16px rgba(210,172,97,0.65), inset 0 1px 0 rgba(255,255,255,0.35); transition: background-position 600ms cubic-bezier(0.16,1,0.3,1), transform 150ms ease; } .ds-btn-gold:hover { background-position: 100% 0; } .ds-btn-gold:active { transform: scale(0.98); } .ds-btn-gold:focus-visible { outline: 2px solid #d2ac61; outline-offset: 3px; }"
+      "description": "The one action on a surface: book the call. Solid champagne, sentence case.",
+      "html": "<a class=\"ds-btn-gold\" href=\"#\">Book your call <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-btn-gold { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; min-height: 3.25rem; padding: 0 1.75rem; border-radius: 999px; background: #cdb283; color: #17120a; font-family: Jost, Futura, system-ui, sans-serif; font-size: 0.9375rem; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color 300ms cubic-bezier(0.16,1,0.3,1), transform 150ms ease; } .ds-btn-gold:hover { background: #e8d6b0; } .ds-btn-gold:active { transform: scale(0.98); } .ds-btn-gold:focus-visible { outline: 1.5px solid #e8d6b0; outline-offset: 4px; border-radius: 8px; }"
     },
     {
-      "name": "Quiet Pill",
+      "name": "Hairline Pill",
       "kind": "button",
       "refersTo": "button-ghost",
-      "description": "Frosted second action, such as See the dashboards.",
-      "html": "<a class=\"ds-btn-ghost\" href=\"#\">See the dashboards <svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
-      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; min-height: 3.25rem; padding: 0 1.6rem; border-radius: 999px; background: rgba(38,32,26,0.5); border: 1px solid rgba(246,241,230,0.1); -webkit-backdrop-filter: blur(26px) saturate(150%); backdrop-filter: blur(26px) saturate(150%); color: #f7f2e7; font-family: Jost, Futura, system-ui, sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.26em; text-transform: uppercase; text-decoration: none; white-space: nowrap; transition: border-color 200ms ease, background 200ms ease; } .ds-btn-ghost:hover { border-color: rgba(210,172,97,0.45); background: rgba(48,40,32,0.62); } .ds-btn-ghost:focus-visible { outline: 2px solid #d2ac61; outline-offset: 3px; }"
+      "description": "Second actions: a hairline rim that turns champagne on hover.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">See the proof <svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; min-height: 3.25rem; padding: 0 1.6rem; border-radius: 999px; border: 1px solid rgba(236,224,200,0.2); background: transparent; color: #f3eee4; font-family: Jost, Futura, system-ui, sans-serif; font-size: 0.9375rem; font-weight: 500; text-decoration: none; white-space: nowrap; transition: border-color 300ms cubic-bezier(0.16,1,0.3,1); } .ds-btn-ghost:hover { border-color: #cdb283; } .ds-btn-ghost:focus-visible { outline: 1.5px solid #e8d6b0; outline-offset: 4px; border-radius: 8px; }"
     },
     {
       "name": "Notification",
       "kind": "card",
-      "refersTo": "glass-notification",
-      "description": "A payout or message arriving on the lock screen: icon, title, time, body with an Bodoni Moda figure.",
-      "html": "<article class=\"ds-notif\"><span class=\"ds-notif-icon\"><svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 4v13h10\"/></svg></span><h3 class=\"ds-notif-title\">Locus · Earnings</h3><span class=\"ds-notif-time\">30d</span><div class=\"ds-notif-body\"><span class=\"ds-notif-fig\">$37.3k</span>Net in the first 30 days on a new page</div></article>",
-      "css": ".ds-notif { display: grid; grid-template-columns: 38px 1fr auto; column-gap: 12px; padding: 12px 16px 14px; max-width: 540px; background: rgba(38,32,26,0.5); border: 1px solid rgba(246,241,230,0.1); border-radius: 22px; -webkit-backdrop-filter: blur(26px) saturate(150%); backdrop-filter: blur(26px) saturate(150%); box-shadow: 0 18px 40px -26px rgba(0,0,0,0.75); font-family: Jost, Futura, system-ui, sans-serif; } .ds-notif-icon { grid-row: span 2; width: 38px; height: 38px; display: grid; place-items: center; border-radius: 10px; background: linear-gradient(150deg,#c0387a,#e08a38); } .ds-notif-title { margin: 0; font-size: 15px; font-weight: 600; line-height: 1.375; color: #f7f2e7; } .ds-notif-time { font-size: 12.5px; color: rgba(247,242,231,0.5); } .ds-notif-body { grid-column: 2 / 4; margin-top: 4px; font-size: 14.5px; line-height: 1.45; color: rgba(247,242,231,0.85); } .ds-notif-fig { display: block; padding: 4px 0; font-family: Bodoni Moda, Didot, serif; font-size: 2rem; line-height: 0.95; color: #f2dda9; }"
+      "refersTo": "notification",
+      "description": "A solid lock-screen notification card; a receipt figure can sit in the body.",
+      "html": "<article class=\"ds-notif\"><span class=\"ds-notif-icon\">A</span><div><p class=\"ds-notif-app\">Locus</p><h3 class=\"ds-notif-title\">Locus · Earnings</h3></div><span class=\"ds-notif-time\">30d</span><div class=\"ds-notif-body\"><span class=\"ds-notif-fig\">$37.3k</span>net in the first 30 days</div></article>",
+      "css": ".ds-notif { display: grid; grid-template-columns: 38px 1fr auto; column-gap: 12px; padding: 12px 16px 14px; max-width: 520px; background: #13110f; border: 1px solid rgba(236,224,200,0.11); border-radius: 18px; box-shadow: 0 18px 36px -22px rgba(0,0,0,0.9); font-family: Jost, Futura, system-ui, sans-serif; color: #f3eee4; } .ds-notif-icon { grid-row: span 2; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 10px; border: 1px solid rgba(138,117,80,0.8); background: #13110f; color: #e8d6b0; font-family: 'Gilda Display', Georgia, serif; font-size: 21px; } .ds-notif-app { margin: 0; font-size: 12px; color: #918979; } .ds-notif-title { margin: 0; font-size: 15px; font-weight: 500; line-height: 1.375; } .ds-notif-time { font-size: 12.5px; color: #918979; } .ds-notif-body { grid-column: 2 / 4; margin-top: 4px; font-size: 14.5px; line-height: 1.45; color: rgba(243,238,228,0.85); } .ds-notif-fig { display: block; padding: 4px 0; font-size: 1.75rem; line-height: 1; letter-spacing: -0.015em; font-variant-numeric: lining-nums tabular-nums; color: #e8d6b0; }"
     },
     {
-      "name": "Widget",
+      "name": "Hero Stat Row",
       "kind": "custom",
-      "refersTo": "widget",
-      "description": "A headline stat as a lock-screen widget: Bodoni Moda figure over a short label.",
-      "html": "<div class=\"ds-widget\"><span class=\"ds-widget-fig\">15%</span><span class=\"ds-widget-label\">Our lowest published rate</span></div>",
-      "css": ".ds-widget { display: flex; flex-direction: column; justify-content: space-between; width: 160px; padding: 14px 16px; background: rgba(38,32,26,0.5); border: 1px solid rgba(246,241,230,0.1); border-radius: 22px; -webkit-backdrop-filter: blur(26px) saturate(150%); backdrop-filter: blur(26px) saturate(150%); box-shadow: 0 18px 40px -26px rgba(0,0,0,0.75); } .ds-widget-fig { font-family: Bodoni Moda, Didot, serif; font-size: 2.15rem; line-height: 0.95; color: #f2dda9; } .ds-widget-label { margin-top: 8px; font-family: Jost, Futura, system-ui, sans-serif; font-size: 12px; line-height: 1.375; color: rgba(247,242,231,0.7); }"
+      "refersTo": "stat-row",
+      "description": "The four headline figures as one hairline-ruled line on an opaque warm-black fill.",
+      "html": "<dl class=\"ds-stats\"><div><dt>4×</dt><dd>First-month bar on chat-driven revenue</dd></div><div><dt>92%+</dt><dd>Annual model retention across the book</dd></div><div><dt>24/7</dt><dd>A dedicated pod on your page, every hour</dd></div><div><dt>100%</dt><dd>Of your page auditable: every message, sale and shift logged</dd></div></dl>",
+      "css": ".ds-stats { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0; max-width: 760px; background: #0b0a09; border-top: 1px solid rgba(236,224,200,0.11); border-bottom: 1px solid rgba(236,224,200,0.11); font-family: Jost, Futura, system-ui, sans-serif; } .ds-stats > div { padding: 18px 20px; } .ds-stats > div + div { border-left: 1px solid rgba(236,224,200,0.11); } .ds-stats dt { font-size: 1.9rem; line-height: 1; letter-spacing: -0.015em; font-variant-numeric: lining-nums tabular-nums; color: #e8d6b0; } .ds-stats dd { margin: 8px 0 0; font-size: 12.5px; line-height: 1.375; color: #bdb4a3; }"
     },
     {
       "name": "Grouped Inset List",
       "kind": "card",
       "refersTo": "card",
-      "description": "Rows grouped in one card, split by hairlines; link rows end in a chevron.",
-      "html": "<ul class=\"ds-list\"><li><a href=\"#\"><span><span class=\"ds-list-t\">We built our own rails</span><span class=\"ds-list-s\">Where the $1.5M went</span></span><svg width=\"8\" height=\"14\" viewBox=\"0 0 8 14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M1 1l6 6-6 6\"/></svg></a></li><li><a href=\"#\"><span><span class=\"ds-list-t\">We take less</span><span class=\"ds-list-s\">Published rates from 15%</span></span><svg width=\"8\" height=\"14\" viewBox=\"0 0 8 14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M1 1l6 6-6 6\"/></svg></a></li></ul>",
-      "css": ".ds-list { list-style: none; margin: 0; padding: 0; max-width: 42rem; overflow: hidden; background: #15120f; border: 1px solid rgba(246,241,230,0.09); border-radius: 22px; box-shadow: 0 1px 0 rgba(255,246,230,0.04) inset, 0 24px 48px -32px rgba(0,0,0,0.9); font-family: Jost, Futura, system-ui, sans-serif; } .ds-list > li + li { border-top: 1px solid rgba(246,241,230,0.09); } .ds-list a { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 4.25rem; padding: 14px 20px; color: #968e7c; text-decoration: none; transition: background 200ms ease; } .ds-list a:hover { background: #1d1915; } .ds-list a:focus-visible { outline: 2px solid #d2ac61; outline-offset: -3px; } .ds-list-t { display: block; font-size: 16px; font-weight: 500; line-height: 1.375; color: #f7f2e7; } .ds-list-s { display: block; margin-top: 2px; font-size: 13.5px; line-height: 1.375; color: #968e7c; }"
+      "description": "One solid card holding rows split by hairlines; link rows end in a chevron.",
+      "html": "<ul class=\"ds-list\"><li><a href=\"#\"><span><span class=\"ds-list-t\">We built our own rails</span><span class=\"ds-list-s\">Where the $1.5M went</span></span><svg width=\"8\" height=\"14\" viewBox=\"0 0 8 14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M1 1l6 6-6 6\"/></svg></a></li><li><a href=\"#\"><span><span class=\"ds-list-t\">We take less</span><span class=\"ds-list-s\">Published, flat rates</span></span><svg width=\"8\" height=\"14\" viewBox=\"0 0 8 14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M1 1l6 6-6 6\"/></svg></a></li><li class=\"ds-list-check\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 22 22\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"10.25\" fill=\"rgba(205,178,131,0.12)\" stroke=\"#8a7550\" stroke-width=\"1\"/><path d=\"M6.6 11.3l2.9 2.9 5.9-6.2\" fill=\"none\" stroke=\"#e8d6b0\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span>Leave with 30 days' notice.</span></li></ul>",
+      "css": ".ds-list { list-style: none; margin: 0; padding: 0; max-width: 42rem; overflow: hidden; background: #13110f; border: 1px solid rgba(236,224,200,0.11); border-radius: 18px; font-family: Jost, Futura, system-ui, sans-serif; } .ds-list > li + li { border-top: 1px solid rgba(236,224,200,0.11); } .ds-list a { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 4.25rem; padding: 14px 20px; color: #918979; text-decoration: none; transition: background-color 150ms ease; } .ds-list a:hover { background: #1a1714; } .ds-list a:focus-visible { outline: 1.5px solid #e8d6b0; outline-offset: 4px; border-radius: 8px; } .ds-list-t { display: block; font-size: 16px; font-weight: 500; line-height: 1.375; color: #f3eee4; } .ds-list-s { display: block; margin-top: 2px; font-size: 13.5px; color: #918979; } .ds-list-check { display: flex; align-items: flex-start; gap: 14px; padding: 16px 20px; font-size: 15.5px; line-height: 1.625; color: #f3eee4; }"
     },
     {
       "name": "Segmented Control",
       "kind": "input",
       "refersTo": "segmented",
-      "description": "The iPhone segmented control, used for tier rate toggles and page-size presets.",
+      "description": "Page-size presets and the 40% / 45% tier toggle.",
       "html": "<div class=\"ds-seg\" role=\"group\" aria-label=\"Rate\"><button type=\"button\" aria-pressed=\"true\">40%</button><button type=\"button\" aria-pressed=\"false\">45%</button></div>",
-      "css": ".ds-seg { display: inline-flex; padding: 3px; gap: 2px; border-radius: 12px; background: rgba(246,241,230,0.07); border: 1px solid rgba(246,241,230,0.09); } .ds-seg > button { min-height: 2.25rem; padding: 0 0.9rem; border: 0; border-radius: 9px; background: transparent; font-family: Jost, Futura, system-ui, sans-serif; font-size: 0.8125rem; font-weight: 500; color: #c2baa9; cursor: pointer; transition: background 180ms ease, color 180ms ease; } .ds-seg > button:hover { color: #f7f2e7; } .ds-seg > button[aria-pressed=\"true\"] { background: rgba(246,241,230,0.16); color: #f7f2e7; box-shadow: 0 2px 6px rgba(0,0,0,0.35); } .ds-seg > button:focus-visible { outline: 2px solid #d2ac61; outline-offset: 3px; }"
+      "css": ".ds-seg { display: inline-flex; gap: 2px; padding: 3px; border-radius: 12px; background: rgba(236,224,200,0.06); border: 1px solid rgba(236,224,200,0.11); } .ds-seg button { min-height: 2.25rem; padding: 0 0.9rem; border: 0; border-radius: 9px; background: transparent; color: #bdb4a3; font-family: Jost, Futura, system-ui, sans-serif; font-size: 0.8125rem; font-weight: 500; cursor: pointer; transition: background 180ms ease, color 180ms ease; } .ds-seg button:hover { color: #f3eee4; } .ds-seg button[aria-pressed=\"true\"] { background: rgba(236,224,200,0.14); color: #f3eee4; } .ds-seg button:focus-visible { outline: 1.5px solid #e8d6b0; outline-offset: 4px; border-radius: 8px; }"
     },
     {
       "name": "Slider",
       "kind": "input",
-      "description": "Calculator range input: gold fill to the value, warm-ink thumb.",
-      "html": "<input class=\"ds-range\" type=\"range\" min=\"0\" max=\"100\" value=\"60\" style=\"--fill:60%\" aria-label=\"Monthly revenue\">",
-      "css": ".ds-range { --fill: 50%; -webkit-appearance: none; appearance: none; width: 280px; height: 6px; border-radius: 999px; background: linear-gradient(90deg, #d2ac61 0 var(--fill), rgba(246,241,230,0.12) var(--fill) 100%); outline: none; cursor: pointer; } .ds-range::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 26px; height: 26px; border-radius: 50%; background: #f7f2e7; border: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.55), 0 0 0 0.5px rgba(0,0,0,0.2); transition: transform 120ms ease; } .ds-range:active::-webkit-slider-thumb { transform: scale(1.08); } .ds-range::-moz-range-thumb { width: 26px; height: 26px; border-radius: 50%; background: #f7f2e7; border: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.55); } .ds-range:focus-visible { outline: 2px solid #d2ac61; outline-offset: 3px; }"
+      "description": "Calculator inputs: a slim track filled in champagne to the value.",
+      "html": "<label class=\"ds-slider\"><span class=\"ds-slider-head\"><span>Monthly net</span><span class=\"ds-slider-val\">$40,000</span></span><input type=\"range\" min=\"0\" max=\"100\" value=\"40\" style=\"--fill:40%\"></label>",
+      "css": ".ds-slider { display: block; max-width: 340px; font-family: Jost, Futura, system-ui, sans-serif; } .ds-slider-head { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 14px; color: #bdb4a3; } .ds-slider-val { font-size: 15px; font-weight: 500; color: #f3eee4; font-variant-numeric: tabular-nums lining-nums; } .ds-slider input { -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 999px; background: linear-gradient(90deg, #cdb283 0 var(--fill), rgba(236,224,200,0.14) var(--fill) 100%); outline: none; cursor: pointer; } .ds-slider input::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; border-radius: 50%; background: #f3eee4; border: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.55); transition: transform 120ms ease; } .ds-slider input:active::-webkit-slider-thumb { transform: scale(1.08); } .ds-slider input::-moz-range-thumb { width: 24px; height: 24px; border-radius: 50%; background: #f3eee4; border: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.55); } .ds-slider input:focus-visible { outline: 1.5px solid #e8d6b0; outline-offset: 4px; border-radius: 8px; }"
     },
     {
       "name": "Status Bar Nav",
       "kind": "nav",
       "refersTo": "nav-status-bar",
-      "description": "Sticky status bar: gold wordmark, spaced-cap links with an active gold pip, a glass Book pill. Frosts on scroll.",
-      "html": "<header class=\"ds-nav\"><a class=\"ds-nav-mark\" href=\"#\">ASTOR</a><nav class=\"ds-nav-links\"><a href=\"#\" aria-current=\"page\">Proof</a><a href=\"#\">The Deal</a><a class=\"ds-nav-book\" href=\"#\"><span></span>Book your call</a></nav></header>",
-      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; height: 64px; padding: 0 24px; background: rgba(9,8,7,0.7); border-bottom: 1px solid rgba(246,241,230,0.09); -webkit-backdrop-filter: blur(40px) saturate(150%); backdrop-filter: blur(40px) saturate(150%); font-family: Jost, Futura, system-ui, sans-serif; } .ds-nav-mark { font-size: 13px; font-weight: 500; letter-spacing: 0.5em; color: #d2ac61; text-decoration: none; } .ds-nav-links { display: flex; align-items: center; gap: 32px; } .ds-nav-links > a:not(.ds-nav-book) { position: relative; display: flex; align-items: center; min-height: 44px; font-size: 11px; font-weight: 500; letter-spacing: 0.32em; text-transform: uppercase; color: #c2baa9; text-decoration: none; transition: color 200ms ease; } .ds-nav-links > a:not(.ds-nav-book):hover, .ds-nav-links > a[aria-current=\"page\"] { color: #f7f2e7; } .ds-nav-links > a[aria-current=\"page\"]::after { content: \"\"; position: absolute; bottom: -2px; left: 50%; width: 4px; height: 4px; margin-left: -2px; border-radius: 50%; background: #d2ac61; } .ds-nav-book { display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 16px; border-radius: 999px; background: rgba(38,32,26,0.5); border: 1px solid rgba(246,241,230,0.1); font-size: 10.5px; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; color: #f7f2e7; text-decoration: none; transition: border-color 200ms ease; } .ds-nav-book:hover { border-color: #8f7137; } .ds-nav-book span { width: 6px; height: 6px; border-radius: 50%; background: #d2ac61; box-shadow: 0 0 0 3px rgba(210,172,97,0.18); } .ds-nav a:focus-visible { outline: 2px solid #d2ac61; outline-offset: 3px; border-radius: 6px; }"
+      "description": "Sticky 64px bar: wordmark, sentence-case links with a champagne pip, a hairline Book pill.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-nav-mark\" href=\"#\">ASTOR <span>Management</span></a><nav><a href=\"#\" aria-current=\"page\">Home</a><a href=\"#\">The Deal</a><a href=\"#\">Proof</a><a class=\"ds-nav-book\" href=\"#\">Book your call</a></nav></header>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; height: 64px; padding: 0 24px; background: rgba(11,10,9,0.7); border-bottom: 1px solid rgba(236,224,200,0.11); font-family: Jost, Futura, system-ui, sans-serif; } .ds-nav-mark { font-size: 14px; font-weight: 500; letter-spacing: 0.34em; color: #f3eee4; text-decoration: none; } .ds-nav-mark span { margin-left: 8px; font-size: 12px; letter-spacing: 0; color: #918979; } .ds-nav nav { display: flex; align-items: center; gap: 32px; } .ds-nav nav a { position: relative; font-size: 14px; color: #bdb4a3; text-decoration: none; transition: color 150ms ease; } .ds-nav nav a:hover, .ds-nav nav a[aria-current=\"page\"] { color: #f3eee4; } .ds-nav nav a[aria-current=\"page\"]::after { content: ''; position: absolute; left: 50%; bottom: -8px; width: 4px; height: 4px; margin-left: -2px; border-radius: 999px; background: #cdb283; } .ds-nav nav a.ds-nav-book { display: flex; align-items: center; min-height: 2.5rem; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(236,224,200,0.2); font-weight: 500; color: #f3eee4; } .ds-nav nav a.ds-nav-book:hover { border-color: #cdb283; } .ds-nav a:focus-visible { outline: 1.5px solid #e8d6b0; outline-offset: 4px; border-radius: 8px; }"
+    },
+    {
+      "name": "Silk Ribbon",
+      "kind": "custom",
+      "description": "The one ornament: a gold silk ribbon that draws in once and passes behind solid cards.",
+      "html": "<div class=\"ds-silk-wrap\"><svg class=\"ds-silk\" viewBox=\"0 0 1440 520\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><defs><linearGradient id=\"ds-silk-g\" gradientUnits=\"userSpaceOnUse\" x1=\"0\" y1=\"0\" x2=\"1440\" y2=\"0\"><stop offset=\"0\" stop-color=\"#6f5d3e\"/><stop offset=\".14\" stop-color=\"#d9c193\"/><stop offset=\".24\" stop-color=\"#8a7550\"/><stop offset=\".42\" stop-color=\"#ecdcb8\"/><stop offset=\".58\" stop-color=\"#9c8458\"/><stop offset=\".74\" stop-color=\"#e2cfa6\"/><stop offset=\".86\" stop-color=\"#8a7550\"/><stop offset=\"1\" stop-color=\"#d4bb8c\"/></linearGradient></defs><path class=\"ds-silk-path\" pathLength=\"1\" d=\"M-20 70 C 160 90, 260 240, 400 290 S 600 336, 720 336 S 960 326, 1060 288 S 1290 100, 1460 70\" fill=\"none\" stroke=\"url(#ds-silk-g)\" stroke-width=\"18\" opacity=\"0.66\"/><path class=\"ds-silk-path\" pathLength=\"1\" d=\"M-20 63 C 160 83, 260 233, 400 283 S 600 329, 720 329 S 960 319, 1060 281 S 1290 93, 1460 63\" fill=\"none\" stroke=\"rgba(255,248,228,0.22)\" stroke-width=\"1.2\"/></svg><div class=\"ds-silk-card\">$222.8k the next month</div></div>",
+      "css": ".ds-silk-wrap { position: relative; isolation: isolate; height: 300px; overflow: hidden; background: #0b0a09; display: grid; place-items: center; font-family: Jost, Futura, system-ui, sans-serif; } .ds-silk { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; filter: drop-shadow(0 12px 14px rgba(0,0,0,0.5)); } .ds-silk-path { stroke-dasharray: 1; } @media (prefers-reduced-motion: no-preference) { .ds-silk-path { animation: ds-silk-draw 1900ms cubic-bezier(0.16,1,0.3,1) 150ms both; } } @keyframes ds-silk-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } } .ds-silk-card { padding: 14px 18px; background: #13110f; border: 1px solid rgba(236,224,200,0.11); border-radius: 18px; box-shadow: 0 18px 36px -22px rgba(0,0,0,0.9); color: #e8d6b0; font-size: 15px; }"
     },
     {
       "name": "Messages Thread",
       "kind": "custom",
       "refersTo": "bubble-in",
-      "description": "The FAQ as a thread: incoming question bubble, outgoing champagne answer.",
-      "html": "<div class=\"ds-thread\"><p class=\"ds-bubble-in\">Can I leave?</p><p class=\"ds-bubble-out\">Yes. Month to month, 30 days' notice, and your page stays yours.</p></div>",
-      "css": ".ds-thread { display: flex; flex-direction: column; gap: 8px; max-width: 420px; padding: 16px; background: #15120f; border: 1px solid rgba(246,241,230,0.09); border-radius: 22px; font-family: Jost, Futura, system-ui, sans-serif; } .ds-bubble-in { align-self: flex-start; max-width: 85%; margin: 0; padding: 10px 16px; background: #2a2520; color: #f7f2e7; border-radius: 20px 20px 20px 6px; font-size: 15.5px; line-height: 1.375; transition: background 200ms ease; } .ds-bubble-in:hover { background: #332d27; } .ds-bubble-out { align-self: flex-end; max-width: 85%; margin: 0; padding: 12px 16px; background: linear-gradient(180deg, #e7cd94, #c9a258); color: #150f06; border-radius: 20px 20px 6px 20px; font-size: 15px; line-height: 1.5; }"
+      "description": "The FAQ: questions as incoming bubbles, answers as solid champagne bubbles.",
+      "html": "<div class=\"ds-thread\"><details open><summary><span class=\"ds-bin\">Can I talk to a model who actually works with you?</span></summary><div class=\"ds-out-row\"><p class=\"ds-bout\">Yes, and we'll offer before you ask. On your intro call we connect you with a creator currently on these systems.</p></div></details></div>",
+      "css": ".ds-thread { display: flex; flex-direction: column; gap: 12px; max-width: 42rem; padding: 16px; background: #13110f; border: 1px solid rgba(236,224,200,0.11); border-radius: 18px; font-family: Jost, Futura, system-ui, sans-serif; } .ds-thread summary { display: flex; list-style: none; cursor: pointer; } .ds-thread summary::-webkit-details-marker { display: none; } .ds-thread summary:focus-visible { outline: 1.5px solid #e8d6b0; outline-offset: 4px; border-radius: 8px; } .ds-bin { max-width: 85%; padding: 10px 16px; background: #24201c; color: #f3eee4; border-radius: 20px 20px 20px 6px; font-size: 15.5px; line-height: 1.375; transition: background-color 150ms ease; } .ds-thread details:hover .ds-bin { background: #2c2722; } .ds-out-row { display: flex; justify-content: flex-end; margin-top: 8px; } .ds-bout { margin: 0; max-width: 85%; padding: 12px 16px; background: #cdb283; color: #17120a; border-radius: 20px 20px 6px 20px; font-size: 15px; line-height: 1.5; }"
     },
     {
       "name": "Tag Chip",
       "kind": "chip",
       "refersTo": "chip-tag",
-      "description": "Case-study tag in spaced caps on a soft gold fill.",
-      "html": "<span class=\"ds-chip\">Takeover</span>",
-      "css": ".ds-chip { display: inline-block; padding: 4px 12px; border-radius: 999px; background: rgba(210,172,97,0.15); color: #f2dda9; font-family: Jost, Futura, system-ui, sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; }"
+      "description": "Case-study tags.",
+      "html": "<span class=\"ds-tag\">Takeover</span>",
+      "css": ".ds-tag { display: inline-block; padding: 4px 12px; border-radius: 999px; background: rgba(205,178,131,0.15); color: #e8d6b0; font-family: Jost, Futura, system-ui, sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; }"
     }
   ],
   "narrative": {
-    "northStar": "The Lock Screen",
-    "overview": "Astor reaches a creator the way their money does: on the phone's lock screen. The whole site is assembled from native iPhone surfaces rendered in the house's pinned black-and-gold. The wallpaper is a warm near-black lit from below by ember and gold. Headlines are set like the clock. Stats are widgets, payouts arrive as notifications, terms are grouped inset lists, the FAQ is a Messages thread, and the close is an incoming call. Each section borrows one of these surfaces. None of them invent a web-marketing component where an iPhone surface already does the job.\n\nThe material is warm frosted glass over lit darkness, with gold read as light rather than paint. A thin fashion display face (Bodoni Moda) carries the clock, titles and big figures. Jost carries everything you read, and its spaced caps carry controls and labels. Density is calm and phone-first. Sections breathe at 96 to 128px, and inside a section the surfaces stack tightly, 8 to 12px apart, the way a notification stack does.\n\nThe palette is pinned by the user and is Astor's own. It is not Altyr's Obsidian Clarity. Product renders of Locus are the one place another language appears, and they appear as themselves, framed inside an Astor card.",
+    "northStar": "Silk",
+    "overview": "Astor keeps the iPhone lock screen as its layout and tells it quietly. The first screen is still a lock screen: a date line, a headline set where the clock would be, a row of figures, a stack of notifications, a dock and a home indicator. Further down, terms are grouped inset lists, the FAQ is a Messages thread, and the close is an incoming call. The surfaces are native; the voice is hushed. Nothing shines, nothing is engraved, nothing shouts.\n\nThe material is matte. Grounds are warm black, cards are solid and edged with a hairline, and gold is a flat champagne used sparingly, never a gradient on type or controls. Light is a low warm glow from below and a trace from above, never a show. The one ornament is a gold silk ribbon on the first screen. It draws itself in once and passes behind the receipts, and the solid cards it slips behind are what make it read as depth. Gilda Display gives the headline and titles a calm, high-waisted serif voice. Jost carries everything you read and every figure, in lining tabular numerals.\n\nDensity is phone-first and calm. Sections breathe at 96 to 128px, and inside a section surfaces stack tightly, 8 to 12px apart, the way a notification stack does. The palette is Astor's own, not Altyr's Obsidian Clarity. Locus product renders are the one place another language appears, and they appear as themselves inside an Astor card.",
     "keyCharacteristics": [
-      "Warm near-black wallpaper lit from below by radial ember and gold light, never a flat fill on hero surfaces.",
-      "Frosted warm glass (26px blur, 150% saturation) with 22px continuous corners for notifications, widgets and round controls.",
-      "Gold foil reserved for the clock, key figures and the one action.",
-      "Bodoni Moda for display and big figures. Jost for text, spaced Jost caps for labels and buttons.",
-      "Grouped inset lists split by hairlines, rather than separate boxed rows.",
-      "One authored motion moment: the screen wakes."
+      "Matte warm black grounds with solid, hairline-edged cards. No frosted glass on surfaces.",
+      "Champagne gold as a flat accent: key figures, the one action, links, checks, the active pip.",
+      "One gold silk ribbon on the first screen, drawn in once, passing behind solid surfaces.",
+      "Gilda Display 400 for the headline and titles. Jost for text and every figure, lining and tabular.",
+      "Sentence-case controls: one solid champagne pill per surface, hairline pills for second actions.",
+      "Grouped inset lists split by hairlines, rather than separate boxed rows."
     ],
     "rules": [
       {
-        "name": "The Lit-Not-Painted Rule",
-        "body": "Grounds are warm (hue near 70°). A cool or neutral black makes the gold look painted on, so never put gold on a cool ground.",
+        "name": "The Warm Ground Rule",
+        "body": "Every ground is a warm black (hue near 60 to 70 degrees). Gold on a cool or neutral black looks painted on.",
         "section": "colors"
       },
       {
-        "name": "The Ember Is Light Rule",
-        "body": "Ember appears as radial light in the wallpaper and section washes. It is never type and never a border. Its only solid use is as a chart segment.",
+        "name": "The Flat Gold Rule",
+        "body": "Gold is a solid colour. No gradient on type, buttons or chips; the only gold gradient in the system is the ribbon's own sheen.",
         "section": "colors"
       },
       {
-        "name": "The Foil Reserve Rule",
-        "body": "The foil gradient goes on the hero clock, key figures (rates, retention, the projected result, case-study \"after\" values) and the gold action pill. Nothing else is foil.",
+        "name": "The Gold Phrase Rule",
+        "body": "A headline or line may carry at most one short phrase in solid gold (the hero's \"smaller cut\", the proof page's \"with names\", asterisk-marked phrases in copy). Gold never fills a whole headline.",
         "section": "colors"
       },
       {
-        "name": "The Clock Face Rule",
-        "body": "Bodoni Moda is for the clock, titles and big figures only. Never set it below about 1.4rem and never use it for running text.",
+        "name": "The Jost Figure Rule",
+        "body": "Every figure is Jost, lining and tabular, from the 5.5rem hero number to a table cell. Gilda never sets a number except the call-card \"30\" and the monograms.",
         "section": "typography"
       },
       {
-        "name": "The Readable One Rule",
-        "body": "Big figures go in Bodoni Moda. Tables, sliders and the calculator keep Jost tabular numerals, so columns of figures line up. Bodoni Moda's own +, × and ~ are hairlines, so the Fig helper sets those symbols in Jost.",
+        "name": "The Sentence Case Rule",
+        "body": "Controls, nav links and captions are sentence case. Spaced caps are reserved for small data labels, column heads and tags, at 0.14em.",
         "section": "typography"
       },
       {
         "name": "The Title Stands Alone Rule",
-        "body": "A headline carries its own weight. Spaced caps name controls, columns and data. They never sit above a headline as a kicker.",
+        "body": "A headline carries its own weight. Nothing in spaced caps sits above it as a kicker.",
         "section": "typography"
       },
       {
-        "name": "The Light From Below Rule",
-        "body": "Wallpaper light rises from the bottom edge: gold at 50% 108%, ember at 10% 96%, bronze at 92% 88%. A faint ember wash enters from the top. Never light a hero from the top centre.",
+        "name": "The Solid Surface Rule",
+        "body": "Cards, notifications and controls are opaque. The ribbon only reads as passing behind because nothing in front of it is translucent; the hero stat row carries an opaque warm-black fill for the same reason.",
         "section": "elevation"
       },
       {
-        "name": "The Glass Over Light Rule",
-        "body": "Glass only earns its blur over the lit wallpaper or a glow band. On a plain warm-black section, use the opaque card.",
+        "name": "The Low Light Rule",
+        "body": "Hero light is a low champagne glow from below (12% at 50% 84%) and a faint trace from above (6% at 50% -6%), masked so it never shows an edge. Alternating bands may carry a 6% glow from the bottom. Light never becomes a visible shape.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Do build each section from a native iPhone surface (widget, notification, grouped list, Messages thread, incoming call, subscription plan) before reaching for a generic web component.",
-      "Do keep every ground warm (warm-black, surface, glass at rgba(38,32,26)) so gold reads as lit.",
-      "Do set big figures in Bodoni Moda champagne, and in foil only for the clock, key figures and the action pill.",
-      "Do use 22px corners for widgets, cards and notifications, and full pills for every button and chip.",
-      "Do group related rows into one card split by hairlines.",
-      "Do keep one foil action per surface, and make it book the call.",
-      "Do frame Locus renders in an Astor card and let them keep Locus's own colours inside the `.altyr-ui` scope."
+      "**Do** build each section from a native iPhone surface (notification, grouped list, segmented control, Messages thread, incoming call, plan card) before reaching for a generic web component.",
+      "**Do** keep every ground warm black and every card solid, edged with a 1px hairline.",
+      "**Do** set every figure in Jost, lining and tabular, usually in champagne light.",
+      "**Do** keep one solid champagne pill per surface, and make it book the call; second actions are hairline pills.",
+      "**Do** keep controls, nav and captions in sentence case.",
+      "**Do** group related rows into one card split by hairlines.",
+      "**Do** let the ribbon be the only ornament, on the first screen only, behind solid surfaces and clear of type.",
+      "**Do** frame Locus renders in an Astor card and let them keep Locus's colours inside the `.altyr-ui` scope."
     ],
     "donts": [
-      "Don't use Altyr's Obsidian Clarity palette (pure black, rose to amber, platinum) on Astor surfaces. It lives only inside Locus panels and the Locus app icon.",
-      "Don't set ember as text or as a border. It is light in the wallpaper and a chart segment, nothing else.",
-      "Don't foil a phrase inside a sentence or headline. Foil belongs to figures and the action.",
-      "Don't put a spaced-cap kicker or eyebrow above a headline.",
-      "Don't set Bodoni Moda for body copy or small sizes, or use it in tables and the calculator.",
-      "Don't light the wallpaper from the top centre, and don't use glass on an unlit flat section.",
-      "Don't add a second authored entrance animation beyond the screen waking."
+      "**Don't** put a gradient on type, buttons or chips. Gold is flat.",
+      "**Don't** use backdrop-filter or translucent glass on cards, notifications or controls.",
+      "**Don't** add foil, bevels, velvet, Deco or engraved costume, or a second ornament beside the ribbon.",
+      "**Don't** use Altyr's Obsidian Clarity palette (pure black, rose to amber, platinum) on Astor surfaces.",
+      "**Don't** put a spaced-cap kicker or eyebrow above a headline.",
+      "**Don't** set Gilda Display for body copy, figures in tables or the calculator.",
+      "**Don't** add a second authored entrance animation beyond the ribbon drawing in."
     ]
   }
 }
