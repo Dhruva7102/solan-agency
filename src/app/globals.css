@@ -81,7 +81,7 @@
   --color-good: var(--good);
   --color-ember: var(--ember);
   --font-sans: var(--font-jost), "Futura", "Century Gothic", system-ui, sans-serif;
-  --font-display: var(--font-italiana), "Didot", serif;
+  --font-display: var(--font-bodoni), "Didot", serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -155,37 +155,39 @@ summary:focus-visible,
 }
 
 .display {
-  font-family: var(--font-italiana), "Didot", serif;
-  font-weight: 400;
-  letter-spacing: 0;
+  font-family: var(--font-bodoni), "Didot", serif;
+  font-weight: 500;
+  letter-spacing: -0.005em;
 }
 
-/* The clock. Thin, foil, as large as the screen allows. */
+/* The clock. High-contrast, foil, as large as the screen allows. */
 .display-hero {
-  font-family: var(--font-italiana), "Didot", serif;
-  font-weight: 400;
-  font-size: clamp(3.4rem, 8.6vw, 8.4rem);
-  line-height: 0.92;
-  letter-spacing: -0.01em;
-  text-wrap: balance;
-}
-
-/* Section titles: the large title of an iPhone screen, set in Italiana */
-.display-xl {
-  font-family: var(--font-italiana), "Didot", serif;
-  font-weight: 400;
-  font-size: clamp(2.5rem, 5.2vw, 4.4rem);
-  line-height: 1.02;
-  letter-spacing: 0;
-  text-wrap: balance;
-}
-
-/* Figures as display objects. Big figures only: tables and the calculator
-   keep Jost's tabular numerals, where the "1" must never read as an "I". */
-.numeral {
-  font-family: var(--font-italiana), "Didot", serif;
-  font-weight: 400;
+  font-family: var(--font-bodoni), "Didot", serif;
+  font-weight: 500;
+  font-size: clamp(2.9rem, 7.2vw, 6.9rem);
   line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+/* Section titles: the large title of an iPhone screen, set in Bodoni Moda */
+.display-xl {
+  font-family: var(--font-bodoni), "Didot", serif;
+  font-weight: 500;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+/* Figures as display objects, at a weight that holds up small: lining,
+   proportional numerals. Tables and the calculator keep Jost's tabular figures. */
+.numeral {
+  font-family: var(--font-bodoni), "Didot", serif;
+  font-weight: 600;
+  font-variant-numeric: lining-nums;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
 }
 .tnum {
   font-family: var(--font-jost), system-ui, sans-serif;

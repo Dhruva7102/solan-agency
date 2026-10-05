@@ -65,6 +65,24 @@ export function Notification({
   );
 }
 
+/** A display figure with its +, × and ~ set in Jost: Bodoni Moda draws
+ *  those as hairlines that vanish at widget size. */
+export function Fig({ children }: { children: string }) {
+  return (
+    <>
+      {children.split(/([+×~])/).map((part, i) =>
+        /^[+×~]$/.test(part) ? (
+          <span key={i} className="font-sans font-normal" style={{ fontSize: "0.78em", marginInline: "0.03em" }}>
+            {part}
+          </span>
+        ) : (
+          part
+        )
+      )}
+    </>
+  );
+}
+
 export function Widget({
   value,
   label,
@@ -86,7 +104,7 @@ export function Widget({
       className={`glass flex items-center gap-3 px-3.5 py-3 sm:flex-col sm:items-stretch sm:justify-between sm:gap-0 sm:px-4 sm:pb-3.5 sm:pt-3.5 ${index !== undefined ? "wake-in" : ""} ${className}`}
       style={index !== undefined ? ({ "--i": index } as CSSProperties) : undefined}
     >
-      <span className={`numeral shrink-0 text-gold-bright ${large ? "text-[3.4rem] sm:text-[4rem]" : "text-[1.75rem] sm:text-[2.15rem]"}`}>{value}</span>
+      <span className={`numeral shrink-0 text-gold-bright ${large ? "text-[3.4rem] sm:text-[4rem]" : "text-[1.75rem] sm:text-[2.15rem]"}`}>{typeof value === "string" ? <Fig>{value}</Fig> : value}</span>
       {mini && <span className="text-[12px] leading-tight text-ink/75 sm:hidden">{mini}</span>}
       <span className={`text-[11px] leading-tight text-ink/70 sm:mt-2 sm:block sm:text-[12px] sm:leading-snug ${mini ? "hidden" : ""}`}>{label}</span>
     </div>

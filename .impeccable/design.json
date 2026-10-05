@@ -268,7 +268,7 @@
     "typographyMeta": {
       "display": {
         "displayName": "Clock",
-        "purpose": "The home hero headline only, in foil. Italiana 400."
+        "purpose": "The home hero headline only, in foil. Bodoni Moda 500."
       },
       "headline": {
         "displayName": "Large Title",
@@ -447,17 +447,17 @@
       "name": "Notification",
       "kind": "card",
       "refersTo": "glass-notification",
-      "description": "A payout or message arriving on the lock screen: icon, title, time, body with an Italiana figure.",
+      "description": "A payout or message arriving on the lock screen: icon, title, time, body with an Bodoni Moda figure.",
       "html": "<article class=\"ds-notif\"><span class=\"ds-notif-icon\"><svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 4v13h10\"/></svg></span><h3 class=\"ds-notif-title\">Locus · Earnings</h3><span class=\"ds-notif-time\">30d</span><div class=\"ds-notif-body\"><span class=\"ds-notif-fig\">$37.3k</span>Net in the first 30 days on a new page</div></article>",
-      "css": ".ds-notif { display: grid; grid-template-columns: 38px 1fr auto; column-gap: 12px; padding: 12px 16px 14px; max-width: 540px; background: rgba(38,32,26,0.5); border: 1px solid rgba(246,241,230,0.1); border-radius: 22px; -webkit-backdrop-filter: blur(26px) saturate(150%); backdrop-filter: blur(26px) saturate(150%); box-shadow: 0 18px 40px -26px rgba(0,0,0,0.75); font-family: Jost, Futura, system-ui, sans-serif; } .ds-notif-icon { grid-row: span 2; width: 38px; height: 38px; display: grid; place-items: center; border-radius: 10px; background: linear-gradient(150deg,#c0387a,#e08a38); } .ds-notif-title { margin: 0; font-size: 15px; font-weight: 600; line-height: 1.375; color: #f7f2e7; } .ds-notif-time { font-size: 12.5px; color: rgba(247,242,231,0.5); } .ds-notif-body { grid-column: 2 / 4; margin-top: 4px; font-size: 14.5px; line-height: 1.45; color: rgba(247,242,231,0.85); } .ds-notif-fig { display: block; padding: 4px 0; font-family: Italiana, Didot, serif; font-size: 2rem; line-height: 0.95; color: #f2dda9; }"
+      "css": ".ds-notif { display: grid; grid-template-columns: 38px 1fr auto; column-gap: 12px; padding: 12px 16px 14px; max-width: 540px; background: rgba(38,32,26,0.5); border: 1px solid rgba(246,241,230,0.1); border-radius: 22px; -webkit-backdrop-filter: blur(26px) saturate(150%); backdrop-filter: blur(26px) saturate(150%); box-shadow: 0 18px 40px -26px rgba(0,0,0,0.75); font-family: Jost, Futura, system-ui, sans-serif; } .ds-notif-icon { grid-row: span 2; width: 38px; height: 38px; display: grid; place-items: center; border-radius: 10px; background: linear-gradient(150deg,#c0387a,#e08a38); } .ds-notif-title { margin: 0; font-size: 15px; font-weight: 600; line-height: 1.375; color: #f7f2e7; } .ds-notif-time { font-size: 12.5px; color: rgba(247,242,231,0.5); } .ds-notif-body { grid-column: 2 / 4; margin-top: 4px; font-size: 14.5px; line-height: 1.45; color: rgba(247,242,231,0.85); } .ds-notif-fig { display: block; padding: 4px 0; font-family: Bodoni Moda, Didot, serif; font-size: 2rem; line-height: 0.95; color: #f2dda9; }"
     },
     {
       "name": "Widget",
       "kind": "custom",
       "refersTo": "widget",
-      "description": "A headline stat as a lock-screen widget: Italiana figure over a short label.",
+      "description": "A headline stat as a lock-screen widget: Bodoni Moda figure over a short label.",
       "html": "<div class=\"ds-widget\"><span class=\"ds-widget-fig\">15%</span><span class=\"ds-widget-label\">Our lowest published rate</span></div>",
-      "css": ".ds-widget { display: flex; flex-direction: column; justify-content: space-between; width: 160px; padding: 14px 16px; background: rgba(38,32,26,0.5); border: 1px solid rgba(246,241,230,0.1); border-radius: 22px; -webkit-backdrop-filter: blur(26px) saturate(150%); backdrop-filter: blur(26px) saturate(150%); box-shadow: 0 18px 40px -26px rgba(0,0,0,0.75); } .ds-widget-fig { font-family: Italiana, Didot, serif; font-size: 2.15rem; line-height: 0.95; color: #f2dda9; } .ds-widget-label { margin-top: 8px; font-family: Jost, Futura, system-ui, sans-serif; font-size: 12px; line-height: 1.375; color: rgba(247,242,231,0.7); }"
+      "css": ".ds-widget { display: flex; flex-direction: column; justify-content: space-between; width: 160px; padding: 14px 16px; background: rgba(38,32,26,0.5); border: 1px solid rgba(246,241,230,0.1); border-radius: 22px; -webkit-backdrop-filter: blur(26px) saturate(150%); backdrop-filter: blur(26px) saturate(150%); box-shadow: 0 18px 40px -26px rgba(0,0,0,0.75); } .ds-widget-fig { font-family: Bodoni Moda, Didot, serif; font-size: 2.15rem; line-height: 0.95; color: #f2dda9; } .ds-widget-label { margin-top: 8px; font-family: Jost, Futura, system-ui, sans-serif; font-size: 12px; line-height: 1.375; color: rgba(247,242,231,0.7); }"
     },
     {
       "name": "Grouped Inset List",
@@ -509,12 +509,12 @@
   ],
   "narrative": {
     "northStar": "The Lock Screen",
-    "overview": "Astor reaches a creator the way their money does: on the phone's lock screen. The whole site is assembled from native iPhone surfaces rendered in the house's pinned black-and-gold. The wallpaper is a warm near-black lit from below by ember and gold. Headlines are set like the clock. Stats are widgets, payouts arrive as notifications, terms are grouped inset lists, the FAQ is a Messages thread, and the close is an incoming call. Each section borrows one of these surfaces. None of them invent a web-marketing component where an iPhone surface already does the job.\n\nThe material is warm frosted glass over lit darkness, with gold read as light rather than paint. A thin fashion display face (Italiana) carries the clock, titles and big figures. Jost carries everything you read, and its spaced caps carry controls and labels. Density is calm and phone-first. Sections breathe at 96 to 128px, and inside a section the surfaces stack tightly, 8 to 12px apart, the way a notification stack does.\n\nThe palette is pinned by the user and is Astor's own. It is not Altyr's Obsidian Clarity. Product renders of Locus are the one place another language appears, and they appear as themselves, framed inside an Astor card.",
+    "overview": "Astor reaches a creator the way their money does: on the phone's lock screen. The whole site is assembled from native iPhone surfaces rendered in the house's pinned black-and-gold. The wallpaper is a warm near-black lit from below by ember and gold. Headlines are set like the clock. Stats are widgets, payouts arrive as notifications, terms are grouped inset lists, the FAQ is a Messages thread, and the close is an incoming call. Each section borrows one of these surfaces. None of them invent a web-marketing component where an iPhone surface already does the job.\n\nThe material is warm frosted glass over lit darkness, with gold read as light rather than paint. A thin fashion display face (Bodoni Moda) carries the clock, titles and big figures. Jost carries everything you read, and its spaced caps carry controls and labels. Density is calm and phone-first. Sections breathe at 96 to 128px, and inside a section the surfaces stack tightly, 8 to 12px apart, the way a notification stack does.\n\nThe palette is pinned by the user and is Astor's own. It is not Altyr's Obsidian Clarity. Product renders of Locus are the one place another language appears, and they appear as themselves, framed inside an Astor card.",
     "keyCharacteristics": [
       "Warm near-black wallpaper lit from below by radial ember and gold light, never a flat fill on hero surfaces.",
       "Frosted warm glass (26px blur, 150% saturation) with 22px continuous corners for notifications, widgets and round controls.",
       "Gold foil reserved for the clock, key figures and the one action.",
-      "Italiana for display and big figures. Jost for text, spaced Jost caps for labels and buttons.",
+      "Bodoni Moda for display and big figures. Jost for text, spaced Jost caps for labels and buttons.",
       "Grouped inset lists split by hairlines, rather than separate boxed rows.",
       "One authored motion moment: the screen wakes."
     ],
@@ -536,12 +536,12 @@
       },
       {
         "name": "The Clock Face Rule",
-        "body": "Italiana is for the clock, titles and big figures only. Never set it below about 1.4rem and never use it for running text.",
+        "body": "Bodoni Moda is for the clock, titles and big figures only. Never set it below about 1.4rem and never use it for running text.",
         "section": "typography"
       },
       {
         "name": "The Readable One Rule",
-        "body": "Big figures go in Italiana. Tables, sliders and the calculator keep Jost tabular numerals, because there a \"1\" must never read as an \"I\".",
+        "body": "Big figures go in Bodoni Moda. Tables, sliders and the calculator keep Jost tabular numerals, so columns of figures line up. Bodoni Moda's own +, × and ~ are hairlines, so the Fig helper sets those symbols in Jost.",
         "section": "typography"
       },
       {
@@ -563,7 +563,7 @@
     "dos": [
       "Do build each section from a native iPhone surface (widget, notification, grouped list, Messages thread, incoming call, subscription plan) before reaching for a generic web component.",
       "Do keep every ground warm (warm-black, surface, glass at rgba(38,32,26)) so gold reads as lit.",
-      "Do set big figures in Italiana champagne, and in foil only for the clock, key figures and the action pill.",
+      "Do set big figures in Bodoni Moda champagne, and in foil only for the clock, key figures and the action pill.",
       "Do use 22px corners for widgets, cards and notifications, and full pills for every button and chip.",
       "Do group related rows into one card split by hairlines.",
       "Do keep one foil action per surface, and make it book the call.",
@@ -574,7 +574,7 @@
       "Don't set ember as text or as a border. It is light in the wallpaper and a chart segment, nothing else.",
       "Don't foil a phrase inside a sentence or headline. Foil belongs to figures and the action.",
       "Don't put a spaced-cap kicker or eyebrow above a headline.",
-      "Don't set Italiana for body copy or small sizes, or use it in tables and the calculator.",
+      "Don't set Bodoni Moda for body copy or small sizes, or use it in tables and the calculator.",
       "Don't light the wallpaper from the top centre, and don't use glass on an unlit flat section.",
       "Don't add a second authored entrance animation beyond the screen waking."
     ]

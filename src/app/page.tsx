@@ -21,7 +21,7 @@ import VideoSlot, { hasIntroVideo } from "@/components/VideoSlot";
 import CtaBand from "@/components/CtaBand";
 import LocusPanel from "@/components/LocusPanel";
 import StandardDeal from "@/components/StandardDeal";
-import { AppIcon, Arrow, Chevron, GoldCheck, Notification, Widget } from "@/components/Phone";
+import { AppIcon, Arrow, Chevron, Fig, GoldCheck, Notification, Widget } from "@/components/Phone";
 import LockDate from "@/components/LockDate";
 
 /* Arrival order for the lock screen waking (see .wake-in / .arrive). */
@@ -44,7 +44,7 @@ export default function Home() {
           <LockDate className="wake-in text-[17px] font-medium text-ink/70 sm:text-[19px]" />
           <h1 id="hero-h" className="mt-2 text-center sm:mt-3">
             <span className="display-hero gold-text wake-clock block">We take a smaller cut</span>
-            <span className="display wake-in mt-3 block text-[clamp(1.6rem,2.7vw,2.4rem)] leading-tight text-ink" style={wake(1)}>
+            <span className="display wake-in mt-3 block text-[clamp(1.4rem,2.7vw,2.4rem)] leading-tight text-ink" style={wake(1)}>
               than the teams we outperform.
             </span>
           </h1>
@@ -65,7 +65,7 @@ export default function Home() {
               <Highlight text={BRAND.subtag} />
             </Notification>
             <Notification app="locus" title="Locus · Earnings" time="30d" index={1}>
-              <span className="numeral block py-1 text-[2rem] text-gold-bright">{firstReceipt.value}</span>
+              <span className="numeral block py-1 text-[2rem] text-gold-bright"><Fig>{firstReceipt.value}</Fig></span>
               {firstReceipt.label}
             </Notification>
             {/* the rest of the stack, collapsed behind it */}
@@ -153,7 +153,7 @@ export default function Home() {
                     Locus
                   </span>
                   <span>
-                    <span className="numeral block text-[2.1rem] text-gold-bright sm:text-[2.8rem]">{c.value}</span>
+                    <span className="numeral block text-[2.1rem] text-gold-bright sm:text-[2.8rem]"><Fig>{c.value}</Fig></span>
                     <span className="mt-1.5 block text-[12.5px] leading-snug text-ink-2">{c.label}</span>
                   </span>
                 </div>
@@ -197,7 +197,7 @@ export default function Home() {
             <h2 className="display-xl text-ink">{NO_CAGE.heading}</h2>
             <p className="mt-7 text-[17px] leading-[1.7] text-ink-2">{NO_CAGE.paragraphs[0]}</p>
             <div className="glass mt-8 p-5">
-              <p className="numeral gold-text text-[3.6rem]">92%+</p>
+              <p className="numeral gold-text text-[3.6rem]"><Fig>92%+</Fig></p>
               <p className="mt-2 text-[14px] leading-snug text-ink/80">{NO_CAGE.retention}</p>
             </div>
           </div>
@@ -289,7 +289,7 @@ export default function Home() {
           <div className="flex flex-col gap-2">
             {[firstReceipt, ...otherReceipts].map((item, i) => (
               <Notification key={item.value} app="locus" title="Locus · Earnings" time={["30d", "1mo", "90d"][i]}>
-                <span className="numeral block py-1 text-[2.3rem] text-gold-bright">{item.value}</span>
+                <span className="numeral block py-1 text-[2.3rem] text-gold-bright"><Fig>{item.value}</Fig></span>
                 {item.label}
               </Notification>
             ))}

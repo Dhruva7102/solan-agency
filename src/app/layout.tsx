@@ -1,22 +1,23 @@
 import type { Metadata } from "next";
-import { Italiana, Jost } from "next/font/google";
+import { Bodoni_Moda, Jost } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import MotionProvider from "@/components/MotionProvider";
 import { BRAND } from "@/lib/content";
 
-/* Jost carries the text and the spaced caps; Italiana is the display voice:
-   the lock-screen clock, titles and the big figures. */
+/* Jost carries the text and the spaced caps; Bodoni Moda is the display
+   voice: the lock-screen clock, titles and the big figures. It replaced
+   Italiana, whose single hairline weight made the figures hard to read. */
 const jost = Jost({
   variable: "--font-jost",
   subsets: ["latin"],
 });
 
-const italiana = Italiana({
-  variable: "--font-italiana",
+const bodoni = Bodoni_Moda({
+  variable: "--font-bodoni",
   subsets: ["latin"],
-  weight: "400",
+  axes: ["opsz"],
 });
 
 export const metadata: Metadata = {
@@ -50,7 +51,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jost.variable} ${italiana.variable} h-full antialiased`}
+      className={`${jost.variable} ${bodoni.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <MotionProvider>

@@ -25,21 +25,21 @@ colors:
   series-customs: "#e9e1d2"
 typography:
   display:
-    fontFamily: "Italiana, Didot, serif"
-    fontSize: "clamp(3.4rem, 8.6vw, 8.4rem)"
-    fontWeight: 400
-    lineHeight: 0.92
-    letterSpacing: "-0.01em"
+    fontFamily: "Bodoni Moda, Didot, serif"
+    fontSize: "clamp(2.9rem, 7.2vw, 6.9rem)"
+    fontWeight: 500
+    lineHeight: 0.95
+    letterSpacing: "-0.02em"
   headline:
-    fontFamily: "Italiana, Didot, serif"
-    fontSize: "clamp(2.5rem, 5.2vw, 4.4rem)"
-    fontWeight: 400
-    lineHeight: 1.02
-    letterSpacing: "0"
+    fontFamily: "Bodoni Moda, Didot, serif"
+    fontSize: "clamp(2.4rem, 5vw, 4.2rem)"
+    fontWeight: 500
+    lineHeight: 1.04
+    letterSpacing: "-0.015em"
   numeral:
-    fontFamily: "Italiana, Didot, serif"
+    fontFamily: "Bodoni Moda, Didot, serif"
     fontSize: "3.6rem"
-    fontWeight: 400
+    fontWeight: 600
     lineHeight: 0.95
   title:
     fontFamily: "Jost, Futura, Century Gothic, system-ui, sans-serif"
@@ -180,7 +180,7 @@ components:
 
 Astor reaches a creator the way their money does: on the phone's lock screen. The whole site is assembled from native iPhone surfaces rendered in the house's pinned black-and-gold. The wallpaper is a warm near-black lit from below by ember and gold. Headlines are set like the clock. Stats are widgets, payouts arrive as notifications, terms are grouped inset lists, the FAQ is a Messages thread, and the close is an incoming call. Each section borrows one of these surfaces. None of them invent a web-marketing component where an iPhone surface already does the job.
 
-The material is warm frosted glass over lit darkness, with gold read as light rather than paint. A thin fashion display face (Italiana) carries the clock, titles and big figures. Jost carries everything you read, and its spaced caps carry controls and labels. Density is calm and phone-first. Sections breathe at 96 to 128px, and inside a section the surfaces stack tightly, 8 to 12px apart, the way a notification stack does.
+The material is warm frosted glass over lit darkness, with gold read as light rather than paint. A high-contrast fashion display face (Bodoni Moda) carries the clock, titles and big figures. Jost carries everything you read, and its spaced caps carry controls and labels. Density is calm and phone-first. Sections breathe at 96 to 128px, and inside a section the surfaces stack tightly, 8 to 12px apart, the way a notification stack does.
 
 The palette is pinned by the user and is Astor's own. It is not Altyr's Obsidian Clarity. Product renders of Locus are the one place another language appears, and they appear as themselves, framed inside an Astor card.
 
@@ -188,7 +188,7 @@ The palette is pinned by the user and is Astor's own. It is not Altyr's Obsidian
 - Warm near-black wallpaper lit from below by radial ember and gold light, never a flat fill on hero surfaces.
 - Frosted warm glass (26px blur, 150% saturation) with 22px continuous corners for notifications, widgets and round controls.
 - Gold foil reserved for the clock, key figures and the one action.
-- Italiana for display and big figures. Jost for text, spaced Jost caps for labels and buttons.
+- Bodoni Moda for display and big figures. Jost for text, spaced Jost caps for labels and buttons.
 - Grouped inset lists split by hairlines, rather than separate boxed rows.
 - One authored motion moment: the screen wakes.
 
@@ -228,15 +228,15 @@ The palette is warm near-black grounds, a three-step gold family on warm ink, an
 
 ## Typography
 
-**Display Font:** Italiana (with Didot, serif)
+**Display Font:** Bodoni Moda (with Didot, serif)
 **Body Font:** Jost (with Futura, Century Gothic, system-ui, sans-serif)
 
-**Character:** A thin, high-contrast fashion display face set large like a lock-screen clock, paired with a geometric sans whose wide-tracked caps read like an invitation card. Italiana ships in one weight (400). Hierarchy comes from size alone.
+**Character:** A high-contrast fashion display face (Bodoni Moda, which replaced the hairline-only Bodoni Moda on 10/04 because the figures read too thin) set large like a lock-screen clock, paired with a geometric sans whose wide-tracked caps read like an invitation card. Bodoni Moda ships in one weight (400). Hierarchy comes from size alone.
 
 ### Hierarchy
 - **Display** (400, clamp(3.4rem, 8.6vw, 8.4rem), 0.92): the clock. It appears once per site, as the home hero headline in foil. Balanced wrap.
 - **Headline** (400, clamp(2.5rem, 5.2vw, 4.4rem), 1.02): every section title and inner-page h1, in warm ink. Balanced wrap. It stands alone, with no label above it.
-- **Numeral** (Italiana 400, 0.95 line height, 1.6rem to 6.5rem): big figures as display objects in widgets, notifications, the census, tier rates and retention. They are set in gold-bright, or in foil when the Foil Reserve allows.
+- **Numeral** (Bodoni Moda 600, 0.95 line height, 1.6rem to 6.5rem): big figures as display objects in widgets, notifications, the census, tier rates and retention. They are set in gold-bright, or in foil when the Foil Reserve allows.
 - **Title** (Jost 600, 15 to 17px, snug): card, tier, list-row and notification titles.
 - **Body** (Jost 400, 17px, 1.7): section prose, capped around 42rem (max-w-2xl). Inside cards it drops to 15 to 15.5px at a relaxed line height. The lead paragraph of a card can step up to 18px in ink.
 - **Label** (Jost 500, 10 to 11px, 0.2em to 0.36em, uppercase): nav links (11px, 0.32em), table column heads, data terms (Before / After), field-group labels and case-study tags.
@@ -244,9 +244,9 @@ The palette is warm near-black grounds, a three-step gold family on warm ink, an
 - **Figure, Tabular** (Jost, tabular and lining numerals): calculator inputs, results and chart values.
 
 ### Named Rules
-**The Clock Face Rule.** Italiana is for the clock, titles and big figures only. Never set it below about 1.4rem and never use it for running text.
+**The Clock Face Rule.** Bodoni Moda is for the clock, titles and big figures only. Never set it below about 1.4rem and never use it for running text.
 
-**The Readable One Rule.** Big figures go in Italiana. Tables, sliders and the calculator keep Jost tabular numerals, because there a "1" must never read as an "I".
+**The Readable One Rule.** Big figures go in Bodoni Moda. Tables, sliders and the calculator keep Jost tabular numerals, so columns of figures line up. Bodoni Moda's own +, × and ~ are hairlines, so the `Fig` helper sets those symbols in Jost.
 
 **The Title Stands Alone Rule.** A headline carries its own weight. Spaced caps name controls, columns and data. They never sit above a headline as a kicker.
 
@@ -317,13 +317,13 @@ Each surface has one action. That action is foil and always books the call.
 - **Mobile:** "Book" plus a 40px round glass menu button. The menu is a glass grouped list with 17px rows, a Home row, and a gold dot on the current page.
 
 ### Notification (signature)
-A glass card on a 38px icon / content / time grid. It has a 15px semibold title, a 12.5px time in ink at 50%, and a 14.5px body in ink at 85%. A champagne Italiana figure can sit in the body. Below the stack, two narrowing glass slivers suggest more notifications.
+A glass card on a 38px icon / content / time grid. It has a 15px semibold title, a 12.5px time in ink at 50%, and a 14.5px body in ink at 85%. A champagne Bodoni Moda figure can sit in the body. Below the stack, two narrowing glass slivers suggest more notifications.
 
 ### Widget (signature)
-A glass tile with an Italiana figure in champagne (1.75 to 2.15rem, or 3.4 to 4rem when large) over an 11 to 12px label in ink at 70%. On phones it lays out as a row (figure beside a one-line label). From 640px it becomes a stacked tile.
+A glass tile with an Bodoni Moda figure in champagne (1.75 to 2.15rem, or 3.4 to 4rem when large) over an 11 to 12px label in ink at 70%. On phones it lays out as a row (figure beside a one-line label). From 640px it becomes a stacked tile.
 
 ### App Icon (signature)
-A 10px-radius square. Astor's is a dark bronze gradient with an antique-bronze rim and a gold Italiana "A". Locus's keeps its own rose-to-amber gradient.
+A 10px-radius square. Astor's is a dark bronze gradient with an antique-bronze rim and a gold Bodoni Moda "A". Locus's keeps its own rose-to-amber gradient.
 
 ### Messages Thread (FAQ)
 Questions are incoming bubbles (#2a2520, lightening to #332d27 on hover) in disclosure summaries. Answers are outgoing champagne-gradient bubbles (#e7cd94 to #c9a258) in gold ink. The thread sits in a card under a contact header.
@@ -342,7 +342,7 @@ One authored moment, the screen waking, plays only under `prefers-reduced-motion
 ### Do:
 - **Do** build each section from a native iPhone surface (widget, notification, grouped list, Messages thread, incoming call, subscription plan) before reaching for a generic web component.
 - **Do** keep every ground warm (warm-black, surface, glass at rgba(38,32,26)) so gold reads as lit.
-- **Do** set big figures in Italiana champagne, and in foil only for the clock, key figures and the action pill.
+- **Do** set big figures in Bodoni Moda champagne, and in foil only for the clock, key figures and the action pill.
 - **Do** use 22px corners for widgets, cards and notifications, and full pills for every button and chip.
 - **Do** group related rows into one card split by hairlines.
 - **Do** keep one foil action per surface, and make it book the call.
@@ -353,6 +353,6 @@ One authored moment, the screen waking, plays only under `prefers-reduced-motion
 - **Don't** set ember as text or as a border. It is light in the wallpaper and a chart segment, nothing else.
 - **Don't** foil a phrase inside a sentence or headline. Foil belongs to figures and the action.
 - **Don't** put a spaced-cap kicker or eyebrow above a headline.
-- **Don't** set Italiana for body copy or small sizes, or use it in tables and the calculator.
+- **Don't** set Bodoni Moda for body copy or small sizes, or use it in tables and the calculator.
 - **Don't** light the wallpaper from the top centre, and don't use glass on an unlit flat section.
 - **Don't** add a second authored entrance animation beyond the screen waking.
