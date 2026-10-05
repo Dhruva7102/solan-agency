@@ -185,7 +185,7 @@ export const FOUNDER_AUTHORITY = {
   founders: [
     {
       role: "The Chatting Operator",
-      desc: "Runs the largest chatting operation in the industry. His team trains and staffs the chatters behind the biggest pages in the space.",
+      desc: "Runs the largest chatting operation in the industry. Their team trains and staffs the chatters behind the biggest pages in the space.",
     },
     {
       role: "The Full-Service Operator",
@@ -348,7 +348,7 @@ export const CHAT_EXAMPLES = {
   eyebrow: "The real thing",
   heading: "Actual conversations, run by our pods.",
   intro:
-    "Not scripts. These are live conversations from pages the founding team runs today. Notice the pacing: rapport first, persona held, the PPV landing inside the conversation. Fan names and media are redacted.",
+    "Not scripts. These are live conversations from pages the founding team runs today. Notice the pacing: rapport first, persona held, the PPV landing inside the conversation. Fan names and media are redacted, and the messages are blurred on this public page; we'll walk you through them on your call.",
   shots: [
     { file: "chat-1.webp", label: "Morning check-in → $40 PPV unlock, in persona" },
     { file: "chat-2.webp", label: "Custom request handled: $350 prospect logged in Locus" },
@@ -407,7 +407,7 @@ export const CALL_EXPECT = {
     },
     {
       title: "You talk to a creator already on the team",
-      desc: "We'll connect you with a model currently on these systems so you can ask her the things you'd never ask us.",
+      desc: "We'll connect you with a model currently on these systems so you can ask them the things you'd never ask us.",
     },
     {
       title: "You leave with the numbers either way",
@@ -424,7 +424,7 @@ export const FAQ = {
   items: [
     {
       q: "Can I talk to a model who actually works with you?",
-      a: "Yes, and we'll offer before you ask. On your intro call we connect you with a creator currently on these systems, and you talk to her without us in the room. Ask her anything: what the money really did, whether the chatters sound like her, what she'd change. Nobody who's hiding something makes that offer.",
+      a: "Yes, and we'll offer before you ask. On your intro call we connect you with a creator currently on these systems, and you talk to them without us in the room. Ask them anything: what the money really did, whether the chatters sound like them, what they'd change. Nobody who's hiding something makes that offer.",
     },
     {
       q: "I already have chatters I trust. Do I have to give them up?",
