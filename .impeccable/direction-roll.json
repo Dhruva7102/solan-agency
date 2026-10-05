@@ -1,0 +1,11 @@
+{
+  "surface": "src/app/page.tsx (+ /deal, /proof)",
+  "seedKey": "77fed2da",
+  "mode": "persuade",
+  "rounds": [
+    {"round": 0, "assigned": "The Astor Terminal", "pick": "The Statement", "challengers": ["obi sleeve (competitive)", "nixie, indoor sun, cloud edge, zoo map, algorave (declined)"], "outcome": "user pinned the black-and-gold scheme, then re-rolled"},
+    {"round": 1, "assigned": "The House Menu", "pick": "Lock Screen", "challengers": ["blast/bless (competitive)", "fletcher wit (competitive)", "bazaar, detector, hypercard, accretion (declined)"], "outcome": "user asked for Lock Screen and Standard mocks, then re-rolled"},
+    {"round": 2, "assigned": "The Invitation", "pick": "The Contact Sheet", "challengers": ["darkroom, jacquard, creator keycaps (offered as text)"], "outcome": "user chose Invitation's type with Lock Screen's layout"}
+  ],
+  "chosen": "fusion: Lock Screen grammar (round 1 pick) set in The Invitation's type (round 2 assigned)"
+}

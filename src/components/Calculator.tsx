@@ -1,10 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import type { CSSProperties } from "react";
 import { CALC } from "@/lib/content";
 import CountUp from "./CountUp";
+import { Arrow } from "./Phone";
 
-/* Validated series palette (dataviz six checks, dark surface #14141C) */
+/* Series colours come from the house palette (see --series-* in globals.css) */
 const SERIES = [
   { key: "subs", label: "Subscriptions", color: "var(--series-subs)" },
   { key: "chat", label: "PPV & messages", color: "var(--series-chat)" },
@@ -41,11 +43,9 @@ function Slider({
 }) {
   return (
     <label className="block">
-      <div className="mb-2 flex items-baseline justify-between gap-3">
-        <span className="text-[13px] font-medium text-ink-2">{label}</span>
-        <span className="text-sm font-semibold tabular-nums text-ink">
-          {display}
-        </span>
+      <div className="mb-3 flex items-baseline justify-between gap-3">
+        <span className="text-[14px] text-ink-2">{label}</span>
+        <span className="tnum text-[15px] font-medium text-ink">{display}</span>
       </div>
       <input
         type="range"
@@ -55,8 +55,9 @@ function Slider({
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
         aria-label={label}
+        style={{ "--fill": `${((value - min) / (max - min)) * 100}%` } as CSSProperties}
       />
-      {hint && <p className="mt-1.5 text-[11px] text-muted">{hint}</p>}
+      {hint && <p className="mt-2 text-[12px] leading-snug text-muted">{hint}</p>}
     </label>
   );
 }
@@ -99,6 +100,13 @@ export default function Calculator() {
   const [tierKey, setTierKey] = useState<(typeof TIERS)[number]["key"]>("chatting");
   const [customSplit, setCustomSplit] = useState(40);
 
+  // Which preset the inputs still match; moving any slider clears it.
+  const [preset, setPreset] = useState<number | null>(1);
+  const touch = (set: (v: number) => void) => (v: number) => {
+    setPreset(null);
+    set(v);
+  };
+
   const tier = TIERS.find((t) => t.key === tierKey)!;
   const split = tier.fixed ? tier.split : customSplit;
 
@@ -130,20 +138,23 @@ export default function Calculator() {
   return (
     <div className="grid items-start gap-6 lg:grid-cols-[380px_1fr]">
       {/* ————— Inputs ————— */}
-      <div className="card p-7 lg:sticky lg:top-24">
-        <p className="eyebrow mb-4">Your page today</p>
-        <div className="mb-6 flex flex-wrap gap-2">
-          {PRESETS.map((p) => (
+      <div className="card p-6 sm:p-7 lg:sticky lg:top-24">
+        <p className="mb-3 text-[11px] font-medium uppercase tracking-[0.22em] text-muted">Your page today</p>
+        <div role="group" aria-label="Start from a page size" className="segmented mb-7 flex w-full">
+          {PRESETS.map((p, i) => (
             <button
               key={p.label}
+              type="button"
+              aria-pressed={preset === i}
+              className="flex-1 whitespace-nowrap !px-2"
               onClick={() => {
+                setPreset(i);
                 setSubs(p.values.subs);
                 setSubPrice(p.values.subPrice);
                 setPpv(p.values.ppv);
                 setTips(p.values.tips);
                 setCustoms(p.values.customs);
               }}
-              className="rounded-full border border-line px-3.5 py-1.5 text-xs text-ink-2 transition-colors hover:border-gold-dim hover:text-ink"
             >
               {p.label}
             </button>
@@ -157,7 +168,7 @@ export default function Calculator() {
             min={0}
             max={25000}
             step={100}
-            onChange={setSubs}
+            onChange={touch(setSubs)}
           />
           <Slider
             label="Subscription price"
@@ -166,7 +177,7 @@ export default function Calculator() {
             min={0}
             max={50}
             step={0.5}
-            onChange={setSubPrice}
+            onChange={touch(setSubPrice)}
           />
           <Slider
             label="PPV & message revenue / month"
@@ -175,7 +186,7 @@ export default function Calculator() {
             min={0}
             max={50000}
             step={100}
-            onChange={setPpv}
+            onChange={touch(setPpv)}
           />
           <Slider
             label="Tips / month"
@@ -184,7 +195,7 @@ export default function Calculator() {
             min={0}
             max={20000}
             step={100}
-            onChange={setTips}
+            onChange={touch(setTips)}
           />
           <Slider
             label="Customs / month"
@@ -193,12 +204,12 @@ export default function Calculator() {
             min={0}
             max={20000}
             step={100}
-            onChange={setCustoms}
+            onChange={touch(setCustoms)}
           />
         </div>
 
         <div className="mt-8 border-t border-line pt-7">
-          <p className="eyebrow mb-6">Assumptions</p>
+          <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.22em] text-muted">Assumptions</p>
           <div className="flex flex-col gap-6">
             <Slider
               label="Month-one uplift on chat-driven revenue"
@@ -228,31 +239,31 @@ export default function Calculator() {
       <div className="flex flex-col gap-6">
         {/* Headline tiles */}
         <div className="grid gap-4 sm:grid-cols-3">
-          <div className="card p-6">
-            <p className="text-xs font-medium uppercase tracking-wider text-muted">
+          <div className="card p-5 sm:p-6">
+            <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-muted">
               Today (gross)
             </p>
-            <p className="display mt-2 text-3xl tabular-nums text-ink-2">
+            <p className="tnum mt-3 text-[2rem] font-light leading-none text-ink-2">
               <CountUp value={money(calc.todayTotal)} />
             </p>
             <p className="mt-1 text-[11px] text-muted">per month, your inputs</p>
           </div>
-          <div className="card-raised border-gold-dim p-6">
-            <p className="text-xs font-medium uppercase tracking-wider text-gold">
+          <div className="card-raised !border-gold-dim p-5 sm:p-6">
+            <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-gold">
               Month one with us (gross)
             </p>
-            <p className="display gold-text mt-2 text-3xl tabular-nums">
+            <p className="tnum gold-text mt-3 text-[2rem] font-normal leading-none">
               <CountUp value={money(calc.solanTotal)} />
             </p>
             <p className="mt-1 text-[11px] text-muted">
               {uplift}× on PPV, messages, tips &amp; customs; subs held flat
             </p>
           </div>
-          <div className="card p-6">
-            <p className="text-xs font-medium uppercase tracking-wider text-muted">
+          <div className="card p-5 sm:p-6">
+            <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-muted">
               Your take-home
             </p>
-            <p className="display mt-2 text-3xl tabular-nums text-ink">
+            <p className="tnum mt-3 text-[2rem] font-light leading-none text-ink">
               <CountUp value={money(takeHome)} />
             </p>
             <p className="mt-1 text-[11px] text-muted">
@@ -262,23 +273,23 @@ export default function Calculator() {
         </div>
 
         {delta > 0 && (
-          <div className="rounded-xl border border-gold-dim/50 bg-[rgba(210,172,97,0.06)] px-5 py-4 text-sm text-ink-2">
+          <div className="glass px-5 py-4 text-[15px] leading-relaxed text-ink-2">
             Even after the split, that&apos;s{" "}
-            <strong className="text-gold">{money(delta)} more per month</strong>{" "}
+            <strong className="font-semibold text-gold-bright">{money(delta)} more per month</strong>{" "}
             in your pocket than running the page yourself today.
           </div>
         )}
 
         {calc.todayTotal < 5000 && (
-          <div className="card p-5 text-sm leading-relaxed text-ink-2">
-            <p className="eyebrow mb-2">Smaller page?</p>
+          <div className="card p-5 text-[15px] leading-relaxed text-ink-2">
+            <p className="mb-2 text-[11px] font-medium uppercase tracking-[0.22em] text-gold">Smaller page?</p>
             This calculator only models your existing revenue at higher
             conversion; it doesn&apos;t include the funnel bringing in new fans,
             which is where smaller pages grow most. One page this size went{" "}
             <strong className="text-ink">$0 to $37.3k net in its first 30 days</strong>{" "}
             on our systems.{" "}
-            <a href="/proof" className="text-gold underline-offset-4 hover:underline">
-              See the dashboard →
+            <a href="/proof" className="text-gold-bright underline-offset-4 hover:underline">
+              See the dashboard <Arrow />
             </a>
           </div>
         )}
@@ -292,9 +303,9 @@ export default function Calculator() {
         />
 
         {/* Split selector */}
-        <div className="card p-7">
-          <p className="eyebrow mb-2">The split</p>
-          <p className="mb-6 text-sm leading-relaxed text-ink-2">
+        <div className="card p-6 sm:p-7">
+          <p className="mb-2 text-[11px] font-medium uppercase tracking-[0.22em] text-muted">The split</p>
+          <p className="mb-6 text-[15px] leading-relaxed text-ink-2">
             Every rate is flat: 15% for Systems & Consulting, 30% for
             Chatting & Sexting, 40% for Growth, and 45% with the full social
             stack. What you pick here is what you&apos;d pay.
@@ -304,13 +315,15 @@ export default function Calculator() {
               <button
                 key={t.key}
                 onClick={() => setTierKey(t.key)}
-                className={`rounded-xl border px-4 py-3.5 text-left transition-colors ${
+                type="button"
+                aria-pressed={tierKey === t.key}
+                className={`rounded-2xl border px-4 py-3.5 text-left transition-colors ${
                   tierKey === t.key
-                    ? "border-gold-dim bg-[rgba(210,172,97,0.08)]"
+                    ? "border-gold-dim bg-[rgba(210,172,97,0.1)]"
                     : "border-line hover:border-line-strong"
                 }`}
               >
-                <span className="block text-sm font-medium text-ink">
+                <span className="block text-[15px] font-medium text-ink">
                   {t.label}
                 </span>
                 <span className="mt-0.5 block text-xs text-muted">
@@ -334,7 +347,7 @@ export default function Calculator() {
           )}
         </div>
 
-        <p className="text-[11px] leading-relaxed text-muted">
+        <p className="text-[12.5px] leading-relaxed text-muted">
           Model, not guarantee. Figures are gross platform earnings as shown on
           your dashboard; the platform fee applies equally to both scenarios and
           is omitted. Your real projection is built at onboarding from your
@@ -365,9 +378,9 @@ function StackedComparison({
   ];
 
   return (
-    <div className="card p-7">
+    <div className="card p-6 sm:p-7">
       <div className="flex flex-wrap items-baseline justify-between gap-3">
-        <h2 className="text-sm font-semibold text-ink">
+        <h2 className="text-[15px] font-semibold text-ink">
           Where the money comes from
         </h2>
         <div className="flex flex-wrap gap-4">
@@ -494,9 +507,9 @@ function Projection({
   const gridVals = [0.25, 0.5, 0.75, 1].map((f) => maxY * f);
 
   return (
-    <div className="card p-7">
+    <div className="card p-6 sm:p-7">
       <div className="flex flex-wrap items-baseline justify-between gap-3">
-        <h2 className="text-sm font-semibold text-ink">
+        <h2 className="text-[15px] font-semibold text-ink">
           12-month trajectory (gross)
         </h2>
         <div className="flex gap-4 text-[11px] text-ink-2">

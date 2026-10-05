@@ -1,128 +1,85 @@
-import { RESULTS, CHAT_EXAMPLES, FOUNDER_AUTHORITY } from "@/lib/content";
+import { RESULTS, CHAT_EXAMPLES } from "@/lib/content";
 import { Section, SectionHeading } from "@/components/Section";
-import Reveal from "@/components/Reveal";
 import ScreenshotSlot from "@/components/ScreenshotSlot";
 import CtaBand from "@/components/CtaBand";
 import Testimonials from "@/components/Testimonials";
 
 export default function ProofPage() {
+  const [statFigure, ...statRest] = RESULTS.churn.stat.split(" ");
+
   return (
     <main>
-      <section className="hero-glow hairline-b">
-        <div className="mx-auto max-w-6xl px-6 pb-16 pt-20 sm:pt-24">
-          <SectionHeading
-            as="h1"
-            eyebrow={RESULTS.eyebrow}
-            heading={RESULTS.heading}
-            intro={RESULTS.intro}
-          />
+      <section className="relative isolate -mt-16 overflow-hidden">
+        <div className="hero-glow absolute inset-0 -z-10" aria-hidden />
+        <div className="mx-auto max-w-6xl px-5 pb-16 pt-36 sm:px-6 sm:pb-20 sm:pt-44">
+          <SectionHeading as="h1" heading={RESULTS.heading} intro={RESULTS.intro} />
+
+          {/* Retention first: the number that says models stay */}
+          <div className="glass mt-12 grid gap-8 p-6 sm:p-9 lg:grid-cols-2 lg:items-center">
+            <div>
+              <p className="numeral gold-text text-[5rem] sm:text-[6.5rem]">{statFigure}</p>
+              <p className="display text-[1.8rem] leading-tight text-ink">{statRest.join(" ")}</p>
+              <p className="mt-4 text-[14px] font-medium text-gold-bright">{RESULTS.churn.figures}</p>
+            </div>
+            <p className="text-[17px] leading-[1.7] text-ink-2">{RESULTS.churn.desc}</p>
+          </div>
         </div>
       </section>
 
-      {/* Retention first: the number that says models stay */}
-      <Section>
-        <Reveal>
-          <div className="card-raised grid gap-8 p-8 sm:p-10 lg:grid-cols-2 lg:items-center">
-            <div>
-              <p className="display gold-text text-4xl leading-tight sm:text-5xl">
-                {RESULTS.churn.stat}
-              </p>
-              <p className="mt-4 text-sm font-medium text-gold">
-                {RESULTS.churn.figures}
-              </p>
-            </div>
-            <p className="text-[15px] leading-relaxed text-ink-2">
-              {RESULTS.churn.desc}
-            </p>
-          </div>
-        </Reveal>
-      </Section>
-
       {/* Case studies */}
-      <Section alt className="border-t border-line hairline-b">
+      <Section alt className="border-y border-line">
         <SectionHeading
-          eyebrow="Case studies"
           heading="Three trajectories, anonymized."
           intro="Real pages from the founding team's current books, names removed, dashboards below. Every figure here is defensible on your call."
         />
-        <div className="mt-10 grid gap-4 lg:grid-cols-3">
-          {RESULTS.caseStudies.map((cs, i) => (
-            <Reveal key={cs.title} delay={i * 0.08} className="h-full">
-              <div className="card flex h-full flex-col p-7">
-                <p className="eyebrow self-start rounded-full border border-gold-dim/50 px-3 py-1 !text-[10px]">
-                  {cs.tag}
-                </p>
-                <h3 className="display mt-4 text-lg text-ink">{cs.title}</h3>
-                <div className="my-6 flex items-center gap-4">
-                  <div>
-                    <p className="text-[11px] uppercase tracking-wider text-muted">
-                      Before
-                    </p>
-                    <p className="display mt-1 text-xl text-ink-2">{cs.before}</p>
-                  </div>
-                  <span className="text-gold" aria-hidden>
-                    →
-                  </span>
-                  <div>
-                    <p className="text-[11px] uppercase tracking-wider text-muted">
-                      After · {cs.timeframe}
-                    </p>
-                    <p className="display gold-text mt-1 text-xl">{cs.after}</p>
-                  </div>
+        <div className="mt-12 grid gap-3 lg:grid-cols-3">
+          {RESULTS.caseStudies.map((cs) => (
+            <article key={cs.title} className="card flex h-full flex-col p-6 sm:p-7">
+              <span className="self-start rounded-full bg-gold/15 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.22em] text-gold-bright">
+                {cs.tag}
+              </span>
+              <h3 className="mt-5 text-[17px] font-semibold leading-snug text-ink">{cs.title}</h3>
+              <dl className="list my-6 border-y border-line">
+                <div className="flex items-baseline justify-between gap-4 py-3">
+                  <dt className="text-[10px] font-medium uppercase tracking-[0.2em] text-muted">Before</dt>
+                  <dd className="numeral whitespace-nowrap text-[1.7rem] text-ink-2">{cs.before}</dd>
                 </div>
-                <p className="text-sm leading-relaxed text-muted">{cs.story}</p>
-              </div>
-            </Reveal>
+                <div className="flex items-baseline justify-between gap-4 py-3">
+                  <dt className="text-[10px] font-medium uppercase tracking-[0.2em] text-muted">After · {cs.timeframe}</dt>
+                  <dd className="numeral gold-text whitespace-nowrap text-right text-[1.9rem] sm:text-[2.2rem]">{cs.after}</dd>
+                </div>
+              </dl>
+              <p className="text-[15px] leading-relaxed text-ink-2">{cs.story}</p>
+            </article>
           ))}
         </div>
       </Section>
 
       {/* Earnings screenshots */}
       <Section>
-        <SectionHeading
-          eyebrow="Receipts"
-          heading="Real dashboards, names removed."
-        />
-        <div className="mt-10 grid items-start gap-4 sm:grid-cols-2">
-          {RESULTS.screenshots.map((shot, i) => (
-            <Reveal key={shot.file} delay={i * 0.08}>
-              <ScreenshotSlot file={shot.file} label={shot.label} />
-            </Reveal>
+        <SectionHeading heading="Real dashboards, names removed." />
+        <div className="mt-12 grid items-start gap-x-4 gap-y-8 sm:grid-cols-2 sm:[&>*:last-child:nth-child(odd)]:col-span-2">
+          {RESULTS.screenshots.map((shot) => (
+            <ScreenshotSlot key={shot.file} file={shot.file} label={shot.label} />
           ))}
         </div>
       </Section>
 
       {/* Chat receipts: how the money actually lands */}
-      <Section alt className="border-t border-line hairline-b">
-        <SectionHeading
-          eyebrow={CHAT_EXAMPLES.eyebrow}
-          heading={CHAT_EXAMPLES.heading}
-          intro={CHAT_EXAMPLES.intro}
-        />
-        <div className="mt-10 grid items-start gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {CHAT_EXAMPLES.shots.map((shot, i) => (
-            <Reveal key={shot.file} delay={i * 0.08}>
-              <ScreenshotSlot
-                file={shot.file}
-                label={shot.label}
-                aspect="aspect-[9/16]"
-              />
-            </Reveal>
+      <Section alt className="border-y border-line">
+        <SectionHeading heading={CHAT_EXAMPLES.heading} intro={CHAT_EXAMPLES.intro} />
+        <div className="mt-12 grid items-start gap-x-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+          {CHAT_EXAMPLES.shots.map((shot) => (
+            <ScreenshotSlot key={shot.file} file={shot.file} label={shot.label} aspect="aspect-[9/16]" />
           ))}
         </div>
       </Section>
 
       {/* Partner authority reprise */}
       <Section>
-        <Reveal>
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="eyebrow mb-4">{FOUNDER_AUTHORITY.eyebrow}</p>
-            <p className="display text-2xl leading-snug text-ink sm:text-3xl">
-              The track records behind these numbers are shared,{" "}
-              <span className="gold-text">with names</span>, on your call.
-            </p>
-          </div>
-        </Reveal>
+        <p className="display mx-auto max-w-3xl text-center text-[clamp(1.9rem,3.6vw,3rem)] leading-tight text-ink">
+          The track records behind these numbers are shared, <span className="text-gold-bright">with names</span>, on your call.
+        </p>
       </Section>
 
       <Testimonials />

@@ -14,7 +14,7 @@ export const BRAND = {
   tagline: "A different type of management.",
   // *asterisks* mark the phrases rendered in gold on the hero.
   subtag:
-    "We raised *$1.5M*, built our own infrastructure, and hired out of the industry's best teams — so we can run your page better and *take a smaller cut* doing it, with *every dollar logged and attributed* where you can check it.",
+    "We raised *$1.5M*, built our own infrastructure, and hired out of the industry's best teams, so we can run your page better and *take a smaller cut* doing it, with *every dollar logged and attributed* where you can check it.",
 };
 
 /* The external product site — where a creator goes to see the tool in depth. */
@@ -31,29 +31,34 @@ export const NAV_LINKS = [
 ] as const;
 
 /* Above the fold: claims about the whole operation. `short` is the
-   tightened label used in the hero strip, where space is scarce. */
+   tightened label used in the hero widgets, where space is scarce; `mini`
+   is the one-line label the widgets use on a phone. */
 export const HEADLINE_STATS = [
   {
     value: "4×",
+    mini: "First-month bar",
     short: "First-month bar on chat-driven revenue",
     label: "The first-month bar for PPV, message and tip revenue",
     sub: "The standard we plan every page around. Many models clear it early.",
   },
   {
     value: "92%+",
+    mini: "Model retention",
     short: "Annual model retention across the book",
     label: "Annual model retention",
     sub: "8 in 10 of our models have been with the team for over three years.",
   },
   {
     value: "24/7",
+    mini: "A dedicated pod",
     short: "A dedicated pod on your page, every hour",
     label: "Dedicated chatter pod on your page, every hour",
     sub: "Your pod. Your voice. Never a shared queue.",
   },
   {
     value: "100%",
-    short: "Of your page auditable — every message, sale and shift logged",
+    mini: "Of your page auditable",
+    short: "Of your page auditable: every message, sale and shift logged",
     label: "Every message, sale and shift logged and attributed",
     sub: "Ask to see any conversation, any day. Nothing settles in a chat you can't see.",
   },
@@ -84,17 +89,17 @@ export const RAILS = {
   eyebrow: "01 · Where the $1.5M went",
   heading: "Every other team rents their software. We built ours.",
   paragraphs: [
-    "Nearly every management company in this space runs creator pages through the same off-the-shelf tool, Infloww — usually without telling the model. We went the other way. We raised $1.5M and built Locus, Altyr's chatting and CRM platform: the creator's playbook, prices and hard limits pinned to one side of every conversation, the fan's history and spend on the other, and every message, sale and shift logged and attributed underneath.",
+    "Nearly every management company in this space runs creator pages through the same off-the-shelf tool, Infloww, usually without telling the model. We went the other way. We raised $1.5M and built Locus, Altyr's chatting and CRM platform: the creator's playbook, prices and hard limits pinned to one side of every conversation, the fan's history and spend on the other, and every message, sale and shift logged and attributed underneath.",
     "And we didn't stop at software. We hired operators out of the top management teams in the industry to run it. You're not signing with a reseller. You're signing with the team that owns the factory.",
   ],
-  /* Measured from the live platform, Sept 8 census. Re-measure before
+  /* Measured from the live platform, Oct 1 census. Re-measure before
      updating; state counts as "at least N", never inflated. */
   census: {
-    note: "Running in production today — measured from the live platform, not projected.",
+    note: "Running in production today, measured from the live platform, not projected.",
     items: [
-      { value: "203k+", label: "messages through Locus" },
-      { value: "126k+", label: "fans in the CRM" },
-      { value: "51k+", label: "vault items managed" },
+      { value: "445k+", label: "messages through Locus" },
+      { value: "167k+", label: "fans in the CRM" },
+      { value: "62k+", label: "vault items managed" },
     ],
   },
   panels: [
@@ -110,7 +115,7 @@ export const TAKE_LESS = {
   eyebrow: "02 · The part nobody else will say",
   heading: "We make less money on you than other management companies. On purpose.",
   paragraphs: [
-    "The standard deal in this industry hovers around half your income — for a shared chatter queue, rented software, and a monthly summary you take on faith. Our rates top out at 45%, full-service chatting starts at 30%, and systems-only is 15%. We can charge less because we already spent the money: Locus does work that other teams bill you for in headcount.",
+    "The standard deal in this industry hovers around half your income, for a shared chatter queue, rented software, and a monthly summary you take on faith. Our rates top out at 45%, full-service chatting starts at 30%, and systems-only is 15%. We can charge less because we already spent the money: Locus does work that other teams bill you for in headcount.",
   ],
   note: "Every rate is published here and written into your agreement. No custom quotes. No surprises at onboarding.",
 };
@@ -122,18 +127,18 @@ export const STANDARD_DEAL = {
   rows: [
     {
       dim: "Your split",
-      them: "Around 50% — sometimes more",
-      us: "15 / 30 / 40 / 45% — flat, published, in writing",
+      them: "Around 50%, sometimes more",
+      us: "15 / 30 / 40 / 45%: flat, published, in writing",
     },
     {
       dim: "The software",
-      them: "Rented — the same Infloww as everyone else",
-      us: "Built and owned — Locus, by Altyr",
+      them: "Rented: the same Infloww as everyone else",
+      us: "Built and owned: Locus, by Altyr",
     },
     {
       dim: "Your visibility",
       them: "Monthly summaries, on trust",
-      us: "Every message, sale and shift logged and attributed — audit any conversation",
+      us: "Every message, sale and shift logged and attributed. Audit any conversation.",
     },
     {
       dim: "The contract",
@@ -148,16 +153,16 @@ export const NO_CAGE = {
   eyebrow: "03 · The contract",
   heading: "Month to month. You stay because we're growing your page, or you go.",
   paragraphs: [
-    "Most management companies ask for your trust, then lock the door behind you. We removed the need for both. No lock-in, no exit fees — thirty days' notice and you leave with your page, your fans, your content and the SOPs we built around you. We don't keep models with paper. We keep them with performance, and the numbers say it works.",
+    "Most management companies ask for your trust, then lock the door behind you. We removed the need for both. No lock-in, no exit fees. Thirty days' notice and you leave with your page, your fans, your content and the SOPs we built around you. We don't keep models with paper. We keep them with performance, and the numbers say it works.",
   ],
   retention: "92%+ of our models stay each year. 8 in 10 have been here over three years.",
   promises: [
-    "Month to month — either side, thirty days' written notice",
+    "Month to month, either side, thirty days' written notice",
     "Your page, fans, content and SOPs leave with you",
-    "Payouts never touch our hands — the platform pays you, we invoice after",
+    "Payouts never touch our hands: the platform pays you, we invoice after",
     "Your boundaries live in Locus, pinned above every reply box on every shift",
     "A boundary crossed by us is a same-day walk, written into the agreement",
-    "Every rate flat and published — the contract quotes this site",
+    "Every rate flat and published, and the contract quotes this site",
   ],
 };
 
@@ -167,7 +172,7 @@ export const EXCLUSIVE = {
   heading: "The tech is ours. The traffic team is ours. Neither is for rent.",
   paragraphs: [
     "Locus is used by no one outside our partner network, so the edge doesn't leak to the teams we compete with. When we build something that sells better, your page gets it and theirs doesn't.",
-    "Growth works the same way. Other companies hire the same recycled marketing vendors as everyone else. We invested in our own traffic team and grew it by hand — and it works for our models only. Where your new fans come from is part of what we walk through, with the numbers, on your call.",
+    "Growth works the same way. Other companies hire the same recycled marketing vendors as everyone else. We invested in our own traffic team and grew it by hand, and it works for our models only. Where your new fans come from is part of what we walk through, with the numbers, on your call.",
   ],
 };
 
@@ -188,7 +193,7 @@ export const FOUNDER_AUTHORITY = {
     },
     {
       role: "The Systems Architect",
-      desc: "Built Locus — the chatting, CRM and accountability platform this operation runs on, and the reason the rest of this site isn't marketing.",
+      desc: "Built Locus, the chatting, CRM and accountability platform this operation runs on, and the reason the rest of this site isn't marketing.",
     },
   ],
 };
@@ -267,7 +272,7 @@ export const DEAL_PAGE = {
   eyebrow: "The deal",
   heading: "What it costs, and how you leave.",
   intro:
-    "The standard split in this industry hovers around half your income. Ours tops out at 45 — because we already paid for the machine. Here's the whole arrangement, including the exits.",
+    "The standard split in this industry hovers around half your income. Ours tops out at 45, because we already paid for the machine. Here's the whole arrangement, including the exits.",
   contractHeading: "The contract, in plain English",
   contractIntro:
     "These aren't website promises. Each line below mirrors a clause in the agreement you'd actually sign.",
@@ -427,11 +432,11 @@ export const FAQ = {
     },
     {
       q: "How fast do I actually see results?",
-      a: "Your pod goes live after thorough onboarding, supervised. 4× on chat-driven revenue is the first-month bar we work to, measured against your own pre-Astor baseline at the day-30 review — and your weekly numbers arrive in writing from the same records we work from.",
+      a: "Your pod goes live after thorough onboarding, supervised. 4× on chat-driven revenue is the first-month bar we work to, measured against your own pre-Astor baseline at the day-30 review, and your weekly numbers arrive in writing from the same records we work from.",
     },
     {
       q: "What can the chatters see, and can they go rogue?",
-      a: "Chatters work inside Locus with your playbook and your hard limits pinned to the conversation — prices, boundaries, what the team may never offer — and every message they send is logged, attributed and QA-scored. Anything outside your SOPs escalates to a human with authority instead of being improvised. You can ask to audit any conversation, any time.",
+      a: "Chatters work inside Locus with your playbook and your hard limits pinned to the conversation (prices, boundaries, what the team may never offer), and every message they send is logged, attributed and QA-scored. Anything outside your SOPs escalates to a human with authority instead of being improvised. You can ask to audit any conversation, any time.",
     },
     {
       q: "What happens if I want to leave?",
@@ -453,7 +458,7 @@ export const CALC = {
 
 export const FINAL_CTA = {
   heading: "See it with your own numbers.",
-  body: "Book a call and we'll walk your actual page through Locus live — the same console our team runs on, pointed at your numbers.",
+  body: "Book a call and we'll walk your actual page through Locus live, on the same console our team runs on, pointed at your numbers.",
   button: "Book your call",
   href: "https://calendly.com/solandennis/30min",
 };

@@ -1,64 +1,17 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
-import { useInView, useReducedMotion } from "framer-motion";
-
 /**
- * Counts the numbers inside a display string up from zero when it scrolls
- * into view, preserving everything around them ("$0 → $37.3k", "+119%").
- * Reduced-motion users get the final value immediately.
+ * Renders a display figure ("$0 → $37.3k", "+119%"). It used to count up
+ * from zero on scroll, which meant every figure read "$0" until it was in
+ * view, in captures and without script. The site's motion now lives in the
+ * lock screen waking, so figures render as themselves. The props are kept so
+ * call sites need not change.
  */
 export default function CountUp({
   value,
-  duration = 1.4,
   className,
 }: {
   value: string;
   duration?: number;
   className?: string;
 }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
-  const reducedMotion = useReducedMotion();
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    if (!inView) return;
-    if (reducedMotion) {
-      setProgress(1);
-      return;
-    }
-    let frame = 0;
-    let start: number | null = null;
-    const tick = (t: number) => {
-      if (start === null) start = t;
-      const elapsed = (t - start) / 1000;
-      const p = Math.min(elapsed / duration, 1);
-      // ease-out cubic: fast off the line, settles on the number
-      setProgress(1 - Math.pow(1 - p, 3));
-      if (p < 1) frame = requestAnimationFrame(tick);
-    };
-    frame = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(frame);
-  }, [inView, reducedMotion, duration]);
-
-  // Animate the numbers, keep symbols, words and thousands grouping intact.
-  const rendered = value.replace(/\d[\d,]*(\.\d+)?/g, (match) => {
-    const grouped = match.includes(",");
-    const target = parseFloat(match.replace(/,/g, ""));
-    const decimals = match.includes(".") ? match.split(".")[1].length : 0;
-    const current = target * progress;
-    return grouped
-      ? current.toLocaleString("en-US", {
-          minimumFractionDigits: decimals,
-          maximumFractionDigits: decimals,
-        })
-      : current.toFixed(decimals);
-  });
-
-  return (
-    <span ref={ref} className={className}>
-      {rendered}
-    </span>
-  );
+  return <span className={className}>{value}</span>;
 }

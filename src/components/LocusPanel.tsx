@@ -95,8 +95,8 @@ function AutomationPanel() {
         ))}
       </div>
 
-      <div className="altyr-inset flex items-center justify-between px-3 py-3">
-        <div className="grid grid-cols-3 gap-3 text-center">
+      <div className="altyr-inset grid grid-cols-2 items-center gap-3 px-3 py-3 sm:flex sm:justify-between">
+        <div className="col-span-2 grid grid-cols-3 gap-3 text-center sm:col-span-1">
           {[
             { k: "Sent today", v: "4,120" },
             { k: "Opened", v: "71%" },
@@ -108,7 +108,7 @@ function AutomationPanel() {
             </div>
           ))}
         </div>
-        <div className="text-right">
+        <div className="col-span-2 text-left sm:text-right">
           <p className="altyr-numeric text-[1.25rem]">$12.4k</p>
           <p className="text-[0.55rem] uppercase tracking-[0.14em] text-white/40">Recovered</p>
         </div>

@@ -1,26 +1,19 @@
-"use client";
-
-import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 
+/**
+ * Formerly a scroll-triggered fade on every block. The site now spends its
+ * motion once, on the lock screen waking and the notifications arriving, so
+ * this renders its children as they are: visible by default, in every
+ * capture, with or without script. `delay` is kept so call sites need not
+ * change.
+ */
 export default function Reveal({
   children,
-  delay = 0,
   className,
 }: {
   children: ReactNode;
   delay?: number;
   className?: string;
 }) {
-  return (
-    <motion.div
-      className={className}
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.55, delay, ease: [0.21, 0.65, 0.36, 1] }}
-    >
-      {children}
-    </motion.div>
-  );
+  return <div className={className}>{children}</div>;
 }

@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import Link from "next/link";
 import {
   BRAND,
@@ -7,7 +8,6 @@ import {
   REASONS_STRIP,
   RAILS,
   TAKE_LESS,
-  STANDARD_DEAL,
   NO_CAGE,
   EXCLUSIVE,
   FOUNDER_AUTHORITY,
@@ -16,349 +16,310 @@ import {
   FINAL_CTA,
 } from "@/lib/content";
 import { Section, SectionHeading } from "@/components/Section";
-import Reveal from "@/components/Reveal";
 import Highlight from "@/components/Highlight";
-import CountUp from "@/components/CountUp";
 import VideoSlot, { hasIntroVideo } from "@/components/VideoSlot";
 import CtaBand from "@/components/CtaBand";
 import LocusPanel from "@/components/LocusPanel";
 import StandardDeal from "@/components/StandardDeal";
+import { AppIcon, Arrow, Chevron, GoldCheck, Notification, Widget } from "@/components/Phone";
+import LockDate from "@/components/LockDate";
+
+/* Arrival order for the lock screen waking (see .wake-in / .arrive). */
+const wake = (i: number) => ({ "--i": i }) as CSSProperties;
+
+/* Each reason's own line, from its section label ("01 · Where the $1.5M went"). */
+const REASON_LINES: Record<string, string> = Object.fromEntries(
+  [RAILS, TAKE_LESS, NO_CAGE, EXCLUSIVE].map((s) => [s.id, s.eyebrow.replace(/^\d+\s*·\s*/, "")])
+);
 
 export default function Home() {
+  const [firstReceipt, ...otherReceipts] = HERO_PROOF.items;
+
   return (
     <main>
-      {/* Hero */}
-      <section className="hero-glow hairline-b relative overflow-hidden">
-        <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-24 text-center sm:pb-28 sm:pt-32">
-          <Reveal>
-            <p className="eyebrow mb-8 justify-center">Management, rebuilt</p>
-            <h1 className="display-hero mx-auto max-w-4xl">
-              We take a <span className="gold-text italic">smaller cut</span>
-              <br className="hidden sm:block" /> than the teams we outperform.
-            </h1>
-            <p className="mx-auto mt-8 max-w-xl text-base leading-relaxed text-ink-2">
-              <Highlight text={BRAND.subtag} />
-            </p>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-              <Link href="/proof" className="btn-gold">
-                See the proof <span aria-hidden>→</span>
-              </Link>
-              <Link href="/deal" className="btn-ghost">
-                See the deal
-              </Link>
-            </div>
-            <p className="mt-5 text-sm text-muted">
-              Or{" "}
-              <a
-                href={FINAL_CTA.href}
-                className="text-gold underline-offset-4 hover:underline"
-              >
-                book an intro call
-              </a>{" "}
-              and we&apos;ll walk your page through it live.
-            </p>
-          </Reveal>
+      {/* ── The lock screen ── */}
+      <section className="relative isolate -mt-16 overflow-hidden" aria-labelledby="hero-h">
+        <div className="hero-glow wake-light absolute inset-x-0 top-0 -z-10 h-[max(100svh,760px)]" aria-hidden />
+        <div className="mx-auto flex min-h-[100svh] max-w-6xl flex-col items-center px-5 pb-5 pt-[4.25rem] sm:px-6 sm:pb-6 sm:pt-[5rem]">
+          <LockDate className="wake-in text-[17px] font-medium text-ink/70 sm:text-[19px]" />
+          <h1 id="hero-h" className="mt-2 text-center sm:mt-3">
+            <span className="display-hero gold-text wake-clock block">We take a smaller cut</span>
+            <span className="display wake-in mt-3 block text-[clamp(1.6rem,2.7vw,2.4rem)] leading-tight text-ink" style={wake(1)}>
+              than the teams we outperform.
+            </span>
+          </h1>
 
-          {/* Above the fold: what's true of the whole operation. */}
-          <Reveal delay={0.15}>
-            <div className="mt-16">
-              <hr className="rule-fade" />
-              <dl className="mt-10 grid grid-cols-2 gap-x-6 gap-y-9 sm:grid-cols-4">
-                {HEADLINE_STATS.map((stat) => (
-                  <div key={stat.label}>
-                    <dt className="numeral gold-text text-[2.75rem] sm:text-[3.5rem]">
-                      {stat.value.includes("/") ? (
-                        stat.value
-                      ) : (
-                        <CountUp value={stat.value} />
-                      )}
-                    </dt>
-                    <dd className="mx-auto mt-3 max-w-[22ch] text-[12.5px] leading-relaxed text-ink-2">
-                      {stat.short}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+          <dl className="mt-4 grid w-full max-w-[680px] grid-cols-2 gap-2 sm:mt-6 sm:grid-cols-4 sm:gap-2.5">
+            {HEADLINE_STATS.map((stat, i) => (
+              <div key={stat.label}>
+                <dt className="sr-only">{stat.short}</dt>
+                <dd>
+                  <Widget value={stat.value} label={stat.short} mini={stat.mini} index={i + 2} className="h-full" />
+                </dd>
+              </div>
+            ))}
+          </dl>
+
+          <div className="mt-5 flex w-full max-w-[540px] flex-col gap-2 sm:mt-auto sm:pt-7">
+            <Notification app="astor" title="Management, rebuilt" time="now" index={0}>
+              <Highlight text={BRAND.subtag} />
+            </Notification>
+            <Notification app="locus" title="Locus · Earnings" time="30d" index={1}>
+              <span className="numeral block py-1 text-[2rem] text-gold-bright">{firstReceipt.value}</span>
+              {firstReceipt.label}
+            </Notification>
+            {/* the rest of the stack, collapsed behind it */}
+            <span aria-hidden className="arrive mx-4 -mt-2.5 h-3 rounded-b-[18px] border border-t-0 border-[var(--glass-edge)] bg-[var(--glass)] opacity-60" style={wake(2)} />
+            <span aria-hidden className="arrive mx-8 -mt-2 h-3 rounded-b-[16px] border border-t-0 border-[var(--glass-edge)] bg-[var(--glass)] opacity-35" style={wake(2)} />
+          </div>
+
+          {/* The dock: proof and deal in the corners, booking as the swipe */}
+          <div className="wake-in mt-4 grid w-full max-w-[560px] grid-cols-[auto_1fr_auto] items-start gap-2 sm:gap-3" style={wake(6)}>
+            <Link href="/proof" className="group flex w-14 flex-col items-center gap-2 sm:w-16">
+              <span className="glass grid h-[52px] w-[52px] place-items-center !rounded-full text-ink transition-colors group-hover:border-gold-dim">
+                <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                  <path d="M4 19V5M4 19h16M8 15l3-4 3 2 5-6" />
+                </svg>
+              </span>
+              <span className="text-[9.5px] font-medium uppercase tracking-[0.28em] text-ink/70">Proof</span>
+            </Link>
+            <div className="flex flex-col items-center gap-2.5">
+              <a href={FINAL_CTA.href} className="btn-gold max-sm:!gap-2 max-sm:!px-4 max-sm:!tracking-[0.16em]">
+                {FINAL_CTA.button}
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </a>
+              <span className="hidden text-center text-[12.5px] text-ink/55 sm:block">We&apos;ll walk your page through it live</span>
             </div>
-          </Reveal>
+            <Link href="/deal" className="group flex w-14 flex-col items-center gap-2 sm:w-16">
+              <span className="glass grid h-[52px] w-[52px] place-items-center !rounded-full text-ink transition-colors group-hover:border-gold-dim">
+                <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                  <path d="M7 3h7l4 4v14H7z" />
+                  <path d="M14 3v4h4M10 12h5M10 16h5" />
+                </svg>
+              </span>
+              <span className="whitespace-nowrap text-[9.5px] font-medium uppercase tracking-[0.2em] text-ink/70 sm:tracking-[0.28em]">The Deal</span>
+            </Link>
+          </div>
+          <span aria-hidden className="mt-3 h-[5px] w-[134px] rounded-full bg-ink/80 sm:mt-4" />
         </div>
       </section>
 
-      {/* The four reasons, as an anchor strip */}
-      <nav
-        aria-label="The four reasons"
-        className="hairline-b border-t border-line bg-bg-2/60"
-      >
-        <div className="mx-auto grid max-w-6xl grid-cols-2 md:grid-cols-4">
+      {/* ── The four reasons, as widgets ── */}
+      <nav aria-label="The four reasons" className="mx-auto max-w-6xl px-5 pt-20 sm:px-6 sm:pt-28">
+        <ul className="card list mx-auto max-w-2xl overflow-hidden">
           {REASONS_STRIP.map((r) => (
-            <a
-              key={r.id}
-              href={`#${r.id}`}
-              className="group flex min-h-14 items-center gap-3 px-6 py-4 transition-colors hover:bg-surface"
-            >
-              <span className="display gold-text text-sm">{r.num}</span>
-              <span className="text-[13px] leading-snug text-ink-2 transition-colors group-hover:text-ink">
-                {r.label}
-              </span>
-            </a>
+            <li key={r.id}>
+              <a href={`#${r.id}`} className="flex min-h-[4.25rem] items-center justify-between gap-4 px-5 py-3.5 transition-colors hover:bg-surface-2">
+                <span>
+                  <span className="block text-[16px] font-medium leading-snug text-ink">{r.label}</span>
+                  <span className="mt-0.5 block text-[13.5px] leading-snug text-muted">{REASON_LINES[r.id]}</span>
+                </span>
+                <Chevron className="text-muted" />
+              </a>
+            </li>
           ))}
-        </div>
+        </ul>
       </nav>
 
       {/* 01 — We built our own rails */}
-      <Section id={RAILS.id} className="scroll-mt-20">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-          <Reveal className="lg:col-span-5">
-            <p className="eyebrow mb-6">{RAILS.eyebrow}</p>
+      <Section id={RAILS.id} className="scroll-mt-16">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-14">
+          <div className="lg:col-span-5">
             <h2 className="display-xl text-ink">{RAILS.heading}</h2>
             <a
               href={LOCUS.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex min-h-11 items-center text-sm text-gold transition-transform hover:translate-x-0.5"
+              className="mt-8 inline-flex min-h-11 items-center gap-2 text-[11px] font-medium uppercase tracking-[0.3em] text-gold-bright hover:text-gold"
             >
-              {LOCUS.linkLabel} <span aria-hidden>&nbsp;↗</span>
+              {LOCUS.linkLabel} <Arrow external />
             </a>
-          </Reveal>
-          <div className="flex flex-col gap-7 lg:col-span-6 lg:col-start-7 lg:pt-3">
-            {RAILS.paragraphs.map((p, i) => (
-              <Reveal key={i} delay={i * 0.06}>
-                <p
-                  className={
-                    i === 0
-                      ? "text-[17px] leading-relaxed text-ink"
-                      : "text-[15px] leading-relaxed text-ink-2"
-                  }
-                >
+          </div>
+          <div className="lg:col-span-7">
+            <div className="card p-6 sm:p-8">
+              {RAILS.paragraphs.map((p, i) => (
+                <p key={i} className={i === 0 ? "text-[18px] leading-[1.7] text-ink" : "mt-5 text-[16px] leading-[1.7] text-ink-2"}>
                   {p}
                 </p>
-              </Reveal>
-            ))}
-            <Reveal delay={0.15}>
-              <div className="card p-6">
-                <p className="text-xs text-muted">{RAILS.census.note}</p>
-                <dl className="mt-4 grid grid-cols-3 gap-4">
-                  {RAILS.census.items.map((c) => (
-                    <div key={c.label}>
-                      <dt className="numeral gold-text text-2xl sm:text-[1.9rem]">
-                        {c.value}
-                      </dt>
-                      <dd className="mt-1 text-[11.5px] leading-snug text-ink-2">
-                        {c.label}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
-            </Reveal>
+              ))}
+            </div>
+            <div className="mt-2.5 grid grid-cols-3 gap-2.5">
+              {RAILS.census.items.map((c) => (
+                <div key={c.label} className="card flex flex-col justify-between gap-5 p-4 sm:p-5">
+                  <span className="flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.28em] text-muted">
+                    <AppIcon app="locus" size={16} />
+                    Locus
+                  </span>
+                  <span>
+                    <span className="numeral block text-[2.1rem] text-gold-bright sm:text-[2.8rem]">{c.value}</span>
+                    <span className="mt-1.5 block text-[12.5px] leading-snug text-ink-2">{c.label}</span>
+                  </span>
+                </div>
+              ))}
+            </div>
+            <p className="mt-3 px-1 text-[12.5px] text-muted">{RAILS.census.note}</p>
           </div>
         </div>
-        <div className="mt-14 grid gap-4 md:grid-cols-2">
-          {RAILS.panels.map((p, i) => (
-            <Reveal key={p.kind} delay={(i % 2) * 0.08}>
-              <LocusPanel kind={p.kind} label={p.label} />
-            </Reveal>
+        <div className="mt-14 grid items-start gap-3 md:grid-cols-2">
+          {RAILS.panels.map((p) => (
+            <LocusPanel key={p.kind} kind={p.kind} label={p.label} />
           ))}
         </div>
       </Section>
 
       {/* 02 — We take less */}
-      <Section
-        id={TAKE_LESS.id}
-        alt
-        className="glow-band hairline-b scroll-mt-20 border-t border-line"
-      >
+      <Section id={TAKE_LESS.id} alt className="glow-band scroll-mt-16 border-y border-line">
         <div className="mx-auto max-w-3xl text-center">
-          <Reveal>
-            <p className="eyebrow mb-6 justify-center">{TAKE_LESS.eyebrow}</p>
-            <h2 className="display-xl text-ink">{TAKE_LESS.heading}</h2>
-            {TAKE_LESS.paragraphs.map((p, i) => (
-              <p
-                key={i}
-                className="mx-auto mt-7 max-w-2xl text-[15px] leading-relaxed text-ink-2"
-              >
-                {p}
-              </p>
-            ))}
-          </Reveal>
+          <h2 className="display-xl text-ink">{TAKE_LESS.heading}</h2>
+          {TAKE_LESS.paragraphs.map((p, i) => (
+            <p key={i} className="mx-auto mt-7 max-w-2xl text-[17px] leading-[1.7] text-ink-2">
+              {p}
+            </p>
+          ))}
         </div>
-        <Reveal delay={0.1} className="mt-12">
+        <div className="mx-auto mt-12 max-w-4xl">
           <StandardDeal />
-        </Reveal>
-        <Reveal delay={0.15}>
-          <p className="mt-6 text-center text-sm text-muted">
+          <p className="mt-5 text-center text-[13.5px] leading-relaxed text-muted">
             {TAKE_LESS.note}{" "}
-            <Link
-              href="/deal"
-              className="text-gold underline-offset-4 hover:underline"
-            >
-              See every tier →
+            <Link href="/deal" className="whitespace-nowrap text-gold-bright underline-offset-4 hover:underline">
+              See every tier <Arrow />
             </Link>
           </p>
-        </Reveal>
+        </div>
       </Section>
 
       {/* 03 — No cage */}
-      <Section id={NO_CAGE.id} className="scroll-mt-20">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-          <Reveal className="lg:col-span-5">
-            <p className="eyebrow mb-6">{NO_CAGE.eyebrow}</p>
+      <Section id={NO_CAGE.id} className="scroll-mt-16">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-14">
+          <div className="lg:col-span-5">
             <h2 className="display-xl text-ink">{NO_CAGE.heading}</h2>
-            <p className="mt-8 text-[15px] leading-relaxed text-ink-2">
-              {NO_CAGE.paragraphs[0]}
+            <p className="mt-7 text-[17px] leading-[1.7] text-ink-2">{NO_CAGE.paragraphs[0]}</p>
+            <div className="glass mt-8 p-5">
+              <p className="numeral gold-text text-[3.6rem]">92%+</p>
+              <p className="mt-2 text-[14px] leading-snug text-ink/80">{NO_CAGE.retention}</p>
+            </div>
+          </div>
+          <div className="lg:col-span-7">
+            <ul className="card list overflow-hidden">
+              {NO_CAGE.promises.map((p) => (
+                <li key={p} className="flex items-start gap-3.5 px-5 py-4 text-[15.5px] leading-relaxed text-ink">
+                  <GoldCheck />
+                  {p}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-3 px-1 text-[13px] text-muted">
+              Each line mirrors a clause in the agreement you&apos;d sign.{" "}
+              <Link href="/deal" className="whitespace-nowrap text-gold-bright underline-offset-4 hover:underline">
+                The deal, in full <Arrow />
+              </Link>
             </p>
-            <p className="display gold-text mt-8 text-xl leading-snug">
-              {NO_CAGE.retention}
-            </p>
-          </Reveal>
-          <div className="lg:col-span-6 lg:col-start-7">
-            <Reveal delay={0.1}>
-              <ul className="card divide-y divide-line p-2">
-                {NO_CAGE.promises.map((p) => (
-                  <li
-                    key={p}
-                    className="flex items-start gap-3 px-5 py-4 text-[14.5px] leading-relaxed text-ink-2"
-                  >
-                    <span className="gold-text mt-0.5" aria-hidden>
-                      ✓
-                    </span>
-                    {p}
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
-            <Reveal delay={0.15}>
-              <p className="mt-4 text-xs text-muted">
-                Each line mirrors a clause in the agreement you&apos;d sign.{" "}
-                <Link
-                  href="/deal"
-                  className="text-gold underline-offset-4 hover:underline"
-                >
-                  The deal, in full →
-                </Link>
-              </p>
-            </Reveal>
           </div>
         </div>
       </Section>
 
       {/* 04 — Exclusives */}
-      <Section
-        id={EXCLUSIVE.id}
-        alt
-        className="hairline-b scroll-mt-20 border-t border-line"
-      >
+      <Section id={EXCLUSIVE.id} alt className="glow-band scroll-mt-16 border-y border-line">
         <div className="mx-auto max-w-3xl text-center">
-          <Reveal>
-            <p className="eyebrow mb-6 justify-center">{EXCLUSIVE.eyebrow}</p>
-            <h2 className="display-xl text-ink">{EXCLUSIVE.heading}</h2>
-          </Reveal>
-          <div className="mt-8 flex flex-col gap-6 text-left sm:text-center">
+          <span className="glass mx-auto grid h-14 w-14 place-items-center !rounded-full text-gold-bright" aria-hidden>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="5" y="11" width="14" height="10" rx="2.5" />
+              <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+            </svg>
+          </span>
+          <h2 className="display-xl mt-7 text-ink">{EXCLUSIVE.heading}</h2>
+          <div className="mt-8 flex flex-col gap-5">
             {EXCLUSIVE.paragraphs.map((p, i) => (
-              <Reveal key={i} delay={i * 0.08}>
-                <p className="text-[15px] leading-relaxed text-ink-2">{p}</p>
-              </Reveal>
+              <p key={i} className="text-[17px] leading-[1.7] text-ink-2">
+                {p}
+              </p>
             ))}
           </div>
         </div>
       </Section>
 
-      {/* Founder intro video — only once the file exists */}
+      {/* Founder intro video: only once the file exists */}
       {hasIntroVideo() && (
         <Section className="hairline-b">
           <div className="mx-auto max-w-3xl">
-            <SectionHeading
-              eyebrow={INTRO_VIDEO.eyebrow}
-              heading={INTRO_VIDEO.heading}
-              center
-            />
-            <Reveal delay={0.1} className="mt-10">
+            <SectionHeading eyebrow={INTRO_VIDEO.eyebrow} heading={INTRO_VIDEO.heading} center />
+            <div className="mt-10">
               <VideoSlot />
-            </Reveal>
+            </div>
           </div>
         </Section>
       )}
 
-      {/* Who's behind this */}
+      {/* Who's behind this: three contact cards, names kept for the call */}
       <Section>
-        <SectionHeading
-          eyebrow={FOUNDER_AUTHORITY.eyebrow}
-          heading={FOUNDER_AUTHORITY.heading}
-        />
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
-          {FOUNDER_AUTHORITY.founders.map((f, i) => (
-            <Reveal key={f.role} delay={i * 0.08}>
-              <div className="card lift h-full p-7">
-                <div className="mb-5 h-10 w-10 rounded-full border border-gold-dim bg-[radial-gradient(circle_at_35%_30%,rgba(232,203,139,0.35),rgba(151,120,63,0.15))]" />
-                <h3 className="display text-lg text-ink">{f.role}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink-2">{f.desc}</p>
-              </div>
-            </Reveal>
+        <SectionHeading eyebrow={FOUNDER_AUTHORITY.eyebrow} heading={FOUNDER_AUTHORITY.heading} />
+        <ul className="card list mt-10 max-w-4xl overflow-hidden">
+          {FOUNDER_AUTHORITY.founders.map((f) => (
+            <li key={f.role} className="grid grid-cols-[3.5rem_1fr] items-start gap-4 px-5 py-5 sm:grid-cols-[4rem_1fr] sm:px-6">
+              <span
+                className="display grid h-14 w-14 place-items-center rounded-full bg-[linear-gradient(160deg,#3a3026,#17120d)] text-[1.35rem] text-gold ring-1 ring-gold-dim/60 sm:h-16 sm:w-16 sm:text-[1.5rem]"
+                aria-hidden
+              >
+                {f.role.replace(/^The\s+/, "").split(/[\s-]+/).map((w) => w[0]).join("").slice(0, 2)}
+              </span>
+              <span>
+                <h3 className="text-[17px] font-semibold leading-snug text-ink">{f.role}</h3>
+                <p className="mt-1.5 text-[15px] leading-relaxed text-ink-2">{f.desc}</p>
+              </span>
+            </li>
           ))}
-        </div>
-        <Reveal delay={0.2}>
-          <p className="mt-6 text-xs italic text-muted">
-            {FOUNDER_AUTHORITY.note}
-          </p>
-        </Reveal>
+        </ul>
+        <p className="mt-5 px-1 text-[13px] text-muted">{FOUNDER_AUTHORITY.note}</p>
       </Section>
 
-      {/* Receipts band */}
-      <Section alt className="glow-band hairline-b border-t border-line">
-        <Reveal>
-          <p className="eyebrow mb-5">Receipts</p>
-          <h2 className="display-xl max-w-2xl text-ink">
-            We&apos;d rather show you dashboards than adjectives.
-          </h2>
-        </Reveal>
-        <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3">
-          {HERO_PROOF.items.map((item, i) => (
-            <Reveal
-              key={item.value}
-              delay={i * 0.08}
-              className="bg-surface p-7 transition-colors duration-300 hover:bg-surface-2 sm:p-8"
+      {/* Receipts: the payouts, as they'd land on your phone */}
+      <Section alt className="glow-band border-y border-line">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <h2 className="display-xl text-ink">We&apos;d rather show you dashboards than adjectives.</h2>
+            <Link
+              href={HERO_PROOF.href}
+              className="btn-ghost mt-9"
             >
-              <p className="numeral gold-text text-[2.75rem] sm:text-[3.25rem]">
-                <CountUp value={item.value} />
-              </p>
-              <p className="mt-5 max-w-[28ch] text-sm leading-relaxed text-ink-2">
+              {HERO_PROOF.linkLabel} <Arrow />
+            </Link>
+          </div>
+          <div className="flex flex-col gap-2">
+            {[firstReceipt, ...otherReceipts].map((item, i) => (
+              <Notification key={item.value} app="locus" title="Locus · Earnings" time={["30d", "1mo", "90d"][i]}>
+                <span className="numeral block py-1 text-[2.3rem] text-gold-bright">{item.value}</span>
                 {item.label}
-              </p>
-            </Reveal>
-          ))}
+              </Notification>
+            ))}
+          </div>
         </div>
-        <Reveal delay={0.2}>
-          <Link
-            href={HERO_PROOF.href}
-            className="mt-8 inline-flex min-h-11 items-center text-sm text-gold transition-transform hover:translate-x-0.5"
-          >
-            {HERO_PROOF.linkLabel} <span aria-hidden>&nbsp;→</span>
-          </Link>
-        </Reveal>
       </Section>
 
-      {/* FAQ */}
+      {/* FAQ: a Messages thread. Tap a question for the answer. */}
       <Section>
         <SectionHeading eyebrow={FAQ.eyebrow} heading={FAQ.heading} />
-        <div className="mx-auto mt-10 flex max-w-3xl flex-col gap-4">
-          {FAQ.items.map((item, i) => (
-            <Reveal key={item.q} delay={(i % 3) * 0.05}>
-              <details className="card group p-6">
-                <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 text-[15px] font-semibold text-ink [&::-webkit-details-marker]:hidden">
-                  {item.q}
-                  <span
-                    aria-hidden
-                    className="gold-text shrink-0 transition-transform group-open:rotate-45"
-                  >
-                    +
+        <div className="card mx-auto mt-10 max-w-3xl overflow-hidden">
+          <div className="flex flex-col items-center gap-2 border-b border-line bg-surface-2/60 py-4">
+            <AppIcon app="astor" size={44} />
+            <span className="text-[12px] text-ink-2">{BRAND.name}</span>
+          </div>
+          <p className="pt-4 text-center text-[11.5px] text-muted">Tap a question for the answer</p>
+          <div className="flex flex-col gap-3 p-4 sm:p-6">
+            {FAQ.items.map((item, i) => (
+              <details key={item.q} className="group" open={i === 0}>
+                <summary className="flex cursor-pointer list-none items-end gap-2 [&::-webkit-details-marker]:hidden">
+                  <span className="bubble-in max-w-[85%] px-4 py-2.5 text-[15.5px] leading-snug transition-colors group-hover:bg-[#332d27]">
+                    {item.q}
                   </span>
                 </summary>
-                <p className="mt-4 text-sm leading-relaxed text-ink-2">
-                  {item.a}
-                </p>
+                <div className="mt-2 flex justify-end">
+                  <p className="bubble-out max-w-[85%] px-4 py-3 text-[15px] leading-[1.5]">{item.a}</p>
+                </div>
               </details>
-            </Reveal>
-          ))}
+            ))}
+          </div>
         </div>
       </Section>
 

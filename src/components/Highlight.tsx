@@ -9,7 +9,7 @@ export default function Highlight({ text }: { text: string }) {
     <>
       {parts.map((part, i) =>
         i % 2 === 1 ? (
-          <strong key={i} className="font-medium text-gold">
+          <strong key={i} className="font-medium text-gold-bright">
             {part}
           </strong>
         ) : (

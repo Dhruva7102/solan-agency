@@ -1,20 +1,22 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Italiana, Jost } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import MotionProvider from "@/components/MotionProvider";
 import { BRAND } from "@/lib/content";
 
-const inter = Inter({
-  variable: "--font-inter",
+/* Jost carries the text and the spaced caps; Italiana is the display voice:
+   the lock-screen clock, titles and the big figures. */
+const jost = Jost({
+  variable: "--font-jost",
   subsets: ["latin"],
 });
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const italiana = Italiana({
+  variable: "--font-italiana",
   subsets: ["latin"],
-  axes: ["opsz"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -23,12 +25,11 @@ export const metadata: Metadata = {
   ),
   title: `${BRAND.name} · ${BRAND.tagline}`,
   description:
-    "A private walkthrough of how we run creator pages: systems, rates, and results.",
-  robots: { index: false, follow: false },
+    "How Astor runs creator pages: our own software, published rates, and the dashboards to prove it.",
   openGraph: {
     title: `${BRAND.name} · ${BRAND.tagline}`,
     description:
-      "A private walkthrough of how we run creator pages: systems, rates, and results.",
+      "How Astor runs creator pages: our own software, published rates, and the dashboards to prove it.",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: BRAND.wordmark }],
   },
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${BRAND.name} · ${BRAND.tagline}`,
     description:
-      "A private walkthrough of how we run creator pages: systems, rates, and results.",
+      "How Astor runs creator pages: our own software, published rates, and the dashboards to prove it.",
     images: ["/og.png"],
   },
 };
@@ -49,9 +50,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${jost.variable} ${italiana.variable} h-full antialiased`}
     >
-      <body className="grain min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col">
         <MotionProvider>
           <Nav />
           <div className="flex-1">{children}</div>

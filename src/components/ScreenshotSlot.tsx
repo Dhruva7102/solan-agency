@@ -28,7 +28,7 @@ export default function ScreenshotSlot({
   );
 
   return (
-    <figure className={`card overflow-hidden ${className}`}>
+    <figure className={className}>
       {size ? (
         /* eslint-disable-next-line @next/next/no-img-element */
         <img
@@ -38,11 +38,11 @@ export default function ScreenshotSlot({
           height={size.height}
           loading="lazy"
           decoding="async"
-          className="h-auto w-full"
+          className="h-auto w-full rounded-[18px] bg-surface ring-1 ring-line"
         />
       ) : (
         <div
-          className={`flex ${aspect} flex-col items-center justify-center gap-3 bg-[radial-gradient(400px_200px_at_50%_40%,rgba(210,172,97,0.06),transparent)] px-6 text-center`}
+          className={`card flex ${aspect} flex-col items-center justify-center gap-3 px-6 text-center`}
         >
           <svg
             width="28"
@@ -65,7 +65,7 @@ export default function ScreenshotSlot({
           </p>
         </div>
       )}
-      <figcaption className="border-t border-line px-4 py-3 text-xs text-muted">
+      <figcaption className="mt-3 px-1 text-[13.5px] leading-snug text-ink-2">
         {label}
       </figcaption>
     </figure>

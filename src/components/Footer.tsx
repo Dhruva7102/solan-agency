@@ -4,24 +4,18 @@ import { BRAND, NAV_LINKS, FINAL_CTA } from "@/lib/content";
 export default function Footer() {
   return (
     <footer className="border-t border-line bg-bg-2">
-      <div className="mx-auto max-w-6xl px-6 py-14">
+      <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6">
         <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
           <div className="max-w-xs">
-            <span className="display gold-text text-lg font-semibold tracking-wide">
-              {BRAND.wordmark}
-            </span>
-            <p className="mt-3 text-sm leading-relaxed text-muted">
-              {BRAND.tagline}
-              {" "}Shared privately with creators we&apos;re in conversation
-              with.
-            </p>
+            <span className="text-[13px] font-medium tracking-[0.5em] text-gold">{BRAND.wordmark}</span>
+            <p className="display mt-4 text-[1.5rem] leading-tight text-ink">{BRAND.tagline}</p>
           </div>
-          <nav className="grid grid-cols-2 gap-x-12">
+          <nav aria-label="Footer" className="flex gap-10">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="flex min-h-11 items-center text-sm text-ink-2 transition-colors hover:text-ink"
+                className="flex min-h-11 items-center text-[11px] font-medium uppercase tracking-[0.3em] text-ink-2 transition-colors hover:text-ink"
               >
                 {link.label}
               </Link>
@@ -31,10 +25,8 @@ export default function Footer() {
             {FINAL_CTA.button}
           </a>
         </div>
-        <p className="mt-12 text-xs leading-relaxed text-muted">
-          Confidential. This material is provided for the recipient only, so
-          please don&apos;t redistribute the link or access code. Revenue
-          figures shown in calculators are illustrative models, not guarantees.
+        <p className="mt-12 border-t border-line pt-6 text-[12.5px] leading-relaxed text-muted">
+          Revenue figures shown in the calculator are illustrative models, not guarantees.
         </p>
       </div>
     </footer>
