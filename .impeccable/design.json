@@ -300,7 +300,7 @@
       },
       "figure-tabular": {
         "displayName": "Tabular Figure",
-        "purpose": "Calculator inputs, results and chart values, where a 1 must never read as an I."
+        "purpose": "Calculator inputs, results and chart values, where columns of figures must line up."
       }
     },
     "foil": {
